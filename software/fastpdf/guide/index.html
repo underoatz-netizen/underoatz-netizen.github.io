@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FastPDF User Guide &amp; FAQ — OZ Lab</title>
+  <meta name="description" content="A short guide to using FastPDF: opening documents, reading, zooming, searching, presenting, capturing and converting, plus answers to common questions.">
+  <link rel="canonical" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
+  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
+  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/fastpdf/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="FastPDF User Guide &amp; FAQ — OZ Lab">
+  <meta property="og:description" content="A short guide to using FastPDF, plus answers to common questions.">
+  <meta property="og:url" content="https://underoatz-netizen.github.io/software/fastpdf/guide/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">OZ Lab</a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/software/fastpdf/downloads/">Downloads</a></li>
+          <li><a href="/software/fastpdf/changelog/">Changelog</a></li>
+          <li><a href="/software/fastpdf/guide/" aria-current="page">Guide &amp; FAQ</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/th/software/fastpdf/guide/" hreflang="th" lang="th">ไทย</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>User guide &amp; FAQ</h1>
+    <p class="lede">This guide describes how FastPDF is used. It covers the
+      features the project has implemented and documented. FastPDF is not yet
+      available for download.</p>
+
+    <section aria-labelledby="basics">
+      <h2 id="basics">Basics</h2>
+      <ul>
+        <li><strong>Open a document.</strong> Use the Open command, drag a
+          single PDF file onto the window, or open one directly from the command
+          line.</li>
+        <li><strong>Read.</strong> Documents are shown in a continuous
+          single-column layout. Scroll with the mouse wheel or the keyboard.</li>
+        <li><strong>Zoom.</strong> Use the zoom commands or the mouse wheel with
+          the Control key held. A page anchor keeps your position when you zoom
+          or resize.</li>
+        <li><strong>Search.</strong> Open the find panel and type. Search runs
+          as you type and highlights matches in the document.</li>
+        <li><strong>Present.</strong> Presentation mode fills the screen and
+          shows one page at a time; use the arrow keys, space or paging keys to
+          move between pages.</li>
+        <li><strong>Capture.</strong> Drag a region on the page to copy it to
+          the clipboard, and save it as an image if you want.</li>
+        <li><strong>Convert.</strong> Export pages to PNG images, or combine
+          PNG, JPEG and BMP images into a single PDF.</li>
+        <li><strong>Print.</strong> Print the current document through the
+          standard Windows printing system.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="shortcuts">
+      <h2 id="shortcuts">Keyboard shortcuts</h2>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">FastPDF keyboard shortcuts</caption>
+          <thead>
+            <tr><th scope="col">Key</th><th scope="col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>O</kbd></td><td>Open a PDF</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Open the find panel</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Capture a region to the clipboard</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td>Print</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td>Toggle the diagnostics overlay</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>0</kbd> / <kbd>Ctrl</kbd>+<kbd>1</kbd> / <kbd>Ctrl</kbd>+<kbd>2</kbd></td><td>Fit page / 100% / fit width</td></tr>
+            <tr><td><kbd>F11</kbd></td><td>Enter or leave presentation mode</td></tr>
+            <tr><td><kbd>Page Up</kbd> / <kbd>Page Down</kbd></td><td>Previous / next page</td></tr>
+            <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>First / last page</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Leave presentation mode, or close the find panel</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="limitations">
+      <h2 id="limitations">Known limitations</h2>
+      <p>These are behaviours the project has documented. They are listed so the
+        guide stays honest about what FastPDF does not do yet:</p>
+      <ul>
+        <li>Password-protected PDFs cannot be opened yet.</li>
+        <li>Search covers the document's text layer only. There is no OCR, so
+          scanned pages return no results.</li>
+        <li>Page rotation applies to the open session only. To keep a rotation,
+          save a rotated copy; the original file is not modified.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Frequently asked questions</h2>
+
+      <h3 id="faq-get">Can I download FastPDF yet?</h3>
+      <p>No. There is no public release or download yet. See the
+        <a href="/software/fastpdf/downloads/">Downloads</a> page for the current
+        status.</p>
+
+      <h3 id="faq-account">Do I need an account to use FastPDF?</h3>
+      <p>No. FastPDF is a desktop application and does not use accounts or
+        sign-in.</p>
+
+      <h3 id="faq-source">Where is the source code?</h3>
+      <p>The source code is kept private. It is not published, and FastPDF is
+        not an open-source project.</p>
+
+      <h3 id="faq-platform">What kind of computer does FastPDF run on?</h3>
+      <p>FastPDF is a Windows desktop utility. More detail will be published
+        alongside a release if and when one becomes available.</p>
+
+      <h3 id="faq-privacy">Does FastPDF send my documents anywhere?</h3>
+      <p>For data handling, see the <a href="/privacy/">Privacy</a> page. The
+        application privacy policy is still a draft and is not yet in effect.</p>
+
+      <h3 id="faq-help">How do I report a problem?</h3>
+      <p>See the <a href="/support/">Support</a> page for the current support
+        channel.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 OZ Lab. All rights reserved.</p>
+      <p>FastPDF is a Windows utility from OZ Lab. This site is static and uses
+        no tracking or analytics.</p>
+    </div>
+  </footer>
+</body>
+</html>
