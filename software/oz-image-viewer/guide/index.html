@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OZ Image Viewer User Guide &amp; FAQ — OZ Lab</title>
+  <meta name="description" content="A short guide to OZ Image Viewer: opening and navigating images, zooming and panning, non-destructive editing, keyboard shortcuts, supported formats, known limitations and common questions.">
+  <link rel="canonical" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="OZ Image Viewer User Guide &amp; FAQ — OZ Lab">
+  <meta property="og:description" content="A short guide to OZ Image Viewer, plus answers to common questions.">
+  <meta property="og:url" content="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">OZ Lab</a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/software/oz-image-viewer/">OZ Image Viewer</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/th/software/oz-image-viewer/guide/" hreflang="th" lang="th">ไทย</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>User guide &amp; FAQ</h1>
+    <p class="lede">This guide walks through how OZ Image Viewer is used. It
+      describes the behaviour implemented so far. The app is still in
+      development and has no public release yet.</p>
+
+    <section aria-labelledby="basics">
+      <h2 id="basics">Basics</h2>
+      <ul>
+        <li><strong>Open an image.</strong> Launch with no arguments to get a
+          window with an Open button, use <kbd>Ctrl</kbd>+<kbd>O</kbd>, or open
+          an image directly from the command line. You can also drag a single
+          image file onto the window.</li>
+        <li><strong>View.</strong> The image is shown fit to the window without
+          enlarging images that are smaller than the window. The first image
+          appears before the rest of the folder is scanned.</li>
+        <li><strong>Navigate.</strong> Other images in the same folder become
+          available for browsing with the keyboard, and each one is decoded as
+          you select it.</li>
+        <li><strong>Zoom and pan.</strong> Scroll to zoom in and out at the
+          cursor, or use the keyboard. Drag with the left mouse button to pan,
+          and double-click to switch between fit and 100%.</li>
+        <li><strong>Fullscreen.</strong> Switch the window to borderless
+          fullscreen on the current monitor and back again.</li>
+        <li><strong>Edit.</strong> Rotate, flip, crop and resize are
+          non-destructive: they change the on-screen document only, and the
+          original file stays untouched until you save.</li>
+        <li><strong>Save.</strong> Save writes the current document back to its
+          original file where the format allows it; Save As writes a new copy
+          and never changes the original.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="formats">
+      <h2 id="formats">Supported formats</h2>
+      <p>These are the common still image formats it opens. Support works by
+        reading the file's own signature, not by trusting the file extension.</p>
+      <ul>
+        <li>JPEG (<code>.jpg</code>, <code>.jpeg</code>)</li>
+        <li>PNG (<code>.png</code>)</li>
+        <li>Static WebP (<code>.webp</code>, still images only)</li>
+        <li>BMP (<code>.bmp</code>) and static GIF (<code>.gif</code>)</li>
+        <li>TIFF (<code>.tif</code>, <code>.tiff</code>, first page only)</li>
+        <li>ICO (<code>.ico</code>) and CUR (<code>.cur</code>)</li>
+        <li>TGA (<code>.tga</code>)</li>
+        <li>AVIF (<code>.avif</code>) and HEIC/HEIF still images when the
+          optional decoder is available</li>
+      </ul>
+      <p>For saving, the output formats are PNG, JPEG, WebP (lossless), TIFF and
+        BMP. TIFF is Save As only.</p>
+    </section>
+
+    <section aria-labelledby="shortcuts">
+      <h2 id="shortcuts">Keyboard and mouse</h2>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">OZ Image Viewer keyboard and mouse controls</caption>
+          <thead>
+            <tr><th scope="col">Input</th><th scope="col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>O</kbd></td><td>Open an image</td></tr>
+            <tr><td><kbd>Left</kbd> / <kbd>Right</kbd></td><td>Previous / next image</td></tr>
+            <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>First / last image in the folder</td></tr>
+            <tr><td><kbd>Space</kbd> / <kbd>Backspace</kbd></td><td>Next / previous image</td></tr>
+            <tr><td>Mouse wheel</td><td>Zoom in or out at the cursor</td></tr>
+            <tr><td><kbd>+</kbd> / <kbd>=</kbd> and <kbd>-</kbd></td><td>Zoom in / zoom out</td></tr>
+            <tr><td><kbd>F</kbd></td><td>Fit to window</td></tr>
+            <tr><td><kbd>1</kbd></td><td>Actual size (100%)</td></tr>
+            <tr><td>Left-drag</td><td>Pan the image</td></tr>
+            <tr><td>Double-click</td><td>Toggle between fit and 100%</td></tr>
+            <tr><td><kbd>F11</kbd></td><td>Enter or leave fullscreen</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Leave fullscreen, or cancel a crop</td></tr>
+            <tr><td><kbd>C</kbd></td><td>Enter crop mode</td></tr>
+            <tr><td><kbd>Enter</kbd> / <kbd>R</kbd></td><td>Apply the crop / reset the crop</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>L</kbd> / <kbd>Ctrl</kbd>+<kbd>R</kbd></td><td>Rotate left / rotate right</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td><td>Flip horizontally / vertically</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>Undo / redo</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd></td><td>Open the Resize dialog</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td><td>Save / Save As</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="limitations">
+      <h2 id="limitations">Known limitations</h2>
+      <p>These are the current limits, so you know what to expect:</p>
+      <ul>
+        <li>There is no RAW support. RAW and camera-raw containers are
+          deliberately rejected.</li>
+        <li>There is no animation support. Animated WebP and multi-frame GIF
+          files are rejected rather than played, and animated PNG (APNG) shows
+          only its first frame.</li>
+        <li>Vector graphics, PDF and general document formats are not
+          supported.</li>
+        <li>Multi-page or multi-frame files such as TIFF and ICO show a single
+          page or frame only.</li>
+        <li>WebP export is lossless single-frame only; lossy and animated WebP
+          export are not supported.</li>
+        <li>There are no plugins or third-party shell codecs, and the set of
+          supported extensions is a fixed list.</li>
+        <li>The app is still in development. There is no public release, no
+          download, and the source code is private.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Frequently asked questions</h2>
+
+      <h3 id="faq-download">Can I download OZ Image Viewer?</h3>
+      <p>Not yet. OZ Image Viewer is still in development and there is no public
+        release to download at this time.</p>
+
+      <h3 id="faq-source">Where is the source code?</h3>
+      <p>The source code is kept private and is not published. The project lives
+        on GitHub at
+        <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>,
+        but the repository is not publicly accessible.</p>
+
+      <h3 id="faq-account">Do I need an account to use it?</h3>
+      <p>No. OZ Image Viewer is a desktop application and does not use accounts
+        or sign-in.</p>
+
+      <h3 id="faq-platform">What kind of computer does it run on?</h3>
+      <p>OZ Image Viewer is a Windows desktop application for 64-bit (x64)
+        Windows 10 and Windows 11.</p>
+
+      <h3 id="faq-edit">Does editing change my original file?</h3>
+      <p>No. Rotate, flip, crop and resize are non-destructive and affect the
+        on-screen document only. Your file changes only when you choose Save or
+        Save As.</p>
+
+      <h3 id="faq-help">How do I report a problem?</h3>
+      <p>See the <a href="/support/">Support</a> page for how to reach us.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 OZ Lab. All rights reserved.</p>
+      <p>OZ Image Viewer is a Windows utility from OZ Lab. This site is static
+        and uses no tracking or analytics.</p>
+    </div>
+  </footer>
+</body>
+</html>

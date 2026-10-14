@@ -44,6 +44,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/guide/"/>
   </url>
   <url>
+    <loc>https://underoatz-netizen.github.io/software/oz-image-viewer/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/"/>
+  </url>
+  <url>
+    <loc>https://underoatz-netizen.github.io/software/oz-image-viewer/guide/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/"/>
+  </url>
+  <url>
     <loc>https://underoatz-netizen.github.io/support/</loc>
     <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/support/"/>
@@ -98,6 +112,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/fastpdf/guide/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/fastpdf/guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/guide/"/>
+  </url>
+  <url>
+    <loc>https://underoatz-netizen.github.io/th/software/oz-image-viewer/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/"/>
+  </url>
+  <url>
+    <loc>https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/"/>
   </url>
   <url>
     <loc>https://underoatz-netizen.github.io/th/support/</loc>

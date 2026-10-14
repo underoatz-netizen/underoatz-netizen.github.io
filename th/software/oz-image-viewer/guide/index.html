@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>คู่มือ OZ Image Viewer และคำถามที่พบบ่อย — OZ Lab</title>
+  <meta name="description" content="คู่มือสั้น ๆ สำหรับ OZ Image Viewer: วิธีเปิดและเลื่อนดูภาพ ซูมและเลื่อนภาพ แก้ไขแบบไม่ทำลายต้นฉบับ คีย์ลัด รูปแบบไฟล์ที่รองรับ ข้อจำกัดที่ทราบ และคำถามที่พบบ่อย">
+  <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="คู่มือ OZ Image Viewer และคำถามที่พบบ่อย — OZ Lab">
+  <meta property="og:description" content="คู่มือสั้น ๆ สำหรับ OZ Image Viewer พร้อมคำถามที่พบบ่อย">
+  <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">OZ Lab</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
+          <li><a href="/th/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/th/software/oz-image-viewer/">OZ Image Viewer</a></li>
+          <li><a href="/th/support/">ช่วยเหลือ</a></li>
+          <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/software/oz-image-viewer/guide/" hreflang="en" lang="en">English</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>คู่มือและคำถามที่พบบ่อย</h1>
+    <p class="lede">คู่มือนี้พาคุณดูวิธีใช้ OZ Image Viewer ตามพฤติกรรมที่มีในตอนนี้
+      แอปยังอยู่ระหว่างการพัฒนาและยังไม่มีรุ่นสาธารณะ</p>
+
+    <section aria-labelledby="basics">
+      <h2 id="basics">พื้นฐาน</h2>
+      <ul>
+        <li><strong>เปิดภาพ</strong> เปิดโปรแกรมโดยไม่ใส่อาร์กิวเมนต์จะได้หน้าต่างที่มี
+          ปุ่มเปิดไฟล์ ใช้ <kbd>Ctrl</kbd>+<kbd>O</kbd> หรือเปิดภาพจากบรรทัดคำสั่ง
+          โดยตรง และลากไฟล์ภาพหนึ่งไฟล์วางบนหน้าต่างได้เช่นกัน</li>
+        <li><strong>ดูภาพ</strong> ภาพจะแสดงให้พอดีหน้าต่าง โดยไม่ขยายภาพที่เล็กกว่า
+          หน้าต่าง ภาพแรกจะปรากฏก่อนที่โฟลเดอร์จะสแกนเสร็จ</li>
+        <li><strong>เลื่อนดู</strong> ภาพอื่นในโฟลเดอร์เดียวกันจะพร้อมให้เลื่อนดูด้วย
+          คีย์บอร์ด และแต่ละภาพจะถูกถอดรหัสเมื่อคุณเลือก</li>
+        <li><strong>ซูมและเลื่อนภาพ</strong> เลื่อนล้อเมาส์เพื่อซูมเข้า/ออกที่ตำแหน่ง
+          เคอร์เซอร์ หรือใช้คีย์บอร์ด ลากด้วยปุ่มซ้ายเพื่อเลื่อนภาพ และดับเบิลคลิก
+          เพื่อสลับระหว่างพอดีหน้าต่างกับ 100%</li>
+        <li><strong>เต็มจอ</strong> สลับหน้าต่างเป็นเต็มจอแบบไม่มีขอบบนจอปัจจุบัน
+          และกลับมา</li>
+        <li><strong>แก้ไข</strong> หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลาย
+          ต้นฉบับ เปลี่ยนเฉพาะเอกสารบนหน้าจอ ไฟล์ต้นฉบับยังคงเดิมจนกว่าคุณจะบันทึก</li>
+        <li><strong>บันทึก</strong> บันทึกจะเขียนเอกสารปัจจุบันกลับไปยังไฟล์ต้นฉบับ
+          เมื่อรูปแบบไฟล์รองรับ ส่วนบันทึกเป็นจะสร้างสำเนาใหม่และไม่แก้ไฟล์ต้นฉบับ</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="formats">
+      <h2 id="formats">รูปแบบไฟล์ที่รองรับ</h2>
+      <p>รูปแบบไฟล์ภาพนิ่งทั่วไปเหล่านี้เปิดได้ โดยตรวจจากลายเซ็นของไฟล์เอง
+        ไม่ได้ดูจากนามสกุลไฟล์</p>
+      <ul>
+        <li>JPEG (<code>.jpg</code>, <code>.jpeg</code>)</li>
+        <li>PNG (<code>.png</code>)</li>
+        <li>WebP แบบนิ่ง (<code>.webp</code> รองรับเฉพาะภาพนิ่ง)</li>
+        <li>BMP (<code>.bmp</code>) และ GIF แบบนิ่ง (<code>.gif</code>)</li>
+        <li>TIFF (<code>.tif</code>, <code>.tiff</code> เฉพาะหน้าแรก)</li>
+        <li>ICO (<code>.ico</code>) และ CUR (<code>.cur</code>)</li>
+        <li>TGA (<code>.tga</code>)</li>
+        <li>AVIF (<code>.avif</code>) และ HEIC/HEIF แบบภาพนิ่งเมื่อมีตัวถอดรหัส
+          เสริมพร้อมใช้งาน</li>
+      </ul>
+      <p>สำหรับการบันทึก รูปแบบผลลัพธ์คือ PNG, JPEG, WebP (แบบไม่สูญเสียข้อมูล),
+        TIFF และ BMP โดย TIFF บันทึกเป็นเท่านั้น</p>
+    </section>
+
+    <section aria-labelledby="shortcuts">
+      <h2 id="shortcuts">คีย์บอร์ดและเมาส์</h2>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">คีย์บอร์ดและเมาส์ของ OZ Image Viewer</caption>
+          <thead>
+            <tr><th scope="col">การใช้งาน</th><th scope="col">การทำงาน</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>O</kbd></td><td>เปิดภาพ</td></tr>
+            <tr><td><kbd>Left</kbd> / <kbd>Right</kbd></td><td>ภาพก่อนหน้า / ภาพถัดไป</td></tr>
+            <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>ภาพแรก / ภาพสุดท้ายในโฟลเดอร์</td></tr>
+            <tr><td><kbd>Space</kbd> / <kbd>Backspace</kbd></td><td>ภาพถัดไป / ภาพก่อนหน้า</td></tr>
+            <tr><td>ล้อเมาส์</td><td>ซูมเข้า/ออกที่ตำแหน่งเคอร์เซอร์</td></tr>
+            <tr><td><kbd>+</kbd> / <kbd>=</kbd> และ <kbd>-</kbd></td><td>ซูมเข้า / ซูมออก</td></tr>
+            <tr><td><kbd>F</kbd></td><td>พอดีหน้าต่าง</td></tr>
+            <tr><td><kbd>1</kbd></td><td>ขนาดจริง (100%)</td></tr>
+            <tr><td>ลากด้วยปุ่มซ้าย</td><td>เลื่อนภาพ</td></tr>
+            <tr><td>ดับเบิลคลิก</td><td>สลับระหว่างพอดีหน้าต่างกับ 100%</td></tr>
+            <tr><td><kbd>F11</kbd></td><td>เข้า/ออกโหมดเต็มจอ</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>ออกโหมดเต็มจอ หรือยกเลิกการครอป</td></tr>
+            <tr><td><kbd>C</kbd></td><td>เข้าโหมดครอป</td></tr>
+            <tr><td><kbd>Enter</kbd> / <kbd>R</kbd></td><td>ใช้การครอป / รีเซ็ตการครอป</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>L</kbd> / <kbd>Ctrl</kbd>+<kbd>R</kbd></td><td>หมุนซ้าย / หมุนขวา</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td><td>พลิกแนวนอน / พลิกแนวตั้ง</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>เลิกทำ / ทำซ้ำ</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd></td><td>เปิดกล่องย่อ/ขยาย</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td><td>บันทึก / บันทึกเป็น</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="limitations">
+      <h2 id="limitations">ข้อจำกัดที่ทราบ</h2>
+      <p>นี่คือข้อจำกัดในตอนนี้ เพื่อให้คุณรู้ว่าควรคาดหวังอะไรได้:</p>
+      <ul>
+        <li>ไม่รองรับ RAW ไฟล์ RAW และรูปแบบกล้องถูกปฏิเสธโดยเจตนา</li>
+        <li>ไม่รองรับภาพเคลื่อนไหว WebP แบบเคลื่อนไหวและ GIF หลายเฟรมจะถูกปฏิเสธ
+          แทนที่จะเล่น และ APNG จะแสดงเฉพาะเฟรมแรก</li>
+        <li>ไม่รองรับเวกเตอร์ PDF และรูปแบบเอกสารทั่วไป</li>
+        <li>ไฟล์หลายหน้าหรือหลายเฟรม เช่น TIFF และ ICO จะแสดงเพียงหน้าเดียว
+          หรือเฟรมเดียว</li>
+        <li>การส่งออก WebP รองรับเฉพาะแบบไม่สูญเสียข้อมูลเฟรมเดียว ไม่รองรับ
+          WebP แบบสูญเสียข้อมูลหรือแบบเคลื่อนไหว</li>
+        <li>ไม่มีปลั๊กอินหรือตัวถอดรหัสของระบบอื่น และรายการนามสกุลที่รองรับ
+          เป็นชุดที่กำหนดไว้ตายตัว</li>
+        <li>แอปยังอยู่ระหว่างการพัฒนา ยังไม่มีรุ่นสาธารณะ ไม่มีให้ดาวน์โหลด
+          และซอร์สโค้ดเป็นส่วนตัว</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">คำถามที่พบบ่อย</h2>
+
+      <h3 id="faq-download">ดาวน์โหลด OZ Image Viewer ได้ไหม</h3>
+      <p>ยังไม่ได้ ตอนนี้ยังอยู่ระหว่างการพัฒนา และยังไม่มีรุ่นสาธารณะให้ดาวน์โหลด</p>
+
+      <h3 id="faq-source">ซอร์สโค้ดอยู่ที่ไหน</h3>
+      <p>ซอร์สโค้ดเป็นส่วนตัวและไม่ได้เผยแพร่ โปรเจกต์อยู่บน GitHub ที่
+        <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>
+        แต่ที่เก็บโค้ดไม่เปิดให้เข้าถึงสาธารณะ</p>
+
+      <h3 id="faq-account">ต้องมีบัญชีไหม</h3>
+      <p>ไม่ต้อง OZ Image Viewer เป็นโปรแกรมเดสก์ท็อป ไม่ใช้บัญชีหรือการลงชื่อเข้าใช้</p>
+
+      <h3 id="faq-platform">ใช้กับคอมพิวเตอร์แบบไหน</h3>
+      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows 64 บิต (x64) บน Windows 10
+        และ Windows 11</p>
+
+      <h3 id="faq-edit">การแก้ไขเปลี่ยนไฟล์ต้นฉบับไหม</h3>
+      <p>ไม่ หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลายต้นฉบับ มีผลเฉพาะ
+        เอกสารบนหน้าจอ ไฟล์ของคุณจะเปลี่ยนเมื่อคุณเลือกบันทึกหรือบันทึกเป็นเท่านั้น</p>
+
+      <h3 id="faq-help">แจ้งปัญหาได้อย่างไร</h3>
+      <p>ดูที่หน้า <a href="/th/support/">ช่วยเหลือ</a> เพื่อดูช่องทางติดต่อเรา</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
+      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
+        และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+    </div>
+  </footer>
+</body>
+</html>
