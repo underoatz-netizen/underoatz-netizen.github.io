@@ -27,10 +27,15 @@ This is the static site repository. It holds the published pages' HTML, CSS,
 images and text, and nothing else. It is not a product repository: it contains
 no application source code, no installers and no release files.
 
-Product source and release files are kept in their own repositories:
+Product source and release files are kept outside this repository:
 
-- FastPDF — <https://github.com/underoatz-netizen/FastPDF-Downloads>
-- OZ Image Viewer — <https://github.com/underoatz-netizen/oz-image-viewer>
+- **FastPDF** — the source code is private and is not published. Release files
+  and the public issue tracker are in
+  <https://github.com/underoatz-netizen/FastPDF-Downloads>. Download links are
+  on <https://underoatz-netizen.github.io/software/fastpdf/downloads/>.
+- **OZ Image Viewer** — the source code is public at
+  <https://github.com/underoatz-netizen/oz-image-viewer>; it has no public
+  release yet.
 
 For what can currently be downloaded, see the product pages on the site.
 
