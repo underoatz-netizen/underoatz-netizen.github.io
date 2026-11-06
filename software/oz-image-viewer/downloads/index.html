@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OZ Image Viewer downloads — official Windows packages</title>
+  <meta name="description" content="Download official release packages for OZ Image Viewer version 0.1.0 on 64-bit Windows, including the installer, portable ZIP, and LGPL corresponding source.">
+  <link rel="canonical" href="https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/">
+  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/">
+  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/downloads/">
+  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="OZ Image Viewer downloads — official Windows packages">
+  <meta property="og:description" content="Download official release packages for OZ Image Viewer version 0.1.0 on 64-bit Windows, including the installer, portable ZIP, and LGPL corresponding source.">
+  <meta property="og:url" content="https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">OZ Lab</a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/software/oz-image-viewer/">OZ Image Viewer</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/th/software/oz-image-viewer/downloads/" hreflang="th" lang="th">ไทย</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>OZ Image Viewer downloads</h1>
+    <p class="lede">Official Windows x64 packages for OZ Image Viewer 0.1.0.</p>
+
+    <div class="callout">
+      <p><strong>Version 0.1.0 release:</strong> Packages are published as 64-bit Windows binaries (x64). First-party source code is licensed under the MIT License. In compliance with LGPLv3 §4 and GPLv3 §6(d), complete corresponding source code, build scripts, and build instructions for the dynamically loaded LGPL components (libheif and libde265) are provided alongside binary distributions.</p>
+    </div>
+
+    <section aria-labelledby="release-files">
+      <h2 id="release-files">Release files (version 0.1.0)</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-win-x64-installer.exe">ozviewer-0.1.0-win-x64-installer.exe</a>
+          — guided Windows setup installer for 64-bit Windows (about 4.0 MB).
+        </li>
+        <li>
+          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-win-x64-portable.zip">ozviewer-0.1.0-win-x64-portable.zip</a>
+          — portable ZIP package (about 2.6 MB).
+        </li>
+        <li>
+          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-lgpl-corresponding-source.zip">ozviewer-0.1.0-lgpl-corresponding-source.zip</a>
+          — complete corresponding source package, patches, and build scripts for LGPL components libheif and libde265 (about 2.4 MB).
+        </li>
+        <li>
+          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/SHA256SUMS">SHA256SUMS</a>
+          — official cryptographic checksum file for all three distribution archives.
+        </li>
+      </ul>
+      <p>All release files and git tags are recorded together on the <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/tag/v0.1.0" rel="noopener noreferrer" target="_blank">v0.1.0 release page on GitHub</a>.</p>
+    </section>
+
+    <section aria-labelledby="package-guidance">
+      <h2 id="package-guidance">Package types and installation</h2>
+      <ul>
+        <li>
+          <strong>Windows Setup Installer:</strong> Installs OZ Image Viewer to your local per-user application directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>). It requires no administrative privileges to install or run. File associations are strictly opt-in during setup and do not hijack system defaults. You can cleanly remove the program at any time through Windows Settings &gt; Installed Apps.
+        </li>
+        <li>
+          <strong>Portable ZIP Archive:</strong> Extract the entire ZIP archive to a folder of your choice before running <code>ozviewer.exe</code>. Do not run the executable directly from inside the compressed folder view, as required companion DLLs (including <code>heif.dll</code> and <code>libde265.dll</code>) must reside alongside the executable to load properly. The portable version writes no uninstaller registry keys.
+        </li>
+      </ul>
+      <p>OZ Image Viewer does not include background services, telemetry, or silent background auto-updaters.</p>
+    </section>
+
+    <section aria-labelledby="checksums">
+      <h2 id="checksums">Cryptographic checksums (SHA-256)</h2>
+      <p>Always verify the SHA-256 hash of your downloaded file before running it. Compare the calculated hash with the exact official values listed below:</p>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">Official SHA-256 checksums for OZ Image Viewer 0.1.0</caption>
+          <thead>
+            <tr><th scope="col">File</th><th scope="col">SHA-256 checksum</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>ozviewer-0.1.0-win-x64-installer.exe</code></td>
+              <td><code>25637adf86ab1eeac9a0e5992918bc492c957c7568116f452de8c6a5e2d3b633</code></td>
+            </tr>
+            <tr>
+              <td><code>ozviewer-0.1.0-win-x64-portable.zip</code></td>
+              <td><code>7c014784fc6a8aa0a9c466d22ae33b838c4f76521c91af2a68e01e445e312792</code></td>
+            </tr>
+            <tr>
+              <td><code>ozviewer-0.1.0-lgpl-corresponding-source.zip</code></td>
+              <td><code>6d6aadebe2ecf2b4f96183de3860b5f24aabac2429673ab300c86ed1ff4cba3f</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>You can check the hash on Windows using PowerShell or Command Prompt:</p>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">Commands to verify SHA-256 checksums on Windows</caption>
+          <thead>
+            <tr><th scope="col">Tool</th><th scope="col">Command example</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PowerShell</td>
+              <td><code>Get-FileHash -Algorithm SHA256 filename</code></td>
+            </tr>
+            <tr>
+              <td>Command Prompt</td>
+              <td><code>certutil -hashfile filename SHA256</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>If any computed hash does not match the official value above, do not execute the file.</p>
+    </section>
+
+    <section aria-labelledby="trust-and-platform">
+      <h2 id="trust-and-platform">Security, trust, and platform scope</h2>
+      <p><strong>Unsigned release builds:</strong> Binaries in version 0.1.0 are currently not digitally code-signed. Windows SmartScreen or web browsers may show an "Unknown Publisher" protection notice when opening the installer or executable. Please check that the file was downloaded from the official repository and that its SHA-256 hash matches the table above rather than blindly bypassing security warnings.</p>
+      <p><strong>Target platform and verification scope:</strong> Built for 64-bit Windows (x64). Automated disposable installation, launch, FirstPresent frame benchmark, association handling, and clean uninstallation have been verified in clean-room standard-user CI on Windows Server 2022 (x64). 32-bit x86 and native ARM64 architectures are not supported in this build.</p>
+    </section>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related pages</h2>
+      <ul>
+        <li><a href="/software/oz-image-viewer/changelog/">Changelog</a> — release notes and changes in version 0.1.0.</li>
+        <li><a href="/software/oz-image-viewer/guide/">User guide &amp; FAQ</a> — keyboard shortcuts, viewing controls, and common questions.</li>
+        <li><a href="/software/oz-image-viewer/">OZ Image Viewer overview</a> — core architecture and format support.</li>
+        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">Source repository on GitHub</a> — public source code, build scripts, and issue tracking.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 OZ Lab. All rights reserved.</p>
+      <p>OZ Image Viewer is a Windows desktop utility from OZ Lab. This site is static and uses no tracking or analytics.</p>
+    </div>
+  </footer>
+</body>
+</html>

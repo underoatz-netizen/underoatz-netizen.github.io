@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>บันทึกการเปลี่ยนแปลง OZ Image Viewer — ประวัติการเผยแพร่</title>
+  <meta name="description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ OZ Image Viewer บนระบบปฏิบัติการ Windows">
+  <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="บันทึกการเปลี่ยนแปลง OZ Image Viewer — ประวัติการเผยแพร่">
+  <meta property="og:description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ OZ Image Viewer บนระบบปฏิบัติการ Windows">
+  <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">OZ Lab</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
+          <li><a href="/th/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/th/software/oz-image-viewer/">OZ Image Viewer</a></li>
+          <li><a href="/th/support/">ช่วยเหลือ</a></li>
+          <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/software/oz-image-viewer/changelog/" hreflang="en" lang="en">English</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>บันทึกการเปลี่ยนแปลง</h1>
+    <p class="lede">ประวัติรุ่นและการพัฒนาของ OZ Image Viewer</p>
+
+    <article aria-labelledby="v0-1-0">
+      <h2 id="v0-1-0">เวอร์ชัน 0.1.0</h2>
+      <p class="muted">รุ่นแรกสำหรับ Windows แบบ 64-บิต</p>
+
+      <p>เวอร์ชัน 0.1.0 เป็นรุ่นแรกของ OZ Image Viewer โปรแกรมดูภาพที่เร็วและขนาดกะทัดรัด พัฒนาด้วย C++23, Direct3D 11, DXGI และ Direct2D สำหรับระบบปฏิบัติการ Windows x64</p>
+
+      <h3>การดูภาพและการเลื่อนดู</h3>
+      <ul>
+        <li>
+          <strong>เปิดไฟล์ภาพหลากหลายรูปแบบ:</strong> ตรวจจับประเภทไฟล์จากโครงสร้างข้อมูลไบนารีโดยตรง รองรับ JPEG, PNG, static WebP, BMP, static GIF, TIFF (หน้าแรก), ICO, CUR, TGA และ AVIF
+        </li>
+        <li>
+          <strong>รองรับไฟล์ HEIC/HEIF:</strong> รองรับการเปิดดูภาพนิ่ง HEIC/HEIF ผ่านการโหลดโมดูลไดนามิก (<code>heif.dll</code> และ <code>libde265.dll</code>) ภายใต้สัญญาอนุญาต LGPLv3
+        </li>
+        <li>
+          <strong>เปิดภาพแรกอย่างรวดเร็ว:</strong> แสดงภาพที่เลือกให้พอดีกับหน้าต่างทันที พร้อมทั้งอ่านรายชื่อไฟล์อื่นในโฟลเดอร์เดียวกันและโหลดภาพถัดไปไว้ล่วงหน้าในเบื้องหลัง
+        </li>
+        <li>
+          <strong>การเลื่อนดูภาพที่สะดวก:</strong> ใช้ปุ่มลูกศรซ้าย/ขวา หรือ Spacebar เพื่อดูภาพก่อนหน้าหรือถัดไปในโฟลเดอร์เดียวกัน
+        </li>
+        <li>
+          <strong>การซูมและเลื่อนภาพ:</strong> ซูมภาพโดยอิงตำแหน่งตัวชี้เมาส์ สลับระหว่างมุมมองพอดีหน้าต่าง (<code>F</code>) และขนาดจริง 100% (<code>1</code> หรือดับเบิลคลิก) เลื่อนภาพด้วยการลากเมาส์ และดูภาพแบบเต็มหน้าจอ (<code>F11</code>)
+        </li>
+      </ul>
+
+      <h3>การปรับแต่งภาพแบบไม่ทำลายต้นฉบับ</h3>
+      <ul>
+        <li>
+          <strong>การหมุนและพลิกภาพ:</strong> หมุนภาพ 90 องศาซ้ายหรือขวา (<code>Ctrl+L</code>, <code>Ctrl+R</code>) และพลิกภาพแนวนอนหรือแนวตั้ง (<code>Ctrl+Shift+H</code>, <code>Ctrl+Shift+V</code>)
+        </li>
+        <li>
+          <strong>การครอปและปรับขนาด:</strong> โหมดครอปภาพแบบเห็นผลลัพธ์ทันที (<code>C</code>) และหน้าต่างปรับขนาดความละเอียดพิกเซล (<code>Ctrl+Alt+R</code>)
+        </li>
+        <li>
+          <strong>เลิกทำและทำซ้ำ (Undo/Redo):</strong> การปรับแต่งภาพจะเปลี่ยนเฉพาะการแสดงผลในหน่วยความจำ ไม่แก้ไขไฟล์ต้นฉบับจนกว่าจะสั่งบันทึก
+        </li>
+        <li>
+          <strong>การบันทึกไฟล์:</strong> บันทึกทับหรือบันทึกเป็นไฟล์ใหม่ในรูปแบบ PNG, JPEG, WebP (lossless), BMP หรือ TIFF
+        </li>
+      </ul>
+
+      <h3>แพ็กเกจและการติดตั้ง</h3>
+      <ul>
+        <li>
+          <strong>ตัวติดตั้งสำหรับ Windows (Setup Installer):</strong> ติดตั้งลงในโฟลเดอร์เฉพาะของผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยไม่ต้องใช้สิทธิ์ระดับผู้ดูแลระบบ (Admin) ไม่ผูกนามสกุลไฟล์โดยพลการ
+        </li>
+        <li>
+          <strong>ไฟล์ ZIP แบบพกพา (Portable ZIP):</strong> แตกไฟล์แล้วเปิดใช้งานได้ทันทีโดยไม่ต้องติดตั้งหรือแก้ไขค่าระบบ
+        </li>
+        <li>
+          <strong>ซอร์สโค้ดส่วนประกอบ LGPL:</strong> เผยแพร่ซอร์สโค้ดและวิธีคอมไพล์สำหรับ libheif และ libde265 ครบถ้วนตามเงื่อนไข LGPLv3 ข้อ 4 และ GPLv3 ข้อ 6(d)
+        </li>
+        <li>
+          <strong>การตรวจสอบความถูกต้อง:</strong> ระบุค่าแฮช SHA-256 ทางการสำหรับทุกแพ็กเกจ
+        </li>
+      </ul>
+      <p><a href="/th/software/oz-image-viewer/downloads/">ไปที่หน้าดาวน์โหลด OZ Image Viewer 0.1.0</a></p>
+    </article>
+
+    <section aria-labelledby="related">
+      <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
+      <ul>
+        <li><a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> — ไฟล์ดาวน์โหลดทางการสำหรับ Windows และค่าแฮช SHA-256</li>
+        <li><a href="/th/software/oz-image-viewer/guide/">คู่มือและคำถามที่พบบ่อย</a> — ปุ่มลัด วิธีดูภาพ และคำถามทั่วไป</li>
+        <li><a href="/th/software/oz-image-viewer/">ภาพรวม OZ Image Viewer</a> — ข้อมูลความสามารถและไฟล์ภาพที่รองรับ</li>
+        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">คลังซอร์สโค้ดบน GitHub</a> — ดูซอร์สโค้ด สคริปต์คอมไพล์ และแจ้งปัญหา</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
+      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+    </div>
+  </footer>
+</body>
+</html>
