@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/th/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
@@ -37,82 +40,247 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>ดาวน์โหลด PikaPDF</h1>
-    <p class="lede">เวอร์ชัน 0.5.0 สำหรับ Windows x64 เลือกตัวติดตั้งหากอยากให้
-      PikaPDF ติดตั้งให้ หรือเลือกไฟล์ ZIP แบบพกพาหากอยากเก็บไว้ใช้งานเอง</p>
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/fastpdf/">PikaPDF</a>
+      <span aria-hidden="true">/</span>
+      <span>ดาวน์โหลด</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">v0.5.0 · Windows x64 · ไฟล์ยังไม่ได้ลงนาม</span>
+      <h1>ดาวน์โหลด PikaPDF</h1>
+      <p class="lede">เวอร์ชัน 0.5.0 สำหรับ Windows x64 เลือกตัวติดตั้งหากอยากให้ PikaPDF ติดตั้งให้ หรือเลือกไฟล์ ZIP แบบพกพาหากอยากเก็บไว้ใช้งานเอง</p>
+    </div>
 
     <div class="callout">
-      <p><strong>PikaPDF 0.5.0 พร้อมให้ดาวน์โหลดแล้ว</strong> ทั้งสองไฟล์มาจาก
-        GitHub Release ทางการ ชื่อไฟล์โปรแกรมภายในแพ็กเกจยังคงใช้
-        <code>FastPDF.exe</code> เพื่อให้ชอร์ตคัตเดิมใช้งานต่อได้ หากคุณมี
-        FastPDF 0.4.1 อยู่แล้ว ตัวติดตั้งจะอัปเกรดทับในตำแหน่งเดิมโดยใช้โฟลเดอร์เดิม
-        และรักษาการตั้งค่ากับไฟล์ล่าสุดไว้ครบถ้วน ไฟล์ยังไม่ได้ลงนาม Windows
-        อาจแสดงคำเตือนก่อนคุณเปิดใช้งาน</p>
+      <p><strong>PikaPDF 0.5.0 พร้อมให้ดาวน์โหลดแล้ว</strong> ทั้งสองไฟล์มาจาก GitHub Release ทางการ ชื่อไฟล์โปรแกรมภายในแพ็กเกจยังคงใช้ <code>FastPDF.exe</code> เพื่อให้ชอร์ตคัตเดิมใช้งานต่อได้ หากคุณมี FastPDF 0.4.1 อยู่แล้ว ตัวติดตั้งจะอัปเกรดทับในตำแหน่งเดิมโดยใช้โฟลเดอร์เดิม และรักษาการตั้งค่ากับไฟล์ล่าสุดไว้ครบถ้วน ไฟล์ยังไม่ได้ลงนาม Windows อาจแสดงคำเตือนก่อนคุณเปิดใช้งาน</p>
     </div>
 
     <section aria-labelledby="files">
-      <h2 id="files">ไฟล์ในรุ่นนี้</h2>
-      <ul>
-        <li><a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64-Setup.exe">PikaPDF-0.5.0-win-x64-Setup.exe</a>
-          — ตัวติดตั้งสำหรับ Windows (ประมาณ 5.4 MB)</li>
-        <li><a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64.zip">PikaPDF-0.5.0-win-x64.zip</a>
-          — ไฟล์ ZIP แบบพกพา (ประมาณ 4.1 MB)</li>
-        <li><a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/SHA256SUMS">SHA256SUMS</a>
-          — ไฟล์ค่าแฮชสำหรับทั้งสองไฟล์</li>
+      <div class="section-head">
+        <h2 id="files">ไฟล์ในรุ่นนี้</h2>
+        <span class="mono-meta">v0.5.0 · 18 พฤศจิกายน 2026</span>
+      </div>
+
+      <div class="download-grid">
+        <div class="download-card is-recommended">
+          <div>
+            <div class="download-card-head">
+              <h3>ตัวติดตั้งสำหรับ Windows (.exe) — แนะนำ</h3>
+              <span class="badge">~5.4 MB</span>
+            </div>
+            <p class="download-card-file">PikaPDF-0.5.0-win-x64-Setup.exe</p>
+            <p>ตัวติดตั้งสำหรับ Windows 10 และ 11 (64 บิต) การติดตั้งใหม่ใช้โฟลเดอร์ <code>Program Files\PikaPDF</code> และสามารถอัปเกรดทับ FastPDF 0.4.1 โดยรักษาการตั้งค่าและไฟล์ล่าสุดไว้</p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64-Setup.exe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>ดาวน์โหลดตัวติดตั้ง (.exe)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-card-head">
+              <h3>ไฟล์ ZIP แบบพกพา (.zip)</h3>
+              <span class="badge">~4.1 MB</span>
+            </div>
+            <p class="download-card-file">PikaPDF-0.5.0-win-x64.zip</p>
+            <p>แพ็กเกจพร้อมใช้งานภายในประกอบด้วย <code>FastPDF.exe</code>, <code>pdfium.dll</code> และ <code>licenses/</code> แตกไฟล์ทั้งหมดลงโฟลเดอร์ที่ต้องการแล้วเปิดใช้งานได้ทันที</p>
+          </div>
+          <div>
+            <a class="btn btn-secondary" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64.zip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>ดาวน์โหลดไฟล์ ZIP แบบพกพา</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/SHA256SUMS">
+            <span class="editorial-row-title">SHA256SUMS</span>
+            <span class="editorial-row-desc">ไฟล์ค่าแฮชสำหรับทั้งสองไฟล์</span>
+            <span class="editorial-row-meta">
+              <span>ไฟล์ค่าแฮช</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.0" rel="noopener noreferrer" target="_blank">
+            <span class="editorial-row-title">หน้าเผยแพร่ v0.5.0 บน GitHub</span>
+            <span class="editorial-row-desc">ทั้งสามไฟล์รวมอยู่ที่หน้า Release ทางการบน GitHub</span>
+            <span class="editorial-row-meta">
+              <span>GitHub</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
-      <p>ทั้งสามไฟล์รวมอยู่ที่
-        <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.0">หน้าเผยแพร่
-        v0.5.0 บน GitHub</a></p>
+    </section>
+
+    <section aria-labelledby="quickstart">
+      <div class="section-head">
+        <h2 id="quickstart">เริ่มต้นใช้งานอย่างรวดเร็ว</h2>
+        <span class="mono-meta">3 ขั้นตอน</span>
+      </div>
+      <ol class="steps-grid">
+        <li class="step-card">
+          <span class="step-num">ขั้นตอน 01</span>
+          <h3>ดาวน์โหลดและตรวจ SHA-256</h3>
+          <p>เลือกดาวน์โหลดตัวติดตั้งหรือไฟล์ ZIP แบบพกพาจาก GitHub Releases แล้วเทียบค่าแฮช SHA-256 กับตารางด้านล่างก่อนเปิดใช้งาน</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num">ขั้นตอน 02</span>
+          <h3>ติดตั้งหรือแตกไฟล์</h3>
+          <p>เปิดตัวติดตั้ง (หรือแตกไฟล์ทั้งหมดใน ZIP) เนื่องจากไฟล์ยังไม่ได้ลงนาม Windows SmartScreen อาจแสดงคำเตือน — เมื่อตรวจค่า SHA-256 ตรงกันแล้ว ให้เลือก More info &gt; Run anyway</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num">ขั้นตอน 03</span>
+          <h3>เปิดใช้งานและอัปเกรด</h3>
+          <p>เปิด PikaPDF (<code>FastPDF.exe</code>) หากอัปเกรดจาก FastPDF 0.4.1 ระบบจะใช้โฟลเดอร์เดิมและเก็บการตั้งค่าใน <code>%LOCALAPPDATA%\FastPDF</code> ไว้ครบถ้วน</p>
+        </li>
+      </ol>
     </section>
 
     <section aria-labelledby="verify">
-      <h2 id="verify">ค่าแฮชและการลงนาม</h2>
-      <p>ไฟล์แต่ละไฟล์มีค่าแฮช SHA-256 หลังดาวน์โหลด ให้ใช้เครื่องมือตรวจค่าแฮช
-        ของคุณแล้วเทียบกับค่าด้านล่าง หากไม่ตรงกัน โปรดอย่าเปิดไฟล์นั้น</p>
-      <div class="table-scroll">
-        <table>
-          <caption class="muted">ค่าแฮช SHA-256 ของ PikaPDF 0.5.0</caption>
-          <thead>
-            <tr><th scope="col">ไฟล์</th><th scope="col">SHA-256</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>PikaPDF-0.5.0-win-x64-Setup.exe</td>
-              <td>29c09b1347f2f20a96ad081425c22cda20d6880c5a076833090dddcd649ee1b9</td>
-            </tr>
-            <tr>
-              <td>PikaPDF-0.5.0-win-x64.zip</td>
-              <td>62494f6913657beaec8c33f7a81c710e041a1c1ee39390105203b6f561dc9dbb</td>
-            </tr>
-            <tr>
-              <td>SHA256SUMS</td>
-              <td>0901f99ccfaa3910af77c9e0d272827737a4f696e15aed38b3909e01f0ae0710</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="section-head">
+        <h2 id="verify">ค่าแฮชและการลงนาม</h2>
+        <span class="mono-meta">ตรวจสอบความถูกต้อง SHA-256</span>
       </div>
-      <p>ตัวติดตั้งและตัวแอปไม่ได้ลงนามด้วยใบรับรองความปลอดภัย Windows SmartScreen
-        หรือเบราว์เซอร์อาจแสดงคำเตือนก่อนคุณเปิดไฟล์ ซึ่งเป็นเรื่องปกติของไฟล์ที่ยัง
-        ไม่ได้ลงนาม และไม่จำเป็นต้องปิดการป้องกันใด ๆ ค่าแฮชด้านบนมีไว้เพื่อให้คุณ
-        ยืนยันได้ว่าไฟล์นั้นเป็นไฟล์ที่เราเผยแพร่จริง</p>
+      <p>ไฟล์แต่ละไฟล์มีค่าแฮช SHA-256 หลังดาวน์โหลด ให้ใช้เครื่องมือตรวจค่าแฮชของคุณแล้วเทียบกับค่าด้านล่าง หากไม่ตรงกัน โปรดอย่าเปิดไฟล์นั้น</p>
+
+      <details class="tech-details">
+        <summary>
+          <span>ตารางค่าแฮช SHA-256 และคำสั่งตรวจสอบบน Windows</span>
+          <svg class="chevron-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="tech-details-body">
+          <div class="table-scroll">
+            <table>
+              <caption class="muted">ค่าแฮช SHA-256 ของ PikaPDF 0.5.0</caption>
+              <thead>
+                <tr><th scope="col">ไฟล์</th><th scope="col">SHA-256</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>PikaPDF-0.5.0-win-x64-Setup.exe</code></td>
+                  <td><code>29c09b1347f2f20a96ad081425c22cda20d6880c5a076833090dddcd649ee1b9</code></td>
+                </tr>
+                <tr>
+                  <td><code>PikaPDF-0.5.0-win-x64.zip</code></td>
+                  <td><code>62494f6913657beaec8c33f7a81c710e041a1c1ee39390105203b6f561dc9dbb</code></td>
+                </tr>
+                <tr>
+                  <td><code>SHA256SUMS</code></td>
+                  <td><code>0901f99ccfaa3910af77c9e0d272827737a4f696e15aed38b3909e01f0ae0710</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <caption class="muted">คำสั่งตรวจสอบค่าแฮช SHA-256 บน Windows</caption>
+              <thead>
+                <tr><th scope="col">เครื่องมือ</th><th scope="col">ตัวอย่างคำสั่ง</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PowerShell</td>
+                  <td><code>Get-FileHash -Algorithm SHA256 PikaPDF-0.5.0-win-x64-Setup.exe</code></td>
+                </tr>
+                <tr>
+                  <td>Command Prompt</td>
+                  <td><code>certutil -hashfile PikaPDF-0.5.0-win-x64-Setup.exe SHA256</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>ตัวติดตั้งและตัวแอปไม่ได้ลงนามด้วยใบรับรองความปลอดภัย Windows SmartScreen หรือเบราว์เซอร์อาจแสดงคำเตือนก่อนคุณเปิดไฟล์ ซึ่งเป็นเรื่องปกติของไฟล์ที่ยังไม่ได้ลงนาม และไม่จำเป็นต้องปิดการป้องกันใด ๆ ค่าแฮชด้านบนมีไว้เพื่อให้คุณยืนยันได้ว่าไฟล์นั้นเป็นไฟล์ที่เราเผยแพร่จริง</p>
+        </div>
+      </details>
     </section>
 
     <section aria-labelledby="related">
-      <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
-      <ul>
-        <li><a href="/th/software/fastpdf/changelog/">บันทึกการเปลี่ยนแปลง</a> —
-          มีอะไรเปลี่ยนในแต่ละรุ่น</li>
-        <li><a href="/th/support/">ช่วยเหลือ</a> — ช่องทางขอความช่วยเหลือ</li>
-        <li><a href="/th/software/fastpdf/">ภาพรวม PikaPDF</a> — ผลิตภัณฑ์นี้ทำอะไรได้บ้าง</li>
+      <div class="section-head">
+        <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
+      </div>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/fastpdf/changelog/">
+            <span class="editorial-row-title">บันทึกการเปลี่ยนแปลง</span>
+            <span class="editorial-row-desc">มีอะไรเปลี่ยนในแต่ละรุ่น</span>
+            <span class="editorial-row-meta">
+              <span>ประวัติรุ่น</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/support/">
+            <span class="editorial-row-title">ช่วยเหลือ</span>
+            <span class="editorial-row-desc">ช่องทางขอความช่วยเหลือ</span>
+            <span class="editorial-row-meta">
+              <span>แจ้งปัญหา</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/fastpdf/">
+            <span class="editorial-row-title">ภาพรวม PikaPDF</span>
+            <span class="editorial-row-desc">ผลิตภัณฑ์นี้ทำอะไรได้บ้าง</span>
+            <span class="editorial-row-meta">
+              <span>ภาพรวม</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>PikaPDF (เดิมชื่อ FastPDF) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
-        และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaPDF (เดิมชื่อ FastPDF) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและมิเรอร์</h2>
+          <ul>
+            <li>เว็บไซต์ทางการบน Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">มิเรอร์สำรองบน GitHub Pages</a></li>
+            <li><a href="/software/fastpdf/downloads/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
     </div>
   </footer>
 </body>

@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="Main">
         <ul class="nav">
           <li><a href="/">Home</a></li>
@@ -37,46 +40,51 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>User guide &amp; FAQ</h1>
-    <p class="lede">This guide walks through how PikaView (formerly OZ Image
-      Viewer) is used. It describes the behaviour implemented in version 0.1.1.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/software/">Software</a>
+      <span aria-hidden="true">/</span>
+      <a href="/software/oz-image-viewer/">PikaView</a>
+      <span aria-hidden="true">/</span>
+      <span>Guide &amp; FAQ</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">Documentation · v0.1.1</span>
+      <h1>User guide &amp; FAQ</h1>
+      <p class="lede">This guide walks through how PikaView (formerly OZ Image Viewer) is used. It describes the behaviour implemented in version 0.1.1.</p>
+    </div>
+
+    <nav class="page-toc" aria-label="On this page">
+      <a href="#basics">Basics</a>
+      <a href="#formats">Supported formats</a>
+      <a href="#shortcuts">Keyboard and mouse</a>
+      <a href="#limitations">Known limitations</a>
+      <a href="#faq">Frequently asked questions</a>
+    </nav>
 
     <section aria-labelledby="basics">
-      <h2 id="basics">Basics</h2>
+      <div class="section-head">
+        <h2 id="basics">Basics</h2>
+      </div>
       <ul>
-        <li><strong>Open an image.</strong> Launch with no arguments to get a
-          window with an Open button, use <kbd>Ctrl</kbd>+<kbd>O</kbd>, or open
-          an image directly from the command line. You can also drag a single
-          image file onto the window.</li>
-        <li><strong>View.</strong> The image is shown fit to the window without
-          enlarging images that are smaller than the window. The first image
-          appears before the rest of the folder is scanned.</li>
-        <li><strong>Navigate.</strong> Other images in the same folder become
-          available for browsing with the keyboard, and each one is decoded as
-          you select it.</li>
-        <li><strong>Zoom and pan.</strong> Scroll to zoom in and out at the
-          cursor, or use the keyboard. Drag with the left mouse button to pan,
-          and double-click to switch between fit and 100%.</li>
-        <li><strong>Fullscreen.</strong> Switch the window to borderless
-          fullscreen on the current monitor and back again.</li>
-        <li><strong>Edit.</strong> Rotate, flip, crop and resize are
-          non-destructive: they change the on-screen document only, and the
-          original file stays untouched until you save.</li>
-        <li><strong>Print.</strong> Choose <code>File -&gt; Print...</code> or
-          press <kbd>Ctrl</kbd>+<kbd>P</kbd> to open the Windows print dialog and
-          print one fit-to-page copy of the committed image without modifying
-          the file.</li>
-        <li><strong>Save.</strong> Save writes the current document back to its
-          original file where the format allows it; Save As writes a new copy
-          and never changes the original.</li>
+        <li><strong>Open an image.</strong> Launch with no arguments to get a window with an Open button, use <kbd>Ctrl</kbd>+<kbd>O</kbd>, or open an image directly from the command line. You can also drag a single image file onto the window.</li>
+        <li><strong>View.</strong> The image is shown fit to the window without enlarging images that are smaller than the window. The first image appears before the rest of the folder is scanned.</li>
+        <li><strong>Navigate.</strong> Other images in the same folder become available for browsing with the keyboard, and each one is decoded as you select it.</li>
+        <li><strong>Zoom and pan.</strong> Scroll to zoom in and out at the cursor, or use the keyboard. Drag with the left mouse button to pan, and double-click to switch between fit and 100%.</li>
+        <li><strong>Fullscreen.</strong> Switch the window to borderless fullscreen on the current monitor and back again.</li>
+        <li><strong>Edit.</strong> Rotate, flip, crop and resize are non-destructive: they change the on-screen document only, and the original file stays untouched until you save.</li>
+        <li><strong>Print.</strong> Choose <code>File -&gt; Print...</code> or press <kbd>Ctrl</kbd>+<kbd>P</kbd> to open the Windows print dialog and print one fit-to-page copy of the committed image without modifying the file.</li>
+        <li><strong>Save.</strong> Save writes the current document back to its original file where the format allows it; Save As writes a new copy and never changes the original.</li>
       </ul>
     </section>
 
     <section aria-labelledby="formats">
-      <h2 id="formats">Supported formats</h2>
-      <p>These are the common still image formats it opens. Support works by
-        reading the file's own signature, not by trusting the file extension.</p>
-      <ul>
+      <div class="section-head">
+        <h2 id="formats">Supported formats</h2>
+        <span class="mono-meta">Signature detection</span>
+      </div>
+      <p>These are the common still image formats it opens. Support works by reading the file's own signature, not by trusting the file extension.</p>
+      <ul class="feature-list">
         <li>JPEG (<code>.jpg</code>, <code>.jpeg</code>)</li>
         <li>PNG (<code>.png</code>)</li>
         <li>Static WebP (<code>.webp</code>, still images only)</li>
@@ -84,15 +92,16 @@
         <li>TIFF (<code>.tif</code>, <code>.tiff</code>, first page only)</li>
         <li>ICO (<code>.ico</code>) and CUR (<code>.cur</code>)</li>
         <li>TGA (<code>.tga</code>)</li>
-        <li>AVIF (<code>.avif</code>) and HEIC/HEIF still images when the
-          optional decoder is available</li>
+        <li>AVIF (<code>.avif</code>) and HEIC/HEIF still images when the optional decoder is available</li>
       </ul>
-      <p>For saving, the output formats are PNG, JPEG, WebP (lossless), TIFF and
-        BMP. TIFF is Save As only.</p>
+      <p style="margin-top: 16px;">For saving, the output formats are PNG, JPEG, WebP (lossless), TIFF and BMP. TIFF is Save As only.</p>
     </section>
 
     <section aria-labelledby="shortcuts">
-      <h2 id="shortcuts">Keyboard and mouse</h2>
+      <div class="section-head">
+        <h2 id="shortcuts">Keyboard and mouse</h2>
+        <span class="mono-meta">Controls</span>
+      </div>
       <div class="table-scroll">
         <table>
           <caption class="muted">PikaView keyboard and mouse controls</caption>
@@ -126,67 +135,45 @@
     </section>
 
     <section aria-labelledby="limitations">
-      <h2 id="limitations">Known limitations</h2>
+      <div class="section-head">
+        <h2 id="limitations">Known limitations</h2>
+      </div>
       <p>These are the current limits, so you know what to expect:</p>
       <ul>
-        <li>There is no RAW support. RAW and camera-raw containers are
-          deliberately rejected.</li>
-        <li>There is no animation support. Animated WebP and multi-frame GIF
-          files are rejected rather than played, and animated PNG (APNG) shows
-          only its first frame.</li>
-        <li>Vector graphics, PDF and general document formats are not
-          supported.</li>
-        <li>Multi-page or multi-frame files such as TIFF and ICO show a single
-          page or frame only.</li>
-        <li>WebP export is lossless single-frame only; lossy and animated WebP
-          export are not supported.</li>
-        <li>There are no plugins or third-party shell codecs, and the set of
-          supported extensions is a fixed list.</li>
-        <li>Printing outputs one fit-to-page copy of the committed image via the
-          Windows <code>PrintDlgExW</code> system dialog. The
-          <code>failed-network-first</code> printer case has not been tested,
-          and no claim is made that all print-dialog hangs are fixed.</li>
-        <li>Release binaries (<code>pikaview-0.1.1-win-x64-installer.exe</code>,
-          <code>ozviewer.exe</code>, <code>heif.dll</code>, and
-          <code>libde265.dll</code>) are unsigned, so Windows SmartScreen or
-          browsers may show an "Unknown Publisher" notice. Verify SHA-256
-          checksums on the <a href="/software/oz-image-viewer/downloads/">Downloads</a>
-          page before running.</li>
+        <li>There is no RAW support. RAW and camera-raw containers are deliberately rejected.</li>
+        <li>There is no animation support. Animated WebP and multi-frame GIF files are rejected rather than played, and animated PNG (APNG) shows only its first frame.</li>
+        <li>Vector graphics, PDF and general document formats are not supported.</li>
+        <li>Multi-page or multi-frame files such as TIFF and ICO show a single page or frame only.</li>
+        <li>WebP export is lossless single-frame only; lossy and animated WebP export are not supported.</li>
+        <li>There are no plugins or third-party shell codecs, and the set of supported extensions is a fixed list.</li>
+        <li>Printing outputs one fit-to-page copy of the committed image via the Windows <code>PrintDlgExW</code> system dialog. The <code>failed-network-first</code> printer case has not been tested, and no claim is made that all print-dialog hangs are fixed.</li>
+        <li>Release binaries (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned, so Windows SmartScreen or browsers may show an "Unknown Publisher" notice. Verify SHA-256 checksums on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page before running.</li>
         <li>The source code is public under the MIT License on GitHub.</li>
       </ul>
     </section>
 
     <section aria-labelledby="faq">
-      <h2 id="faq">Frequently asked questions</h2>
+      <div class="section-head">
+        <h2 id="faq">Frequently asked questions</h2>
+      </div>
 
       <h3 id="faq-download">Can I download PikaView?</h3>
-      <p>Yes. Release packages for 64-bit Windows are available on the
-        <a href="/software/oz-image-viewer/downloads/">Downloads</a> page.</p>
+      <p>Yes. Release packages for 64-bit Windows are available on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page.</p>
 
       <h3 id="faq-upgrade">How do I upgrade from OZ Image Viewer 0.1.0?</h3>
-      <p>Run the PikaView 0.1.1 installer over your existing OZ Image Viewer
-        0.1.0 installation. It upgrades in place in the original per-user
-        directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>), keeps
-        the <code>ozviewer.exe</code> executable filename, stable AppId, and
-        <code>OZImageViewer.Image</code> ProgID, and preserves all existing
-        Windows default file associations (<code>UserChoice</code>).</p>
+      <p>Run the PikaView 0.1.1 installer over your existing OZ Image Viewer 0.1.0 installation. It upgrades in place in the original per-user directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>), keeps the <code>ozviewer.exe</code> executable filename, stable AppId, and <code>OZImageViewer.Image</code> ProgID, and preserves all existing Windows default file associations (<code>UserChoice</code>).</p>
 
       <h3 id="faq-source">Where is the source code?</h3>
-      <p>The source code is public. The project lives on GitHub at
-        <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>.</p>
+      <p>The source code is public. The project lives on GitHub at <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>.</p>
 
       <h3 id="faq-account">Do I need an account to use it?</h3>
-      <p>No. PikaView is a desktop application and does not use accounts
-        or sign-in.</p>
+      <p>No. PikaView is a desktop application and does not use accounts or sign-in.</p>
 
       <h3 id="faq-platform">What kind of computer does it run on?</h3>
-      <p>PikaView is a Windows desktop application for 64-bit (x64)
-        Windows 10 and Windows 11.</p>
+      <p>PikaView is a Windows desktop application for 64-bit (x64) Windows 10 and Windows 11.</p>
 
       <h3 id="faq-edit">Does editing change my original file?</h3>
-      <p>No. Rotate, flip, crop and resize are non-destructive and affect the
-        on-screen document only. Your file changes only when you choose Save or
-        Save As.</p>
+      <p>No. Rotate, flip, crop and resize are non-destructive and affect the on-screen document only. Your file changes only when you choose Save or Save As.</p>
 
       <h3 id="faq-help">How do I report a problem?</h3>
       <p>See the <a href="/support/">Support</a> page for how to reach us.</p>
@@ -195,9 +182,40 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab. All rights reserved.</p>
-      <p>PikaView (formerly OZ Image Viewer) is a Windows utility from OZ Lab. This site is static
-        and uses no tracking or analytics.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaView (formerly OZ Image Viewer) is a Windows desktop utility from OZ Lab. This site is static and uses no tracking or analytics.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Software</h2>
+          <ul>
+            <li><a href="/software/">All software</a></li>
+            <li><a href="/software/fastpdf/">PikaPDF (formerly FastPDF)</a></li>
+            <li><a href="/software/oz-image-viewer/">PikaView (formerly OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="/support/">Support &amp; donations</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Hosting &amp; mirrors</h2>
+          <ul>
+            <li>Official site on Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages Backup Mirror</a></li>
+            <li><a href="/th/software/oz-image-viewer/guide/" hreflang="th" lang="th">ภาษาไทย</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab. All rights reserved.</span>
+        <span class="mono-meta">Static HTML &amp; CSS · Zero tracking</span>
+      </div>
     </div>
   </footer>
 </body>

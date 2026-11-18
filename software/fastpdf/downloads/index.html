@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="Main">
         <ul class="nav">
           <li><a href="/">Home</a></li>
@@ -37,86 +40,247 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>Download PikaPDF</h1>
-    <p class="lede">Version 0.5.0, for Windows x64. Take the installer if you
-      would like PikaPDF set up for you, or the portable ZIP if you would rather
-      keep it self-contained.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/software/">Software</a>
+      <span aria-hidden="true">/</span>
+      <a href="/software/fastpdf/">PikaPDF</a>
+      <span aria-hidden="true">/</span>
+      <span>Downloads</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">v0.5.0 · Windows x64 · Unsigned build</span>
+      <h1>Download PikaPDF</h1>
+      <p class="lede">Version 0.5.0, for Windows x64. Take the installer if you would like PikaPDF set up for you, or the portable ZIP if you would rather keep it self-contained.</p>
+    </div>
 
     <div class="callout">
-      <p><strong>PikaPDF 0.5.0 is available now.</strong> Both files come from
-        the official GitHub Release. The executable inside the packages is still
-        named <code>FastPDF.exe</code>, so existing shortcuts keep working. If
-        you already have FastPDF 0.4.1, the build upgrades in place, reuses the
-        existing install directory and preserves your settings and recent files.
-        The builds are unsigned, so Windows may warn you before you run them.</p>
+      <p><strong>PikaPDF 0.5.0 is available now.</strong> Both files come from the official GitHub Release. The executable inside the packages is still named <code>FastPDF.exe</code>, so existing shortcuts keep working. If you already have FastPDF 0.4.1, the build upgrades in place, reuses the existing install directory and preserves your settings and recent files. The builds are unsigned, so Windows may warn you before you run them.</p>
     </div>
 
     <section aria-labelledby="files">
-      <h2 id="files">Release files</h2>
-      <ul>
-        <li><a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64-Setup.exe">PikaPDF-0.5.0-win-x64-Setup.exe</a>
-          — the Windows installer (about 5.4 MB).</li>
-        <li><a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64.zip">PikaPDF-0.5.0-win-x64.zip</a>
-          — a portable ZIP package (about 4.1 MB).</li>
-        <li><a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/SHA256SUMS">SHA256SUMS</a>
-          — the checksum file for both downloads.</li>
+      <div class="section-head">
+        <h2 id="files">Release files</h2>
+        <span class="mono-meta">v0.5.0 · 18 November 2026</span>
+      </div>
+
+      <div class="download-grid">
+        <div class="download-card is-recommended">
+          <div>
+            <div class="download-card-head">
+              <h3>Windows Setup Installer (.exe) — Recommended</h3>
+              <span class="badge">~5.4 MB</span>
+            </div>
+            <p class="download-card-file">PikaPDF-0.5.0-win-x64-Setup.exe</p>
+            <p>Guided setup for 64-bit Windows 10 and 11. Fresh installs default to <code>Program Files\PikaPDF</code>, and upgrades over FastPDF 0.4.1 update in place while preserving your settings and recent files.</p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64-Setup.exe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>Download Setup Installer</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-card-head">
+              <h3>Portable ZIP (.zip)</h3>
+              <span class="badge">~4.1 MB</span>
+            </div>
+            <p class="download-card-file">PikaPDF-0.5.0-win-x64.zip</p>
+            <p>Self-contained archive with <code>FastPDF.exe</code>, <code>pdfium.dll</code> and <code>licenses/</code>. Extract all files into a folder and run without modifying system installation folders.</p>
+          </div>
+          <div>
+            <a class="btn btn-secondary" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/PikaPDF-0.5.0-win-x64.zip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>Download Portable ZIP</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/download/v0.5.0/SHA256SUMS">
+            <span class="editorial-row-title">SHA256SUMS</span>
+            <span class="editorial-row-desc">The checksum file for both downloads</span>
+            <span class="editorial-row-meta">
+              <span>Checksum file</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.0" rel="noopener noreferrer" target="_blank">
+            <span class="editorial-row-title">v0.5.0 release page on GitHub</span>
+            <span class="editorial-row-desc">All three release files listed together on GitHub Releases</span>
+            <span class="editorial-row-meta">
+              <span>GitHub</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
-      <p>All three files are listed together on the
-        <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.0">v0.5.0
-        release page on GitHub</a>.</p>
+    </section>
+
+    <section aria-labelledby="quickstart">
+      <div class="section-head">
+        <h2 id="quickstart">Quick start</h2>
+        <span class="mono-meta">3 steps</span>
+      </div>
+      <ol class="steps-grid">
+        <li class="step-card">
+          <span class="step-num">Step 01</span>
+          <h3>Download &amp; verify SHA-256</h3>
+          <p>Download either the installer or portable ZIP from GitHub Releases and verify its SHA-256 checksum against the values below before opening.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num">Step 02</span>
+          <h3>Install or extract</h3>
+          <p>Run the installer (or extract the full ZIP folder). Because builds are unsigned, Windows SmartScreen may show a notice — confirm your SHA-256 hash matches first, then choose More info &gt; Run anyway.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num">Step 03</span>
+          <h3>Open &amp; keep shortcuts</h3>
+          <p>Launch PikaPDF (<code>FastPDF.exe</code>). Upgrades from FastPDF 0.4.1 reuse your install folder and keep settings and recent files in <code>%LOCALAPPDATA%\FastPDF</code>.</p>
+        </li>
+      </ol>
     </section>
 
     <section aria-labelledby="verify">
-      <h2 id="verify">Checksums and unsigned builds</h2>
-      <p>Each file has a SHA-256 checksum. After you download one, run your own
-        checksum tool and compare the result with the value below. If they do not
-        match, please do not run the file.</p>
-      <div class="table-scroll">
-        <table>
-          <caption class="muted">SHA-256 checksums for PikaPDF 0.5.0</caption>
-          <thead>
-            <tr><th scope="col">File</th><th scope="col">SHA-256</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>PikaPDF-0.5.0-win-x64-Setup.exe</td>
-              <td>29c09b1347f2f20a96ad081425c22cda20d6880c5a076833090dddcd649ee1b9</td>
-            </tr>
-            <tr>
-              <td>PikaPDF-0.5.0-win-x64.zip</td>
-              <td>62494f6913657beaec8c33f7a81c710e041a1c1ee39390105203b6f561dc9dbb</td>
-            </tr>
-            <tr>
-              <td>SHA256SUMS</td>
-              <td>0901f99ccfaa3910af77c9e0d272827737a4f696e15aed38b3909e01f0ae0710</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="section-head">
+        <h2 id="verify">Checksums and unsigned builds</h2>
+        <span class="mono-meta">SHA-256 verification</span>
       </div>
-      <p>The installer and the app are not code-signed. Windows SmartScreen or
-        your browser may show a warning before you open them; that is normal for
-        an unsigned build. There is no need to switch off any protection — the
-        checksums above are there so you can confirm a file is the one we
-        published.</p>
+      <p>Each file has a SHA-256 checksum. After you download one, run your own checksum tool and compare the result with the value below. If they do not match, please do not run the file.</p>
+
+      <details class="tech-details">
+        <summary>
+          <span>SHA-256 checksum table &amp; Windows verification commands</span>
+          <svg class="chevron-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="tech-details-body">
+          <div class="table-scroll">
+            <table>
+              <caption class="muted">SHA-256 checksums for PikaPDF 0.5.0</caption>
+              <thead>
+                <tr><th scope="col">File</th><th scope="col">SHA-256</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>PikaPDF-0.5.0-win-x64-Setup.exe</code></td>
+                  <td><code>29c09b1347f2f20a96ad081425c22cda20d6880c5a076833090dddcd649ee1b9</code></td>
+                </tr>
+                <tr>
+                  <td><code>PikaPDF-0.5.0-win-x64.zip</code></td>
+                  <td><code>62494f6913657beaec8c33f7a81c710e041a1c1ee39390105203b6f561dc9dbb</code></td>
+                </tr>
+                <tr>
+                  <td><code>SHA256SUMS</code></td>
+                  <td><code>0901f99ccfaa3910af77c9e0d272827737a4f696e15aed38b3909e01f0ae0710</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <caption class="muted">Commands to verify SHA-256 checksums on Windows</caption>
+              <thead>
+                <tr><th scope="col">Tool</th><th scope="col">Command example</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PowerShell</td>
+                  <td><code>Get-FileHash -Algorithm SHA256 PikaPDF-0.5.0-win-x64-Setup.exe</code></td>
+                </tr>
+                <tr>
+                  <td>Command Prompt</td>
+                  <td><code>certutil -hashfile PikaPDF-0.5.0-win-x64-Setup.exe SHA256</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The installer and the app are not code-signed. Windows SmartScreen or your browser may show a warning before you open them; that is normal for an unsigned build. There is no need to switch off any protection — the checksums above are there so you can confirm a file is the one we published.</p>
+        </div>
+      </details>
     </section>
 
     <section aria-labelledby="related">
-      <h2 id="related">Related pages</h2>
-      <ul>
-        <li><a href="/software/fastpdf/changelog/">Changelog</a> — what changed in
-          each release.</li>
-        <li><a href="/support/">Support</a> — how to get help.</li>
-        <li><a href="/software/fastpdf/">PikaPDF overview</a> — what the product
-          does.</li>
+      <div class="section-head">
+        <h2 id="related">Related pages</h2>
+      </div>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/software/fastpdf/changelog/">
+            <span class="editorial-row-title">Changelog</span>
+            <span class="editorial-row-desc">What changed in each release</span>
+            <span class="editorial-row-meta">
+              <span>History</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/support/">
+            <span class="editorial-row-title">Support</span>
+            <span class="editorial-row-desc">How to get help</span>
+            <span class="editorial-row-meta">
+              <span>Issues</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/software/fastpdf/">
+            <span class="editorial-row-title">PikaPDF overview</span>
+            <span class="editorial-row-desc">What the product does</span>
+            <span class="editorial-row-meta">
+              <span>Overview</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab. All rights reserved.</p>
-      <p>PikaPDF (formerly FastPDF) is a Windows utility from OZ Lab. This site is static and uses
-        no tracking or analytics.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaPDF (formerly FastPDF) is a Windows utility from OZ Lab. This site is static and uses no tracking or analytics.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Software</h2>
+          <ul>
+            <li><a href="/software/">All software</a></li>
+            <li><a href="/software/fastpdf/">PikaPDF (formerly FastPDF)</a></li>
+            <li><a href="/software/oz-image-viewer/">PikaView (formerly OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="/support/">Support &amp; donations</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Hosting &amp; mirrors</h2>
+          <ul>
+            <li>Official site on Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages Backup Mirror</a></li>
+            <li><a href="/th/software/fastpdf/downloads/" hreflang="th" lang="th">ภาษาไทย</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab. All rights reserved.</span>
+        <span class="mono-meta">Static HTML &amp; CSS · Zero tracking</span>
+      </div>
     </div>
   </footer>
 </body>

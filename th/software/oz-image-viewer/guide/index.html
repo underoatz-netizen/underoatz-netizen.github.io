@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/th/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
@@ -37,39 +40,51 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>คู่มือและคำถามที่พบบ่อย</h1>
-    <p class="lede">คู่มือนี้พาคุณดูวิธีใช้ PikaView (เดิมชื่อ OZ Image Viewer) ตามพฤติกรรมการทำงานในเวอร์ชัน 0.1.1</p>
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/oz-image-viewer/">PikaView</a>
+      <span aria-hidden="true">/</span>
+      <span>คู่มือและคำถามที่พบบ่อย</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">คู่มือการใช้งาน · v0.1.1</span>
+      <h1>คู่มือและคำถามที่พบบ่อย</h1>
+      <p class="lede">คู่มือนี้พาคุณดูวิธีใช้ PikaView (เดิมชื่อ OZ Image Viewer) ตามพฤติกรรมการทำงานในเวอร์ชัน 0.1.1</p>
+    </div>
+
+    <nav class="page-toc" aria-label="หัวข้อในหน้านี้">
+      <a href="#basics">พื้นฐาน</a>
+      <a href="#formats">รูปแบบไฟล์ที่รองรับ</a>
+      <a href="#shortcuts">คีย์บอร์ดและเมาส์</a>
+      <a href="#limitations">ข้อจำกัดที่ทราบ</a>
+      <a href="#faq">คำถามที่พบบ่อย</a>
+    </nav>
 
     <section aria-labelledby="basics">
-      <h2 id="basics">พื้นฐาน</h2>
+      <div class="section-head">
+        <h2 id="basics">พื้นฐาน</h2>
+      </div>
       <ul>
-        <li><strong>เปิดภาพ</strong> เปิดโปรแกรมโดยไม่ใส่อาร์กิวเมนต์จะได้หน้าต่างที่มี
-          ปุ่มเปิดไฟล์ ใช้ <kbd>Ctrl</kbd>+<kbd>O</kbd> หรือเปิดภาพจากบรรทัดคำสั่ง
-          โดยตรง และลากไฟล์ภาพหนึ่งไฟล์วางบนหน้าต่างได้เช่นกัน</li>
-        <li><strong>ดูภาพ</strong> ภาพจะแสดงให้พอดีหน้าต่าง โดยไม่ขยายภาพที่เล็กกว่า
-          หน้าต่าง ภาพแรกจะปรากฏก่อนที่โฟลเดอร์จะสแกนเสร็จ</li>
-        <li><strong>เลื่อนดู</strong> ภาพอื่นในโฟลเดอร์เดียวกันจะพร้อมให้เลื่อนดูด้วย
-          คีย์บอร์ด และแต่ละภาพจะถูกถอดรหัสเมื่อคุณเลือก</li>
-        <li><strong>ซูมและเลื่อนภาพ</strong> เลื่อนล้อเมาส์เพื่อซูมเข้า/ออกที่ตำแหน่ง
-          เคอร์เซอร์ หรือใช้คีย์บอร์ด ลากด้วยปุ่มซ้ายเพื่อเลื่อนภาพ และดับเบิลคลิก
-          เพื่อสลับระหว่างพอดีหน้าต่างกับ 100%</li>
-        <li><strong>เต็มจอ</strong> สลับหน้าต่างเป็นเต็มจอแบบไม่มีขอบบนจอปัจจุบัน
-          และกลับมา</li>
-        <li><strong>แก้ไข</strong> หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลาย
-          ต้นฉบับ เปลี่ยนเฉพาะเอกสารบนหน้าจอ ไฟล์ต้นฉบับยังคงเดิมจนกว่าคุณจะบันทึก</li>
-        <li><strong>พิมพ์</strong> เลือก <code>File -&gt; Print...</code> หรือกด
-          <kbd>Ctrl</kbd>+<kbd>P</kbd> เพื่อเปิดกล่องโต้ตอบการพิมพ์ของ Windows
-          และพิมพ์ภาพที่ยืนยันแล้วหนึ่งชุดพอดีหน้ากระดาษโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
-        <li><strong>บันทึก</strong> บันทึกจะเขียนเอกสารปัจจุบันกลับไปยังไฟล์ต้นฉบับ
-          เมื่อรูปแบบไฟล์รองรับ ส่วนบันทึกเป็นจะสร้างสำเนาใหม่และไม่แก้ไฟล์ต้นฉบับ</li>
+        <li><strong>เปิดภาพ</strong> เปิดโปรแกรมโดยไม่ใส่อาร์กิวเมนต์จะได้หน้าต่างที่มีปุ่มเปิดไฟล์ ใช้ <kbd>Ctrl</kbd>+<kbd>O</kbd> หรือเปิดภาพจากบรรทัดคำสั่งโดยตรง และลากไฟล์ภาพหนึ่งไฟล์วางบนหน้าต่างได้เช่นกัน</li>
+        <li><strong>ดูภาพ</strong> ภาพจะแสดงให้พอดีหน้าต่าง โดยไม่ขยายภาพที่เล็กกว่าหน้าต่าง ภาพแรกจะปรากฏก่อนที่โฟลเดอร์จะสแกนเสร็จ</li>
+        <li><strong>เลื่อนดู</strong> ภาพอื่นในโฟลเดอร์เดียวกันจะพร้อมให้เลื่อนดูด้วยคีย์บอร์ด และแต่ละภาพจะถูกถอดรหัสเมื่อคุณเลือก</li>
+        <li><strong>ซูมและเลื่อนภาพ</strong> เลื่อนล้อเมาส์เพื่อซูมเข้า/ออกที่ตำแหน่งเคอร์เซอร์ หรือใช้คีย์บอร์ด ลากด้วยปุ่มซ้ายเพื่อเลื่อนภาพ และดับเบิลคลิกเพื่อสลับระหว่างพอดีหน้าต่างกับ 100%</li>
+        <li><strong>เต็มจอ</strong> สลับหน้าต่างเป็นเต็มจอแบบไม่มีขอบบนจอปัจจุบันและกลับมา</li>
+        <li><strong>แก้ไข</strong> หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลายต้นฉบับ เปลี่ยนเฉพาะเอกสารบนหน้าจอ ไฟล์ต้นฉบับยังคงเดิมจนกว่าคุณจะบันทึก</li>
+        <li><strong>พิมพ์</strong> เลือก <code>File -&gt; Print...</code> หรือกด <kbd>Ctrl</kbd>+<kbd>P</kbd> เพื่อเปิดกล่องโต้ตอบการพิมพ์ของ Windows และพิมพ์ภาพที่ยืนยันแล้วหนึ่งชุดพอดีหน้ากระดาษโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
+        <li><strong>บันทึก</strong> บันทึกจะเขียนเอกสารปัจจุบันกลับไปยังไฟล์ต้นฉบับเมื่อรูปแบบไฟล์รองรับ ส่วนบันทึกเป็นจะสร้างสำเนาใหม่และไม่แก้ไฟล์ต้นฉบับ</li>
       </ul>
     </section>
 
     <section aria-labelledby="formats">
-      <h2 id="formats">รูปแบบไฟล์ที่รองรับ</h2>
-      <p>รูปแบบไฟล์ภาพนิ่งทั่วไปเหล่านี้เปิดได้ โดยตรวจจากลายเซ็นของไฟล์เอง
-        ไม่ได้ดูจากนามสกุลไฟล์</p>
-      <ul>
+      <div class="section-head">
+        <h2 id="formats">รูปแบบไฟล์ที่รองรับ</h2>
+        <span class="mono-meta">ตรวจจับจากลายเซ็นไฟล์</span>
+      </div>
+      <p>รูปแบบไฟล์ภาพนิ่งทั่วไปเหล่านี้เปิดได้ โดยตรวจจากลายเซ็นของไฟล์เอง ไม่ได้ดูจากนามสกุลไฟล์</p>
+      <ul class="feature-list">
         <li>JPEG (<code>.jpg</code>, <code>.jpeg</code>)</li>
         <li>PNG (<code>.png</code>)</li>
         <li>WebP แบบนิ่ง (<code>.webp</code> รองรับเฉพาะภาพนิ่ง)</li>
@@ -77,15 +92,16 @@
         <li>TIFF (<code>.tif</code>, <code>.tiff</code> เฉพาะหน้าแรก)</li>
         <li>ICO (<code>.ico</code>) และ CUR (<code>.cur</code>)</li>
         <li>TGA (<code>.tga</code>)</li>
-        <li>AVIF (<code>.avif</code>) และ HEIC/HEIF แบบภาพนิ่งเมื่อมีตัวถอดรหัส
-          เสริมพร้อมใช้งาน</li>
+        <li>AVIF (<code>.avif</code>) และ HEIC/HEIF แบบภาพนิ่งเมื่อมีตัวถอดรหัสเสริมพร้อมใช้งาน</li>
       </ul>
-      <p>สำหรับการบันทึก รูปแบบผลลัพธ์คือ PNG, JPEG, WebP (แบบไม่สูญเสียข้อมูล),
-        TIFF และ BMP โดย TIFF บันทึกเป็นเท่านั้น</p>
+      <p style="margin-top: 16px;">สำหรับการบันทึก รูปแบบผลลัพธ์คือ PNG, JPEG, WebP (แบบไม่สูญเสียข้อมูล), TIFF และ BMP โดย TIFF บันทึกเป็นเท่านั้น</p>
     </section>
 
     <section aria-labelledby="shortcuts">
-      <h2 id="shortcuts">คีย์บอร์ดและเมาส์</h2>
+      <div class="section-head">
+        <h2 id="shortcuts">คีย์บอร์ดและเมาส์</h2>
+        <span class="mono-meta">การควบคุม</span>
+      </div>
       <div class="table-scroll">
         <table>
           <caption class="muted">คีย์บอร์ดและเมาส์ของ PikaView</caption>
@@ -119,59 +135,45 @@
     </section>
 
     <section aria-labelledby="limitations">
-      <h2 id="limitations">ข้อจำกัดที่ทราบ</h2>
+      <div class="section-head">
+        <h2 id="limitations">ข้อจำกัดที่ทราบ</h2>
+      </div>
       <p>นี่คือข้อจำกัดในตอนนี้ เพื่อให้คุณรู้ว่าควรคาดหวังอะไรได้:</p>
       <ul>
         <li>ไม่รองรับ RAW ไฟล์ RAW และรูปแบบกล้องถูกปฏิเสธโดยเจตนา</li>
-        <li>ไม่รองรับภาพเคลื่อนไหว WebP แบบเคลื่อนไหวและ GIF หลายเฟรมจะถูกปฏิเสธ
-          แทนที่จะเล่น และ APNG จะแสดงเฉพาะเฟรมแรก</li>
+        <li>ไม่รองรับภาพเคลื่อนไหว WebP แบบเคลื่อนไหวและ GIF หลายเฟรมจะถูกปฏิเสธแทนที่จะเล่น และ APNG จะแสดงเฉพาะเฟรมแรก</li>
         <li>ไม่รองรับเวกเตอร์ PDF และรูปแบบเอกสารทั่วไป</li>
-        <li>ไฟล์หลายหน้าหรือหลายเฟรม เช่น TIFF และ ICO จะแสดงเพียงหน้าเดียว
-          หรือเฟรมเดียว</li>
-        <li>การส่งออก WebP รองรับเฉพาะแบบไม่สูญเสียข้อมูลเฟรมเดียว ไม่รองรับ
-          WebP แบบสูญเสียข้อมูลหรือแบบเคลื่อนไหว</li>
-        <li>ไม่มีปลั๊กอินหรือตัวถอดรหัสของระบบอื่น และรายการนามสกุลที่รองรับ
-          เป็นชุดที่กำหนดไว้ตายตัว</li>
-        <li>การพิมพ์จะส่งออกภาพที่ยืนยันแล้วหนึ่งชุดแบบพอดีหน้ากระดาษผ่านกล่องโต้ตอบของระบบ Windows
-          <code>PrintDlgExW</code> กรณีเครื่องพิมพ์เครือข่าย <code>failed-network-first</code>
-          ยังไม่ได้ทดสอบ และไม่มีการอ้างว่าอาการค้างของกล่องโต้ตอบพิมพ์ทั้งหมดได้รับการแก้ไขแล้ว</li>
-        <li>ไฟล์ไบนารีของโปรเจกต์ (<code>pikaview-0.1.1-win-x64-installer.exe</code>,
-          <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>)
-          ยังไม่ได้ลงลายเซ็นดิจิทัล Windows SmartScreen หรือเบราว์เซอร์อาจแสดงคำเตือน
-          "Unknown Publisher" โปรดตรวจสอบค่าแฮช SHA-256 ที่หน้า
-          <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> ก่อนรันไฟล์</li>
+        <li>ไฟล์หลายหน้าหรือหลายเฟรม เช่น TIFF และ ICO จะแสดงเพียงหน้าเดียวหรือเฟรมเดียว</li>
+        <li>การส่งออก WebP รองรับเฉพาะแบบไม่สูญเสียข้อมูลเฟรมเดียว ไม่รองรับ WebP แบบสูญเสียข้อมูลหรือแบบเคลื่อนไหว</li>
+        <li>ไม่มีปลั๊กอินหรือตัวถอดรหัสของระบบอื่น และรายการนามสกุลที่รองรับเป็นชุดที่กำหนดไว้ตายตัว</li>
+        <li>การพิมพ์จะส่งออกภาพที่ยืนยันแล้วหนึ่งชุดแบบพอดีหน้ากระดาษผ่านกล่องโต้ตอบของระบบ Windows <code>PrintDlgExW</code> กรณีเครื่องพิมพ์เครือข่าย <code>failed-network-first</code> ยังไม่ได้ทดสอบ และไม่มีการอ้างว่าอาการค้างของกล่องโต้ตอบพิมพ์ทั้งหมดได้รับการแก้ไขแล้ว</li>
+        <li>ไฟล์ไบนารีของโปรเจกต์ (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>) ยังไม่ได้ลงลายเซ็นดิจิทัล Windows SmartScreen หรือเบราว์เซอร์อาจแสดงคำเตือน "Unknown Publisher" โปรดตรวจสอบค่าแฮช SHA-256 ที่หน้า <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> ก่อนรันไฟล์</li>
         <li>ซอร์สโค้ดเปิดเผยสาธารณะภายใต้สัญญาอนุญาต MIT บน GitHub</li>
       </ul>
     </section>
 
     <section aria-labelledby="faq">
-      <h2 id="faq">คำถามที่พบบ่อย</h2>
+      <div class="section-head">
+        <h2 id="faq">คำถามที่พบบ่อย</h2>
+      </div>
 
       <h3 id="faq-download">ดาวน์โหลด PikaView ได้ไหม</h3>
-      <p>ได้ สามารถดาวน์โหลดแพ็กเกจสำหรับ Windows 64-บิต ได้ที่หน้า
-        <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a></p>
+      <p>ได้ สามารถดาวน์โหลดแพ็กเกจสำหรับ Windows 64-บิต ได้ที่หน้า <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a></p>
 
       <h3 id="faq-upgrade">อัปเกรดจาก OZ Image Viewer 0.1.0 อย่างไร</h3>
-      <p>รันตัวติดตั้ง PikaView 0.1.1 ทับการติดตั้ง OZ Image Viewer 0.1.0 เดิมได้เลย
-        โปรแกรมจะอัปเกรดในตำแหน่งเดิมภายใต้โฟลเดอร์ต่อผู้ใช้
-        (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยยังคงชื่อไฟล์โปรแกรม
-        <code>ozviewer.exe</code> ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code>
-        และรักษาค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>) เดิมไว้ครบถ้วน</p>
+      <p>รันตัวติดตั้ง PikaView 0.1.1 ทับการติดตั้ง OZ Image Viewer 0.1.0 เดิมได้เลย โปรแกรมจะอัปเกรดในตำแหน่งเดิมภายใต้โฟลเดอร์ต่อผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยยังคงชื่อไฟล์โปรแกรม <code>ozviewer.exe</code> ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code> และรักษาค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>) เดิมไว้ครบถ้วน</p>
 
       <h3 id="faq-source">ซอร์สโค้ดอยู่ที่ไหน</h3>
-      <p>ซอร์สโค้ดเปิดเผยสาธารณะ โปรเจกต์อยู่บน GitHub ที่
-        <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a></p>
+      <p>ซอร์สโค้ดเปิดเผยสาธารณะ โปรเจกต์อยู่บน GitHub ที่ <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a></p>
 
       <h3 id="faq-account">ต้องมีบัญชีไหม</h3>
       <p>ไม่ต้อง PikaView เป็นโปรแกรมเดสก์ท็อป ไม่ใช้บัญชีหรือการลงชื่อเข้าใช้</p>
 
       <h3 id="faq-platform">ใช้กับคอมพิวเตอร์แบบไหน</h3>
-      <p>PikaView เป็นโปรแกรมสำหรับ Windows 64 บิต (x64) บน Windows 10
-        และ Windows 11</p>
+      <p>PikaView เป็นโปรแกรมสำหรับ Windows 64 บิต (x64) บน Windows 10 และ Windows 11</p>
 
       <h3 id="faq-edit">การแก้ไขเปลี่ยนไฟล์ต้นฉบับไหม</h3>
-      <p>ไม่ หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลายต้นฉบับ มีผลเฉพาะ
-        เอกสารบนหน้าจอ ไฟล์ของคุณจะเปลี่ยนเมื่อคุณเลือกบันทึกหรือบันทึกเป็นเท่านั้น</p>
+      <p>ไม่ หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลายต้นฉบับ มีผลเฉพาะเอกสารบนหน้าจอ ไฟล์ของคุณจะเปลี่ยนเมื่อคุณเลือกบันทึกหรือบันทึกเป็นเท่านั้น</p>
 
       <h3 id="faq-help">แจ้งปัญหาได้อย่างไร</h3>
       <p>ดูที่หน้า <a href="/th/support/">ช่วยเหลือ</a> เพื่อดูช่องทางติดต่อเรา</p>
@@ -180,9 +182,40 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
-        และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและมิเรอร์</h2>
+          <ul>
+            <li>เว็บไซต์ทางการบน Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">มิเรอร์สำรองบน GitHub Pages</a></li>
+            <li><a href="/software/oz-image-viewer/guide/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
     </div>
   </footer>
 </body>

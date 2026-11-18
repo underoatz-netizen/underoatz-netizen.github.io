@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/th/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
@@ -37,13 +40,31 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>คู่มือและคำถามที่พบบ่อย</h1>
-    <p class="lede">คู่มือนี้พาดูวิธีใช้ PikaPDF (เดิมชื่อ FastPDF) ครอบคลุมฟีเจอร์ในรุ่นปัจจุบัน
-      เวอร์ชัน 0.5.0 สำหรับ Windows x64 ดาวน์โหลดได้ที่หน้า
-      <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a></p>
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/fastpdf/">PikaPDF</a>
+      <span aria-hidden="true">/</span>
+      <span>คู่มือและคำถามที่พบบ่อย</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">คู่มือการใช้งาน · v0.5.0</span>
+      <h1>คู่มือและคำถามที่พบบ่อย</h1>
+      <p class="lede">คู่มือนี้พาดูวิธีใช้ PikaPDF (เดิมชื่อ FastPDF) ครอบคลุมฟีเจอร์ในรุ่นปัจจุบัน เวอร์ชัน 0.5.0 สำหรับ Windows x64 ดาวน์โหลดได้ที่หน้า <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a></p>
+    </div>
+
+    <nav class="page-toc" aria-label="หัวข้อในหน้านี้">
+      <a href="#basics">พื้นฐาน</a>
+      <a href="#shortcuts">คีย์ลัด</a>
+      <a href="#limitations">ข้อจำกัดที่ทราบ</a>
+      <a href="#faq">คำถามที่พบบ่อย</a>
+    </nav>
 
     <section aria-labelledby="basics">
-      <h2 id="basics">พื้นฐาน</h2>
+      <div class="section-head">
+        <h2 id="basics">พื้นฐาน</h2>
+      </div>
       <ul>
         <li><strong>แถบคำสั่งและ More commands</strong> คำสั่งต่าง ๆ อยู่ในแถบคำสั่งแถวเดียวที่ปรับขนาดตามหน้าต่างพร้อมไอคอน Lucide คำสั่งที่ไม่พอวางบนแถวและคำสั่งจัดการเอกสารจะอยู่ในเมนู <strong>More commands</strong> (Open..., Recent Files, Save a Copy..., Save Rotated Copy..., Print..., PDF to PNG..., Image to PDF..., Check for Updates)</li>
         <li><strong>เปิดเอกสาร</strong> ใช้คำสั่ง Open... (<kbd>Ctrl</kbd>+<kbd>O</kbd>), Recent Files, ลากไฟล์ PDF หนึ่งไฟล์วางบนหน้าต่าง หรือเปิดโดยตรงจากบรรทัดคำสั่ง</li>
@@ -61,7 +82,10 @@
     </section>
 
     <section aria-labelledby="shortcuts">
-      <h2 id="shortcuts">คีย์ลัด</h2>
+      <div class="section-head">
+        <h2 id="shortcuts">คีย์ลัด</h2>
+        <span class="mono-meta">แป้นพิมพ์</span>
+      </div>
       <div class="table-scroll">
         <table>
           <caption class="muted">คีย์ลัดของ PikaPDF</caption>
@@ -88,7 +112,9 @@
     </section>
 
     <section aria-labelledby="limitations">
-      <h2 id="limitations">ข้อจำกัดที่ทราบ</h2>
+      <div class="section-head">
+        <h2 id="limitations">ข้อจำกัดที่ทราบ</h2>
+      </div>
       <p>ต่อไปนี้คือข้อจำกัดในตอนนี้ เพื่อให้คุณรู้ว่าควรคาดหวังอะไร:</p>
       <ul>
         <li>ยังเปิดไฟล์ PDF ที่ตั้งรหัสผ่านไม่ได้</li>
@@ -102,33 +128,27 @@
     </section>
 
     <section aria-labelledby="faq">
-      <h2 id="faq">คำถามที่พบบ่อย</h2>
+      <div class="section-head">
+        <h2 id="faq">คำถามที่พบบ่อย</h2>
+      </div>
 
       <h3 id="faq-get">ดาวน์โหลด PikaPDF ได้ที่ไหน</h3>
-      <p>เวอร์ชัน 0.5.0 สำหรับ Windows 10 และ Windows 11 (x64) ดาวน์โหลดได้ที่หน้า
-        <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a> ไฟล์ที่เผยแพร่ยังไม่ได้
-        ลงนาม Windows อาจแสดงคำเตือนเมื่อคุณเปิดใช้งาน</p>
+      <p>เวอร์ชัน 0.5.0 สำหรับ Windows 10 และ Windows 11 (x64) ดาวน์โหลดได้ที่หน้า <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a> ไฟล์ที่เผยแพร่ยังไม่ได้ลงนาม Windows อาจแสดงคำเตือนเมื่อคุณเปิดใช้งาน</p>
 
       <h3 id="faq-upgrade">อัปเกรดจาก FastPDF 0.4.1 ได้อย่างไร</h3>
-      <p>PikaPDF 0.5.0 อัปเกรดทับ FastPDF 0.4.1 ในตำแหน่งเดิมได้ทันที โดยใช้โฟลเดอร์ติดตั้งเดิม
-        และรักษาการตั้งค่ากับไฟล์ล่าสุดไว้ใน <code>%LOCALAPPDATA%\FastPDF</code>
-        ส่วนการติดตั้งใหม่จะใช้โฟลเดอร์ <code>Program Files\PikaPDF</code> เป็นค่าเริ่มต้น
-        ทั้งในตัวติดตั้งและไฟล์ ZIP ยังคงใช้ชื่อไฟล์โปรแกรม <code>FastPDF.exe</code>
-        (พร้อม <code>pdfium.dll</code> และ <code>licenses/</code>) เพื่อให้ชอร์ตคัตเดิมใช้งานได้ต่อเนื่อง</p>
+      <p>PikaPDF 0.5.0 อัปเกรดทับ FastPDF 0.4.1 ในตำแหน่งเดิมได้ทันที โดยใช้โฟลเดอร์ติดตั้งเดิม และรักษาการตั้งค่ากับไฟล์ล่าสุดไว้ใน <code>%LOCALAPPDATA%\FastPDF</code> ส่วนการติดตั้งใหม่จะใช้โฟลเดอร์ <code>Program Files\PikaPDF</code> เป็นค่าเริ่มต้น ทั้งในตัวติดตั้งและไฟล์ ZIP ยังคงใช้ชื่อไฟล์โปรแกรม <code>FastPDF.exe</code> (พร้อม <code>pdfium.dll</code> และ <code>licenses/</code>) เพื่อให้ชอร์ตคัตเดิมใช้งานได้ต่อเนื่อง</p>
 
       <h3 id="faq-account">ต้องมีบัญชีเพื่อใช้ PikaPDF หรือไม่</h3>
       <p>ไม่ต้อง PikaPDF เป็นโปรแกรมบนเดสก์ท็อป ไม่มีการใช้บัญชีหรือการลงชื่อเข้าใช้</p>
 
       <h3 id="faq-source">ซอร์สโค้ดอยู่ที่ไหน</h3>
-      <p>ซอร์สโค้ดถูกเก็บเป็นส่วนตัว ไม่ได้เผยแพร่ และ PikaPDF ไม่ใช่โปรเจกต์
-        โอเพนซอร์ส</p>
+      <p>ซอร์สโค้ดถูกเก็บเป็นส่วนตัว ไม่ได้เผยแพร่ และ PikaPDF ไม่ใช่โปรเจกต์โอเพนซอร์ส</p>
 
       <h3 id="faq-platform">PikaPDF ใช้กับคอมพิวเตอร์แบบไหน</h3>
       <p>PikaPDF ใช้บน Windows 10 และ Windows 11 รุ่น 64 บิต (x64)</p>
 
       <h3 id="faq-privacy">PikaPDF ส่งเอกสารของฉันออกไปที่ใดหรือไม่</h3>
-      <p>เรื่องการจัดการข้อมูล โปรดดูหน้า <a href="/th/privacy/">ความเป็นส่วนตัว</a>
-        นโยบายความเป็นส่วนตัวของแอปยังเป็นฉบับร่างและยังไม่มีผลบังคับใช้</p>
+      <p>เรื่องการจัดการข้อมูล โปรดดูหน้า <a href="/th/privacy/">ความเป็นส่วนตัว</a> นโยบายความเป็นส่วนตัวของแอปยังเป็นฉบับร่างและยังไม่มีผลบังคับใช้</p>
 
       <h3 id="faq-help">จะรายงานปัญหาได้อย่างไร</h3>
       <p>ดูวิธีติดต่อเราได้ที่หน้า <a href="/th/support/">ช่วยเหลือ</a></p>
@@ -137,9 +157,40 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>PikaPDF (เดิมชื่อ FastPDF) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
-        และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaPDF (เดิมชื่อ FastPDF) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและมิเรอร์</h2>
+          <ul>
+            <li>เว็บไซต์ทางการบน Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">มิเรอร์สำรองบน GitHub Pages</a></li>
+            <li><a href="/software/fastpdf/guide/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
     </div>
   </footer>
 </body>

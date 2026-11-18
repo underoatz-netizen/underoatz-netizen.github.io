@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/th/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
@@ -37,116 +40,239 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>ดาวน์โหลด PikaView</h1>
-    <p class="lede">แพ็กเกจทางการสำหรับระบบปฏิบัติการ Windows x64 ของ PikaView (เดิมชื่อ OZ Image Viewer) เวอร์ชัน 0.1.1</p>
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/oz-image-viewer/">PikaView</a>
+      <span aria-hidden="true">/</span>
+      <span>ดาวน์โหลด</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">v0.1.1 · Windows x64 · MIT + LGPLv3</span>
+      <h1>ดาวน์โหลด PikaView</h1>
+      <p class="lede">แพ็กเกจทางการสำหรับระบบปฏิบัติการ Windows x64 ของ PikaView (เดิมชื่อ OZ Image Viewer) เวอร์ชัน 0.1.1</p>
+    </div>
 
     <div class="callout">
       <p><strong>การเผยแพร่รุ่น 0.1.1:</strong> แพ็กเกจไบนารีสร้างขึ้นสำหรับระบบปฏิบัติการ Windows แบบ 64-บิต (x64) ซอร์สโค้ดส่วนแรกพัฒนาโดยตรงอยู่ภายใต้สัญญาอนุญาต MIT สำหรับไลบรารีบุคคลที่สามที่โหลดแบบไดนามิกภายใต้สัญญาอนุญาต LGPLv3 (libheif และ libde265) ทางเราได้จัดเตรียมซอร์สโค้ด ส่วนแก้ไข (patches) และสคริปต์คอมไพล์ครบถ้วนควบคู่กับไฟล์โปรแกรมตามข้อกำหนดของ LGPLv3 ข้อ 4 และ GPLv3 ข้อ 6(d) หากคุณมี OZ Image Viewer 0.1.0 อยู่แล้ว ตัวติดตั้งจะอัปเกรดในตำแหน่งเดิมโดยยังคงใช้ <code>ozviewer.exe</code> และโฟลเดอร์ <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code></p>
     </div>
 
     <section aria-labelledby="release-files">
-      <h2 id="release-files">ไฟล์ดาวน์โหลดทางการ (รุ่น 0.1.1)</h2>
-      <ul>
-        <li>
-          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/pikaview-0.1.1-win-x64-installer.exe">pikaview-0.1.1-win-x64-installer.exe</a>
-          — ตัวติดตั้งสำหรับ Windows 64-บิต (ขนาดประมาณ 4.1 MB / 4,260,442 ไบต์)
+      <div class="section-head">
+        <h2 id="release-files">ไฟล์ดาวน์โหลดทางการ (รุ่น 0.1.1)</h2>
+        <span class="mono-meta">GitHub Releases</span>
+      </div>
+
+      <div class="download-grid">
+        <div class="download-card is-recommended">
+          <div>
+            <div class="download-card-head">
+              <h3>ตัวติดตั้งสำหรับ Windows (.exe) — แนะนำ</h3>
+              <span class="badge">~4.1 MB</span>
+            </div>
+            <p class="download-card-file">pikaview-0.1.1-win-x64-installer.exe (4,260,442 ไบต์)</p>
+            <p>ติดตั้งโปรแกรมลงในโฟลเดอร์ผู้ใช้เฉพาะบุคคล (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยยังคงชื่อไฟล์โปรแกรม <code>ozviewer.exe</code> และไม่ต้องใช้สิทธิ์ระดับผู้ดูแลระบบ (Admin) หากมี OZ Image Viewer 0.1.0 อยู่ก่อนแล้ว รุ่น 0.1.1 จะอัปเกรดในโฟลเดอร์เดิม อัปเดตป้ายชื่อเป็น PikaView และคงค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>) เดิมไว้ครบถ้วน การเชื่อมโยงนามสกุลไฟล์เป็นแบบให้ผู้ใช้เลือกเปิดเองขณะติดตั้งเท่านั้น และถอนการติดตั้งได้อย่างหมดจดผ่าน Windows Settings &gt; Installed Apps</p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/pikaview-0.1.1-win-x64-installer.exe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>ดาวน์โหลดตัวติดตั้ง (.exe)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-card-head">
+              <h3>ไฟล์ ZIP แบบพกพา (.zip)</h3>
+              <span class="badge">~2.6 MB</span>
+            </div>
+            <p class="download-card-file">pikaview-0.1.1-win-x64-portable.zip (2,714,302 ไบต์)</p>
+            <p>ให้แตกไฟล์ทั้งหมดออกจากไฟล์ ZIP ไปยังโฟลเดอร์ที่ต้องการก่อนเปิดใช้งาน <code>ozviewer.exe</code> โปรดอย่าเปิดไฟล์จากในหน้าดูไฟล์บีบอัดโดยตรงเนื่องจากจำเป็นต้องโหลดไฟล์ DLL คู่ขนาน (เช่น <code>heif.dll</code> และ <code>libde265.dll</code>) จากโฟลเดอร์เดียวกัน รุ่นพกพาจะไม่มีการเขียนคีย์ถอนการติดตั้งลงในรีจิสทรี</p>
+          </div>
+          <div>
+            <a class="btn btn-secondary" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/pikaview-0.1.1-win-x64-portable.zip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>ดาวน์โหลดไฟล์ ZIP แบบพกพา</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/pikaview-0.1.1-lgpl-corresponding-source.zip">
+            <span class="editorial-row-title">pikaview-0.1.1-lgpl-corresponding-source.zip</span>
+            <span class="editorial-row-desc">ซอร์สโค้ดและสคริปต์คอมไพล์สำหรับส่วนประกอบ LGPL (libheif และ libde265) (2,420,966 ไบต์)</span>
+            <span class="editorial-row-meta">
+              <span>~2.3 MB</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
         </li>
-        <li>
-          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/pikaview-0.1.1-win-x64-portable.zip">pikaview-0.1.1-win-x64-portable.zip</a>
-          — แพ็กเกจไฟล์ ZIP แบบพกพา (ขนาดประมาณ 2.6 MB / 2,714,302 ไบต์)
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/SHA256SUMS">
+            <span class="editorial-row-title">SHA256SUMS</span>
+            <span class="editorial-row-desc">ไฟล์บันทึกค่าแฮชตรวจสอบความถูกต้องของไฟล์ดาวน์โหลดทั้ง 3 ไฟล์</span>
+            <span class="editorial-row-meta">
+              <span>ไฟล์ค่าแฮช</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
         </li>
-        <li>
-          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/pikaview-0.1.1-lgpl-corresponding-source.zip">pikaview-0.1.1-lgpl-corresponding-source.zip</a>
-          — ซอร์สโค้ดและสคริปต์คอมไพล์สำหรับส่วนประกอบ LGPL (libheif และ libde265) (ขนาดประมาณ 2.3 MB / 2,420,966 ไบต์)
-        </li>
-        <li>
-          <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.1/SHA256SUMS">SHA256SUMS</a>
-          — ไฟล์บันทึกค่าแฮชตรวจสอบความถูกต้องของไฟล์ดาวน์โหลดทั้ง 3 ไฟล์
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/tag/v0.1.1" rel="noopener noreferrer" target="_blank">
+            <span class="editorial-row-title">หน้า Release v0.1.1 บน GitHub</span>
+            <span class="editorial-row-desc">ไฟล์ดาวน์โหลดทั้งหมดและแท็ก git บันทึกรวมไว้ที่หน้า Release ทางการ</span>
+            <span class="editorial-row-meta">
+              <span>GitHub</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </a>
         </li>
       </ul>
-      <p>ไฟล์ดาวน์โหลดทั้งหมดและแท็ก git บันทึกรวมไว้ที่ <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/tag/v0.1.1" rel="noopener noreferrer" target="_blank">หน้า Release v0.1.1 บน GitHub</a></p>
+      <p class="muted" style="margin-top: 16px;">PikaView ไม่มีบริการเบื้องหลัง ไม่มีการเก็บข้อมูลการใช้งาน (Telemetry) และไม่มีระบบอัปเดตอัตโนมัติแบบเงียบ</p>
     </section>
 
-    <section aria-labelledby="package-guidance">
-      <h2 id="package-guidance">คำแนะนำการเลือกแพ็กเกจและการติดตั้ง</h2>
-      <ul>
-        <li>
-          <strong>ตัวติดตั้งสำหรับ Windows (Setup Installer):</strong> ติดตั้งโปรแกรมลงในโฟลเดอร์ผู้ใช้เฉพาะบุคคล (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยยังคงชื่อไฟล์โปรแกรม <code>ozviewer.exe</code> และไม่ต้องใช้สิทธิ์ระดับผู้ดูแลระบบ (Admin) หากมี OZ Image Viewer 0.1.0 อยู่ก่อนแล้ว รุ่น 0.1.1 จะอัปเกรดในโฟลเดอร์เดิม อัปเดตป้ายชื่อเป็น PikaView และคงค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>) เดิมไว้ครบถ้วน การเชื่อมโยงนามสกุลไฟล์เป็นแบบให้ผู้ใช้เลือกเปิดเองขณะติดตั้งเท่านั้น และถอนการติดตั้งได้อย่างหมดจดผ่าน Windows Settings &gt; Installed Apps
+    <section aria-labelledby="quickstart">
+      <div class="section-head">
+        <h2 id="quickstart">เริ่มต้นใช้งานอย่างรวดเร็ว</h2>
+        <span class="mono-meta">3 ขั้นตอน</span>
+      </div>
+      <ol class="steps-grid">
+        <li class="step-card">
+          <span class="step-num">ขั้นตอน 01</span>
+          <h3>ดาวน์โหลดและตรวจ SHA-256</h3>
+          <p>ดาวน์โหลดตัวติดตั้งหรือไฟล์ ZIP แบบพกพาของ v0.1.1 จาก GitHub Releases และตรวจสอบค่าแฮช SHA-256 ให้ตรงกับไฟล์ <code>SHA256SUMS</code> และตารางด้านล่างก่อนเปิดใช้งาน</p>
         </li>
-        <li>
-          <strong>ไฟล์ ZIP แบบพกพา (Portable ZIP):</strong> ให้แตกไฟล์ทั้งหมดออกจากไฟล์ ZIP ไปยังโฟลเดอร์ที่ต้องการก่อนเปิดใช้งาน <code>ozviewer.exe</code> โปรดอย่าเปิดไฟล์จากในหน้าดูไฟล์บีบอัดโดยตรงเนื่องจากจำเป็นต้องโหลดไฟล์ DLL คู่ขนาน (เช่น <code>heif.dll</code> และ <code>libde265.dll</code>) จากโฟลเดอร์เดียวกัน รุ่นพกพาจะไม่มีการเขียนคีย์ถอนการติดตั้งลงในรีจิสทรี
+        <li class="step-card">
+          <span class="step-num">ขั้นตอน 02</span>
+          <h3>ติดตั้ง อัปเกรด หรือแตกไฟล์ให้ครบ</h3>
+          <p>เปิดตัวติดตั้งสำหรับผู้ใช้ทั่วไป (อัปเกรด OZ Image Viewer 0.1.0 ในตำแหน่งเดิมได้ทันที) หรือแตกไฟล์ทั้งหมดใน ZIP (รวม <code>heif.dll</code> และ <code>libde265.dll</code>) หาก Windows SmartScreen แสดงคำเตือน "Unknown Publisher" ให้ตรวจสอบค่าแฮช SHA-256 ก่อนยืนยันเปิดไฟล์</p>
         </li>
-      </ul>
-      <p>PikaView ไม่มีบริการเบื้องหลัง ไม่มีการเก็บข้อมูลการใช้งาน (Telemetry) และไม่มีระบบอัปเดตอัตโนมัติแบบเงียบ</p>
+        <li class="step-card">
+          <span class="step-num">ขั้นตอน 03</span>
+          <h3>ดูภาพ แก้ไข และพิมพ์อย่างปลอดภัย</h3>
+          <p>เปิดไฟล์ภาพนิ่งโดยตรงหรือลากไฟล์วางบน <code>ozviewer.exe</code> การปรับแต่งทั้งหมดจะยังไม่แก้ไฟล์ต้นฉบับจนกว่าคุณจะสั่งบันทึก และกด <code>Ctrl+P</code> เพื่อสั่งพิมพ์หนึ่งหน้าพอดีกระดาษได้ทันที</p>
+        </li>
+      </ol>
     </section>
 
     <section aria-labelledby="checksums">
-      <h2 id="checksums">ค่าแฮชตรวจสอบความถูกต้อง (SHA-256)</h2>
+      <div class="section-head">
+        <h2 id="checksums">ค่าแฮชตรวจสอบความถูกต้อง (SHA-256) และความปลอดภัย</h2>
+        <span class="mono-meta">SHA-256 และข้อมูลแพลตฟอร์ม</span>
+      </div>
       <p>โปรดตรวจสอบค่าแฮช SHA-256 ของไฟล์ที่คุณดาวน์โหลดเสมอ โดยเปรียบเทียบกับค่าทางการที่แสดงในตารางด้านล่าง:</p>
-      <div class="table-scroll">
-        <table>
-          <caption class="muted">ค่าแฮช SHA-256 ทางการสำหรับ PikaView 0.1.1</caption>
-          <thead>
-            <tr><th scope="col">ชื่อไฟล์</th><th scope="col">ค่าแฮช SHA-256</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>pikaview-0.1.1-win-x64-installer.exe</code></td>
-              <td><code>2abc046cc5e20187bca5343fa9f73f4adb527b9f5bfd98ac35f380b42391c076</code></td>
-            </tr>
-            <tr>
-              <td><code>pikaview-0.1.1-win-x64-portable.zip</code></td>
-              <td><code>ade4a2602a50c0949e9f6ddab2c004dbbdee3ea5ffed21d9b9348c20a97bf36b</code></td>
-            </tr>
-            <tr>
-              <td><code>pikaview-0.1.1-lgpl-corresponding-source.zip</code></td>
-              <td><code>5b35334749d600173bf97a2e6897f993611770d89d7f3fee99c885f131de144f</code></td>
-            </tr>
-            <tr>
-              <td><code>SHA256SUMS</code></td>
-              <td><code>c40ea7e91909695b848f8236c88e1334293702e9c893964333ba37720babcb99</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>คุณสามารถใช้เครื่องมือบรรทัดคำสั่งใน Windows เพื่อตรวจค่าแฮชได้ดังนี้:</p>
-      <div class="table-scroll">
-        <table>
-          <caption class="muted">คำสั่งตรวจสอบค่าแฮช SHA-256 บน Windows</caption>
-          <thead>
-            <tr><th scope="col">เครื่องมือ</th><th scope="col">ตัวอย่างคำสั่ง</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>PowerShell</td>
-              <td><code>Get-FileHash -Algorithm SHA256 filename</code></td>
-            </tr>
-            <tr>
-              <td>Command Prompt</td>
-              <td><code>certutil -hashfile filename SHA256</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>หากค่าแฮชที่คำนวณได้ไม่ตรงกับค่าทางการที่ระบุไว้ โปรดอย่าเปิดไฟล์ดังกล่าวใช้งาน</p>
-    </section>
 
-    <section aria-labelledby="trust-and-platform">
-      <h2 id="trust-and-platform">ความปลอดภัยและการรองรับระบบปฏิบัติการ</h2>
-      <p><strong>สถานะไฟล์ที่ยังไม่ได้ลงลายมือชื่อดิจิทัล:</strong> ไฟล์ไบนารีของโปรเจกต์ในรุ่น 0.1.1 (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>) ยังไม่ได้ลงลายมือชื่อดิจิทัล (<code>NotSigned</code>) ส่วน Microsoft VC143 CRT DLL ที่รวมอยู่ในแพ็กเกจมีลายเซ็น Authenticode ของ Microsoft ที่ถูกต้อง Windows SmartScreen หรือเว็บเบราว์เซอร์อาจแสดงข้อความแจ้งเตือน "Unknown Publisher" เมื่อเปิดไฟล์ โปรดตรวจสอบว่าดาวน์โหลดมาจากคลังทางการและมีค่าแฮช SHA-256 ตรงตามไฟล์ <code>SHA256SUMS</code> และตารางด้านบน ไม่แนะนำให้กดยืนยันเปิดไฟล์โดยไม่ได้ตรวจสอบความถูกต้อง</p>
-      <p><strong>ขอบเขตสถาปัตยกรรมและการทดสอบ:</strong> โปรแกรมคอมไพล์สำหรับ Windows แบบ 64-บิต (x64) ผ่านการทดสอบอัตโนมัติในบัญชีผู้ใช้ทั่วไป (Standard User) บน Windows Server 2022 (x64) แบบ clean-room ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตบนเดสก์ท็อปแบบเลือกเอง การอัปเกรดในตำแหน่งเดิมจาก <code>v0.1.0 -&gt; v0.1.1</code> พร้อมคงค่า <code>UserChoice</code> การตรวจแฮชรันไทม์ และการถอนการติดตั้งอย่างหมดจด โดยในรุ่นนี้ยังไม่รองรับ Windows 32-บิต และ ARM64</p>
+      <details class="tech-details">
+        <summary>
+          <span>ตารางค่าแฮช SHA-256 คำสั่งตรวจสอบบน Windows และขอบเขตการทดสอบ</span>
+          <svg class="chevron-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="tech-details-body">
+          <div class="table-scroll">
+            <table>
+              <caption class="muted">ค่าแฮช SHA-256 ทางการสำหรับ PikaView 0.1.1</caption>
+              <thead>
+                <tr><th scope="col">ชื่อไฟล์</th><th scope="col">ค่าแฮช SHA-256</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>pikaview-0.1.1-win-x64-installer.exe</code></td>
+                  <td><code>2abc046cc5e20187bca5343fa9f73f4adb527b9f5bfd98ac35f380b42391c076</code></td>
+                </tr>
+                <tr>
+                  <td><code>pikaview-0.1.1-win-x64-portable.zip</code></td>
+                  <td><code>ade4a2602a50c0949e9f6ddab2c004dbbdee3ea5ffed21d9b9348c20a97bf36b</code></td>
+                </tr>
+                <tr>
+                  <td><code>pikaview-0.1.1-lgpl-corresponding-source.zip</code></td>
+                  <td><code>5b35334749d600173bf97a2e6897f993611770d89d7f3fee99c885f131de144f</code></td>
+                </tr>
+                <tr>
+                  <td><code>SHA256SUMS</code></td>
+                  <td><code>c40ea7e91909695b848f8236c88e1334293702e9c893964333ba37720babcb99</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <caption class="muted">คำสั่งตรวจสอบค่าแฮช SHA-256 บน Windows</caption>
+              <thead>
+                <tr><th scope="col">เครื่องมือ</th><th scope="col">ตัวอย่างคำสั่ง</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PowerShell</td>
+                  <td><code>Get-FileHash -Algorithm SHA256 filename</code></td>
+                </tr>
+                <tr>
+                  <td>Command Prompt</td>
+                  <td><code>certutil -hashfile filename SHA256</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>สถานะไฟล์ที่ยังไม่ได้ลงลายมือชื่อดิจิทัล:</strong> ไฟล์ไบนารีของโปรเจกต์ในรุ่น 0.1.1 (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>) ยังไม่ได้ลงลายมือชื่อดิจิทัล (<code>NotSigned</code>) ส่วน Microsoft VC143 CRT DLL ที่รวมอยู่ในแพ็กเกจมีลายเซ็น Authenticode ของ Microsoft ที่ถูกต้อง Windows SmartScreen หรือเว็บเบราว์เซอร์อาจแสดงข้อความแจ้งเตือน "Unknown Publisher" เมื่อเปิดไฟล์ โปรดตรวจสอบว่าดาวน์โหลดมาจากคลังทางการและมีค่าแฮช SHA-256 ตรงตามไฟล์ <code>SHA256SUMS</code> และตารางด้านบน ไม่แนะนำให้กดยืนยันเปิดไฟล์โดยไม่ได้ตรวจสอบความถูกต้อง</p>
+          <p><strong>ขอบเขตสถาปัตยกรรมและการทดสอบ:</strong> โปรแกรมคอมไพล์สำหรับ Windows แบบ 64-บิต (x64) ผ่านการทดสอบอัตโนมัติในบัญชีผู้ใช้ทั่วไป (Standard User) บน Windows Server 2022 (x64) แบบ clean-room ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตบนเดสก์ท็อปแบบเลือกเอง การอัปเกรดในตำแหน่งเดิมจาก <code>v0.1.0 -&gt; v0.1.1</code> พร้อมคงค่า <code>UserChoice</code> การตรวจแฮชรันไทม์ และการถอนการติดตั้งอย่างหมดจด โดยในรุ่นนี้ยังไม่รองรับ Windows 32-บิต และ ARM64</p>
+        </div>
+      </details>
     </section>
 
     <section aria-labelledby="historical-v010">
-      <h2 id="historical-v010">รุ่นเชิงประวัติศาสตร์ (เวอร์ชัน 0.1.0 — OZ Image Viewer)</h2>
+      <div class="section-head">
+        <h2 id="historical-v010">รุ่นเชิงประวัติศาสตร์ (เวอร์ชัน 0.1.0 — OZ Image Viewer)</h2>
+        <span class="mono-meta">ไฟล์เก็บถาวร</span>
+      </div>
       <p>แพ็กเกจรุ่น 0.1.0 ยังคงเก็บรักษาไว้ภายใต้ชื่อ OZ Image Viewer เดิมที่ <a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/tag/v0.1.0" rel="noopener noreferrer" target="_blank">หน้า Release v0.1.0 บน GitHub</a>:</p>
-      <ul>
-        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-win-x64-installer.exe">ozviewer-0.1.0-win-x64-installer.exe</a></li>
-        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-win-x64-portable.zip">ozviewer-0.1.0-win-x64-portable.zip</a></li>
-        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-lgpl-corresponding-source.zip">ozviewer-0.1.0-lgpl-corresponding-source.zip</a></li>
-        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/SHA256SUMS">SHA256SUMS</a></li>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-win-x64-installer.exe">
+            <span class="editorial-row-title">ozviewer-0.1.0-win-x64-installer.exe</span>
+            <span class="editorial-row-desc">ตัวติดตั้งรุ่นประวัติศาสตร์ v0.1.0 สำหรับ Windows x64</span>
+            <span class="editorial-row-meta">
+              <span>v0.1.0</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-win-x64-portable.zip">
+            <span class="editorial-row-title">ozviewer-0.1.0-win-x64-portable.zip</span>
+            <span class="editorial-row-desc">แพ็กเกจพกพารุ่นประวัติศาสตร์ v0.1.0 สำหรับ Windows x64</span>
+            <span class="editorial-row-meta">
+              <span>v0.1.0</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/ozviewer-0.1.0-lgpl-corresponding-source.zip">
+            <span class="editorial-row-title">ozviewer-0.1.0-lgpl-corresponding-source.zip</span>
+            <span class="editorial-row-desc">ซอร์สโค้ดส่วนประกอบ LGPL รุ่นประวัติศาสตร์ v0.1.0</span>
+            <span class="editorial-row-meta">
+              <span>v0.1.0</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer/releases/download/v0.1.0/SHA256SUMS">
+            <span class="editorial-row-title">SHA256SUMS (v0.1.0)</span>
+            <span class="editorial-row-desc">ไฟล์ค่าแฮช SHA-256 รุ่นประวัติศาสตร์ v0.1.0</span>
+            <span class="editorial-row-meta">
+              <span>ไฟล์ค่าแฮช</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
-      <div class="table-scroll">
+      <div class="table-scroll" style="margin-top: 16px;">
         <table>
           <caption class="muted">ค่าแฮช SHA-256 ทางการสำหรับ OZ Image Viewer 0.1.0</caption>
           <thead>
@@ -171,20 +297,90 @@
     </section>
 
     <section aria-labelledby="related">
-      <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
-      <ul>
-        <li><a href="/th/software/oz-image-viewer/changelog/">บันทึกการเปลี่ยนแปลง</a> — รายละเอียดการเปลี่ยนแปลงในรุ่น 0.1.1 และ 0.1.0</li>
-        <li><a href="/th/software/oz-image-viewer/guide/">คู่มือและคำถามที่พบบ่อย</a> — ปุ่มลัด วิธีดูภาพ และคำถามทั่วไป</li>
-        <li><a href="/th/software/oz-image-viewer/">ภาพรวม PikaView</a> — สถาปัตยกรรมและไฟล์ภาพที่รองรับ</li>
-        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">คลังซอร์สโค้ดบน GitHub</a> — ดูซอร์สโค้ด สคริปต์คอมไพล์ และแจ้งปัญหา</li>
+      <div class="section-head">
+        <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
+      </div>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/oz-image-viewer/changelog/">
+            <span class="editorial-row-title">บันทึกการเปลี่ยนแปลง</span>
+            <span class="editorial-row-desc">รายละเอียดการเปลี่ยนแปลงในรุ่น 0.1.1 และ 0.1.0</span>
+            <span class="editorial-row-meta">
+              <span>ประวัติรุ่น</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/oz-image-viewer/guide/">
+            <span class="editorial-row-title">คู่มือและคำถามที่พบบ่อย</span>
+            <span class="editorial-row-desc">ปุ่มลัด วิธีดูภาพ และคำถามทั่วไป</span>
+            <span class="editorial-row-meta">
+              <span>คู่มือ</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/oz-image-viewer/">
+            <span class="editorial-row-title">ภาพรวม PikaView</span>
+            <span class="editorial-row-desc">สถาปัตยกรรมและไฟล์ภาพที่รองรับ</span>
+            <span class="editorial-row-meta">
+              <span>ภาพรวม</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">
+            <span class="editorial-row-title">คลังซอร์สโค้ดบน GitHub</span>
+            <span class="editorial-row-desc">ดูซอร์สโค้ด สคริปต์คอมไพล์ และแจ้งปัญหา</span>
+            <span class="editorial-row-meta">
+              <span>GitHub</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและมิเรอร์</h2>
+          <ul>
+            <li>เว็บไซต์ทางการบน Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">มิเรอร์สำรองบน GitHub Pages</a></li>
+            <li><a href="/software/oz-image-viewer/downloads/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
     </div>
   </footer>
 </body>

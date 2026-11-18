@@ -21,7 +21,10 @@
   <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/th/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
@@ -37,127 +40,179 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>บันทึกการเปลี่ยนแปลง</h1>
-    <p class="lede">ประวัติรุ่นและการพัฒนาของ PikaView (เดิมชื่อ OZ Image Viewer)</p>
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/oz-image-viewer/">PikaView</a>
+      <span aria-hidden="true">/</span>
+      <span>บันทึกการเปลี่ยนแปลง</span>
+    </nav>
 
-    <article aria-labelledby="v0-1-1">
-      <h2 id="v0-1-1">เวอร์ชัน 0.1.1 — 18 พฤศจิกายน 2026</h2>
+    <div class="page-intro">
+      <span class="mono-meta">ประวัติการเผยแพร่ · v0.1.1</span>
+      <h1>บันทึกการเปลี่ยนแปลง</h1>
+      <p class="lede">ประวัติรุ่นและการพัฒนาของ PikaView (เดิมชื่อ OZ Image Viewer)</p>
+    </div>
+
+    <article class="changelog-entry" aria-labelledby="v0-1-1">
+      <div class="changelog-head">
+        <h2 id="v0-1-1">เวอร์ชัน 0.1.1 — 18 พฤศจิกายน 2026</h2>
+        <span class="badge">รุ่นปัจจุบัน · Windows x64</span>
+      </div>
       <p class="muted">เปลี่ยนชื่อเป็น PikaView เส้นทางการพิมพ์ PrintDlgExW และแพ็กเกจพร้อม provenance สำหรับ Windows 64-บิต</p>
-
       <p>เวอร์ชัน 0.1.1 สืบเนื่องจาก OZ Image Viewer ภายใต้ชื่อผลิตภัณฑ์ <strong>PikaView</strong> โดยยังคงข้อมูลระบุตัวตนภายในสำหรับการอัปเกรด เพื่อให้การติดตั้งแบบต่อผู้ใช้รุ่น 0.1.0 เดิมสามารถอัปเกรดทับในตำแหน่งเดิมได้อย่างราบรื่น</p>
 
       <h3>ข้อมูลระบุตัวตนและการอัปเกรดในตำแหน่งเดิม</h3>
       <ul>
-        <li>
-          <strong>เปลี่ยนชื่อเป็น PikaView:</strong> ชื่อผลิตภัณฑ์สำหรับผู้ใช้ ป้ายชื่อในตัวติดตั้ง ชอร์ตคัต และแพ็กเกจรุ่นนี้เปลี่ยนเป็น <strong>PikaView</strong> (เดิมชื่อ OZ Image Viewer)
-        </li>
-        <li>
-          <strong>ความต่อเนื่องของการอัปเกรดจาก 0.1.0:</strong> ยังคงชื่อไฟล์โปรแกรม <code>ozviewer.exe</code> โฟลเดอร์ติดตั้งต่อผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code> และโครงสร้างรีจิสทรี <code>HKCU\Software\OZImageViewer</code> การอัปเกรดจาก 0.1.0 จะปรับป้ายชื่อในตำแหน่งเดิมโดยไม่แก้ไขค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>)
-        </li>
+        <li><strong>เปลี่ยนชื่อเป็น PikaView:</strong> ชื่อผลิตภัณฑ์สำหรับผู้ใช้ ป้ายชื่อในตัวติดตั้ง ชอร์ตคัต และแพ็กเกจรุ่นนี้เปลี่ยนเป็น <strong>PikaView</strong> (เดิมชื่อ OZ Image Viewer)</li>
+        <li><strong>ความต่อเนื่องของการอัปเกรดจาก 0.1.0:</strong> ยังคงชื่อไฟล์โปรแกรม <code>ozviewer.exe</code> โฟลเดอร์ติดตั้งต่อผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code> และโครงสร้างรีจิสทรี <code>HKCU\Software\OZImageViewer</code> การอัปเกรดจาก 0.1.0 จะปรับป้ายชื่อในตำแหน่งเดิมโดยไม่แก้ไขค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>)</li>
       </ul>
 
       <h3>การพิมพ์แบบโต้ตอบและข้อจำกัดของหลักฐาน</h3>
       <ul>
-        <li>
-          <strong>เส้นทางการพิมพ์ภาพเดี่ยวผ่าน <code>PrintDlgExW</code>:</strong> คำสั่งพิมพ์ (<code>File -&gt; Print...</code> หรือ <code>Ctrl+P</code>) ใช้ตัวช่วย <code>PrintDlgExW</code> แยกเฉพาะพร้อมวงจรชีวิต COM แบบ STA ที่จำกัดขอบเขต การจัดการผลลัพธ์ยกเลิก/ใช้งาน/ล้มเหลวอย่างชัดเจน การเก็บคืน <code>DevMode</code>/<code>DevNames</code>/<code>HDC</code> ครบถ้วน และตัวป้องกันการเรียกซ้ำเพื่อเตรียมหนึ่งหน้าพอดีกระดาษจากภาพที่ยืนยันแล้วโดยไม่แก้ไขไฟล์ต้นฉบับ
-        </li>
-        <li>
-          <strong>ขอบเขตของหลักฐานตามจริง:</strong> ข้อสังเกตเรื่องการพิมพ์ออกหน้ากระดาษจริงและพฤติกรรมการกด Cancel ครั้งที่สองเป็นข้อมูลเชิงประวัติศาสตร์จากแคนดิเดตและสภาพแวดล้อมก่อนหน้า ไม่ใช่ผลการทดสอบกับเครื่องพิมพ์จริงที่รันซ้ำในรุ่น v0.1.1 นี้ กรณีเครื่องพิมพ์เครือข่าย <code>failed-network-first</code> ยังไม่ได้ทดสอบ และไม่มีการอ้างว่าอาการค้างของกล่องโต้ตอบพิมพ์ทั้งหมดได้รับการแก้ไขแล้ว
-        </li>
-        <li>
-          <strong>ปิดไดแอกนอสติกในรุ่น Release:</strong> คอมไพล์ด้วยค่า <code>OZVIEWER_PRINT_DIAGNOSTICS=OFF</code>
-        </li>
+        <li><strong>เส้นทางการพิมพ์ภาพเดี่ยวผ่าน <code>PrintDlgExW</code>:</strong> คำสั่งพิมพ์ (<code>File -&gt; Print...</code> หรือ <code>Ctrl+P</code>) ใช้ตัวช่วย <code>PrintDlgExW</code> แยกเฉพาะพร้อมวงจรชีวิต COM แบบ STA ที่จำกัดขอบเขต การจัดการผลลัพธ์ยกเลิก/ใช้งาน/ล้มเหลวอย่างชัดเจน การเก็บคืน <code>DevMode</code>/<code>DevNames</code>/<code>HDC</code> ครบถ้วน และตัวป้องกันการเรียกซ้ำเพื่อเตรียมหนึ่งหน้าพอดีกระดาษจากภาพที่ยืนยันแล้วโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
+        <li><strong>ขอบเขตของหลักฐานตามจริง:</strong> ข้อสังเกตเรื่องการพิมพ์ออกหน้ากระดาษจริงและพฤติกรรมการกด Cancel ครั้งที่สองเป็นข้อมูลเชิงประวัติศาสตร์จากแคนดิเดตและสภาพแวดล้อมก่อนหน้า ไม่ใช่ผลการทดสอบกับเครื่องพิมพ์จริงที่รันซ้ำในรุ่น v0.1.1 นี้ กรณีเครื่องพิมพ์เครือข่าย <code>failed-network-first</code> ยังไม่ได้ทดสอบ และไม่มีการอ้างว่าอาการค้างของกล่องโต้ตอบพิมพ์ทั้งหมดได้รับการแก้ไขแล้ว</li>
+        <li><strong>ปิดไดแอกนอสติกในรุ่น Release:</strong> คอมไพล์ด้วยค่า <code>OZVIEWER_PRINT_DIAGNOSTICS=OFF</code></li>
       </ul>
 
       <h3>Provenance การตรวจสอบ และแพ็กเกจ</h3>
       <ul>
-        <li>
-          <strong>การตรวจสอบ provenance ของ dependency:</strong> ไฟล์ <code>BUILD-PROVENANCE.json</code> ผูกไบต์ของ <code>heif.dll</code> และ <code>libde265.dll</code> เข้ากับค่าสร้าง vcpkg <code>oz-x64-windows-static-md</code> สูตร/แพตช์ที่ปักหมุด และไฟล์ <code>pikaview-0.1.1-lgpl-corresponding-source.zip</code>
-        </li>
-        <li>
-          <strong>การทดสอบวงจรชีวิตในระบบ CI แบบ clean-room:</strong> การรัน GitHub Actions CI หมายเลข <code>44229309225</code> บน Windows Server 2022 (x64) ผ่าน <code>fetch-candidate</code> และ <code>validate-candidate</code> (ชุดทดสอบ disposable lifecycle: 48 รายการ โดยผ่าน 47 รายการ และมีคำเตือน <code>non_admin_integrity_check</code> ตามคาด 1 รายการ; พร้อมเกต <code>standard-user-lifecycle</code>: ผ่าน 12/12 รายการฝั่ง parent + 48/48 รายการฝั่ง child ในบัญชีผู้ใช้ทั่วไปแบบไม่ยกระดับสิทธิ์) ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตแบบเลือกเอง การอัปเกรดในตำแหน่งเดิม <code>v0.1.0 -&gt; v0.1.1</code> การตรวจแฮชรันไทม์ การคงค่า <code>UserChoice</code> ครบทั้ง 14 นามสกุล และการถอนการติดตั้งอย่างหมดจด
-        </li>
-        <li>
-          <strong>แพ็กเกจรุ่น v0.1.1 จำนวน 4 ไฟล์:</strong> <code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>pikaview-0.1.1-win-x64-portable.zip</code>, <code>pikaview-0.1.1-lgpl-corresponding-source.zip</code> และ <code>SHA256SUMS</code> (ไฟล์ไบนารีของโปรเจกต์ยังไม่ได้ลงลายเซ็น / <code>NotSigned</code>; ส่วน Microsoft VC143 CRT DLL มีลายเซ็นของ Microsoft)
-        </li>
+        <li><strong>การตรวจสอบ provenance ของ dependency:</strong> ไฟล์ <code>BUILD-PROVENANCE.json</code> ผูกไบต์ของ <code>heif.dll</code> และ <code>libde265.dll</code> เข้ากับค่าสร้าง vcpkg <code>oz-x64-windows-static-md</code> สูตร/แพตช์ที่ปักหมุด และไฟล์ <code>pikaview-0.1.1-lgpl-corresponding-source.zip</code></li>
+        <li><strong>การทดสอบวงจรชีวิตในระบบ CI แบบ clean-room:</strong> การรัน GitHub Actions CI หมายเลข <code>44229309225</code> บน Windows Server 2022 (x64) ผ่าน <code>fetch-candidate</code> และ <code>validate-candidate</code> (ชุดทดสอบ disposable lifecycle: 48 รายการ โดยผ่าน 47 รายการ และมีคำเตือน <code>non_admin_integrity_check</code> ตามคาด 1 รายการ; พร้อมเกต <code>standard-user-lifecycle</code>: ผ่าน 12/12 รายการฝั่ง parent + 48/48 รายการฝั่ง child ในบัญชีผู้ใช้ทั่วไปแบบไม่ยกระดับสิทธิ์) ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตแบบเลือกเอง การอัปเกรดในตำแหน่งเดิม <code>v0.1.0 -&gt; v0.1.1</code> การตรวจแฮชรันไทม์ การคงค่า <code>UserChoice</code> ครบทั้ง 14 นามสกุล และการถอนการติดตั้งอย่างหมดจด</li>
+        <li><strong>แพ็กเกจรุ่น v0.1.1 จำนวน 4 ไฟล์:</strong> <code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>pikaview-0.1.1-win-x64-portable.zip</code>, <code>pikaview-0.1.1-lgpl-corresponding-source.zip</code> และ <code>SHA256SUMS</code> (ไฟล์ไบนารีของโปรเจกต์ยังไม่ได้ลงลายเซ็น / <code>NotSigned</code>; ส่วน Microsoft VC143 CRT DLL มีลายเซ็นของ Microsoft)</li>
       </ul>
-      <p><a href="/th/software/oz-image-viewer/downloads/">ไปที่หน้าดาวน์โหลด PikaView 0.1.1</a></p>
+      <p style="margin-top: 20px;">
+        <a class="btn btn-primary" href="/th/software/oz-image-viewer/downloads/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>ไปที่หน้าดาวน์โหลด PikaView 0.1.1</span>
+        </a>
+      </p>
     </article>
 
-    <article aria-labelledby="v0-1-0">
-      <h2 id="v0-1-0">เวอร์ชัน 0.1.0</h2>
-      <p class="muted">รุ่นแรกสำหรับ Windows แบบ 64-บิต</p>
-
+    <article class="changelog-entry" aria-labelledby="v0-1-0">
+      <div class="changelog-head">
+        <h2 id="v0-1-0">เวอร์ชัน 0.1.0</h2>
+        <span class="badge">รุ่นแรกสำหรับ Windows แบบ 64-บิต</span>
+      </div>
       <p>เวอร์ชัน 0.1.0 เป็นรุ่นแรกของ OZ Image Viewer โปรแกรมดูภาพที่เร็วและขนาดกะทัดรัด พัฒนาด้วย C++23, Direct3D 11, DXGI และ Direct2D สำหรับระบบปฏิบัติการ Windows x64</p>
 
       <h3>การดูภาพและการเลื่อนดู</h3>
       <ul>
-        <li>
-          <strong>เปิดไฟล์ภาพหลากหลายรูปแบบ:</strong> ตรวจจับประเภทไฟล์จากโครงสร้างข้อมูลไบนารีโดยตรง รองรับ JPEG, PNG, static WebP, BMP, static GIF, TIFF (หน้าแรก), ICO, CUR, TGA และ AVIF
-        </li>
-        <li>
-          <strong>รองรับไฟล์ HEIC/HEIF:</strong> รองรับการเปิดดูภาพนิ่ง HEIC/HEIF ผ่านการโหลดโมดูลไดนามิก (<code>heif.dll</code> และ <code>libde265.dll</code>) ภายใต้สัญญาอนุญาต LGPLv3
-        </li>
-        <li>
-          <strong>เปิดภาพแรกอย่างรวดเร็ว:</strong> แสดงภาพที่เลือกให้พอดีกับหน้าต่างทันที พร้อมทั้งอ่านรายชื่อไฟล์อื่นในโฟลเดอร์เดียวกันและโหลดภาพถัดไปไว้ล่วงหน้าในเบื้องหลัง
-        </li>
-        <li>
-          <strong>การเลื่อนดูภาพที่สะดวก:</strong> ใช้ปุ่มลูกศรซ้าย/ขวา หรือ Spacebar เพื่อดูภาพก่อนหน้าหรือถัดไปในโฟลเดอร์เดียวกัน
-        </li>
-        <li>
-          <strong>การซูมและเลื่อนภาพ:</strong> ซูมภาพโดยอิงตำแหน่งตัวชี้เมาส์ สลับระหว่างมุมมองพอดีหน้าต่าง (<code>F</code>) และขนาดจริง 100% (<code>1</code> หรือดับเบิลคลิก) เลื่อนภาพด้วยการลากเมาส์ และดูภาพแบบเต็มหน้าจอ (<code>F11</code>)
-        </li>
+        <li><strong>เปิดไฟล์ภาพหลากหลายรูปแบบ:</strong> ตรวจจับประเภทไฟล์จากโครงสร้างข้อมูลไบนารีโดยตรง รองรับ JPEG, PNG, static WebP, BMP, static GIF, TIFF (หน้าแรก), ICO, CUR, TGA และ AVIF</li>
+        <li><strong>รองรับไฟล์ HEIC/HEIF:</strong> รองรับการเปิดดูภาพนิ่ง HEIC/HEIF ผ่านการโหลดโมดูลไดนามิก (<code>heif.dll</code> และ <code>libde265.dll</code>) ภายใต้สัญญาอนุญาต LGPLv3</li>
+        <li><strong>เปิดภาพแรกอย่างรวดเร็ว:</strong> แสดงภาพที่เลือกให้พอดีกับหน้าต่างทันที พร้อมทั้งอ่านรายชื่อไฟล์อื่นในโฟลเดอร์เดียวกันและโหลดภาพถัดไปไว้ล่วงหน้าในเบื้องหลัง</li>
+        <li><strong>การเลื่อนดูภาพที่สะดวก:</strong> ใช้ปุ่มลูกศรซ้าย/ขวา หรือ Spacebar เพื่อดูภาพก่อนหน้าหรือถัดไปในโฟลเดอร์เดียวกัน</li>
+        <li><strong>การซูมและเลื่อนภาพ:</strong> ซูมภาพโดยอิงตำแหน่งตัวชี้เมาส์ สลับระหว่างมุมมองพอดีหน้าต่าง (<kbd>F</kbd>) และขนาดจริง 100% (<kbd>1</kbd> หรือดับเบิลคลิก) เลื่อนภาพด้วยการลากเมาส์ และดูภาพแบบเต็มหน้าจอ (<kbd>F11</kbd>)</li>
       </ul>
 
       <h3>การปรับแต่งภาพแบบไม่ทำลายต้นฉบับ</h3>
       <ul>
-        <li>
-          <strong>การหมุนและพลิกภาพ:</strong> หมุนภาพ 90 องศาซ้ายหรือขวา (<code>Ctrl+L</code>, <code>Ctrl+R</code>) และพลิกภาพแนวนอนหรือแนวตั้ง (<code>Ctrl+Shift+H</code>, <code>Ctrl+Shift+V</code>)
-        </li>
-        <li>
-          <strong>การครอปและปรับขนาด:</strong> โหมดครอปภาพแบบเห็นผลลัพธ์ทันที (<code>C</code>) และหน้าต่างปรับขนาดความละเอียดพิกเซล (<code>Ctrl+Alt+R</code>)
-        </li>
-        <li>
-          <strong>เลิกทำและทำซ้ำ (Undo/Redo):</strong> การปรับแต่งภาพจะเปลี่ยนเฉพาะการแสดงผลในหน่วยความจำ ไม่แก้ไขไฟล์ต้นฉบับจนกว่าจะสั่งบันทึก
-        </li>
-        <li>
-          <strong>การบันทึกไฟล์:</strong> บันทึกทับหรือบันทึกเป็นไฟล์ใหม่ในรูปแบบ PNG, JPEG, WebP (lossless), BMP หรือ TIFF
-        </li>
+        <li><strong>การหมุนและพลิกภาพ:</strong> หมุนภาพ 90 องศาซ้ายหรือขวา (<kbd>Ctrl</kbd>+<kbd>L</kbd>, <kbd>Ctrl</kbd>+<kbd>R</kbd>) และพลิกภาพแนวนอนหรือแนวตั้ง (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>)</li>
+        <li><strong>การครอปและปรับขนาด:</strong> โหมดครอปภาพแบบเห็นผลลัพธ์ทันที (<kbd>C</kbd>) และหน้าต่างปรับขนาดความละเอียดพิกเซล (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>)</li>
+        <li><strong>เลิกทำและทำซ้ำ (Undo/Redo):</strong> การปรับแต่งภาพจะเปลี่ยนเฉพาะการแสดงผลในหน่วยความจำ ไม่แก้ไขไฟล์ต้นฉบับจนกว่าจะสั่งบันทึก</li>
+        <li><strong>การบันทึกไฟล์:</strong> บันทึกทับหรือบันทึกเป็นไฟล์ใหม่ในรูปแบบ PNG, JPEG, WebP (lossless), BMP หรือ TIFF</li>
       </ul>
 
       <h3>แพ็กเกจและการติดตั้ง</h3>
       <ul>
-        <li>
-          <strong>ตัวติดตั้งสำหรับ Windows (Setup Installer):</strong> ติดตั้งลงในโฟลเดอร์เฉพาะของผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยไม่ต้องใช้สิทธิ์ระดับผู้ดูแลระบบ (Admin) ไม่ผูกนามสกุลไฟล์โดยพลการ
-        </li>
-        <li>
-          <strong>ไฟล์ ZIP แบบพกพา (Portable ZIP):</strong> แตกไฟล์แล้วเปิดใช้งานได้ทันทีโดยไม่ต้องติดตั้งหรือแก้ไขค่าระบบ
-        </li>
-        <li>
-          <strong>ซอร์สโค้ดส่วนประกอบ LGPL:</strong> เผยแพร่ซอร์สโค้ดและวิธีคอมไพล์สำหรับ libheif และ libde265 ครบถ้วนตามเงื่อนไข LGPLv3 ข้อ 4 และ GPLv3 ข้อ 6(d)
-        </li>
-        <li>
-          <strong>การตรวจสอบความถูกต้อง:</strong> ระบุค่าแฮช SHA-256 ทางการสำหรับทุกแพ็กเกจ
-        </li>
+        <li><strong>ตัวติดตั้งสำหรับ Windows (Setup Installer):</strong> ติดตั้งลงในโฟลเดอร์เฉพาะของผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยไม่ต้องใช้สิทธิ์ระดับผู้ดูแลระบบ (Admin) ไม่ผูกนามสกุลไฟล์โดยพลการ</li>
+        <li><strong>ไฟล์ ZIP แบบพกพา (Portable ZIP):</strong> แตกไฟล์แล้วเปิดใช้งานได้ทันทีโดยไม่ต้องติดตั้งหรือแก้ไขค่าระบบ</li>
+        <li><strong>ซอร์สโค้ดส่วนประกอบ LGPL:</strong> เผยแพร่ซอร์สโค้ดและวิธีคอมไพล์สำหรับ libheif และ libde265 ครบถ้วนตามเงื่อนไข LGPLv3 ข้อ 4 และ GPLv3 ข้อ 6(d)</li>
+        <li><strong>การตรวจสอบความถูกต้อง:</strong> ระบุค่าแฮช SHA-256 ทางการสำหรับทุกแพ็กเกจ</li>
       </ul>
-      <p><a href="/th/software/oz-image-viewer/downloads/">ไปที่หน้าดาวน์โหลด OZ Image Viewer 0.1.0</a></p>
+      <p style="margin-top: 20px;">
+        <a class="btn btn-primary" href="/th/software/oz-image-viewer/downloads/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>ไปที่หน้าดาวน์โหลด OZ Image Viewer 0.1.0</span>
+        </a>
+      </p>
     </article>
 
     <section aria-labelledby="related">
-      <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
-      <ul>
-        <li><a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> — ไฟล์ดาวน์โหลดทางการสำหรับ Windows และค่าแฮช SHA-256</li>
-        <li><a href="/th/software/oz-image-viewer/guide/">คู่มือและคำถามที่พบบ่อย</a> — ปุ่มลัด วิธีดูภาพ และคำถามทั่วไป</li>
-        <li><a href="/th/software/oz-image-viewer/">ภาพรวม PikaView</a> — ข้อมูลความสามารถและไฟล์ภาพที่รองรับ</li>
-        <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">คลังซอร์สโค้ดบน GitHub</a> — ดูซอร์สโค้ด สคริปต์คอมไพล์ และแจ้งปัญหา</li>
+      <div class="section-head">
+        <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
+      </div>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/oz-image-viewer/downloads/">
+            <span class="editorial-row-title">ดาวน์โหลด</span>
+            <span class="editorial-row-desc">ไฟล์ดาวน์โหลดทางการสำหรับ Windows และค่าแฮช SHA-256</span>
+            <span class="editorial-row-meta">
+              <span>v0.1.1</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/oz-image-viewer/guide/">
+            <span class="editorial-row-title">คู่มือและคำถามที่พบบ่อย</span>
+            <span class="editorial-row-desc">ปุ่มลัด วิธีดูภาพ และคำถามทั่วไป</span>
+            <span class="editorial-row-meta">
+              <span>คู่มือ</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/oz-image-viewer/">
+            <span class="editorial-row-title">ภาพรวม PikaView</span>
+            <span class="editorial-row-desc">ข้อมูลความสามารถและไฟล์ภาพที่รองรับ</span>
+            <span class="editorial-row-meta">
+              <span>ภาพรวม</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">
+            <span class="editorial-row-title">คลังซอร์สโค้ดบน GitHub</span>
+            <span class="editorial-row-desc">ดูซอร์สโค้ด สคริปต์คอมไพล์ และแจ้งปัญหา</span>
+            <span class="editorial-row-meta">
+              <span>GitHub</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและมิเรอร์</h2>
+          <ul>
+            <li>เว็บไซต์ทางการบน Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">มิเรอร์สำรองบน GitHub Pages</a></li>
+            <li><a href="/software/oz-image-viewer/changelog/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
     </div>
   </footer>
 </body>

@@ -37,7 +37,10 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">OZ Lab</a>
+      <a class="brand" href="/">
+        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <span>OZ Lab</span>
+      </a>
       <nav aria-label="Main">
         <ul class="nav">
           <li><a href="/">Home</a></li>
@@ -53,67 +56,137 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>PikaPDF</h1>
-    <p class="lede">PikaPDF (formerly FastPDF) is a Windows desktop app for
-      working with PDF documents, made by OZ Lab. The source code is private, and
-      version 0.5.0 is available to download.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/software/">Software</a>
+      <span aria-hidden="true">/</span>
+      <span>PikaPDF</span>
+    </nav>
+
+    <div class="hero-split">
+      <div class="hero-copy">
+        <span class="mono-meta">v0.5.0 · Windows x64 · Freeware</span>
+        <h1>PikaPDF</h1>
+        <p class="lede">PikaPDF (formerly FastPDF) is a Windows desktop app for working with PDF documents, made by OZ Lab. The source code is private, and version 0.5.0 is available to download.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/software/fastpdf/downloads/">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            <span>Download v0.5.0</span>
+          </a>
+          <a class="btn btn-secondary" href="/software/fastpdf/guide/">
+            <span>User guide &amp; FAQ</span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="product-preview" aria-label="PikaPDF command bar and document preview">
+          <div class="preview-titlebar">
+            <div class="preview-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="preview-title">FastPDF.exe — PikaPDF</span>
+            <span class="preview-tag">v0.5.0</span>
+          </div>
+          <div class="preview-toolbar">
+            <div class="preview-tool-group">
+              <span class="preview-tool is-active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
+                <span>Sidebar</span>
+              </span>
+              <span class="preview-tool">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <span>Find</span>
+              </span>
+              <span class="preview-tool">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+                <span>Ink</span>
+              </span>
+              <span class="preview-tool">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Highlight</span>
+              </span>
+              <span class="preview-tool">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                <span>More commands</span>
+              </span>
+            </div>
+            <span class="preview-tag">Fit width · 1 / 24</span>
+          </div>
+          <div class="preview-body preview-body--split">
+            <div class="preview-sidebar" aria-hidden="true">
+              <div class="preview-thumb is-active">
+                <div class="preview-thumb-line"></div>
+                <div class="preview-thumb-line is-short"></div>
+                <span class="preview-thumb-num">Page 01</span>
+              </div>
+              <div class="preview-thumb">
+                <div class="preview-thumb-line"></div>
+                <div class="preview-thumb-line is-short"></div>
+                <span class="preview-thumb-num">Page 02</span>
+              </div>
+              <div class="preview-thumb">
+                <div class="preview-thumb-line"></div>
+                <div class="preview-thumb-line is-short"></div>
+                <span class="preview-thumb-num">Page 03</span>
+              </div>
+            </div>
+            <div class="preview-canvas">
+              <div class="preview-sheet" aria-hidden="true">
+                <div class="preview-sheet-head">
+                  <span class="preview-sheet-title">Single-column continuous canvas</span>
+                  <span class="preview-tag">Save a Copy</span>
+                </div>
+                <div class="preview-skeleton">
+                  <div class="preview-line is-ink"></div>
+                  <div class="preview-line is-w85"></div>
+                  <div class="preview-line is-w70"></div>
+                  <div class="preview-line is-w85"></div>
+                </div>
+              </div>
+              <div class="preview-hud">
+                <span class="preview-hud-label">Ctrl+B Sidebar · Ctrl+F Find · F11 Present</span>
+                <span class="preview-hud-meta">Original file untouched</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="callout">
-      <p><strong>PikaPDF 0.5.0 for Windows x64 is available now.</strong>
-        Upgrading over FastPDF 0.4.1 is seamless: the build upgrades in place,
-        reuses the existing install directory, and preserves your settings and
-        recent files. The builds are unsigned, so Windows may show a warning when
-        you run them. You can find the files and their SHA-256 checksums on the
-        <a href="/software/fastpdf/downloads/">Downloads</a> page.</p>
+      <p><strong>PikaPDF 0.5.0 for Windows x64 is available now.</strong> Upgrading over FastPDF 0.4.1 is seamless: the build upgrades in place, reuses the existing install directory, and preserves your settings and recent files. The builds are unsigned, so Windows may show a warning when you run them. You can find the files and their SHA-256 checksums on the <a href="/software/fastpdf/downloads/">Downloads</a> page.</p>
     </div>
 
     <section aria-labelledby="what">
-      <h2 id="what">What PikaPDF does</h2>
-      <p>PikaPDF is a viewer and a set of document tools in one desktop app.
-        These are the features it includes:</p>
+      <div class="section-head">
+        <h2 id="what">What PikaPDF does</h2>
+        <span class="mono-meta">16 core capabilities</span>
+      </div>
+      <p>PikaPDF is a viewer and a set of document tools in one desktop app. These are the features it includes:</p>
       <ul class="feature-list">
-        <li>Open and read PDF documents, with continuous single-column
-          scrolling.</li>
-        <li>Reach commands from a single-row responsive command bar with Lucide
-          icons; commands that do not fit appear in the More commands overflow
-          menu.</li>
-        <li>Show or hide the Thumbnails and Bookmarks sidebar with
-          <kbd>Ctrl</kbd>+<kbd>B</kbd>. Unsupported external or remote bookmark
-          actions are safely labelled and never executed.</li>
-        <li>Draw freehand ink in multiple colours and three stroke widths, or
-          highlight selectable text in multiple colours, then undo and redo with
-          <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd>.</li>
-        <li>Save a Copy of the current document. Unsaved-change protection
-          prompts on close, open, print and PNG export, and never overwrites
-          existing files or the source document.</li>
-        <li>Jump directly to any page with the Go to Page dialog
-          (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
-        <li>Zoom controls: fit width, fit page, 100% and free zoom, with a page
-          anchor that keeps your place.</li>
-        <li>Presentation mode (<kbd>F11</kbd>) for full-screen page-by-page
-          viewing.</li>
-        <li>Search inside a document with an incremental find panel
-          (<kbd>Ctrl</kbd>+<kbd>F</kbd>).</li>
-        <li>Capture a region of a page to the clipboard with Screenshot
-          (<kbd>Ctrl</kbd>+<kbd>S</kbd>) and save it as an image.</li>
-        <li>Export PDF pages to PNG images, and combine PNG, JPEG and BMP images
-          into a single PDF.</li>
-        <li>Print through an enhanced Print dialog: 1–6 pages per sheet, a
-          preview thumbnail, colour or monochrome output, duplex printing,
-          Fast/Medium/Detailed quality, By set or By page selection, and progress
-          with cancel.</li>
-        <li>Rotate pages and save a rotated copy without changing the original
-          file.</li>
+        <li>Open and read PDF documents, with continuous single-column scrolling.</li>
+        <li>Reach commands from a single-row responsive command bar with Lucide icons; commands that do not fit appear in the More commands overflow menu.</li>
+        <li>Show or hide the Thumbnails and Bookmarks sidebar with <kbd>Ctrl</kbd>+<kbd>B</kbd>. Unsupported external or remote bookmark actions are safely labelled and never executed.</li>
+        <li>Draw freehand ink in multiple colours and three stroke widths, or highlight selectable text in multiple colours, then undo and redo with <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd>.</li>
+        <li>Save a Copy of the current document. Unsaved-change protection prompts on close, open, print and PNG export, and never overwrites existing files or the source document.</li>
+        <li>Jump directly to any page with the Go to Page dialog (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
+        <li>Zoom controls: fit width, fit page, 100% and free zoom, with a page anchor that keeps your place.</li>
+        <li>Presentation mode (<kbd>F11</kbd>) for full-screen page-by-page viewing.</li>
+        <li>Search inside a document with an incremental find panel (<kbd>Ctrl</kbd>+<kbd>F</kbd>).</li>
+        <li>Capture a region of a page to the clipboard with Screenshot (<kbd>Ctrl</kbd>+<kbd>S</kbd>) and save it as an image.</li>
+        <li>Export PDF pages to PNG images, and combine PNG, JPEG and BMP images into a single PDF.</li>
+        <li>Print through an enhanced Print dialog: 1–6 pages per sheet, a preview thumbnail, colour or monochrome output, duplex printing, Fast/Medium/Detailed quality, By set or By page selection, and progress with cancel.</li>
+        <li>Rotate pages and save a rotated copy without changing the original file.</li>
         <li>Keep a list of recently opened documents.</li>
-        <li>Open a document directly from the command line or by dragging one
-          file onto the window.</li>
-        <li>A manual "Check for Updates" option and an About dialog, plus
-          Diagnostics (<kbd>Ctrl</kbd>+<kbd>D</kbd>) for troubleshooting.</li>
+        <li>Open a document directly from the command line or by dragging one file onto the window.</li>
+        <li>A manual "Check for Updates" option and an About dialog, plus Diagnostics (<kbd>Ctrl</kbd>+<kbd>D</kbd>) for troubleshooting.</li>
       </ul>
     </section>
 
     <section aria-labelledby="status">
-      <h2 id="status">Project status</h2>
+      <div class="section-head">
+        <h2 id="status">Project status</h2>
+        <span class="mono-meta">Specifications</span>
+      </div>
       <div class="table-scroll">
         <table class="status-table">
           <caption class="muted">PikaPDF status as published on this site</caption>
@@ -132,8 +205,7 @@
             </tr>
             <tr>
               <th scope="row">Downloads</th>
-              <td>Available on GitHub Releases (see
-                <a href="/software/fastpdf/downloads/">Downloads</a>)</td>
+              <td>Available on GitHub Releases (see <a href="/software/fastpdf/downloads/">Downloads</a>)</td>
             </tr>
             <tr>
               <th scope="row">Distribution</th>
@@ -141,8 +213,7 @@
             </tr>
             <tr>
               <th scope="row">Support</th>
-              <td>Through the project's public issue tracker (see
-                <a href="/support/">Support</a>)</td>
+              <td>Through the project's public issue tracker (see <a href="/support/">Support</a>)</td>
             </tr>
           </tbody>
         </table>
@@ -150,23 +221,80 @@
     </section>
 
     <section aria-labelledby="next">
-      <h2 id="next">Where to go next</h2>
-      <ul>
-        <li><a href="/software/fastpdf/guide/">User guide &amp; FAQ</a> — how the
-          features work and common questions.</li>
-        <li><a href="/software/fastpdf/downloads/">Downloads</a> — get the
-          current version.</li>
-        <li><a href="/software/fastpdf/changelog/">Changelog</a> — release
-          history.</li>
+      <div class="section-head">
+        <h2 id="next">Where to go next</h2>
+      </div>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/software/fastpdf/downloads/">
+            <span class="editorial-row-title">Downloads</span>
+            <span class="editorial-row-desc">Get version 0.5.0 installer or portable ZIP and SHA-256 checksums</span>
+            <span class="editorial-row-meta">
+              <span>v0.5.0</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/software/fastpdf/guide/">
+            <span class="editorial-row-title">User guide &amp; FAQ</span>
+            <span class="editorial-row-desc">How the features work, keyboard shortcuts and common questions</span>
+            <span class="editorial-row-meta">
+              <span>Guide</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/software/fastpdf/changelog/">
+            <span class="editorial-row-title">Changelog</span>
+            <span class="editorial-row-desc">Release history from v0.3.2 through v0.5.0</span>
+            <span class="editorial-row-meta">
+              <span>History</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 OZ Lab. All rights reserved.</p>
-      <p>PikaPDF (formerly FastPDF) is a Windows utility from OZ Lab. This site
-        is static and uses no tracking or analytics.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaPDF (formerly FastPDF) is a Windows utility from OZ Lab. This site is static and uses no tracking or analytics.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Software</h2>
+          <ul>
+            <li><a href="/software/">All software</a></li>
+            <li><a href="/software/fastpdf/">PikaPDF (formerly FastPDF)</a></li>
+            <li><a href="/software/oz-image-viewer/">PikaView (formerly OZ Image Viewer)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="/support/">Support &amp; donations</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Hosting &amp; mirrors</h2>
+          <ul>
+            <li>Official site on Cloudflare Pages</li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages Backup Mirror</a></li>
+            <li><a href="/th/software/fastpdf/" hreflang="th" lang="th">ภาษาไทย</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab. All rights reserved.</span>
+        <span class="mono-meta">Static HTML &amp; CSS · Zero tracking</span>
+      </div>
     </div>
   </footer>
 </body>
