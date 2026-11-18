@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FastPDF User Guide &amp; FAQ — OZ Lab</title>
-  <meta name="description" content="A short guide to using FastPDF: opening documents, reading, zooming, searching, presenting, capturing and converting, plus answers to common questions.">
+  <title>PikaPDF User Guide &amp; FAQ — OZ Lab</title>
+  <meta name="description" content="A short guide to using PikaPDF 0.5.0 (formerly FastPDF): command bar, sidebar, drawing and highlighting, saving copies, printing, reading, searching, presenting, capturing and converting, plus answers to common questions.">
   <link rel="canonical" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/fastpdf/guide/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="FastPDF User Guide &amp; FAQ — OZ Lab">
-  <meta property="og:description" content="A short guide to using FastPDF, plus answers to common questions.">
+  <meta property="og:title" content="PikaPDF User Guide &amp; FAQ — OZ Lab">
+  <meta property="og:description" content="A short guide to using PikaPDF 0.5.0 (formerly FastPDF), plus answers to common questions.">
   <meta property="og:url" content="https://underoatz-netizen.github.io/software/fastpdf/guide/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -26,7 +26,7 @@
         <ul class="nav">
           <li><a href="/">Home</a></li>
           <li><a href="/software/">Software</a></li>
-          <li><a href="/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/software/fastpdf/">PikaPDF</a></li>
           <li><a href="/software/oz-image-viewer/">OZ Image Viewer</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy</a></li>
@@ -38,34 +38,59 @@
 
   <main id="main" class="wrap">
     <h1>User guide &amp; FAQ</h1>
-    <p class="lede">This guide walks through how FastPDF is used. It covers the
-      features in the current release. Version 0.4.0 for Windows x64 is available
+    <p class="lede">This guide walks through how PikaPDF (formerly FastPDF) is
+      used. It covers the features in version 0.5.0 for Windows x64, available
       on the <a href="/software/fastpdf/downloads/">Downloads</a> page.</p>
 
     <section aria-labelledby="basics">
       <h2 id="basics">Basics</h2>
       <ul>
-        <li><strong>Open a document.</strong> Use the Open command, drag a
-          single PDF file onto the window, or open one directly from the command
-          line.</li>
-        <li><strong>Read.</strong> Documents are shown in a continuous
-          single-column layout. Scroll with the mouse wheel or the keyboard.</li>
-        <li><strong>Go to Page.</strong> Jump directly to any valid page number
-          using the Go to Page dialog (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
+        <li><strong>Command bar &amp; More commands.</strong> Commands live in a
+          single-row responsive command bar with Lucide icons. Commands that do
+          not fit, along with document actions, appear under <strong>More
+          commands</strong> (Open..., Recent Files, Save a Copy..., Save
+          Rotated Copy..., Print..., PDF to PNG..., Image to PDF..., Check for
+          Updates).</li>
+        <li><strong>Open a document.</strong> Use Open... (<kbd>Ctrl</kbd>+<kbd>O</kbd>),
+          Recent Files, drag a single PDF file onto the window, or open one
+          directly from the command line.</li>
+        <li><strong>Sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>).</strong> Toggle the
+          sidebar to switch between Thumbnails and Bookmarks. Unsupported
+          external or remote bookmark actions are labelled cleanly and never
+          executed.</li>
+        <li><strong>Read &amp; Navigate.</strong> Documents are shown in a
+          continuous single-column layout. Scroll with the mouse wheel or
+          keyboard, or jump directly to any valid page number using the Go to
+          Page dialog (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
         <li><strong>Zoom.</strong> Use the zoom commands or the mouse wheel with
           the Control key held. A page anchor keeps your position when you zoom
           or resize.</li>
-        <li><strong>Search.</strong> Open the find panel and type. Search runs
-          as you type and highlights matches in the document.</li>
-        <li><strong>Present.</strong> Presentation mode fills the screen and
-          shows one page at a time; use the arrow keys, space or paging keys to
-          move between pages.</li>
-        <li><strong>Capture.</strong> Drag a region on the page to copy it to
-          the clipboard, and save it as an image if you want.</li>
-        <li><strong>Convert.</strong> Export pages to PNG images, or combine
+        <li><strong>Search.</strong> Open the find panel (<kbd>Ctrl</kbd>+<kbd>F</kbd>)
+          and type. Search runs as you type and highlights matches in the
+          document.</li>
+        <li><strong>Draw &amp; Highlight.</strong> Draw freehand ink in multiple
+          colours and three stroke widths, or highlight embedded selectable text.
+          Undo and redo changes with <kbd>Ctrl</kbd>+<kbd>Z</kbd> and
+          <kbd>Ctrl</kbd>+<kbd>Y</kbd>.</li>
+        <li><strong>Save a Copy.</strong> Save annotations using <strong>Save a
+          Copy...</strong>, which always writes a new file and never overwrites
+          existing files or the source document. Unsaved-change protection
+          prompts you before closing, opening another file, printing, or
+          exporting to PNG.</li>
+        <li><strong>Present.</strong> Presentation mode (<kbd>F11</kbd>) fills
+          the screen and shows one page at a time; use the arrow keys, space or
+          paging keys to move between pages.</li>
+        <li><strong>Screenshot (<kbd>Ctrl</kbd>+<kbd>S</kbd>).</strong> Drag a
+          region on the page to copy it to the clipboard and optionally save it
+          as an image. Note that <kbd>Ctrl</kbd>+<kbd>S</kbd> triggers
+          Screenshot capture, not document saving.</li>
+        <li><strong>Convert.</strong> Export PDF pages to PNG images, or combine
           PNG, JPEG and BMP images into a single PDF.</li>
-        <li><strong>Print.</strong> Print the current document through the
-          standard Windows printing system.</li>
+        <li><strong>Print (<kbd>Ctrl</kbd>+<kbd>P</kbd>).</strong> Use the
+          Print dialog with 1–6 pages per sheet, a first-sheet preview
+          thumbnail, colour or monochrome output, duplex printing,
+          Fast/Medium/Detailed quality, By set or By page copy order, and spool
+          progress with cancel.</li>
       </ul>
     </section>
 
@@ -73,15 +98,17 @@
       <h2 id="shortcuts">Keyboard shortcuts</h2>
       <div class="table-scroll">
         <table>
-          <caption class="muted">FastPDF keyboard shortcuts</caption>
+          <caption class="muted">PikaPDF keyboard shortcuts</caption>
           <thead>
             <tr><th scope="col">Key</th><th scope="col">Action</th></tr>
           </thead>
           <tbody>
             <tr><td><kbd>Ctrl</kbd>+<kbd>O</kbd></td><td>Open a PDF</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td>Toggle Thumbnails &amp; Bookmarks sidebar</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>G</kbd></td><td>Go to page</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Open the find panel</td></tr>
-            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Capture a region to the clipboard</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>Undo / Redo annotations</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Screenshot capture (copies a region to clipboard; not document save)</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td>Print</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td>Toggle the diagnostics overlay</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>0</kbd> / <kbd>Ctrl</kbd>+<kbd>1</kbd> / <kbd>Ctrl</kbd>+<kbd>2</kbd></td><td>Fit page / 100% / fit width</td></tr>
@@ -98,34 +125,49 @@
       <h2 id="limitations">Known limitations</h2>
       <p>These are the current limits, so you know what to expect:</p>
       <ul>
-        <li>Password-protected PDFs cannot be opened yet.</li>
-        <li>Search covers the document's text layer only. There is no OCR, so
-          scanned pages return no results.</li>
+        <li>Password-protected PDFs cannot be opened.</li>
+        <li>Search and text highlighting cover the document's embedded text
+          layer only. There is no OCR, so scanned pages cannot be searched or
+          text-highlighted.</li>
+        <li>There is no Add Text tool.</li>
+        <li>Annotation editing is disabled on signed, protected, or encrypted
+          PDFs and on pages that already contain annotations.</li>
+        <li>Save a Copy never overwrites existing files or the source document.</li>
         <li>Page rotation applies to the open session only. To keep a rotation,
-          save a rotated copy; the original file is not modified.</li>
+          use Save Rotated Copy; the original file is not modified.</li>
+        <li>The builds are unsigned, so Windows SmartScreen or your browser may
+          show a warning before you run them.</li>
       </ul>
     </section>
 
     <section aria-labelledby="faq">
       <h2 id="faq">Frequently asked questions</h2>
 
-      <h3 id="faq-get">Where can I download FastPDF?</h3>
-      <p>Version 0.4.0 is available for Windows x64 on the
+      <h3 id="faq-get">Where can I download PikaPDF?</h3>
+      <p>Version 0.5.0 is available for Windows 10 and Windows 11 (x64) on the
         <a href="/software/fastpdf/downloads/">Downloads</a> page. The builds are
         unsigned, so Windows may show a warning when you run them.</p>
 
-      <h3 id="faq-account">Do I need an account to use FastPDF?</h3>
-      <p>No. FastPDF is a desktop application and does not use accounts or
+      <h3 id="faq-upgrade">How do I upgrade from FastPDF 0.4.1?</h3>
+      <p>PikaPDF 0.5.0 upgrades over FastPDF 0.4.1 in place, reusing your
+        existing install folder and preserving your settings and recent files in
+        <code>%LOCALAPPDATA%\FastPDF</code>. Fresh installs default to
+        <code>Program Files\PikaPDF</code>. Inside both packages, the executable
+        filename remains <code>FastPDF.exe</code> (with <code>pdfium.dll</code>
+        and <code>licenses/</code>) so existing shortcuts keep working.</p>
+
+      <h3 id="faq-account">Do I need an account to use PikaPDF?</h3>
+      <p>No. PikaPDF is a desktop application and does not use accounts or
         sign-in.</p>
 
       <h3 id="faq-source">Where is the source code?</h3>
-      <p>The source code is kept private. It is not published, and FastPDF is
+      <p>The source code is kept private. It is not published, and PikaPDF is
         not an open-source project.</p>
 
-      <h3 id="faq-platform">What kind of computer does FastPDF run on?</h3>
-      <p>FastPDF runs on Windows. The 0.4.0 release is a 64-bit (x64) build.</p>
+      <h3 id="faq-platform">What kind of computer does PikaPDF run on?</h3>
+      <p>PikaPDF runs on 64-bit (x64) Windows 10 and Windows 11.</p>
 
-      <h3 id="faq-privacy">Does FastPDF send my documents anywhere?</h3>
+      <h3 id="faq-privacy">Does PikaPDF send my documents anywhere?</h3>
       <p>For data handling, see the <a href="/privacy/">Privacy</a> page. The
         application privacy policy is still a draft and is not yet in effect.</p>
 
@@ -137,7 +179,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab. All rights reserved.</p>
-      <p>FastPDF is a Windows utility from OZ Lab. This site is static and uses
+      <p>PikaPDF (formerly FastPDF) is a Windows utility from OZ Lab. This site is static and uses
         no tracking or analytics.</p>
     </div>
   </footer>

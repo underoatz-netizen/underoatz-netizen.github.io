@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>บันทึกการเปลี่ยนแปลง FastPDF — ประวัติการเผยแพร่</title>
-  <meta name="description" content="ประวัติการเผยแพร่ของ FastPDF เวอร์ชัน 0.4.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
+  <title>บันทึกการเปลี่ยนแปลง PikaPDF — ประวัติการเผยแพร่</title>
+  <meta name="description" content="ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF) เวอร์ชัน 0.5.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
   <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/changelog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="บันทึกการเปลี่ยนแปลง FastPDF — ประวัติการเผยแพร่">
-  <meta property="og:description" content="ประวัติการเผยแพร่ของ FastPDF เวอร์ชัน 0.4.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
+  <meta property="og:title" content="บันทึกการเปลี่ยนแปลง PikaPDF — ประวัติการเผยแพร่">
+  <meta property="og:description" content="ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF) เวอร์ชัน 0.5.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
   <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/fastpdf/changelog/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -26,7 +26,7 @@
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
           <li><a href="/th/software/">ซอฟต์แวร์</a></li>
-          <li><a href="/th/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
           <li><a href="/th/software/oz-image-viewer/">OZ Image Viewer</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
@@ -38,12 +38,57 @@
 
   <main id="main" class="wrap">
     <h1>บันทึกการเปลี่ยนแปลง</h1>
-    <p class="lede">ประวัติการเผยแพร่ของ FastPDF เรียงจากใหม่ไปเก่า</p>
+    <p class="lede">ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF ถึงรุ่น 0.4.1) เรียงจากใหม่ไปเก่า</p>
 
     <div class="callout">
-      <p><strong>FastPDF 0.4.0 พร้อมใช้งานแล้ว</strong> เผยแพร่เมื่อวันที่
-        24 ตุลาคม 2026 สำหรับ Windows x64</p>
+      <p><strong>PikaPDF 0.5.0 พร้อมใช้งานแล้ว</strong> เผยแพร่เมื่อวันที่
+        18 พฤศจิกายน 2026 สำหรับ Windows 10 และ Windows 11 (64-bit x64)</p>
     </div>
+
+    <section aria-labelledby="v050">
+      <h2 id="v050">0.5.0 — 18 พฤศจิกายน 2026</h2>
+      <ul>
+        <li>เปลี่ยนชื่อผลิตภัณฑ์จาก FastPDF เป็น <strong>PikaPDF</strong> โดยยังคงชื่อไฟล์โปรแกรม
+          <code>FastPDF.exe</code> ภายในแพ็กเกจ เพื่อให้ชอร์ตคัตเดิมใช้งานได้ต่อเนื่อง</li>
+        <li>การติดตั้งใหม่จะใช้โฟลเดอร์ <code>Program Files\PikaPDF</code> เป็นค่าเริ่มต้น
+          ส่วนการอัปเกรดทับ FastPDF 0.4.1 จะอัปเกรดในตำแหน่งเดิม ใช้โฟลเดอร์ติดตั้งเดิม
+          และรักษาการตั้งค่ากับไฟล์ล่าสุดใน <code>%LOCALAPPDATA%\FastPDF</code></li>
+        <li>เปลี่ยนแถบเมนูแบบแยก (File, View, Convert) เป็นแถบคำสั่งแถวเดียวที่ปรับขนาดตามหน้าต่าง
+          พร้อมไอคอน Lucide และเมนู <strong>More commands</strong> (Open..., Recent Files,
+          Save a Copy..., Save Rotated Copy..., Print..., PDF to PNG..., Image to PDF...,
+          Check for Updates)</li>
+        <li>เพิ่มแถบด้านข้างภาพย่อ (Thumbnails) และบุ๊กมาร์ก (Bookmarks) เปิดปิดด้วย
+          <kbd>Ctrl</kbd>+<kbd>B</kbd> โดยบุ๊กมาร์กภายนอกหรือระยะไกลที่ไม่รองรับจะถูกติดป้ายอย่างชัดเจนและไม่ถูกเรียกทำงาน</li>
+        <li>เพิ่มการวาดหมึกอิสระ (หลายสี 3 ความหนาเส้น) และการไฮไลต์ข้อความในเอกสารพร้อมเลิกทำและทำซ้ำ
+          (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>) บันทึกผ่าน Save a Copy
+          โดยไม่เขียนทับไฟล์ที่มีอยู่หรือไฟล์ต้นฉบับ พร้อมหน้าต่างเตือนงานยังไม่บันทึกก่อนปิด เปลี่ยนไฟล์ พิมพ์ หรือส่งออก PNG</li>
+        <li>ปรับปรุงกล่องโต้ตอบการพิมพ์: 1–6 หน้าต่อแผ่น แสดงตัวอย่างแผ่นแรก สีหรือขาวดำ พิมพ์สองหน้า
+          คุณภาพ Fast/Medium/Detailed ลำดับสำเนา By set/By page และความคืบหน้าพร้อมปุ่มยกเลิก</li>
+        <li>มีสองไฟล์ให้ดาวน์โหลด คือตัวติดตั้งสำหรับ Windows และไฟล์ ZIP แบบพกพา ทั้งสองไฟล์ยังไม่ได้ลงนาม
+          และเผยแพร่ค่าแฮช SHA-256 ไว้ในไฟล์ SHA256SUMS</li>
+      </ul>
+      <p>ดูไฟล์และค่าแฮชได้ที่หน้า
+        <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a>
+        หรือดูที่ <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.0">v0.5.0
+        บน GitHub Releases</a></p>
+    </section>
+
+    <section aria-labelledby="v041">
+      <h2 id="v041">0.4.1 — 26 ตุลาคม 2026</h2>
+      <ul>
+        <li>เพิ่มการวัดและบันทึกเวลาเปิดเอกสาร PDF ลงในบันทึกวินิจฉัย
+          การเปลี่ยนแปลงนี้เป็นการปรับปรุงการบันทึกเท่านั้น ไม่มีการกล่าวอ้างเรื่องความเร็ว</li>
+        <li>มีกล่องโต้ตอบไปที่หน้า (<kbd>Ctrl</kbd>+<kbd>G</kbd>)
+          พร้อมการตรวจสอบหมายเลขหน้าเป้าหมายเริ่มต้นที่ 1</li>
+        <li>ตัวติดตั้ง Windows สามารถสร้างชอร์ตคัตบนเดสก์ท็อปได้แบบเลือกได้ (ปิดเป็นค่าเริ่มต้น)</li>
+        <li>มีสองไฟล์ให้ดาวน์โหลด คือตัวติดตั้งสำหรับ Windows และไฟล์ ZIP แบบพกพา</li>
+        <li>ทั้งสองไฟล์ยังไม่ได้ลงนาม และเผยแพร่ค่าแฮช SHA-256 ไว้ในไฟล์ SHA256SUMS</li>
+      </ul>
+      <p>ดูไฟล์และค่าแฮชได้ที่หน้า
+        <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a>
+        หรือดูที่ <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.4.1">v0.4.1
+        บน GitHub Releases</a></p>
+    </section>
 
     <section aria-labelledby="v040">
       <h2 id="v040">0.4.0 — 24 ตุลาคม 2026</h2>
@@ -74,7 +119,7 @@
       <ul>
         <li><a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a> —
           รับเวอร์ชันปัจจุบัน</li>
-        <li><a href="/th/software/fastpdf/">ภาพรวม FastPDF</a> — ผลิตภัณฑ์นี้ทำอะไรได้บ้าง</li>
+        <li><a href="/th/software/fastpdf/">ภาพรวม PikaPDF</a> — ผลิตภัณฑ์นี้ทำอะไรได้บ้าง</li>
       </ul>
     </section>
   </main>
@@ -82,7 +127,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>FastPDF เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
+      <p>PikaPDF (เดิมชื่อ FastPDF) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
         และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
     </div>
   </footer>

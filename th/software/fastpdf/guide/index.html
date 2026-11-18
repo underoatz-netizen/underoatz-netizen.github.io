@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>คู่มือและคำถามที่พบบ่อย FastPDF — OZ Lab</title>
-  <meta name="description" content="คู่มือสั้น ๆ เกี่ยวกับการใช้ FastPDF: การเปิดเอกสาร อ่าน ซูม ค้นหา นำเสนอ จับภาพ และแปลงไฟล์ พร้อมคำตอบสำหรับคำถามที่พบบ่อย">
+  <title>คู่มือและคำถามที่พบบ่อย PikaPDF — OZ Lab</title>
+  <meta name="description" content="คู่มือสั้น ๆ เกี่ยวกับการใช้ PikaPDF 0.5.0 (เดิมชื่อ FastPDF): แถบคำสั่ง แถบด้านข้าง วาดและไฮไลต์ บันทึกสำเนา พิมพ์ อ่าน ซูม ค้นหา นำเสนอ จับภาพ และแปลงไฟล์ พร้อมคำตอบสำหรับคำถามที่พบบ่อย">
   <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/fastpdf/guide/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/fastpdf/guide/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/guide/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="คู่มือและคำถามที่พบบ่อย FastPDF — OZ Lab">
-  <meta property="og:description" content="คู่มือสั้น ๆ เกี่ยวกับการใช้ FastPDF พร้อมคำตอบสำหรับคำถามที่พบบ่อย">
+  <meta property="og:title" content="คู่มือและคำถามที่พบบ่อย PikaPDF — OZ Lab">
+  <meta property="og:description" content="คู่มือสั้น ๆ เกี่ยวกับการใช้ PikaPDF 0.5.0 (เดิมชื่อ FastPDF) พร้อมคำตอบสำหรับคำถามที่พบบ่อย">
   <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/fastpdf/guide/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -26,7 +26,7 @@
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
           <li><a href="/th/software/">ซอฟต์แวร์</a></li>
-          <li><a href="/th/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
           <li><a href="/th/software/oz-image-viewer/">OZ Image Viewer</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
@@ -38,30 +38,25 @@
 
   <main id="main" class="wrap">
     <h1>คู่มือและคำถามที่พบบ่อย</h1>
-    <p class="lede">คู่มือนี้พาดูวิธีใช้ FastPDF ครอบคลุมฟีเจอร์ในรุ่นปัจจุบัน
-      เวอร์ชัน 0.4.0 สำหรับ Windows x64 ดาวน์โหลดได้ที่หน้า
+    <p class="lede">คู่มือนี้พาดูวิธีใช้ PikaPDF (เดิมชื่อ FastPDF) ครอบคลุมฟีเจอร์ในรุ่นปัจจุบัน
+      เวอร์ชัน 0.5.0 สำหรับ Windows x64 ดาวน์โหลดได้ที่หน้า
       <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a></p>
 
     <section aria-labelledby="basics">
       <h2 id="basics">พื้นฐาน</h2>
       <ul>
-        <li><strong>เปิดเอกสาร</strong> ใช้คำสั่งเปิด ลากไฟล์ PDF หนึ่งไฟล์วางบน
-          หน้าต่าง หรือเปิดโดยตรงจากบรรทัดคำสั่ง</li>
-        <li><strong>อ่าน</strong> เอกสารแสดงแบบต่อเนื่องหนึ่งคอลัมน์ เลื่อนด้วย
-          ล้อเมาส์หรือแป้นพิมพ์</li>
-        <li><strong>ไปที่หน้า</strong> กระโดดไปยังหน้าที่ต้องการได้ทันทีผ่านกล่องโต้ตอบ
-          ไปที่หน้า (<kbd>Ctrl</kbd>+<kbd>G</kbd>)</li>
-        <li><strong>ซูม</strong> ใช้คำสั่งซูม หรือกดปุ่ม Control ค้างแล้วหมุนล้อเมาส์
-          ระบบยึดตำแหน่งจะคงที่ให้เมื่อซูมหรือปรับขนาดหน้าต่าง</li>
-        <li><strong>ค้นหา</strong> เปิดแผงค้นหาแล้วพิมพ์ การค้นหาทำงานทันทีขณะพิมพ์
-          และไฮไลต์ผลที่พบในเอกสาร</li>
-        <li><strong>นำเสนอ</strong> โหมดนำเสนอจะเต็มหน้าจอและแสดงทีละหน้า ใช้ปุ่มลูกศร
-          ปุ่มเว้นวรรค หรือปุ่มเลื่อนหน้าเพื่อเปลี่ยนหน้า</li>
-        <li><strong>จับภาพ</strong> ลากเลือกบริเวณบนหน้าเพื่อคัดลอกลงคลิปบอร์ด
-          และบันทึกเป็นรูปภาพได้หากต้องการ</li>
-        <li><strong>แปลงไฟล์</strong> ส่งออกหน้าเอกสารเป็นไฟล์ภาพ PNG หรือรวมไฟล์
-          ภาพ PNG, JPEG และ BMP ให้เป็น PDF ไฟล์เดียว</li>
-        <li><strong>พิมพ์</strong> พิมพ์เอกสารปัจจุบันผ่านระบบพิมพ์มาตรฐานของ Windows</li>
+        <li><strong>แถบคำสั่งและ More commands</strong> คำสั่งต่าง ๆ อยู่ในแถบคำสั่งแถวเดียวที่ปรับขนาดตามหน้าต่างพร้อมไอคอน Lucide คำสั่งที่ไม่พอวางบนแถวและคำสั่งจัดการเอกสารจะอยู่ในเมนู <strong>More commands</strong> (Open..., Recent Files, Save a Copy..., Save Rotated Copy..., Print..., PDF to PNG..., Image to PDF..., Check for Updates)</li>
+        <li><strong>เปิดเอกสาร</strong> ใช้คำสั่ง Open... (<kbd>Ctrl</kbd>+<kbd>O</kbd>), Recent Files, ลากไฟล์ PDF หนึ่งไฟล์วางบนหน้าต่าง หรือเปิดโดยตรงจากบรรทัดคำสั่ง</li>
+        <li><strong>แถบด้านข้าง (<kbd>Ctrl</kbd>+<kbd>B</kbd>)</strong> เปิด/ปิดแถบด้านข้างเพื่อสลับระหว่างภาพย่อ (Thumbnails) และบุ๊กมาร์ก (Bookmarks) บุ๊กมาร์กที่เป็นลิงก์ภายนอกหรือระยะไกลที่ไม่รองรับจะถูกติดป้ายอย่างชัดเจนและไม่ถูกเรียกทำงาน</li>
+        <li><strong>อ่านและไปที่หน้า</strong> เอกสารแสดงแบบต่อเนื่องหนึ่งคอลัมน์ เลื่อนด้วยล้อเมาส์หรือแป้นพิมพ์ หรือกระโดดไปยังหน้าที่ต้องการได้ทันทีผ่านกล่องโต้ตอบไปที่หน้า (<kbd>Ctrl</kbd>+<kbd>G</kbd>)</li>
+        <li><strong>ซูม</strong> ใช้คำสั่งซูม หรือกดปุ่ม Control ค้างแล้วหมุนล้อเมาส์ ระบบยึดตำแหน่งจะคงที่ให้เมื่อซูมหรือปรับขนาดหน้าต่าง</li>
+        <li><strong>ค้นหา</strong> เปิดแผงค้นหา (<kbd>Ctrl</kbd>+<kbd>F</kbd>) แล้วพิมพ์ การค้นหาทำงานทันทีขณะพิมพ์และไฮไลต์ผลที่พบในเอกสาร</li>
+        <li><strong>วาดและไฮไลต์</strong> วาดหมึกอิสระได้หลายสีและ 3 ความหนาเส้น หรือไฮไลต์ข้อความในเอกสาร เลิกทำและทำซ้ำด้วย <kbd>Ctrl</kbd>+<kbd>Z</kbd> และ <kbd>Ctrl</kbd>+<kbd>Y</kbd></li>
+        <li><strong>Save a Copy</strong> บันทึกคำอธิบายประกอบผ่านคำสั่ง <strong>Save a Copy...</strong> ซึ่งสร้างไฟล์ใหม่เสมอโดยไม่เขียนทับไฟล์ที่มีอยู่หรือไฟล์ต้นฉบับ และมีหน้าต่างเตือนงานยังไม่บันทึกก่อนปิด เปิดไฟล์อื่น พิมพ์ หรือส่งออกเป็น PNG</li>
+        <li><strong>นำเสนอ</strong> โหมดนำเสนอ (<kbd>F11</kbd>) จะเต็มหน้าจอและแสดงทีละหน้า ใช้ปุ่มลูกศร ปุ่มเว้นวรรค หรือปุ่มเลื่อนหน้าเพื่อเปลี่ยนหน้า</li>
+        <li><strong>จับภาพหน้าจอ (<kbd>Ctrl</kbd>+<kbd>S</kbd>)</strong> ลากเลือกบริเวณบนหน้าเพื่อคัดลอกลงคลิปบอร์ด และบันทึกเป็นรูปภาพได้หากต้องการ หมายเหตุ: <kbd>Ctrl</kbd>+<kbd>S</kbd> ใช้สำหรับจับภาพหน้าจอ ไม่ใช่การบันทึกเอกสาร</li>
+        <li><strong>แปลงไฟล์</strong> ส่งออกหน้าเอกสารเป็นไฟล์ภาพ PNG หรือรวมไฟล์ภาพ PNG, JPEG และ BMP ให้เป็น PDF ไฟล์เดียว</li>
+        <li><strong>พิมพ์ (<kbd>Ctrl</kbd>+<kbd>P</kbd>)</strong> ใช้กล่องโต้ตอบการพิมพ์ที่รองรับ 1–6 หน้าต่อแผ่น แสดงตัวอย่างแผ่นแรก พิมพ์สีหรือขาวดำ พิมพ์สองหน้า คุณภาพ Fast/Medium/Detailed ลำดับสำเนา By set/By page และความคืบหน้าพร้อมปุ่มยกเลิก</li>
       </ul>
     </section>
 
@@ -69,15 +64,17 @@
       <h2 id="shortcuts">คีย์ลัด</h2>
       <div class="table-scroll">
         <table>
-          <caption class="muted">คีย์ลัดของ FastPDF</caption>
+          <caption class="muted">คีย์ลัดของ PikaPDF</caption>
           <thead>
             <tr><th scope="col">ปุ่ม</th><th scope="col">การทำงาน</th></tr>
           </thead>
           <tbody>
             <tr><td><kbd>Ctrl</kbd>+<kbd>O</kbd></td><td>เปิดไฟล์ PDF</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td>เปิด/ปิดแถบด้านข้างภาพย่อและบุ๊กมาร์ก</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>G</kbd></td><td>ไปที่หน้า</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>เปิดแผงค้นหา</td></tr>
-            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>จับภาพบางส่วนไปยังคลิปบอร์ด</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>เลิกทำ / ทำซ้ำคำอธิบายประกอบ</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>จับภาพหน้าจอไปยังคลิปบอร์ด (ไม่ใช่คำสั่งบันทึกเอกสาร)</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td>พิมพ์</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td>เปิด/ปิดแผงข้อมูลวินิจฉัย</td></tr>
             <tr><td><kbd>Ctrl</kbd>+<kbd>0</kbd> / <kbd>Ctrl</kbd>+<kbd>1</kbd> / <kbd>Ctrl</kbd>+<kbd>2</kbd></td><td>พอดีหน้า / 100% / พอดีความกว้าง</td></tr>
@@ -95,32 +92,41 @@
       <p>ต่อไปนี้คือข้อจำกัดในตอนนี้ เพื่อให้คุณรู้ว่าควรคาดหวังอะไร:</p>
       <ul>
         <li>ยังเปิดไฟล์ PDF ที่ตั้งรหัสผ่านไม่ได้</li>
-        <li>การค้นหาครอบคลุมเฉพาะชั้นข้อความของเอกสาร ไม่มี OCR
-          หน้าสแกนจึงไม่พบผลลัพธ์</li>
-        <li>การหมุนหน้าใช้กับเซสชันที่เปิดอยู่เท่านั้น หากต้องการเก็บการหมุนไว้
-          ให้บันทึกสำเนาที่หมุนแล้ว ไฟล์ต้นฉบับจะไม่ถูกแก้ไข</li>
+        <li>การค้นหาและการไฮไลต์ข้อความครอบคลุมเฉพาะชั้นข้อความในเอกสาร ไม่มี OCR หน้าสแกนจึงค้นหาหรือไฮไลต์ข้อความไม่ได้</li>
+        <li>ยังไม่มีเครื่องมือเพิ่มข้อความ (Add Text)</li>
+        <li>ปิดการแก้ไขคำอธิบายประกอบในไฟล์ PDF ที่มีลายเซ็นดิจิทัล มีการป้องกัน หรือเข้ารหัส รวมถึงบนหน้าที่มีคำอธิบายประกอบอยู่แล้ว</li>
+        <li>Save a Copy จะไม่เขียนทับไฟล์ที่มีอยู่หรือไฟล์ต้นฉบับ</li>
+        <li>การหมุนหน้าใช้กับเซสชันที่เปิดอยู่เท่านั้น หากต้องการเก็บการหมุนไว้ ให้ใช้ Save Rotated Copy ไฟล์ต้นฉบับจะไม่ถูกแก้ไข</li>
+        <li>ไฟล์ที่เผยแพร่ยังไม่ได้ลงนาม Windows SmartScreen หรือเบราว์เซอร์อาจแสดงคำเตือนก่อนคุณเปิดใช้งาน</li>
       </ul>
     </section>
 
     <section aria-labelledby="faq">
       <h2 id="faq">คำถามที่พบบ่อย</h2>
 
-      <h3 id="faq-get">ดาวน์โหลด FastPDF ได้ที่ไหน</h3>
-      <p>เวอร์ชัน 0.4.0 สำหรับ Windows x64 ดาวน์โหลดได้ที่หน้า
+      <h3 id="faq-get">ดาวน์โหลด PikaPDF ได้ที่ไหน</h3>
+      <p>เวอร์ชัน 0.5.0 สำหรับ Windows 10 และ Windows 11 (x64) ดาวน์โหลดได้ที่หน้า
         <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a> ไฟล์ที่เผยแพร่ยังไม่ได้
         ลงนาม Windows อาจแสดงคำเตือนเมื่อคุณเปิดใช้งาน</p>
 
-      <h3 id="faq-account">ต้องมีบัญชีเพื่อใช้ FastPDF หรือไม่</h3>
-      <p>ไม่ต้อง FastPDF เป็นโปรแกรมบนเดสก์ท็อป ไม่มีการใช้บัญชีหรือการลงชื่อเข้าใช้</p>
+      <h3 id="faq-upgrade">อัปเกรดจาก FastPDF 0.4.1 ได้อย่างไร</h3>
+      <p>PikaPDF 0.5.0 อัปเกรดทับ FastPDF 0.4.1 ในตำแหน่งเดิมได้ทันที โดยใช้โฟลเดอร์ติดตั้งเดิม
+        และรักษาการตั้งค่ากับไฟล์ล่าสุดไว้ใน <code>%LOCALAPPDATA%\FastPDF</code>
+        ส่วนการติดตั้งใหม่จะใช้โฟลเดอร์ <code>Program Files\PikaPDF</code> เป็นค่าเริ่มต้น
+        ทั้งในตัวติดตั้งและไฟล์ ZIP ยังคงใช้ชื่อไฟล์โปรแกรม <code>FastPDF.exe</code>
+        (พร้อม <code>pdfium.dll</code> และ <code>licenses/</code>) เพื่อให้ชอร์ตคัตเดิมใช้งานได้ต่อเนื่อง</p>
+
+      <h3 id="faq-account">ต้องมีบัญชีเพื่อใช้ PikaPDF หรือไม่</h3>
+      <p>ไม่ต้อง PikaPDF เป็นโปรแกรมบนเดสก์ท็อป ไม่มีการใช้บัญชีหรือการลงชื่อเข้าใช้</p>
 
       <h3 id="faq-source">ซอร์สโค้ดอยู่ที่ไหน</h3>
-      <p>ซอร์สโค้ดถูกเก็บเป็นส่วนตัว ไม่ได้เผยแพร่ และ FastPDF ไม่ใช่โปรเจกต์
+      <p>ซอร์สโค้ดถูกเก็บเป็นส่วนตัว ไม่ได้เผยแพร่ และ PikaPDF ไม่ใช่โปรเจกต์
         โอเพนซอร์ส</p>
 
-      <h3 id="faq-platform">FastPDF ใช้กับคอมพิวเตอร์แบบไหน</h3>
-      <p>FastPDF ใช้บน Windows รุ่น 0.4.0 เป็นไฟล์สำหรับสถาปัตยกรรม 64 บิต (x64)</p>
+      <h3 id="faq-platform">PikaPDF ใช้กับคอมพิวเตอร์แบบไหน</h3>
+      <p>PikaPDF ใช้บน Windows 10 และ Windows 11 รุ่น 64 บิต (x64)</p>
 
-      <h3 id="faq-privacy">FastPDF ส่งเอกสารของฉันออกไปที่ใดหรือไม่</h3>
+      <h3 id="faq-privacy">PikaPDF ส่งเอกสารของฉันออกไปที่ใดหรือไม่</h3>
       <p>เรื่องการจัดการข้อมูล โปรดดูหน้า <a href="/th/privacy/">ความเป็นส่วนตัว</a>
         นโยบายความเป็นส่วนตัวของแอปยังเป็นฉบับร่างและยังไม่มีผลบังคับใช้</p>
 
@@ -132,7 +138,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>FastPDF เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
+      <p>PikaPDF (เดิมชื่อ FastPDF) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
         และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
     </div>
   </footer>

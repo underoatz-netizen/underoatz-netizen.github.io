@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FastPDF changelog — release history</title>
-  <meta name="description" content="FastPDF release history. Version 0.4.0 is available on GitHub Releases for Windows x64.">
+  <title>PikaPDF Changelog — Release History</title>
+  <meta name="description" content="PikaPDF (formerly FastPDF) release history. Version 0.5.0 is available on GitHub Releases for Windows x64.">
   <link rel="canonical" href="https://underoatz-netizen.github.io/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/fastpdf/changelog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="FastPDF changelog — release history">
-  <meta property="og:description" content="FastPDF release history. Version 0.4.0 is available on GitHub Releases for Windows x64.">
+  <meta property="og:title" content="PikaPDF Changelog — Release History">
+  <meta property="og:description" content="PikaPDF (formerly FastPDF) release history. Version 0.5.0 is available on GitHub Releases for Windows x64.">
   <meta property="og:url" content="https://underoatz-netizen.github.io/software/fastpdf/changelog/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -26,7 +26,7 @@
         <ul class="nav">
           <li><a href="/">Home</a></li>
           <li><a href="/software/">Software</a></li>
-          <li><a href="/software/fastpdf/">FastPDF</a></li>
+          <li><a href="/software/fastpdf/">PikaPDF</a></li>
           <li><a href="/software/oz-image-viewer/">OZ Image Viewer</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy</a></li>
@@ -38,12 +38,68 @@
 
   <main id="main" class="wrap">
     <h1>Changelog</h1>
-    <p class="lede">The release history of FastPDF, newest first.</p>
+    <p class="lede">The release history of PikaPDF (formerly FastPDF through
+      version 0.4.1), newest first.</p>
 
     <div class="callout">
-      <p><strong>FastPDF 0.4.0 is available now.</strong> Published on
-        24 October 2026, for Windows x64.</p>
+      <p><strong>PikaPDF 0.5.0 is available now.</strong> Published on
+        18 November 2026, for Windows 10 and Windows 11 (64-bit x64).</p>
     </div>
+
+    <section aria-labelledby="v050">
+      <h2 id="v050">0.5.0 — 18 November 2026</h2>
+      <ul>
+        <li>Rebranded the product from FastPDF to <strong>PikaPDF</strong>,
+          while keeping the executable filename <code>FastPDF.exe</code>
+          inside packages so existing shortcuts keep working.</li>
+        <li>Fresh installs default to <code>Program Files\PikaPDF</code>;
+          upgrades over FastPDF 0.4.1 upgrade in place, reusing the existing
+          install folder and preserving settings and recent files in
+          <code>%LOCALAPPDATA%\FastPDF</code>.</li>
+        <li>Replaced the separate menu bar (File, View, Convert) with a
+          single-row responsive command bar with Lucide icons and a More
+          commands overflow menu (Open..., Recent Files, Save a Copy...,
+          Save Rotated Copy..., Print..., PDF to PNG..., Image to PDF...,
+          Check for Updates).</li>
+        <li>Added a Thumbnails and Bookmarks sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>);
+          unsupported external or remote bookmark actions are labelled cleanly
+          and never executed.</li>
+        <li>Added freehand ink drawing (multiple colours, three stroke widths)
+          and embedded-text highlighting with undo and redo
+          (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>), saved
+          via Save a Copy without overwriting existing or source files, plus
+          unsaved-change prompts before close, open, print or PNG export.</li>
+        <li>Enhanced Print dialog with 1–6 pages per sheet, first-sheet preview
+          thumbnail, colour or monochrome output, duplex printing,
+          Fast/Medium/Detailed quality, By set/By page copy order, and spool
+          progress with cancel.</li>
+        <li>Two downloads: a Windows installer and a portable ZIP package, both
+          unsigned, with SHA-256 checksums published in SHA256SUMS.</li>
+      </ul>
+      <p>See <a href="/software/fastpdf/downloads/">Downloads</a> for the files
+        and their checksums, or
+        <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.0">v0.5.0
+        on GitHub Releases</a>.</p>
+    </section>
+
+    <section aria-labelledby="v041">
+      <h2 id="v041">0.4.1 — 26 October 2026</h2>
+      <ul>
+        <li>Added PDF open-duration diagnostics: how long the document-open phase
+          takes is now measured and written to the diagnostic log. This is a
+          logging change only and makes no performance claim.</li>
+        <li>Includes the Go to Page dialog (<kbd>Ctrl</kbd>+<kbd>G</kbd>) with
+          1-based target validation.</li>
+        <li>The Windows installer can optionally create a Desktop shortcut (off
+          by default).</li>
+        <li>Two downloads: a Windows installer and a portable ZIP package.</li>
+        <li>Both builds are unsigned, and SHA-256 checksums are published in SHA256SUMS.</li>
+      </ul>
+      <p>See <a href="/software/fastpdf/downloads/">Downloads</a> for the files
+        and their checksums, or
+        <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.4.1">v0.4.1
+        on GitHub Releases</a>.</p>
+    </section>
 
     <section aria-labelledby="v040">
       <h2 id="v040">0.4.0 — 24 October 2026</h2>
@@ -76,7 +132,7 @@
       <ul>
         <li><a href="/software/fastpdf/downloads/">Downloads</a> — get the
           current version.</li>
-        <li><a href="/software/fastpdf/">FastPDF overview</a> — what the product
+        <li><a href="/software/fastpdf/">PikaPDF overview</a> — what the product
           does.</li>
       </ul>
     </section>
@@ -85,7 +141,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab. All rights reserved.</p>
-      <p>FastPDF is a Windows utility from OZ Lab. This site is static and uses
+      <p>PikaPDF (formerly FastPDF) is a Windows utility from OZ Lab. This site is static and uses
         no tracking or analytics.</p>
     </div>
   </footer>
