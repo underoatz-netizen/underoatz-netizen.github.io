@@ -15,6 +15,9 @@
   <meta property="og:description" content="ดาวน์โหลดแพ็กเกจทางการของ PikaView (เดิมชื่อ OZ Image Viewer) เวอร์ชัน 0.1.1 สำหรับ Windows 64-บิต ประกอบด้วยตัวติดตั้ง โปรแกรมแบบพกพา และซอร์สโค้ดส่วนประกอบ LGPL">
   <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/downloads/">
   <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -22,7 +25,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="/th/">
-        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <img class="brand-logo" src="/assets/images/oz-lab-logo.png" alt="" width="28" height="28">
         <span>OZ Lab</span>
       </a>
       <nav aria-label="เมนูหลัก">
@@ -135,7 +138,7 @@
       <p class="muted" style="margin-top: 16px;">PikaView ไม่มีบริการเบื้องหลัง ไม่มีการเก็บข้อมูลการใช้งาน (Telemetry) และไม่มีระบบอัปเดตอัตโนมัติแบบเงียบ</p>
     </section>
 
-    <section aria-labelledby="quickstart">
+    <section id="package-guidance" aria-labelledby="quickstart">
       <div class="section-head">
         <h2 id="quickstart">เริ่มต้นใช้งานอย่างรวดเร็ว</h2>
         <span class="mono-meta">3 ขั้นตอน</span>
@@ -161,14 +164,15 @@
 
     <section aria-labelledby="checksums">
       <div class="section-head">
-        <h2 id="checksums">ค่าแฮชตรวจสอบความถูกต้อง (SHA-256) และความปลอดภัย</h2>
-        <span class="mono-meta">SHA-256 และข้อมูลแพลตฟอร์ม</span>
+        <h2 id="checksums">ค่าแฮชตรวจสอบความถูกต้อง (SHA-256)</h2>
+        <span class="mono-meta">SHA-256 และการตรวจสอบ</span>
       </div>
       <p>โปรดตรวจสอบค่าแฮช SHA-256 ของไฟล์ที่คุณดาวน์โหลดเสมอ โดยเปรียบเทียบกับค่าทางการที่แสดงในตารางด้านล่าง:</p>
+      <p class="callout"><strong>หากค่าแฮชที่คำนวณได้ไม่ตรงกับค่าทางการในตารางด้านล่าง โปรดอย่าเปิดไฟล์ดังกล่าวใช้งาน</strong></p>
 
       <details class="tech-details">
         <summary>
-          <span>ตารางค่าแฮช SHA-256 คำสั่งตรวจสอบบน Windows และขอบเขตการทดสอบ</span>
+          <span>ตารางค่าแฮช SHA-256 และคำสั่งตรวจสอบบน Windows</span>
           <svg class="chevron-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </summary>
         <div class="tech-details-body">
@@ -218,10 +222,14 @@
             </table>
           </div>
 
-          <p><strong>สถานะไฟล์ที่ยังไม่ได้ลงลายมือชื่อดิจิทัล:</strong> ไฟล์ไบนารีของโปรเจกต์ในรุ่น 0.1.1 (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>) ยังไม่ได้ลงลายมือชื่อดิจิทัล (<code>NotSigned</code>) ส่วน Microsoft VC143 CRT DLL ที่รวมอยู่ในแพ็กเกจมีลายเซ็น Authenticode ของ Microsoft ที่ถูกต้อง Windows SmartScreen หรือเว็บเบราว์เซอร์อาจแสดงข้อความแจ้งเตือน "Unknown Publisher" เมื่อเปิดไฟล์ โปรดตรวจสอบว่าดาวน์โหลดมาจากคลังทางการและมีค่าแฮช SHA-256 ตรงตามไฟล์ <code>SHA256SUMS</code> และตารางด้านบน ไม่แนะนำให้กดยืนยันเปิดไฟล์โดยไม่ได้ตรวจสอบความถูกต้อง</p>
-          <p><strong>ขอบเขตสถาปัตยกรรมและการทดสอบ:</strong> โปรแกรมคอมไพล์สำหรับ Windows แบบ 64-บิต (x64) ผ่านการทดสอบอัตโนมัติในบัญชีผู้ใช้ทั่วไป (Standard User) บน Windows Server 2022 (x64) แบบ clean-room ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตบนเดสก์ท็อปแบบเลือกเอง การอัปเกรดในตำแหน่งเดิมจาก <code>v0.1.0 -&gt; v0.1.1</code> พร้อมคงค่า <code>UserChoice</code> การตรวจแฮชรันไทม์ และการถอนการติดตั้งอย่างหมดจด โดยในรุ่นนี้ยังไม่รองรับ Windows 32-บิต และ ARM64</p>
         </div>
       </details>
+    </section>
+
+    <section aria-labelledby="trust-and-platform">
+      <h2 id="trust-and-platform">ความปลอดภัยและการรองรับระบบปฏิบัติการ</h2>
+      <p><strong>สถานะไฟล์ที่ยังไม่ได้ลงลายมือชื่อดิจิทัล:</strong> ไฟล์ไบนารีของโปรเจกต์ในรุ่น 0.1.1 (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>) ยังไม่ได้ลงลายมือชื่อดิจิทัล (<code>NotSigned</code>) ส่วน Microsoft VC143 CRT DLL ที่รวมอยู่ในแพ็กเกจมีลายเซ็น Authenticode ของ Microsoft ที่ถูกต้อง Windows SmartScreen หรือเว็บเบราว์เซอร์อาจแสดงข้อความแจ้งเตือน "Unknown Publisher" เมื่อเปิดไฟล์ โปรดตรวจสอบว่าดาวน์โหลดมาจากคลังทางการและมีค่าแฮช SHA-256 ตรงตามไฟล์ <code>SHA256SUMS</code> และตารางด้านบน ไม่แนะนำให้กดยืนยันเปิดไฟล์โดยไม่ได้ตรวจสอบความถูกต้อง</p>
+      <p><strong>ขอบเขตสถาปัตยกรรมและการทดสอบ:</strong> โปรแกรมคอมไพล์สำหรับ Windows แบบ 64-บิต (x64) ผ่านการทดสอบอัตโนมัติในบัญชีผู้ใช้ทั่วไป (Standard User) บน Windows Server 2022 (x64) แบบ clean-room ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตบนเดสก์ท็อปแบบเลือกเอง การอัปเกรดในตำแหน่งเดิมจาก <code>v0.1.0 -&gt; v0.1.1</code> พร้อมคงค่า <code>UserChoice</code> การตรวจแฮชรันไทม์ และการถอนการติดตั้งอย่างหมดจด โดยในรุ่นนี้ยังไม่รองรับ Windows 32-บิต และ ARM64</p>
     </section>
 
     <section aria-labelledby="historical-v010">
@@ -369,10 +377,9 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>โฮสติ้งและมิเรอร์</h2>
+          <h2>โฮสติ้ง</h2>
           <ul>
-            <li>เว็บไซต์ทางการบน Cloudflare Pages</li>
-            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">มิเรอร์สำรองบน GitHub Pages</a></li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages</a></li>
             <li><a href="/software/oz-image-viewer/downloads/" hreflang="en" lang="en">English</a></li>
           </ul>
         </div>

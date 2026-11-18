@@ -15,6 +15,9 @@
   <meta property="og:description" content="Download official release packages for PikaView (formerly OZ Image Viewer) version 0.1.1 on 64-bit Windows, including the installer, portable ZIP, and LGPL corresponding source.">
   <meta property="og:url" content="https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/">
   <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -22,7 +25,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="/">
-        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h3"/></svg>
+        <img class="brand-logo" src="/assets/images/oz-lab-logo.png" alt="" width="28" height="28">
         <span>OZ Lab</span>
       </a>
       <nav aria-label="Main">
@@ -135,7 +138,7 @@
       <p class="muted" style="margin-top: 16px;">PikaView does not include background services, telemetry, or silent background auto-updaters.</p>
     </section>
 
-    <section aria-labelledby="quickstart">
+    <section id="package-guidance" aria-labelledby="quickstart">
       <div class="section-head">
         <h2 id="quickstart">Quick start</h2>
         <span class="mono-meta">3 steps</span>
@@ -161,14 +164,15 @@
 
     <section aria-labelledby="checksums">
       <div class="section-head">
-        <h2 id="checksums">Cryptographic checksums &amp; platform scope</h2>
-        <span class="mono-meta">SHA-256 &amp; CI notes</span>
+        <h2 id="checksums">Cryptographic checksums (SHA-256)</h2>
+        <span class="mono-meta">SHA-256 &amp; verification</span>
       </div>
       <p>Always verify the SHA-256 hash of your downloaded file before running it. Compare the calculated hash with the exact official values listed below:</p>
+      <p class="callout"><strong>If any computed hash does not match the official value in the checksum table below, do not execute the file.</strong></p>
 
       <details class="tech-details">
         <summary>
-          <span>SHA-256 checksums, Windows verification commands &amp; LGPL / CI scope</span>
+          <span>SHA-256 checksums &amp; Windows verification commands</span>
           <svg class="chevron-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </summary>
         <div class="tech-details-body">
@@ -218,10 +222,14 @@
             </table>
           </div>
 
-          <p><strong>Unsigned release builds:</strong> Release binaries in version 0.1.1 (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned (<code>NotSigned</code>), while the bundled Microsoft VC143 CRT DLLs carry valid Microsoft Authenticode signatures. Windows SmartScreen or web browsers may show an "Unknown Publisher" protection notice when opening the installer or executable. Please check that the file was downloaded from the official repository and that its SHA-256 hash matches <code>SHA256SUMS</code> and the table above rather than blindly bypassing security warnings.</p>
-          <p><strong>Target platform and verification scope:</strong> Built for 64-bit Windows (x64). Automated disposable standard-user installation, <code>FirstPresent</code> benchmark smoke, opt-in association and desktop shortcut handling, in-place <code>v0.1.0 -&gt; v0.1.1</code> upgrade with <code>UserChoice</code> preservation, runtime closure verification, and clean uninstallation have been verified in clean-room standard-user CI on Windows Server 2022 (x64). 32-bit x86 and native ARM64 architectures are not supported in this build.</p>
         </div>
       </details>
+    </section>
+
+    <section aria-labelledby="trust-and-platform">
+      <h2 id="trust-and-platform">Security, trust, and platform scope</h2>
+      <p><strong>Unsigned release builds:</strong> Release binaries in version 0.1.1 (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned (<code>NotSigned</code>), while the bundled Microsoft VC143 CRT DLLs carry valid Microsoft Authenticode signatures. Windows SmartScreen or web browsers may show an "Unknown Publisher" protection notice when opening the installer or executable. Please check that the file was downloaded from the official repository and that its SHA-256 hash matches <code>SHA256SUMS</code> and the table above rather than blindly bypassing security warnings.</p>
+      <p><strong>Target platform and verification scope:</strong> Built for 64-bit Windows (x64). Automated disposable standard-user installation, <code>FirstPresent</code> benchmark smoke, opt-in association and desktop shortcut handling, in-place <code>v0.1.0 -&gt; v0.1.1</code> upgrade with <code>UserChoice</code> preservation, runtime closure verification, and clean uninstallation have been verified in clean-room standard-user CI on Windows Server 2022 (x64). 32-bit x86 and native ARM64 architectures are not supported in this build.</p>
     </section>
 
     <section aria-labelledby="historical-v010">
@@ -369,10 +377,9 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Hosting &amp; mirrors</h2>
+          <h2>Hosting</h2>
           <ul>
-            <li>Official site on Cloudflare Pages</li>
-            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages Backup Mirror</a></li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages</a></li>
             <li><a href="/th/software/oz-image-viewer/downloads/" hreflang="th" lang="th">ภาษาไทย</a></li>
           </ul>
         </div>
