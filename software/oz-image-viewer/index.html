@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OZ Image Viewer — a Windows image viewer from OZ Lab</title>
-  <meta name="description" content="OZ Image Viewer is a fast, lightweight Windows desktop image viewer from OZ Lab for common still image formats, with smooth zoom, pan and non-destructive editing. Version 0.1.0 is available for Windows x64.">
+  <title>PikaView (formerly OZ Image Viewer) — a Windows image viewer from OZ Lab</title>
+  <meta name="description" content="PikaView (formerly OZ Image Viewer) is a fast, lightweight Windows desktop image viewer from OZ Lab for common still image formats, with smooth zoom, pan, non-destructive editing and printing. Version 0.1.1 is available for Windows x64.">
   <link rel="canonical" href="https://underoatz-netizen.github.io/software/oz-image-viewer/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="OZ Image Viewer — a Windows image viewer from OZ Lab">
-  <meta property="og:description" content="A fast, lightweight Windows desktop image viewer for common still image formats, with smooth zoom, pan and non-destructive editing. Version 0.1.0 is available for Windows x64.">
+  <meta property="og:title" content="PikaView (formerly OZ Image Viewer) — a Windows image viewer from OZ Lab">
+  <meta property="og:description" content="A fast, lightweight Windows desktop image viewer for common still image formats, with smooth zoom, pan, non-destructive editing and printing. Version 0.1.1 is available for Windows x64.">
   <meta property="og:url" content="https://underoatz-netizen.github.io/software/oz-image-viewer/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -20,10 +20,12 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "OZ Image Viewer",
+    "name": "PikaView",
+    "alternateName": "OZ Image Viewer",
+    "softwareVersion": "0.1.1",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "Windows",
-    "description": "A fast, lightweight Windows desktop image viewer for common still image formats, with fast first-image display, smooth zoom and pan, sibling image navigation and non-destructive rotate, flip, crop and resize editing.",
+    "description": "A fast, lightweight Windows desktop image viewer for common still image formats, with fast first-image display, smooth zoom and pan, sibling image navigation, non-destructive rotate, flip, crop and resize editing, and single-image printing.",
     "url": "https://underoatz-netizen.github.io/software/oz-image-viewer/",
     "publisher": {
       "@type": "Organization",
@@ -42,7 +44,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/software/">Software</a></li>
           <li><a href="/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/software/oz-image-viewer/" aria-current="page">OZ Image Viewer</a></li>
+          <li><a href="/software/oz-image-viewer/" aria-current="page">PikaView</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy</a></li>
         </ul>
@@ -52,23 +54,28 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>OZ Image Viewer</h1>
-    <p class="lede">OZ Image Viewer is a fast, lightweight image viewer for
-      Windows desktop, made by OZ Lab. It opens common still image formats
-      quickly and lets you zoom, pan and make simple non-destructive edits.</p>
+    <h1>PikaView</h1>
+    <p class="lede">PikaView (formerly OZ Image Viewer) is a fast, lightweight
+      image viewer for Windows desktop, made by OZ Lab. It opens common still
+      image formats quickly and lets you zoom, pan, print and make simple
+      non-destructive edits.</p>
 
     <div class="callout">
-      <p><strong>Version 0.1.0 release:</strong> OZ Image Viewer 0.1.0 is available
-        for 64-bit Windows systems. Download the installer or portable ZIP from the
-        <a href="/software/oz-image-viewer/downloads/">Downloads</a> page. Source code
-        is public on GitHub at
+      <p><strong>Version 0.1.1 release:</strong> OZ Image Viewer has been
+        rebranded to <strong>PikaView</strong>. Version 0.1.1 is available for
+        64-bit Windows systems and upgrades existing OZ Image Viewer 0.1.0
+        per-user installations seamlessly in place, keeping <code>ozviewer.exe</code>
+        and <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>. Download the
+        installer or portable ZIP from the
+        <a href="/software/oz-image-viewer/downloads/">Downloads</a> page. Source
+        code is public on GitHub at
         <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>.</p>
     </div>
 
     <section aria-labelledby="what">
-      <h2 id="what">What OZ Image Viewer does</h2>
-      <p>OZ Image Viewer opens one image at a time and focuses on showing it
-        quickly, then staying responsive while you look around. These are the
+      <h2 id="what">What PikaView does</h2>
+      <p>PikaView opens one image at a time and focuses on showing it quickly,
+        then staying responsive while you look around. These are the
         capabilities implemented so far:</p>
       <ul class="feature-list">
         <li>Open and display common still image formats: JPEG, PNG, static WebP,
@@ -86,6 +93,9 @@
         <li>Borderless-windowed fullscreen on the current monitor.</li>
         <li>Non-destructive editing: rotate, flip, crop and resize, with undo
           and redo. The original file is never changed until you save.</li>
+        <li>Interactive single-image printing (<code>File -&gt; Print...</code> or
+          <code>Ctrl+P</code>): prepares one fit-to-page output of the committed
+          image without modifying the file.</li>
         <li>Save and Save As to PNG, JPEG, WebP (lossless), TIFF (Save As only)
           and BMP.</li>
         <li>Open an image from the command line, or drag a single file onto the
@@ -97,7 +107,7 @@
       <h2 id="status">Project status</h2>
       <div class="table-scroll">
         <table class="status-table">
-          <caption class="muted">OZ Image Viewer status as published on this site</caption>
+          <caption class="muted">PikaView status as published on this site</caption>
           <tbody>
             <tr>
               <th scope="row">Platform</th>
@@ -109,11 +119,11 @@
             </tr>
             <tr>
               <th scope="row">Version</th>
-              <td>0.1.0</td>
+              <td>0.1.1</td>
             </tr>
             <tr>
               <th scope="row">Public releases</th>
-              <td><a href="/software/oz-image-viewer/changelog/">0.1.0</a></td>
+              <td><a href="/software/oz-image-viewer/changelog/">0.1.1, 0.1.0</a></td>
             </tr>
             <tr>
               <th scope="row">Downloads</th>
@@ -140,7 +150,7 @@
         <li><a href="/software/oz-image-viewer/changelog/">Changelog</a> — release
           notes and version history.</li>
         <li><a href="/software/oz-image-viewer/guide/">User guide &amp; FAQ</a> —
-          how viewing and editing work, plus common questions.</li>
+          how viewing, editing and printing work, plus common questions.</li>
         <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">The project on GitHub</a>.</li>
       </ul>
     </section>
@@ -149,7 +159,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab. All rights reserved.</p>
-      <p>OZ Image Viewer is a Windows utility from OZ Lab. This site is static
+      <p>PikaView (formerly OZ Image Viewer) is a Windows utility from OZ Lab. This site is static
         and uses no tracking or analytics.</p>
     </div>
   </footer>

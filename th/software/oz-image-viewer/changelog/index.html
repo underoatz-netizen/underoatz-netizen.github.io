@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>บันทึกการเปลี่ยนแปลง OZ Image Viewer — ประวัติการเผยแพร่</title>
-  <meta name="description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ OZ Image Viewer บนระบบปฏิบัติการ Windows">
+  <title>บันทึกการเปลี่ยนแปลง PikaView — ประวัติการเผยแพร่</title>
+  <meta name="description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ PikaView (เดิมชื่อ OZ Image Viewer) บนระบบปฏิบัติการ Windows">
   <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="บันทึกการเปลี่ยนแปลง OZ Image Viewer — ประวัติการเผยแพร่">
-  <meta property="og:description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ OZ Image Viewer บนระบบปฏิบัติการ Windows">
+  <meta property="og:title" content="บันทึกการเปลี่ยนแปลง PikaView — ประวัติการเผยแพร่">
+  <meta property="og:description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ PikaView (เดิมชื่อ OZ Image Viewer) บนระบบปฏิบัติการ Windows">
   <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -27,7 +27,7 @@
           <li><a href="/th/">หน้าแรก</a></li>
           <li><a href="/th/software/">ซอฟต์แวร์</a></li>
           <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/th/software/oz-image-viewer/">OZ Image Viewer</a></li>
+          <li><a href="/th/software/oz-image-viewer/">PikaView</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
         </ul>
@@ -38,7 +38,51 @@
 
   <main id="main" class="wrap">
     <h1>บันทึกการเปลี่ยนแปลง</h1>
-    <p class="lede">ประวัติรุ่นและการพัฒนาของ OZ Image Viewer</p>
+    <p class="lede">ประวัติรุ่นและการพัฒนาของ PikaView (เดิมชื่อ OZ Image Viewer)</p>
+
+    <article aria-labelledby="v0-1-1">
+      <h2 id="v0-1-1">เวอร์ชัน 0.1.1 — 18 พฤศจิกายน 2026</h2>
+      <p class="muted">เปลี่ยนชื่อเป็น PikaView เส้นทางการพิมพ์ PrintDlgExW และแพ็กเกจพร้อม provenance สำหรับ Windows 64-บิต</p>
+
+      <p>เวอร์ชัน 0.1.1 สืบเนื่องจาก OZ Image Viewer ภายใต้ชื่อผลิตภัณฑ์ <strong>PikaView</strong> โดยยังคงข้อมูลระบุตัวตนภายในสำหรับการอัปเกรด เพื่อให้การติดตั้งแบบต่อผู้ใช้รุ่น 0.1.0 เดิมสามารถอัปเกรดทับในตำแหน่งเดิมได้อย่างราบรื่น</p>
+
+      <h3>ข้อมูลระบุตัวตนและการอัปเกรดในตำแหน่งเดิม</h3>
+      <ul>
+        <li>
+          <strong>เปลี่ยนชื่อเป็น PikaView:</strong> ชื่อผลิตภัณฑ์สำหรับผู้ใช้ ป้ายชื่อในตัวติดตั้ง ชอร์ตคัต และแพ็กเกจรุ่นนี้เปลี่ยนเป็น <strong>PikaView</strong> (เดิมชื่อ OZ Image Viewer)
+        </li>
+        <li>
+          <strong>ความต่อเนื่องของการอัปเกรดจาก 0.1.0:</strong> ยังคงชื่อไฟล์โปรแกรม <code>ozviewer.exe</code> โฟลเดอร์ติดตั้งต่อผู้ใช้ (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code> และโครงสร้างรีจิสทรี <code>HKCU\Software\OZImageViewer</code> การอัปเกรดจาก 0.1.0 จะปรับป้ายชื่อในตำแหน่งเดิมโดยไม่แก้ไขค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>)
+        </li>
+      </ul>
+
+      <h3>การพิมพ์แบบโต้ตอบและข้อจำกัดของหลักฐาน</h3>
+      <ul>
+        <li>
+          <strong>เส้นทางการพิมพ์ภาพเดี่ยวผ่าน <code>PrintDlgExW</code>:</strong> คำสั่งพิมพ์ (<code>File -&gt; Print...</code> หรือ <code>Ctrl+P</code>) ใช้ตัวช่วย <code>PrintDlgExW</code> แยกเฉพาะพร้อมวงจรชีวิต COM แบบ STA ที่จำกัดขอบเขต การจัดการผลลัพธ์ยกเลิก/ใช้งาน/ล้มเหลวอย่างชัดเจน การเก็บคืน <code>DevMode</code>/<code>DevNames</code>/<code>HDC</code> ครบถ้วน และตัวป้องกันการเรียกซ้ำเพื่อเตรียมหนึ่งหน้าพอดีกระดาษจากภาพที่ยืนยันแล้วโดยไม่แก้ไขไฟล์ต้นฉบับ
+        </li>
+        <li>
+          <strong>ขอบเขตของหลักฐานตามจริง:</strong> ข้อสังเกตเรื่องการพิมพ์ออกหน้ากระดาษจริงและพฤติกรรมการกด Cancel ครั้งที่สองเป็นข้อมูลเชิงประวัติศาสตร์จากแคนดิเดตและสภาพแวดล้อมก่อนหน้า ไม่ใช่ผลการทดสอบกับเครื่องพิมพ์จริงที่รันซ้ำในรุ่น v0.1.1 นี้ กรณีเครื่องพิมพ์เครือข่าย <code>failed-network-first</code> ยังไม่ได้ทดสอบ และไม่มีการอ้างว่าอาการค้างของกล่องโต้ตอบพิมพ์ทั้งหมดได้รับการแก้ไขแล้ว
+        </li>
+        <li>
+          <strong>ปิดไดแอกนอสติกในรุ่น Release:</strong> คอมไพล์ด้วยค่า <code>OZVIEWER_PRINT_DIAGNOSTICS=OFF</code>
+        </li>
+      </ul>
+
+      <h3>Provenance การตรวจสอบ และแพ็กเกจ</h3>
+      <ul>
+        <li>
+          <strong>การตรวจสอบ provenance ของ dependency:</strong> ไฟล์ <code>BUILD-PROVENANCE.json</code> ผูกไบต์ของ <code>heif.dll</code> และ <code>libde265.dll</code> เข้ากับค่าสร้าง vcpkg <code>oz-x64-windows-static-md</code> สูตร/แพตช์ที่ปักหมุด และไฟล์ <code>pikaview-0.1.1-lgpl-corresponding-source.zip</code>
+        </li>
+        <li>
+          <strong>การทดสอบวงจรชีวิตในระบบ CI แบบ clean-room:</strong> การรัน GitHub Actions CI หมายเลข <code>44229309225</code> บน Windows Server 2022 (x64) ผ่าน <code>fetch-candidate</code> และ <code>validate-candidate</code> (ชุดทดสอบ disposable lifecycle: 48 รายการ โดยผ่าน 47 รายการ และมีคำเตือน <code>non_admin_integrity_check</code> ตามคาด 1 รายการ; พร้อมเกต <code>standard-user-lifecycle</code>: ผ่าน 12/12 รายการฝั่ง parent + 48/48 รายการฝั่ง child ในบัญชีผู้ใช้ทั่วไปแบบไม่ยกระดับสิทธิ์) ครอบคลุมการติดตั้งใหม่ การทดสอบ <code>FirstPresent</code> benchmark การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตแบบเลือกเอง การอัปเกรดในตำแหน่งเดิม <code>v0.1.0 -&gt; v0.1.1</code> การตรวจแฮชรันไทม์ การคงค่า <code>UserChoice</code> ครบทั้ง 14 นามสกุล และการถอนการติดตั้งอย่างหมดจด
+        </li>
+        <li>
+          <strong>แพ็กเกจรุ่น v0.1.1 จำนวน 4 ไฟล์:</strong> <code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>pikaview-0.1.1-win-x64-portable.zip</code>, <code>pikaview-0.1.1-lgpl-corresponding-source.zip</code> และ <code>SHA256SUMS</code> (ไฟล์ไบนารีของโปรเจกต์ยังไม่ได้ลงลายเซ็น / <code>NotSigned</code>; ส่วน Microsoft VC143 CRT DLL มีลายเซ็นของ Microsoft)
+        </li>
+      </ul>
+      <p><a href="/th/software/oz-image-viewer/downloads/">ไปที่หน้าดาวน์โหลด PikaView 0.1.1</a></p>
+    </article>
 
     <article aria-labelledby="v0-1-0">
       <h2 id="v0-1-0">เวอร์ชัน 0.1.0</h2>
@@ -104,7 +148,7 @@
       <ul>
         <li><a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> — ไฟล์ดาวน์โหลดทางการสำหรับ Windows และค่าแฮช SHA-256</li>
         <li><a href="/th/software/oz-image-viewer/guide/">คู่มือและคำถามที่พบบ่อย</a> — ปุ่มลัด วิธีดูภาพ และคำถามทั่วไป</li>
-        <li><a href="/th/software/oz-image-viewer/">ภาพรวม OZ Image Viewer</a> — ข้อมูลความสามารถและไฟล์ภาพที่รองรับ</li>
+        <li><a href="/th/software/oz-image-viewer/">ภาพรวม PikaView</a> — ข้อมูลความสามารถและไฟล์ภาพที่รองรับ</li>
         <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">คลังซอร์สโค้ดบน GitHub</a> — ดูซอร์สโค้ด สคริปต์คอมไพล์ และแจ้งปัญหา</li>
       </ul>
     </section>
@@ -113,7 +157,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+      <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
     </div>
   </footer>
 </body>

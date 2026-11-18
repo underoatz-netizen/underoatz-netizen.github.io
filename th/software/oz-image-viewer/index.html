@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OZ Image Viewer — โปรแกรมดูรูปภาพสำหรับ Windows จาก OZ Lab</title>
-  <meta name="description" content="OZ Image Viewer เป็นโปรแกรมดูรูปภาพบนเดสก์ท็อปสำหรับ Windows จาก OZ Lab ที่เน้นความรวดเร็ว รองรับไฟล์ภาพนิ่งทั่วไป พร้อมการซูม เลื่อนดู และแก้ไขแบบไม่ทำลายต้นฉบับ เวอร์ชัน 0.1.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64">
+  <title>PikaView (เดิมชื่อ OZ Image Viewer) — โปรแกรมดูรูปภาพสำหรับ Windows จาก OZ Lab</title>
+  <meta name="description" content="PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมดูรูปภาพบนเดสก์ท็อปสำหรับ Windows จาก OZ Lab ที่เน้นความรวดเร็ว รองรับไฟล์ภาพนิ่งทั่วไป พร้อมการซูม เลื่อนดู แก้ไขแบบไม่ทำลายต้นฉบับ และสั่งพิมพ์ เวอร์ชัน 0.1.1 พร้อมให้ดาวน์โหลดสำหรับ Windows x64">
   <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="OZ Image Viewer — โปรแกรมดูรูปภาพสำหรับ Windows จาก OZ Lab">
-  <meta property="og:description" content="โปรแกรมดูรูปภาพบนเดสก์ท็อปสำหรับ Windows ที่รวดเร็ว รองรับไฟล์ภาพนิ่งทั่วไป ซูม เลื่อนดู และแก้ไขแบบไม่ทำลายต้นฉบับ เวอร์ชัน 0.1.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64">
+  <meta property="og:title" content="PikaView (เดิมชื่อ OZ Image Viewer) — โปรแกรมดูรูปภาพสำหรับ Windows จาก OZ Lab">
+  <meta property="og:description" content="โปรแกรมดูรูปภาพบนเดสก์ท็อปสำหรับ Windows ที่รวดเร็ว รองรับไฟล์ภาพนิ่งทั่วไป ซูม เลื่อนดู แก้ไขแบบไม่ทำลายต้นฉบับ และสั่งพิมพ์ เวอร์ชัน 0.1.1 พร้อมให้ดาวน์โหลดสำหรับ Windows x64">
   <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -27,7 +27,7 @@
           <li><a href="/th/">หน้าแรก</a></li>
           <li><a href="/th/software/">ซอฟต์แวร์</a></li>
           <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/th/software/oz-image-viewer/" aria-current="page">OZ Image Viewer</a></li>
+          <li><a href="/th/software/oz-image-viewer/" aria-current="page">PikaView</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
         </ul>
@@ -37,22 +37,26 @@
   </header>
 
   <main id="main" class="wrap">
-    <h1>OZ Image Viewer</h1>
-    <p class="lede">OZ Image Viewer เป็นโปรแกรมดูรูปภาพบนเดสก์ท็อปสำหรับ Windows
-      พัฒนาโดย OZ Lab เปิดไฟล์ภาพนิ่งทั่วไปได้อย่างรวดเร็ว และให้คุณซูม เลื่อนดู
-      และแก้ไขแบบง่าย ๆ โดยไม่ทำลายไฟล์ต้นฉบับ</p>
+    <h1>PikaView</h1>
+    <p class="lede">PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมดูรูปภาพบนเดสก์ท็อปสำหรับ
+      Windows พัฒนาโดย OZ Lab เปิดไฟล์ภาพนิ่งทั่วไปได้อย่างรวดเร็ว และให้คุณซูม
+      เลื่อนดู สั่งพิมพ์ และแก้ไขแบบง่าย ๆ โดยไม่ทำลายไฟล์ต้นฉบับ</p>
 
     <div class="callout">
-      <p><strong>การเผยแพร่รุ่น 0.1.0:</strong> OZ Image Viewer เวอร์ชัน 0.1.0
-        พร้อมให้ดาวน์โหลดสำหรับระบบปฏิบัติการ Windows แบบ 64-บิต สามารถดาวน์โหลดตัวติดตั้ง
-        หรือไฟล์ ZIP แบบพกพาได้ที่หน้า <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a>
+      <p><strong>การเผยแพร่รุ่น 0.1.1:</strong> OZ Image Viewer ได้เปลี่ยนชื่อเป็น
+        <strong>PikaView</strong> แล้ว เวอร์ชัน 0.1.1 พร้อมให้ดาวน์โหลดสำหรับ
+        Windows แบบ 64-บิต และสามารถอัปเกรดทับการติดตั้ง OZ Image Viewer 0.1.0
+        แบบต่อผู้ใช้เดิมได้ทันทีโดยไม่สะดุด โดยยังคงใช้ <code>ozviewer.exe</code>
+        และโฟลเดอร์ <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>
+        สามารถดาวน์โหลดตัวติดตั้งหรือไฟล์ ZIP แบบพกพาได้ที่หน้า
+        <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a>
         ซอร์สโค้ดเปิดเผยสาธารณะบน GitHub ที่
         <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a></p>
     </div>
 
     <section aria-labelledby="what">
-      <h2 id="what">OZ Image Viewer ทำอะไรได้บ้าง</h2>
-      <p>OZ Image Viewer เปิดรูปทีละภาพ เน้นการแสดงผลที่รวดเร็วและตอบสนองลื่นไหล
+      <h2 id="what">PikaView ทำอะไรได้บ้าง</h2>
+      <p>PikaView เปิดรูปทีละภาพ เน้นการแสดงผลที่รวดเร็วและตอบสนองลื่นไหล
         ระหว่างดูรูป นี่คือความสามารถที่มีในตอนนี้:</p>
       <ul class="feature-list">
         <li>เปิดและแสดงไฟล์ภาพนิ่งทั่วไป: JPEG, PNG, WebP แบบนิ่ง, BMP, GIF
@@ -65,6 +69,8 @@
         <li>โหมดเต็มจอแบบไม่มีขอบบนจอปัจจุบัน</li>
         <li>แก้ไขแบบไม่ทำลายต้นฉบับ: หมุน พลิก ครอป และย่อ/ขยาย พร้อมเลิกทำและ
           ทำซ้ำ ไฟล์ต้นฉบับไม่ถูกแก้จนกว่าคุณจะบันทึก</li>
+        <li>พิมพ์ภาพเดี่ยวแบบโต้ตอบ (<code>File -&gt; Print...</code> หรือ
+          <code>Ctrl+P</code>): เตรียมผลลัพธ์หนึ่งหน้าพอดีกระดาษจากภาพที่ยืนยันแล้วโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
         <li>บันทึกและบันทึกเป็นเป็น PNG, JPEG, WebP (แบบไม่สูญเสียข้อมูล),
           TIFF (บันทึกเป็นเท่านั้น) และ BMP</li>
         <li>เปิดภาพจากบรรทัดคำสั่ง หรือลากไฟล์หนึ่งไฟล์วางบนหน้าต่าง</li>
@@ -75,7 +81,7 @@
       <h2 id="status">สถานะโปรเจกต์</h2>
       <div class="table-scroll">
         <table class="status-table">
-          <caption class="muted">สถานะของ OZ Image Viewer ตามที่เผยแพร่บนเว็บนี้</caption>
+          <caption class="muted">สถานะของ PikaView ตามที่เผยแพร่บนเว็บนี้</caption>
           <tbody>
             <tr>
               <th scope="row">แพลตฟอร์ม</th>
@@ -87,11 +93,11 @@
             </tr>
             <tr>
               <th scope="row">เวอร์ชัน</th>
-              <td>0.1.0</td>
+              <td>0.1.1</td>
             </tr>
             <tr>
               <th scope="row">รุ่นที่เผยแพร่สาธารณะ</th>
-              <td><a href="/th/software/oz-image-viewer/changelog/">0.1.0</a></td>
+              <td><a href="/th/software/oz-image-viewer/changelog/">0.1.1, 0.1.0</a></td>
             </tr>
             <tr>
               <th scope="row">ดาวน์โหลด</th>
@@ -114,9 +120,9 @@
       <h2 id="next">ไปที่หน้าถัดไป</h2>
       <ul>
         <li><a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> — แพ็กเกจทางการสำหรับ Windows และค่าแฮช SHA-256</li>
-        <li><a href="/th/software/oz-image-viewer/changelog/">บันทึกการเปลี่ยนแปลง</a> — รายละเอียดการเปลี่ยนแปลงในรุ่น 0.1.0</li>
+        <li><a href="/th/software/oz-image-viewer/changelog/">บันทึกการเปลี่ยนแปลง</a> — รายละเอียดการเปลี่ยนแปลงในรุ่น 0.1.1 และ 0.1.0</li>
         <li><a href="/th/software/oz-image-viewer/guide/">คู่มือและคำถามที่พบบ่อย</a> —
-          วิธีดูและแก้ไขภาพ พร้อมคำถามที่พบบ่อย</li>
+          วิธีดู แก้ไข และสั่งพิมพ์ภาพ พร้อมคำถามที่พบบ่อย</li>
         <li><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">โปรเจกต์บน GitHub</a></li>
       </ul>
     </section>
@@ -125,7 +131,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
+      <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
         และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
     </div>
   </footer>

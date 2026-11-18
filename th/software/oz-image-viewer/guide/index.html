@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>คู่มือ OZ Image Viewer และคำถามที่พบบ่อย — OZ Lab</title>
-  <meta name="description" content="คู่มือสั้น ๆ สำหรับ OZ Image Viewer: วิธีเปิดและเลื่อนดูภาพ ซูมและเลื่อนภาพ แก้ไขแบบไม่ทำลายต้นฉบับ คีย์ลัด รูปแบบไฟล์ที่รองรับ ข้อจำกัดที่ทราบ และคำถามที่พบบ่อย">
+  <title>คู่มือ PikaView และคำถามที่พบบ่อย — OZ Lab</title>
+  <meta name="description" content="คู่มือสั้น ๆ สำหรับ PikaView (เดิมชื่อ OZ Image Viewer): วิธีเปิดและเลื่อนดูภาพ ซูมและเลื่อนภาพ แก้ไขแบบไม่ทำลายต้นฉบับ พิมพ์ภาพ คีย์ลัด รูปแบบไฟล์ที่รองรับ ข้อจำกัดที่ทราบ และคำถามที่พบบ่อย">
   <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
   <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
   <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
   <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
-  <meta property="og:title" content="คู่มือ OZ Image Viewer และคำถามที่พบบ่อย — OZ Lab">
-  <meta property="og:description" content="คู่มือสั้น ๆ สำหรับ OZ Image Viewer พร้อมคำถามที่พบบ่อย">
+  <meta property="og:title" content="คู่มือ PikaView และคำถามที่พบบ่อย — OZ Lab">
+  <meta property="og:description" content="คู่มือสั้น ๆ สำหรับ PikaView (เดิมชื่อ OZ Image Viewer) พร้อมคำถามที่พบบ่อย">
   <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -27,7 +27,7 @@
           <li><a href="/th/">หน้าแรก</a></li>
           <li><a href="/th/software/">ซอฟต์แวร์</a></li>
           <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/th/software/oz-image-viewer/">OZ Image Viewer</a></li>
+          <li><a href="/th/software/oz-image-viewer/">PikaView</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
         </ul>
@@ -38,7 +38,7 @@
 
   <main id="main" class="wrap">
     <h1>คู่มือและคำถามที่พบบ่อย</h1>
-    <p class="lede">คู่มือนี้พาคุณดูวิธีใช้ OZ Image Viewer ตามพฤติกรรมการทำงานในเวอร์ชัน 0.1.0</p>
+    <p class="lede">คู่มือนี้พาคุณดูวิธีใช้ PikaView (เดิมชื่อ OZ Image Viewer) ตามพฤติกรรมการทำงานในเวอร์ชัน 0.1.1</p>
 
     <section aria-labelledby="basics">
       <h2 id="basics">พื้นฐาน</h2>
@@ -57,6 +57,9 @@
           และกลับมา</li>
         <li><strong>แก้ไข</strong> หมุน พลิก ครอป และย่อ/ขยายเป็นการแก้ไขแบบไม่ทำลาย
           ต้นฉบับ เปลี่ยนเฉพาะเอกสารบนหน้าจอ ไฟล์ต้นฉบับยังคงเดิมจนกว่าคุณจะบันทึก</li>
+        <li><strong>พิมพ์</strong> เลือก <code>File -&gt; Print...</code> หรือกด
+          <kbd>Ctrl</kbd>+<kbd>P</kbd> เพื่อเปิดกล่องโต้ตอบการพิมพ์ของ Windows
+          และพิมพ์ภาพที่ยืนยันแล้วหนึ่งชุดพอดีหน้ากระดาษโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
         <li><strong>บันทึก</strong> บันทึกจะเขียนเอกสารปัจจุบันกลับไปยังไฟล์ต้นฉบับ
           เมื่อรูปแบบไฟล์รองรับ ส่วนบันทึกเป็นจะสร้างสำเนาใหม่และไม่แก้ไฟล์ต้นฉบับ</li>
       </ul>
@@ -85,12 +88,13 @@
       <h2 id="shortcuts">คีย์บอร์ดและเมาส์</h2>
       <div class="table-scroll">
         <table>
-          <caption class="muted">คีย์บอร์ดและเมาส์ของ OZ Image Viewer</caption>
+          <caption class="muted">คีย์บอร์ดและเมาส์ของ PikaView</caption>
           <thead>
             <tr><th scope="col">การใช้งาน</th><th scope="col">การทำงาน</th></tr>
           </thead>
           <tbody>
             <tr><td><kbd>Ctrl</kbd>+<kbd>O</kbd></td><td>เปิดภาพ</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td>พิมพ์ภาพปัจจุบัน</td></tr>
             <tr><td><kbd>Left</kbd> / <kbd>Right</kbd></td><td>ภาพก่อนหน้า / ภาพถัดไป</td></tr>
             <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>ภาพแรก / ภาพสุดท้ายในโฟลเดอร์</td></tr>
             <tr><td><kbd>Space</kbd> / <kbd>Backspace</kbd></td><td>ภาพถัดไป / ภาพก่อนหน้า</td></tr>
@@ -128,6 +132,14 @@
           WebP แบบสูญเสียข้อมูลหรือแบบเคลื่อนไหว</li>
         <li>ไม่มีปลั๊กอินหรือตัวถอดรหัสของระบบอื่น และรายการนามสกุลที่รองรับ
           เป็นชุดที่กำหนดไว้ตายตัว</li>
+        <li>การพิมพ์จะส่งออกภาพที่ยืนยันแล้วหนึ่งชุดแบบพอดีหน้ากระดาษผ่านกล่องโต้ตอบของระบบ Windows
+          <code>PrintDlgExW</code> กรณีเครื่องพิมพ์เครือข่าย <code>failed-network-first</code>
+          ยังไม่ได้ทดสอบ และไม่มีการอ้างว่าอาการค้างของกล่องโต้ตอบพิมพ์ทั้งหมดได้รับการแก้ไขแล้ว</li>
+        <li>ไฟล์ไบนารีของโปรเจกต์ (<code>pikaview-0.1.1-win-x64-installer.exe</code>,
+          <code>ozviewer.exe</code>, <code>heif.dll</code> และ <code>libde265.dll</code>)
+          ยังไม่ได้ลงลายเซ็นดิจิทัล Windows SmartScreen หรือเบราว์เซอร์อาจแสดงคำเตือน
+          "Unknown Publisher" โปรดตรวจสอบค่าแฮช SHA-256 ที่หน้า
+          <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> ก่อนรันไฟล์</li>
         <li>ซอร์สโค้ดเปิดเผยสาธารณะภายใต้สัญญาอนุญาต MIT บน GitHub</li>
       </ul>
     </section>
@@ -135,19 +147,26 @@
     <section aria-labelledby="faq">
       <h2 id="faq">คำถามที่พบบ่อย</h2>
 
-      <h3 id="faq-download">ดาวน์โหลด OZ Image Viewer ได้ไหม</h3>
+      <h3 id="faq-download">ดาวน์โหลด PikaView ได้ไหม</h3>
       <p>ได้ สามารถดาวน์โหลดแพ็กเกจสำหรับ Windows 64-บิต ได้ที่หน้า
         <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a></p>
+
+      <h3 id="faq-upgrade">อัปเกรดจาก OZ Image Viewer 0.1.0 อย่างไร</h3>
+      <p>รันตัวติดตั้ง PikaView 0.1.1 ทับการติดตั้ง OZ Image Viewer 0.1.0 เดิมได้เลย
+        โปรแกรมจะอัปเกรดในตำแหน่งเดิมภายใต้โฟลเดอร์ต่อผู้ใช้
+        (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>) โดยยังคงชื่อไฟล์โปรแกรม
+        <code>ozviewer.exe</code> ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code>
+        และรักษาค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>) เดิมไว้ครบถ้วน</p>
 
       <h3 id="faq-source">ซอร์สโค้ดอยู่ที่ไหน</h3>
       <p>ซอร์สโค้ดเปิดเผยสาธารณะ โปรเจกต์อยู่บน GitHub ที่
         <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a></p>
 
       <h3 id="faq-account">ต้องมีบัญชีไหม</h3>
-      <p>ไม่ต้อง OZ Image Viewer เป็นโปรแกรมเดสก์ท็อป ไม่ใช้บัญชีหรือการลงชื่อเข้าใช้</p>
+      <p>ไม่ต้อง PikaView เป็นโปรแกรมเดสก์ท็อป ไม่ใช้บัญชีหรือการลงชื่อเข้าใช้</p>
 
       <h3 id="faq-platform">ใช้กับคอมพิวเตอร์แบบไหน</h3>
-      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows 64 บิต (x64) บน Windows 10
+      <p>PikaView เป็นโปรแกรมสำหรับ Windows 64 บิต (x64) บน Windows 10
         และ Windows 11</p>
 
       <h3 id="faq-edit">การแก้ไขเปลี่ยนไฟล์ต้นฉบับไหม</h3>
@@ -162,7 +181,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2026 OZ Lab สงวนลิขสิทธิ์</p>
-      <p>OZ Image Viewer เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
+      <p>PikaView (เดิมชื่อ OZ Image Viewer) เป็นโปรแกรมสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิต
         และไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
     </div>
   </footer>
