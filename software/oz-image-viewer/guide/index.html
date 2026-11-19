@@ -52,9 +52,9 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">Documentation · v0.1.1</span>
+      <span class="mono-meta">Documentation · v0.1.2</span>
       <h1>User guide &amp; FAQ</h1>
-      <p class="lede">This guide walks through how PikaView (formerly OZ Image Viewer) is used. It describes the behaviour implemented in version 0.1.1.</p>
+      <p class="lede">This guide walks through how PikaView (formerly OZ Image Viewer) is used. It describes the behaviour implemented in version 0.1.2.</p>
     </div>
 
     <nav class="page-toc" aria-label="On this page">
@@ -76,8 +76,9 @@
         <li><strong>Zoom and pan.</strong> Scroll to zoom in and out at the cursor, or use the keyboard. Drag with the left mouse button to pan, and double-click to switch between fit and 100%.</li>
         <li><strong>Fullscreen.</strong> Switch the window to borderless fullscreen on the current monitor and back again.</li>
         <li><strong>Edit.</strong> Rotate, flip, crop and resize are non-destructive: they change the on-screen document only, and the original file stays untouched until you save.</li>
-        <li><strong>Print.</strong> Choose <code>File -&gt; Print...</code> or press <kbd>Ctrl</kbd>+<kbd>P</kbd> to open the Windows print dialog and print one fit-to-page copy of the committed image without modifying the file.</li>
-        <li><strong>Save.</strong> Save writes the current document back to its original file where the format allows it; Save As writes a new copy and never changes the original.</li>
+        <li><strong>Command bar &amp; More menu.</strong> PikaView uses a single-row Lucide command bar with direct action buttons and a right-side <strong>More</strong> overflow menu (opened via the button or <kbd>F10</kbd> / <kbd>Alt</kbd>). Keyboard focus returns automatically to the canvas after command bar actions.</li>
+        <li><strong>Print.</strong> Choose the <strong>Print</strong> button on the command bar, <code>More -&gt; Print...</code>, or press <kbd>Ctrl</kbd>+<kbd>P</kbd> to open the Windows print dialog and print one fit-to-page copy of the committed image without modifying the file.</li>
+        <li><strong>Save.</strong> Save writes the current document back to its original file where the format allows it (reloading and re-saving cleanly across folder navigation, with localized guidance if storage is read-only or permission is denied); Save As writes a new copy and never changes the original.</li>
       </ul>
     </section>
 
@@ -123,6 +124,7 @@
             <tr><td><kbd>1</kbd></td><td>Actual size (100%)</td></tr>
             <tr><td>Left-drag</td><td>Pan the image</td></tr>
             <tr><td>Double-click</td><td>Toggle between fit and 100%</td></tr>
+            <tr><td><kbd>F10</kbd> / <kbd>Alt</kbd></td><td>Open the <strong>More</strong> command bar overflow menu</td></tr>
             <tr><td><kbd>F11</kbd></td><td>Enter or leave fullscreen</td></tr>
             <tr><td><kbd>Esc</kbd></td><td>Leave fullscreen, or cancel a crop</td></tr>
             <tr><td><kbd>C</kbd></td><td>Enter crop mode</td></tr>
@@ -150,7 +152,7 @@
         <li>WebP export is lossless single-frame only; lossy and animated WebP export are not supported.</li>
         <li>There are no plugins or third-party shell codecs, and the set of supported extensions is a fixed list.</li>
         <li>Printing outputs one fit-to-page copy of the committed image via the Windows <code>PrintDlgExW</code> system dialog. The <code>failed-network-first</code> printer case has not been tested, and no claim is made that all print-dialog hangs are fixed.</li>
-        <li>Release binaries (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned, so Windows SmartScreen or browsers may show an "Unknown Publisher" notice. Verify SHA-256 checksums on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page before running.</li>
+        <li>Release binaries (<code>pikaview-0.1.2-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned, so Windows SmartScreen or browsers may show an "Unknown Publisher" notice. Verify SHA-256 checksums on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page before running.</li>
         <li>The source code is public under the MIT License on GitHub.</li>
       </ul>
     </section>
@@ -163,8 +165,8 @@
       <h3 id="faq-download">Can I download PikaView?</h3>
       <p>Yes. Release packages for 64-bit Windows are available on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page.</p>
 
-      <h3 id="faq-upgrade">How do I upgrade from OZ Image Viewer 0.1.0?</h3>
-      <p>Run the PikaView 0.1.1 installer over your existing OZ Image Viewer 0.1.0 installation. It upgrades in place in the original per-user directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>), keeps the <code>ozviewer.exe</code> executable filename, stable AppId, and <code>OZImageViewer.Image</code> ProgID, and preserves all existing Windows default file associations (<code>UserChoice</code>).</p>
+      <h3 id="faq-upgrade">How do I upgrade from 0.1.0 or 0.1.1?</h3>
+      <p>Run the PikaView 0.1.2 installer over your existing OZ Image Viewer 0.1.0 or PikaView 0.1.1 installation. It upgrades in place in the original per-user directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>), keeps the <code>ozviewer.exe</code> executable filename, stable AppId, and <code>OZImageViewer.Image</code> ProgID, and preserves all existing Windows default file associations (<code>UserChoice</code>).</p>
 
       <h3 id="faq-source">Where is the source code?</h3>
       <p>The source code is public. The project lives on GitHub at <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>.</p>

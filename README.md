@@ -16,7 +16,7 @@ build step and no JavaScript; GitHub Pages publishes the files here directly.
 - **PikaView (formerly OZ Image Viewer)** — a Windows desktop image viewer for
   common still image formats, with fast first-image display, zoom and pan,
   folder navigation, non-destructive editing and printing. Current release:
-  `v0.1.1` for Windows x64.
+  `v0.1.2` for Windows x64.
   <https://underoatz-netizen.github.io/software/oz-image-viewer/>
 
 The site also has a Support page (<https://underoatz-netizen.github.io/support/>)
@@ -36,7 +36,7 @@ Product source and release files are kept outside this repository:
   on <https://underoatz-netizen.github.io/software/fastpdf/downloads/>.
 - **PikaView (formerly OZ Image Viewer)** — first-party source code is public
   at <https://github.com/underoatz-netizen/oz-image-viewer>. Release files
-  (`v0.1.1` for Windows x64) and corresponding LGPL component source are
+  (`v0.1.2` for Windows x64) and corresponding LGPL component source are
   linked on <https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/>.
 
 For what can currently be downloaded, see the product pages on the site.

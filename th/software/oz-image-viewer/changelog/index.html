@@ -52,15 +52,52 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">ประวัติการเผยแพร่ · v0.1.1</span>
+      <span class="mono-meta">ประวัติการเผยแพร่ · v0.1.2</span>
       <h1>บันทึกการเปลี่ยนแปลง</h1>
       <p class="lede">ประวัติรุ่นและการพัฒนาของ PikaView (เดิมชื่อ OZ Image Viewer)</p>
     </div>
 
+    <article class="changelog-entry" aria-labelledby="v0-1-2">
+      <div class="changelog-head">
+        <h2 id="v0-1-2">เวอร์ชัน 0.1.2 — 19 พฤศจิกายน 2026</h2>
+        <span class="badge">รุ่นปัจจุบัน · Windows x64</span>
+      </div>
+      <p class="muted">ไอคอน PikaView ใหม่ แถบคำสั่งแถวเดียวด้วย Lucide 1.71.0 ความน่าเชื่อถือของแคช/พรีโหลดเมื่อบันทึก คำแนะนำข้อผิดพลาดพื้นที่เก็บข้อมูล ความต่อเนื่องในการอัปเกรดทับรุ่นเดิม และการสร้างไบนารี PE แบบกำหนดได้แน่นอนที่สร้างซ้ำได้ตรงกันทุกบิต</p>
+      <p>เวอร์ชัน 0.1.2 ปรับโฉมไอคอนแอปและกรอบหน้าต่างด้วยแถบคำสั่งแถวเดียวที่ใช้ไอคอน Lucide 1.71.0 แก้ไขสถานะแคชและพรีโหลดค้างเมื่อบันทึกข้ามการเลื่อนดูภาพ เพิ่มคำแนะนำข้อผิดพลาดด้านสิทธิ์และการเขียนสื่อเป็นภาษาอังกฤษและภาษาไทย รองรับการอัปเกรดทับในตำแหน่งเดิมจากทั้งรุ่น 0.1.0 และ 0.1.1 และสร้างไบนารี PE แบบสะอาดจากซอร์สโค้ดที่พิสูจน์ความตรงกันระดับบิตต่อบิต</p>
+
+      <h3>ภาพลักษณ์และแถบคำสั่ง</h3>
+      <ul>
+        <li><strong>ไอคอนแอป PikaView ใหม่:</strong> ใช้งานอย่างสอดคล้องกันทั้งในทรัพยากร <code>ozviewer.exe</code> หน้าต่างหลัก กล่องโต้ตอบ หน้าจอว่าง/ต้อนรับ และตัวติดตั้ง Windows Setup (<code>pikaview.png</code> / <code>ozviewer.ico</code>)</li>
+        <li><strong>แถบคำสั่งแถวเดียวด้วย Lucide 1.71.0 และหน้าต่างที่สะอาดตา:</strong> แทนที่แถบเมนูแบบเดิมด้วยแถบคำสั่งแถวเดียวสูง 40 DIP (ปุ่มขนาด <code>32</code> DIP ตัวคั่นแบบเรียบ เมนูส่วนเกิน <strong>More</strong> ด้านขวาที่มีลำดับแน่นอน ตัวควบคุมแถบครอปที่คมชัด การเปิดเมนูด้วยคีย์บอร์ด <code>F10</code>/<code>Alt</code> คงคีย์ลัดเดิมทั้งหมด และคืนโฟกัสกลับสู่พื้นที่ภาพอัตโนมัติ) ในโทน UI สีเทาเข้ม (dark charcoal) พร้อมเพิ่มประกาศ Lucide (ISC) และ Feather (MIT) ใน <code>THIRD-PARTY-NOTICES.md</code></li>
+      </ul>
+
+      <h3>ความน่าเชื่อถือของการบันทึก ความต่อเนื่องของการอัปเกรด และการสร้างแบบกำหนดได้แน่นอน</h3>
+      <ul>
+        <li><strong>ความน่าเชื่อถือของแคช/พรีโหลดเมื่อบันทึกและคำแนะนำข้อผิดพลาดพื้นที่เก็บข้อมูล:</strong> แก้ไขสถานะ <code>app.cache</code> และ preload ค้างเมื่อสั่งบันทึก ทำให้การสลับดู <code>Save -&gt; Next -&gt; Previous -&gt; Save</code> โหลดและบันทึกซ้ำได้ถูกต้องโดยไม่ขึ้นข้อความผิดพลาดเท็จว่า "source file modified" ประสานขั้นตอนเมื่อบันทึกเสร็จกับ checkpoint ของเอกสารปัจจุบันและการจัดตารางนำทางที่ค้างอยู่ พร้อมเพิ่มคำแนะนำภาษาอังกฤษและภาษาไทยสำหรับสื่ออ่านอย่างเดียว (<code>win32 19</code> write-protected storage) และกรณีไม่มีสิทธิ์ (<code>win32 5</code>)</li>
+        <li><strong>ความต่อเนื่องของการอัปเกรดในตำแหน่งเดิม:</strong> ตัวติดตั้งรู้จักการลงทะเบียนที่เป็นเจ้าของจากรุ่น <code>0.1.0</code>, <code>0.1.1</code> และ <code>0.1.2</code> อัปเกรดทับที่ <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code> โดยยังคง <code>ozviewer.exe</code> ค่า AppId ที่คงที่ ProgID <code>OZImageViewer.Image</code> และ <code>HKCU\Software\OZImageViewer</code> และรักษาค่าเริ่มต้นของ Windows (<code>UserChoice</code>) ไว้ทั้งหมด</li>
+        <li><strong>การสร้างแบบกำหนดได้แน่นอนด้วย MSVC <code>/Brepro</code> / <code>/experimental:deterministic</code>:</strong> สร้างจากคอมมิตที่สะอาด <code>4541ffedc4fde9d4095d92f3f7a0c5397bbb501b</code> (tree <code>0c464561de3d418b8d2a8b3689ca163a1cbad7bd</code>) ด้วย MSVC <code>/experimental:deterministic /Brepro /PDBALTPATH:%_PDB%</code> ทริปเล็ต <code>oz-x64-windows-static-md</code> (<code>v143</code> พร้อม <code>libheif</code>/<code>libde265</code> ใช้ <code>/Brepro /PDBALTPATH:heif.pdb</code> และ <code>libde265.pdb</code>) และ <code>file-local</code> named namespace <code>oz_viewer_main_internal</code> ใน <code>src/viewer/main.cpp</code> ร่วมกับการสร้าง dependency ใหม่สะอาดจากซอร์สโค้ด (<code>VCPKG_BINARY_SOURCES=clear</code>)</li>
+      </ul>
+
+      <h3>การตรวจสอบ หลักฐานการสร้างซ้ำ ข้อจำกัดของหลักฐาน และแพ็กเกจ</h3>
+      <ul>
+        <li><strong>หลักฐานการสร้างซ้ำได้ตรงกันระดับบิตต่อบิต (<code>REPRODUCIBLE-BUILD-PROOF.json</code>):</strong> การสร้างแอปพลิเคชันแบบสะอาดและเป็นอิสระสองครั้ง (<code>repro-a</code> และ <code>repro-b</code> ที่มีโฟลเดอร์และเวลาต่างกัน) คอมไพล์ใหม่สะอาดจากซอร์สโค้ดด้วย <code>VCPKG_BINARY_SOURCES=clear</code> และไม่มีการคืนค่าไบนารีจากแคช ให้ไฟล์ <code>ozviewer.exe</code> ตรงกัน 2 ทางระดับบิตต่อบิต (<code>04dfd470...</code>, <code>repro-a == repro-b</code>) และเมื่อรวมกับการสร้างส่วนประกอบ LGPL แบบแยกอิสระครั้งที่ 3 ด้วย <code>build-lgpl-dlls.ps1</code> จาก <code>pikaview-0.1.2-lgpl-corresponding-source.zip</code> ให้ไฟล์ DLL ของ LGPL ที่โหลดแบบไดนามิกตรงกัน 3 ทางระดับบิตต่อบิต ได้แก่ <code>heif.dll</code> (<code>9bf0954c...</code>) และ <code>libde265.dll</code> (<code>15536336...</code>) (<code>repro-a == repro-b == Standalone</code>) พร้อม debug directory แบบ <code>repro</code> และไม่มีพาธ PDB ของเครื่องผู้สร้าง ซึ่งเติมเต็มข้อกำหนดด้านการสร้างซ้ำและการสร้างใหม่แบบแยกขาดร่วมกับ <code>BUILD-PROVENANCE.json</code> ขณะที่ตัวห่อหุ้มแพ็กเกจเผยแพร่ (เวลาในไฟล์ <code>portable.zip</code> และตัวติดตั้ง Inno Setup <code>.exe</code>) ถูกแพ็กครั้งเดียวจาก Build A และผูกค่า SHA-256 ไว้ใน <code>SHA256SUMS</code></li>
+        <li><strong>ชุดทดสอบ CTest เฉพาะเป้าหมายบน Clean Build A และชุดทดสอบแพ็กเกจ/provenance (<code>OZVIEWER_PRINT_DIAGNOSTICS=OFF</code>):</strong> คอมไพล์ Release x64 แบบสะอาดเสร็จสมบูรณ์โดยมี 0 errors; CTest เฉพาะชุดเป้าหมายบนบิลด์สะอาดผ่าน <code>11/11</code> รายการ (<code>ozviewer_core_tests</code> 2987/0, <code>ozviewer_stage7_seam_tests</code> 5366/0, <code>ozviewer_localization_tests</code> 1249/0, <code>ozviewer_recycle_delete_tests</code> 27/0, <code>ozviewer_icon_asset_tests</code>, <code>release_build_wrapper_tests</code> และสแกนแยก/แคตตาล็อก 5 รายการ; ทั้งนี้ยังไม่ได้รันชุด CTest เต็มทั้ง 52 รายการซ้ำหลังคอมมิต <code>4541ffe</code>) ชุดทดสอบแพ็กเกจ provenance และการย้ายรุ่นผ่านทั้งหมดด้วย exit code 0 (<code>validate-portable-payload.ps1</code>, <code>smoke-portable.ps1</code> <code>FirstPresent</code> PASS, <code>test-installer-migration.ps1</code> รวมถึงจำลองการอัปเกรด <code>0.1.0</code>/<code>0.1.1 -&gt; 0.1.2</code> + คอมไพล์ <code>ISCC.exe</code>, <code>test-dependency-provenance.ps1</code> และ <code>test-envelope-provenance.ps1</code>)</li>
+        <li><strong>การทดสอบวงจรชีวิตในระบบ CI แบบ clean-room:</strong> GitHub Actions CI run <code>44501854397</code> (<code>windows-2022</code> x64) ผ่าน <code>fetch-candidate</code> (47 วินาที) และ <code>validate-candidate</code> (1 นาที 26 วินาที) — disposable lifecycle harness: 48 รายการ (ผ่าน 47, คำเตือน <code>non_admin_integrity_check</code> ตามคาด 1, ล้มเหลว 0) และ <code>standard-user-lifecycle</code>: 12/12 parent + 48/48 non-elevated standard-user child checks ผ่านครบ ครอบคลุมการติดตั้งใหม่ <code>FirstPresent</code> benchmark smoke การเชื่อมโยงนามสกุลไฟล์และชอร์ตคัตแบบเลือกเอง การอัปเกรดในตำแหน่งเดิม <code>v0.1.0 -&gt; v0.1.2</code> การตรวจแฮชรันไทม์ การคงค่า <code>UserChoice</code> ครบทั้ง 14 นามสกุล และการถอนการติดตั้งอย่างหมดจด</li>
+        <li><strong>ข้อจำกัดของหลักฐานตามจริง:</strong> เส้นทางอัปเกรด <code>0.1.1 -&gt; 0.1.2</code> ผ่านการตรวจสอบด้วยชุดทดสอบรีจิสทรี/นโยบายจำลองและการคอมไพล์ <code>ISCC</code> ขณะที่การรันอัปเกรดจริงใน CI แบบ clean-room ทดสอบเส้นทาง <code>v0.1.0 -&gt; v0.1.2</code> ส่วนข้อจำกัดด้านเครื่องพิมพ์จริงและกรณี <code>failed-network-first</code> จากรุ่น v0.1.1 ยังคงเดิม</li>
+        <li><strong>แพ็กเกจรุ่น v0.1.2 จำนวน 4 ไฟล์:</strong> <code>pikaview-0.1.2-win-x64-installer.exe</code> (4,276,637 ไบต์), <code>pikaview-0.1.2-win-x64-portable.zip</code> (2,744,297 ไบต์), <code>pikaview-0.1.2-lgpl-corresponding-source.zip</code> (2,421,056 ไบต์) และ <code>SHA256SUMS</code> (316 ไบต์) (ไฟล์ไบนารีของโปรเจกต์ยังไม่ได้ลงลายเซ็น / <code>NotSigned</code>; ส่วน Microsoft VC143 CRT DLL มีลายเซ็นของ Microsoft)</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="btn btn-primary" href="/th/software/oz-image-viewer/downloads/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>ไปที่หน้าดาวน์โหลด PikaView 0.1.2</span>
+        </a>
+      </p>
+    </article>
+
     <article class="changelog-entry" aria-labelledby="v0-1-1">
       <div class="changelog-head">
         <h2 id="v0-1-1">เวอร์ชัน 0.1.1 — 18 พฤศจิกายน 2026</h2>
-        <span class="badge">รุ่นปัจจุบัน · Windows x64</span>
+        <span class="badge">รุ่นก่อนหน้า · Windows x64</span>
       </div>
       <p class="muted">เปลี่ยนชื่อเป็น PikaView เส้นทางการพิมพ์ PrintDlgExW และแพ็กเกจพร้อม provenance สำหรับ Windows 64-บิต</p>
       <p>เวอร์ชัน 0.1.1 สืบเนื่องจาก OZ Image Viewer ภายใต้ชื่อผลิตภัณฑ์ <strong>PikaView</strong> โดยยังคงข้อมูลระบุตัวตนภายในสำหรับการอัปเกรด เพื่อให้การติดตั้งแบบต่อผู้ใช้รุ่น 0.1.0 เดิมสามารถอัปเกรดทับในตำแหน่งเดิมได้อย่างราบรื่น</p>
@@ -141,7 +178,7 @@
             <span class="editorial-row-title">ดาวน์โหลด</span>
             <span class="editorial-row-desc">ไฟล์ดาวน์โหลดทางการสำหรับ Windows และค่าแฮช SHA-256</span>
             <span class="editorial-row-meta">
-              <span>v0.1.1</span>
+              <span>v0.1.2</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>

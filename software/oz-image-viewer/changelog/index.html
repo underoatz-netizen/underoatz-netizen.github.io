@@ -52,15 +52,52 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">Release history · v0.1.1</span>
+      <span class="mono-meta">Release history · v0.1.2</span>
       <h1>Changelog</h1>
       <p class="lede">Release notes and version milestones for PikaView (formerly OZ Image Viewer).</p>
     </div>
 
+    <article class="changelog-entry" aria-labelledby="v0-1-2">
+      <div class="changelog-head">
+        <h2 id="v0-1-2">Version 0.1.2 — 19 November 2026</h2>
+        <span class="badge">Current release · Windows x64</span>
+      </div>
+      <p class="muted">New PikaView icon, single-row Lucide 1.71.0 command bar, save cache/preload reliability &amp; storage error guidance, in-place upgrade continuity, and deterministic reproducible PE binary builds</p>
+      <p>Version 0.1.2 updates PikaView's application icon and chrome with a single-row Lucide 1.71.0 command bar, fixes stale save cache/preload state across navigation, adds localized storage error guidance, preserves in-place upgrades from both 0.1.0 and 0.1.1, and produces bit-for-bit reproducible PE binaries built cleanly from source.</p>
+
+      <h3>Visual identity &amp; command bar</h3>
+      <ul>
+        <li><strong>New PikaView application icon:</strong> Applied consistently across <code>ozviewer.exe</code> executable resources, main window, dialogs, empty/welcome view, and Windows setup installer (<code>pikaview.png</code> / <code>ozviewer.ico</code>).</li>
+        <li><strong>Single-row Lucide 1.71.0 command bar &amp; clean chrome:</strong> Replaced the legacy menu bar with a 40-DIP single-row command bar (<code>32</code> DIP buttons, subtle separators, deterministic right-side <strong>More</strong> overflow menu, crisp crop strip controls, <code>F10</code>/<code>Alt</code> keyboard menu activation, preserved keyboard shortcuts, and automatic canvas focus restore) styled cleanly in a dark charcoal UI. Included Lucide (ISC) and Feather (MIT) notices in <code>THIRD-PARTY-NOTICES.md</code>.</li>
+      </ul>
+
+      <h3>Save reliability, upgrade continuity &amp; deterministic builds</h3>
+      <ul>
+        <li><strong>Save cache/preload reliability &amp; storage error guidance:</strong> Fixed stale <code>app.cache</code> and preloaded completion state on Save so navigating <code>Save -&gt; Next -&gt; Previous -&gt; Save</code> reloads/re-saves cleanly without false "source file modified" errors; coordinated save-completion steps with active document checkpoints and pending navigation rescheduling; added localized EN/TH guidance for read-only media (<code>win32 19</code> write-protected storage) and permission denials (<code>win32 5</code>).</li>
+        <li><strong>In-place upgrade continuity:</strong> Installer recognizes <code>0.1.0</code>, <code>0.1.1</code>, and <code>0.1.2</code> owned registrations, upgrading in place at <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code> while retaining <code>ozviewer.exe</code>, the stable AppId, <code>OZImageViewer.Image</code> ProgID, and <code>HKCU\Software\OZImageViewer</code> without altering existing Windows default file associations (<code>UserChoice</code>).</li>
+        <li><strong>Deterministic MSVC <code>/Brepro</code> / <code>/experimental:deterministic</code> builds:</strong> Built from clean commit <code>4541ffedc4fde9d4095d92f3f7a0c5397bbb501b</code> (tree <code>0c464561de3d418b8d2a8b3689ca163a1cbad7bd</code>) using MSVC <code>/experimental:deterministic /Brepro /PDBALTPATH:%_PDB%</code>, pinned <code>v143</code> triplet <code>oz-x64-windows-static-md</code> (with <code>libheif</code>/<code>libde265</code> <code>/Brepro /PDBALTPATH:heif.pdb</code> &amp; <code>libde265.pdb</code>), and <code>file-local</code> named namespace <code>oz_viewer_main_internal</code> in <code>src/viewer/main.cpp</code>, with clean from-source dependency rebuilds (<code>VCPKG_BINARY_SOURCES=clear</code>).</li>
+      </ul>
+
+      <h3>Verification, reproducibility proof, evidence limits &amp; packages</h3>
+      <ul>
+        <li><strong>Bit-for-bit reproducible-build proof (<code>REPRODUCIBLE-BUILD-PROOF.json</code>):</strong> Two independent clean application builds (<code>repro-a</code> and <code>repro-b</code>, distinct directories and timestamps) built cleanly from source with <code>VCPKG_BINARY_SOURCES=clear</code> and zero cached binary restores produced 2-way bit-for-bit identical <code>ozviewer.exe</code> (<code>04dfd470...</code>, <code>repro-a == repro-b</code>), and together with a 3rd standalone LGPL rebuild using <code>build-lgpl-dlls.ps1</code> extracted from <code>pikaview-0.1.2-lgpl-corresponding-source.zip</code> produced 3-way bit-for-bit identical dynamically loaded LGPL DLLs: <code>heif.dll</code> (<code>9bf0954c...</code>) and <code>libde265.dll</code> (<code>15536336...</code>) (<code>repro-a == repro-b == Standalone</code>), with PE <code>repro</code> debug directories and zero host PDB paths. This fulfills the companion reproducible-build and isolated from-source rebuild requirements alongside <code>BUILD-PROVENANCE.json</code>, while distribution containers (<code>portable.zip</code> entry timestamps and the Inno Setup <code>.exe</code> installer) are packaged once from Build A and bound by SHA-256 in <code>SHA256SUMS</code>.</li>
+        <li><strong>Clean Build A targeted CTest &amp; packaging/provenance suites (<code>OZVIEWER_PRINT_DIAGNOSTICS=OFF</code>):</strong> Clean Release x64 build completed with 0 errors; targeted clean-build CTest passed <code>11/11</code> checks (<code>ozviewer_core_tests</code> 2987/0, <code>ozviewer_stage7_seam_tests</code> 5366/0, <code>ozviewer_localization_tests</code> 1249/0, <code>ozviewer_recycle_delete_tests</code> 27/0, <code>ozviewer_icon_asset_tests</code>, <code>release_build_wrapper_tests</code>, and 5 isolation/catalog scans; note the full 52-test CTest suite was not re-run post-<code>4541ffe</code>). Packaging, provenance, and migration suites passed with exit 0 (<code>validate-portable-payload.ps1</code>, <code>smoke-portable.ps1</code> <code>FirstPresent</code> PASS, <code>test-installer-migration.ps1</code> including mock <code>0.1.0</code>/<code>0.1.1 -&gt; 0.1.2</code> upgrades + <code>ISCC.exe</code> compile, <code>test-dependency-provenance.ps1</code>, and <code>test-envelope-provenance.ps1</code>).</li>
+        <li><strong>Clean-room CI lifecycle verification:</strong> GitHub Actions CI run <code>44501854397</code> (<code>windows-2022</code> x64) passed <code>fetch-candidate</code> (47s) and <code>validate-candidate</code> (1m26s) — disposable lifecycle harness: 48 checks (47 <code>pass</code>, 1 expected <code>non_admin_integrity_check</code> warning, 0 <code>fail</code>) and <code>standard-user-lifecycle</code>: 12/12 parent + 48/48 non-elevated standard-user child checks <code>pass</code>, covering fresh install, <code>FirstPresent</code> benchmark smoke, opt-in file associations/desktop shortcut handling, <code>v0.1.0 -&gt; v0.1.2</code> in-place upgrade, runtime closure hashes, <code>UserChoice</code> preservation across all 14 extensions, and clean uninstall.</li>
+        <li><strong>Truthful evidence limits:</strong> The <code>0.1.1 -&gt; 0.1.2</code> upgrade path is verified via mock registry/policy tests and <code>ISCC</code> compile while hosted CI clean-room upgrade execution exercised <code>v0.1.0 -&gt; v0.1.2</code>; print physical-printer and <code>failed-network-first</code> limits from v0.1.1 remain unchanged.</li>
+        <li><strong>Four v0.1.2 release packages:</strong> <code>pikaview-0.1.2-win-x64-installer.exe</code> (4,276,637 bytes), <code>pikaview-0.1.2-win-x64-portable.zip</code> (2,744,297 bytes), <code>pikaview-0.1.2-lgpl-corresponding-source.zip</code> (2,421,056 bytes), and <code>SHA256SUMS</code> (316 bytes) (project binaries unsigned / <code>NotSigned</code>; bundled Microsoft VC143 CRT DLLs Microsoft-signed).</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="btn btn-primary" href="/software/oz-image-viewer/downloads/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>Download PikaView 0.1.2</span>
+        </a>
+      </p>
+    </article>
+
     <article class="changelog-entry" aria-labelledby="v0-1-1">
       <div class="changelog-head">
         <h2 id="v0-1-1">Version 0.1.1 — 18 November 2026</h2>
-        <span class="badge">Current release · Windows x64</span>
+        <span class="badge">Previous release · Windows x64</span>
       </div>
       <p class="muted">PikaView rebrand, PrintDlgExW single-image print path, and provenance release for 64-bit Windows</p>
       <p>Version 0.1.1 continues OZ Image Viewer under the <strong>PikaView</strong> name while preserving internal upgrade identity so existing 0.1.0 per-user installations upgrade seamlessly in place.</p>
@@ -141,7 +178,7 @@
             <span class="editorial-row-title">Downloads</span>
             <span class="editorial-row-desc">Official Windows packages and SHA-256 checksums</span>
             <span class="editorial-row-meta">
-              <span>v0.1.1</span>
+              <span>v0.1.2</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>
