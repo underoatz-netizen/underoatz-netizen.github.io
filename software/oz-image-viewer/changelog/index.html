@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PikaView changelog — release history</title>
   <meta name="description" content="Release notes and version history for PikaView (formerly OZ Image Viewer) on Windows.">
-  <link rel="canonical" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
-  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
-  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
-  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
+  <link rel="canonical" href="https://ozlab.pages.dev/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/oz-image-viewer/changelog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
   <meta property="og:title" content="PikaView changelog — release history">
   <meta property="og:description" content="Release notes and version history for PikaView (formerly OZ Image Viewer) on Windows.">
-  <meta property="og:url" content="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
+  <meta property="og:url" content="https://ozlab.pages.dev/software/oz-image-viewer/changelog/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -52,15 +52,49 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">Release history · v0.1.1</span>
+      <span class="mono-meta">Release history · v0.1.2</span>
       <h1>Changelog</h1>
       <p class="lede">Release notes and version milestones for PikaView (formerly OZ Image Viewer).</p>
     </div>
 
+    <article class="changelog-entry" aria-labelledby="v0-1-2">
+      <div class="changelog-head">
+        <h2 id="v0-1-2">Version 0.1.2 — 19 November 2026</h2>
+        <span class="badge">Current release · Windows x64</span>
+      </div>
+      <p class="muted">New PikaView icon, single-row 40-DIP Lucide 1.71.0 command bar, save cache/preload fixes, and deterministic MSVC builds for 64-bit Windows</p>
+      <p>Version 0.1.2 updates PikaView's visual identity and top-bar ergonomics while fixing save cache/preload invalidation and keeping full in-place upgrade continuity over 0.1.0 and 0.1.1.</p>
+
+      <h3>Visual identity &amp; command bar</h3>
+      <ul>
+        <li><strong>New PikaView application icon:</strong> Applied across <code>ozviewer.exe</code>, the main window, dialogs, the empty/welcome view, and the Windows Setup installer.</li>
+        <li><strong>Single-row 40-DIP Lucide 1.71.0 command bar &amp; dark-charcoal UI:</strong> Replaces the legacy menu bar with 32-DIP buttons, subtle separators, a right-side <code>More</code> overflow menu (including <code>More -&gt; Print...</code>), crisp crop-strip icons, <kbd>F10</kbd>/<kbd>Alt</kbd> keyboard menu activation, preserved shortcuts, and automatic canvas focus restore. Lucide (ISC) and Feather (MIT) notices are included in <code>THIRD-PARTY-NOTICES.md</code>.</li>
+      </ul>
+
+      <h3>Save reliability &amp; upgrade continuity</h3>
+      <ul>
+        <li><strong>Save cache/preload invalidation &amp; localized storage guidance:</strong> Fixes stale cache/preload on Save (<code>Save -&gt; Next -&gt; Previous -&gt; Save</code>), coordinates save completion with active document checkpoints and pending navigation, and adds English and Thai guidance for <code>win32 19</code> write-protected storage and <code>win32 5</code> permission denials.</li>
+        <li><strong>In-place upgrade continuity across 0.1.0, 0.1.1, and 0.1.2:</strong> Retains <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>, <code>ozviewer.exe</code>, stable AppId, <code>OZImageViewer.Image</code> ProgID, and <code>HKCU\Software\OZImageViewer</code>, preserving existing Windows default file associations (<code>UserChoice</code>).</li>
+      </ul>
+
+      <h3>Deterministic builds, verification &amp; packages</h3>
+      <ul>
+        <li><strong>Deterministic MSVC builds:</strong> Built with <code>/Brepro</code> and <code>/experimental:deterministic</code>; clean Build A targeted CTest checks passed (<code>11/11</code>).</li>
+        <li><strong>CI &amp; upgrade verification:</strong> GitHub Actions CI run <code>44501854397</code> on <code>windows-2022</code> passed <code>fetch-candidate</code> and <code>validate-candidate</code> (48 checks: 47 pass + 1 expected <code>non_admin_integrity_check</code> warning; <code>standard-user-lifecycle</code>: 12/12 parent + 48/48 non-elevated child pass, covering <code>v0.1.0 -&gt; v0.1.2</code> upgrade). The <code>0.1.1 -&gt; 0.1.2</code> upgrade path was verified via mock migration tests and ISCC compile. Physical printer and <code>failed-network-first</code> limits remain unchanged from 0.1.1.</li>
+        <li><strong>Four v0.1.2 release packages:</strong> <code>pikaview-0.1.2-win-x64-installer.exe</code>, <code>pikaview-0.1.2-win-x64-portable.zip</code>, <code>pikaview-0.1.2-lgpl-corresponding-source.zip</code>, and <code>SHA256SUMS</code> (project binaries unsigned / <code>NotSigned</code>).</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="btn btn-primary" href="/software/oz-image-viewer/downloads/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>Download PikaView 0.1.2</span>
+        </a>
+      </p>
+    </article>
+
     <article class="changelog-entry" aria-labelledby="v0-1-1">
       <div class="changelog-head">
         <h2 id="v0-1-1">Version 0.1.1 — 18 November 2026</h2>
-        <span class="badge">Current release · Windows x64</span>
+        <span class="badge">Previous release · Windows x64</span>
       </div>
       <p class="muted">PikaView rebrand, PrintDlgExW single-image print path, and provenance release for 64-bit Windows</p>
       <p>Version 0.1.1 continues OZ Image Viewer under the <strong>PikaView</strong> name while preserving internal upgrade identity so existing 0.1.0 per-user installations upgrade seamlessly in place.</p>
@@ -141,7 +175,7 @@
             <span class="editorial-row-title">Downloads</span>
             <span class="editorial-row-desc">Official Windows packages and SHA-256 checksums</span>
             <span class="editorial-row-meta">
-              <span>v0.1.1</span>
+              <span>v0.1.2</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>
@@ -204,9 +238,10 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Hosting</h2>
+          <h2>Hosting &amp; mirrors</h2>
           <ul>
-            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages</a></li>
+            <li><a href="https://ozlab.pages.dev/">Official site (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">Backup mirror (GitHub Pages)</a></li>
             <li><a href="/th/software/oz-image-viewer/changelog/" hreflang="th" lang="th">ภาษาไทย</a></li>
           </ul>
         </div>

@@ -1,26 +1,29 @@
 # OZ Lab website
 
-This repository is the public source of the OZ Lab website served at
-<https://underoatz-netizen.github.io/>. The site is plain HTML and CSS with no
-build step and no JavaScript; GitHub Pages publishes the files here directly.
+This repository is the public source of the OZ Lab website. The official site is
+served at <https://ozlab.pages.dev/> (hosted on Cloudflare Pages), and GitHub
+Pages at <https://underoatz-netizen.github.io/> serves as the backup mirror
+published directly from this repository. The site is plain HTML and CSS with no
+build step and no JavaScript.
 
-- English: <https://underoatz-netizen.github.io/>
-- Thai (ไทย): <https://underoatz-netizen.github.io/th/>
+- English: <https://ozlab.pages.dev/>
+- Thai (ไทย): <https://ozlab.pages.dev/th/>
+- Backup mirror (GitHub Pages): <https://underoatz-netizen.github.io/>
 
 ## Product pages on the site
 
 - **PikaPDF (formerly FastPDF)** — a Windows desktop app for opening, reading,
   searching, annotating, presenting, capturing, printing and converting PDF
   documents. Current release: `v0.5.0`.
-  <https://underoatz-netizen.github.io/software/fastpdf/>
+  <https://ozlab.pages.dev/software/fastpdf/>
 - **PikaView (formerly OZ Image Viewer)** — a Windows desktop image viewer for
   common still image formats, with fast first-image display, zoom and pan,
   folder navigation, non-destructive editing and printing. Current release:
-  `v0.1.1` for Windows x64.
-  <https://underoatz-netizen.github.io/software/oz-image-viewer/>
+  `v0.1.2` for Windows x64.
+  <https://ozlab.pages.dev/software/oz-image-viewer/>
 
-The site also has a Support page (<https://underoatz-netizen.github.io/support/>)
-and a Privacy page (<https://underoatz-netizen.github.io/privacy/>).
+The site also has a Support page (<https://ozlab.pages.dev/support/>)
+and a Privacy page (<https://ozlab.pages.dev/privacy/>).
 
 ## What this repository is, and is not
 
@@ -33,11 +36,11 @@ Product source and release files are kept outside this repository:
 - **PikaPDF (formerly FastPDF)** — the source code is private and is not
   published. Release files (`v0.5.0`) and the public issue tracker are in
   <https://github.com/underoatz-netizen/FastPDF-Downloads>. Download links are
-  on <https://underoatz-netizen.github.io/software/fastpdf/downloads/>.
+  on <https://ozlab.pages.dev/software/fastpdf/downloads/>.
 - **PikaView (formerly OZ Image Viewer)** — first-party source code is public
   at <https://github.com/underoatz-netizen/oz-image-viewer>. Release files
-  (`v0.1.1` for Windows x64) and corresponding LGPL component source are
-  linked on <https://underoatz-netizen.github.io/software/oz-image-viewer/downloads/>.
+  (`v0.1.2` for Windows x64) and corresponding LGPL component source are
+  linked on <https://ozlab.pages.dev/software/oz-image-viewer/downloads/>.
 
 For what can currently be downloaded, see the product pages on the site.
 

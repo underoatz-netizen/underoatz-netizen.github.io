@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>บันทึกการเปลี่ยนแปลง PikaView — ประวัติการเผยแพร่</title>
   <meta name="description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ PikaView (เดิมชื่อ OZ Image Viewer) บนระบบปฏิบัติการ Windows">
-  <link rel="canonical" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
-  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
-  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
-  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/changelog/">
+  <link rel="canonical" href="https://ozlab.pages.dev/th/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/oz-image-viewer/changelog/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/oz-image-viewer/changelog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
   <meta property="og:title" content="บันทึกการเปลี่ยนแปลง PikaView — ประวัติการเผยแพร่">
   <meta property="og:description" content="บันทึกการเปลี่ยนแปลงและประวัติรุ่นของ PikaView (เดิมชื่อ OZ Image Viewer) บนระบบปฏิบัติการ Windows">
-  <meta property="og:url" content="https://underoatz-netizen.github.io/th/software/oz-image-viewer/changelog/">
+  <meta property="og:url" content="https://ozlab.pages.dev/th/software/oz-image-viewer/changelog/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -52,15 +52,49 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">ประวัติการเผยแพร่ · v0.1.1</span>
+      <span class="mono-meta">ประวัติการเผยแพร่ · v0.1.2</span>
       <h1>บันทึกการเปลี่ยนแปลง</h1>
       <p class="lede">ประวัติรุ่นและการพัฒนาของ PikaView (เดิมชื่อ OZ Image Viewer)</p>
     </div>
 
+    <article class="changelog-entry" aria-labelledby="v0-1-2">
+      <div class="changelog-head">
+        <h2 id="v0-1-2">เวอร์ชัน 0.1.2 — 19 พฤศจิกายน 2026</h2>
+        <span class="badge">รุ่นปัจจุบัน · Windows x64</span>
+      </div>
+      <p class="muted">ไอคอน PikaView ใหม่ แถบคำสั่ง Lucide 1.71.0 แถวเดียว 40-DIP การแก้ไขแคช/พรีโหลดเมื่อบันทึก และการคอมไพล์แบบ deterministic สำหรับ Windows 64-บิต</p>
+      <p>เวอร์ชัน 0.1.2 ปรับโฉมไอคอนและแถบคำสั่งด้านบน พร้อมแก้ไขปัญหาแคชและพรีโหลดค้างเมื่อบันทึกไฟล์ โดยยังคงความต่อเนื่องในการอัปเกรดทับรุ่น 0.1.0 และ 0.1.1 ในตำแหน่งเดิม</p>
+
+      <h3>อัตลักษณ์ภาพและแถบคำสั่ง</h3>
+      <ul>
+        <li><strong>ไอคอนแอป PikaView ใหม่:</strong> ใช้ทั่วทั้ง <code>ozviewer.exe</code> หน้าต่างหลัก กล่องโต้ตอบ หน้าว่าง/ต้อนรับ และตัวติดตั้ง Windows Setup</li>
+        <li><strong>แถบคำสั่ง Lucide 1.71.0 แถวเดียวความสูง 40-DIP และหน้าตาโทนเข้ม:</strong> แทนที่แถบเมนูเดิมด้วยปุ่มขนาด 32 DIP เส้นคั่นที่สะอาดตา เมนู <code>More</code> ทางขวา (รวมคำสั่ง <code>More -&gt; Print...</code>) ไอคอนแถบครอปที่คมชัด การเปิดเมนูด้วยคีย์ <kbd>F10</kbd>/<kbd>Alt</kbd> คีย์ลัดเดิมครบถ้วน และการคืนโฟกัสไปยังพื้นที่ภาพโดยอัตโนมัติ (ระบุประกาศลิขสิทธิ์ Lucide ISC และ Feather MIT ใน <code>THIRD-PARTY-NOTICES.md</code>)</li>
+      </ul>
+
+      <h3>ความเสถียรในการบันทึกและความต่อเนื่องของการอัปเกรด</h3>
+      <ul>
+        <li><strong>การล้างแคช/พรีโหลดเมื่อบันทึกและคำแนะนำพื้นที่จัดเก็บ:</strong> แก้ไขปัญหาแคช/พรีโหลดค้างเมื่อบันทึก (<code>Save -&gt; Next -&gt; Previous -&gt; Save</code>) ประสานงานการบันทึกกับจุดตรวจของเอกสารและคิวเลื่อนภาพ พร้อมเพิ่มคำแนะนำภาษาอังกฤษ/ไทยสำหรับข้อผิดพลาดพื้นที่ป้องกันการเขียน (<code>win32 19</code>) และไม่มีสิทธิ์เข้าถึง (<code>win32 5</code>)</li>
+        <li><strong>ความต่อเนื่องของการอัปเกรดข้ามรุ่น 0.1.0, 0.1.1 และ 0.1.2:</strong> ยังคงโฟลเดอร์ <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code> ไฟล์ <code>ozviewer.exe</code> ค่า AppId ProgID <code>OZImageViewer.Image</code> และรีจิสทรี <code>HKCU\Software\OZImageViewer</code> เดิม พร้อมคงค่าเริ่มต้นการเปิดไฟล์ของ Windows (<code>UserChoice</code>)</li>
+      </ul>
+
+      <h3>การคอมไพล์แบบ deterministic การตรวจสอบ และแพ็กเกจ</h3>
+      <ul>
+        <li><strong>การคอมไพล์ MSVC แบบ deterministic:</strong> ใช้แฟล็ก <code>/Brepro</code> และ <code>/experimental:deterministic</code> โดยชุดทดสอบ CTest เป้าหมายบน Build A แบบคลีนผ่านครบ (<code>11/11</code>)</li>
+        <li><strong>การตรวจสอบใน CI และเส้นทางอัปเกรด:</strong> การรัน GitHub Actions CI หมายเลข <code>44501854397</code> บน <code>windows-2022</code> ผ่าน <code>fetch-candidate</code> และ <code>validate-candidate</code> (48 รายการ: ผ่าน 47 และคำเตือน <code>non_admin_integrity_check</code> ตามคาด 1 รายการ; <code>standard-user-lifecycle</code>: ผ่าน 12/12 ฝั่ง parent + 48/48 ฝั่ง child ครอบคลุมการอัปเกรด <code>v0.1.0 -&gt; v0.1.2</code>) ส่วนเส้นทาง <code>0.1.1 -&gt; 0.1.2</code> ผ่านการตรวจสอบด้วยชุดทดสอบจำลองการย้ายข้อมูลและคอมไพล์ ISCC ข้อจำกัดด้านเครื่องพิมพ์จริงและ <code>failed-network-first</code> ยังคงเดิมจากรุ่น 0.1.1</li>
+        <li><strong>แพ็กเกจรุ่น v0.1.2 จำนวน 4 ไฟล์:</strong> <code>pikaview-0.1.2-win-x64-installer.exe</code>, <code>pikaview-0.1.2-win-x64-portable.zip</code>, <code>pikaview-0.1.2-lgpl-corresponding-source.zip</code> และ <code>SHA256SUMS</code> (ไฟล์ไบนารีของโปรเจกต์ยังไม่ได้ลงลายเซ็น / <code>NotSigned</code>)</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="btn btn-primary" href="/th/software/oz-image-viewer/downloads/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>ไปที่หน้าดาวน์โหลด PikaView 0.1.2</span>
+        </a>
+      </p>
+    </article>
+
     <article class="changelog-entry" aria-labelledby="v0-1-1">
       <div class="changelog-head">
         <h2 id="v0-1-1">เวอร์ชัน 0.1.1 — 18 พฤศจิกายน 2026</h2>
-        <span class="badge">รุ่นปัจจุบัน · Windows x64</span>
+        <span class="badge">รุ่นก่อนหน้า · Windows x64</span>
       </div>
       <p class="muted">เปลี่ยนชื่อเป็น PikaView เส้นทางการพิมพ์ PrintDlgExW และแพ็กเกจพร้อม provenance สำหรับ Windows 64-บิต</p>
       <p>เวอร์ชัน 0.1.1 สืบเนื่องจาก OZ Image Viewer ภายใต้ชื่อผลิตภัณฑ์ <strong>PikaView</strong> โดยยังคงข้อมูลระบุตัวตนภายในสำหรับการอัปเกรด เพื่อให้การติดตั้งแบบต่อผู้ใช้รุ่น 0.1.0 เดิมสามารถอัปเกรดทับในตำแหน่งเดิมได้อย่างราบรื่น</p>
@@ -141,7 +175,7 @@
             <span class="editorial-row-title">ดาวน์โหลด</span>
             <span class="editorial-row-desc">ไฟล์ดาวน์โหลดทางการสำหรับ Windows และค่าแฮช SHA-256</span>
             <span class="editorial-row-meta">
-              <span>v0.1.1</span>
+              <span>v0.1.2</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>
@@ -204,9 +238,10 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>โฮสติ้ง</h2>
+          <h2>โฮสติ้งและเว็บสำรอง</h2>
           <ul>
-            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages</a></li>
+            <li><a href="https://ozlab.pages.dev/th/">เว็บไซต์ทางการ (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/th/" rel="noopener noreferrer" target="_blank">เว็บสำรอง (GitHub Pages)</a></li>
             <li><a href="/software/oz-image-viewer/changelog/" hreflang="en" lang="en">English</a></li>
           </ul>
         </div>

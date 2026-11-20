@@ -848,6 +848,68 @@ code {
   background: var(--card);
 }
 
+/* Real Application Screenshots ------------------------------------------ */
+
+.screenshot-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .screenshot-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.screenshot-frame {
+  margin: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card);
+}
+
+.screenshot-frame img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screenshot-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--secondary);
+}
+
+.screenshot-caption a {
+  color: var(--fg);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+}
+
+.screenshot-caption a:hover {
+  text-decoration-color: var(--fg);
+}
+
+.screenshot-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
 /* Section Headers ------------------------------------------------------- */
 
 .section-head {

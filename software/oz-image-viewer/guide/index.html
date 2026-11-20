@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PikaView User Guide &amp; FAQ — OZ Lab</title>
   <meta name="description" content="A short guide to PikaView (formerly OZ Image Viewer): opening and navigating images, zooming and panning, non-destructive editing, printing, keyboard shortcuts, supported formats, known limitations and common questions.">
-  <link rel="canonical" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
-  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
-  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/software/oz-image-viewer/guide/">
-  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <link rel="canonical" href="https://ozlab.pages.dev/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/oz-image-viewer/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/oz-image-viewer/guide/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
   <meta property="og:title" content="PikaView User Guide &amp; FAQ — OZ Lab">
   <meta property="og:description" content="A short guide to PikaView (formerly OZ Image Viewer), plus answers to common questions.">
-  <meta property="og:url" content="https://underoatz-netizen.github.io/software/oz-image-viewer/guide/">
+  <meta property="og:url" content="https://ozlab.pages.dev/software/oz-image-viewer/guide/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -52,9 +52,9 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">Documentation · v0.1.1</span>
+      <span class="mono-meta">Documentation · v0.1.2</span>
       <h1>User guide &amp; FAQ</h1>
-      <p class="lede">This guide walks through how PikaView (formerly OZ Image Viewer) is used. It describes the behaviour implemented in version 0.1.1.</p>
+      <p class="lede">This guide walks through how PikaView (formerly OZ Image Viewer) is used. It describes the behaviour implemented in version 0.1.2.</p>
     </div>
 
     <nav class="page-toc" aria-label="On this page">
@@ -76,7 +76,7 @@
         <li><strong>Zoom and pan.</strong> Scroll to zoom in and out at the cursor, or use the keyboard. Drag with the left mouse button to pan, and double-click to switch between fit and 100%.</li>
         <li><strong>Fullscreen.</strong> Switch the window to borderless fullscreen on the current monitor and back again.</li>
         <li><strong>Edit.</strong> Rotate, flip, crop and resize are non-destructive: they change the on-screen document only, and the original file stays untouched until you save.</li>
-        <li><strong>Print.</strong> Choose <code>File -&gt; Print...</code> or press <kbd>Ctrl</kbd>+<kbd>P</kbd> to open the Windows print dialog and print one fit-to-page copy of the committed image without modifying the file.</li>
+        <li><strong>Print.</strong> Choose <code>More -&gt; Print...</code> or press <kbd>Ctrl</kbd>+<kbd>P</kbd> to open the Windows print dialog and print one fit-to-page copy of the committed image without modifying the file.</li>
         <li><strong>Save.</strong> Save writes the current document back to its original file where the format allows it; Save As writes a new copy and never changes the original.</li>
       </ul>
     </section>
@@ -150,7 +150,7 @@
         <li>WebP export is lossless single-frame only; lossy and animated WebP export are not supported.</li>
         <li>There are no plugins or third-party shell codecs, and the set of supported extensions is a fixed list.</li>
         <li>Printing outputs one fit-to-page copy of the committed image via the Windows <code>PrintDlgExW</code> system dialog. The <code>failed-network-first</code> printer case has not been tested, and no claim is made that all print-dialog hangs are fixed.</li>
-        <li>Release binaries (<code>pikaview-0.1.1-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned, so Windows SmartScreen or browsers may show an "Unknown Publisher" notice. Verify SHA-256 checksums on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page before running.</li>
+        <li>Release binaries (<code>pikaview-0.1.2-win-x64-installer.exe</code>, <code>ozviewer.exe</code>, <code>heif.dll</code>, and <code>libde265.dll</code>) are unsigned, so Windows SmartScreen or browsers may show an "Unknown Publisher" notice. Verify SHA-256 checksums on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page before running.</li>
         <li>The source code is public under the MIT License on GitHub.</li>
       </ul>
     </section>
@@ -163,8 +163,8 @@
       <h3 id="faq-download">Can I download PikaView?</h3>
       <p>Yes. Release packages for 64-bit Windows are available on the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page.</p>
 
-      <h3 id="faq-upgrade">How do I upgrade from OZ Image Viewer 0.1.0?</h3>
-      <p>Run the PikaView 0.1.1 installer over your existing OZ Image Viewer 0.1.0 installation. It upgrades in place in the original per-user directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>), keeps the <code>ozviewer.exe</code> executable filename, stable AppId, and <code>OZImageViewer.Image</code> ProgID, and preserves all existing Windows default file associations (<code>UserChoice</code>).</p>
+      <h3 id="faq-upgrade">How do I upgrade from 0.1.0 or 0.1.1?</h3>
+      <p>Run the PikaView 0.1.2 installer over your existing OZ Image Viewer 0.1.0 or PikaView 0.1.1 installation. It upgrades in place in the original per-user directory (<code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>), keeps the <code>ozviewer.exe</code> executable filename, stable AppId, and <code>OZImageViewer.Image</code> ProgID, and preserves all existing Windows default file associations (<code>UserChoice</code>).</p>
 
       <h3 id="faq-source">Where is the source code?</h3>
       <p>The source code is public. The project lives on GitHub at <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>.</p>
@@ -207,9 +207,10 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Hosting</h2>
+          <h2>Hosting &amp; mirrors</h2>
           <ul>
-            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages</a></li>
+            <li><a href="https://ozlab.pages.dev/">Official site (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">Backup mirror (GitHub Pages)</a></li>
             <li><a href="/th/software/oz-image-viewer/guide/" hreflang="th" lang="th">ภาษาไทย</a></li>
           </ul>
         </div>

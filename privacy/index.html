@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy — OZ Lab</title>
-  <meta name="description" content="This website uses no tracking or analytics. The PikaPDF (formerly FastPDF) application privacy policy is still a draft and is not yet in effect.">
-  <link rel="canonical" href="https://underoatz-netizen.github.io/privacy/">
-  <link rel="alternate" hreflang="en" href="https://underoatz-netizen.github.io/privacy/">
-  <link rel="alternate" hreflang="th" href="https://underoatz-netizen.github.io/th/privacy/">
-  <link rel="alternate" hreflang="x-default" href="https://underoatz-netizen.github.io/privacy/">
+  <meta name="description" content="Published Privacy Policy for the OZ Lab website, PikaPDF (formerly FastPDF), and PikaView (formerly OZ Image Viewer). Zero tracking, offline-first processing, and clear local storage details.">
+  <link rel="canonical" href="https://ozlab.pages.dev/privacy/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/privacy/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/privacy/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
   <meta property="og:title" content="Privacy — OZ Lab">
-  <meta property="og:description" content="This website uses no tracking or analytics. The PikaPDF (formerly FastPDF) application privacy policy is still a draft and is not yet in effect.">
-  <meta property="og:url" content="https://underoatz-netizen.github.io/privacy/">
+  <meta property="og:description" content="Published Privacy Policy for the OZ Lab website, PikaPDF (formerly FastPDF), and PikaView (formerly OZ Image Viewer). Zero tracking and offline-first local processing.">
+  <meta property="og:url" content="https://ozlab.pages.dev/privacy/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -44,10 +44,18 @@
 
   <main id="main" class="wrap">
     <div class="page-intro">
-      <span class="mono-meta">Static website &amp; software</span>
-      <h1>Privacy</h1>
-      <p class="lede">This page covers two things: this website, and the PikaPDF (formerly FastPDF) app.</p>
+      <span class="mono-meta">Effective 19 November 2026 · Static website &amp; desktop apps</span>
+      <h1>Privacy policy</h1>
+      <p class="lede">This Privacy Policy explains how data is handled by the OZ Lab website, PikaPDF (formerly FastPDF), and PikaView (formerly OZ Image Viewer).</p>
     </div>
+
+    <nav class="page-toc" aria-label="On this page">
+      <a href="#site-privacy">This website</a>
+      <a href="#app-privacy">PikaPDF</a>
+      <a href="#pikaview-privacy">PikaView</a>
+      <a href="#questions">Support, donations &amp; user control</a>
+      <a href="#policy-updates">Policy updates</a>
+    </nav>
 
     <section aria-labelledby="site-privacy">
       <div class="section-head">
@@ -55,29 +63,69 @@
         <span class="mono-meta">Zero tracking</span>
       </div>
       <ul>
-        <li>This site is a set of static pages. It does not use tracking, analytics or advertising.</li>
-        <li>It does not set cookies of its own.</li>
-        <li>It has no forms, no sign-in and no user accounts.</li>
-        <li>It does not load analytics or tracking scripts from other companies.</li>
+        <li>This site consists of plain static HTML and CSS pages. It does not use tracking, analytics, or advertising.</li>
+        <li>It does not set cookies of its own, load third-party fonts, or include third-party tracking scripts.</li>
+        <li>It has no forms, no sign-in, and no user accounts.</li>
       </ul>
-      <p>Whichever hosting provider serves the address you requested may process standard technical data (such as an IP address and request details) when serving a page, under that provider's own privacy policy. That is the host's processing, not something this site collects.</p>
+      <p>The official site is hosted on <strong>Cloudflare Pages</strong> (<code>ozlab.pages.dev</code>), with <strong>GitHub Pages</strong> (<code>underoatz-netizen.github.io</code>) serving as the backup mirror. When serving a page, Cloudflare or GitHub may process standard technical connection data (such as your IP address and request headers) under that provider's own privacy policy. OZ Lab does not collect or retain this connection data.</p>
     </section>
 
     <section aria-labelledby="app-privacy">
       <div class="section-head">
-        <h2 id="app-privacy">PikaPDF (formerly FastPDF) application</h2>
+        <h2 id="app-privacy">PikaPDF (formerly FastPDF)</h2>
+        <span class="mono-meta">Effective 19 November 2026 · PikaPDF v0.5.0+</span>
       </div>
       <div class="callout">
-        <p><span class="badge badge-draft">Draft — pending owner approval</span></p>
-        <p>The privacy policy for the PikaPDF (formerly FastPDF) application is still a <strong>draft</strong>. It has not been approved, it is <strong>not yet in effect</strong>, and it is deliberately not published on this page. Until it is finalised and approved, this page makes no commitments about how the application handles data.</p>
+        <p class="mono-meta">Published policy · Effective 19 November 2026 · PikaPDF v0.5.0+</p>
+        <p>PikaPDF is an offline-first local Windows desktop application with no user accounts, no login, no telemetry, no analytics, no advertising, no crash-report uploads, and no background network services.</p>
       </div>
+
+      <h3>Offline-first and local processing</h3>
+      <p>All PDF opening, reading, searching, freehand drawing, text highlighting, screenshot capture, PNG export, image-to-PDF conversion, and printing happen locally on your device. Your PDF files and document contents are never uploaded or transmitted by PikaPDF.</p>
+
+      <h3>Local files stored on your device</h3>
+      <p>PikaPDF stores small local state files under <code>%LOCALAPPDATA%\FastPDF\</code> (kept in the legacy <code>FastPDF</code> folder so upgrades from FastPDF 0.4.1 preserve your settings and recent files):</p>
+      <ul>
+        <li><code>recent.dat</code> — file paths and per-document viewing position/zoom state of recently opened PDF documents so the Recent Files list and resume view work across sessions.</li>
+        <li><code>fastpdf.log</code> / <code>fastpdf.log.1</code> — a local diagnostic log written automatically during normal use (rotated at approximately 1 MB) containing local timestamps, status/diagnostic events, and the file paths of opened or saved PDF documents. (Note: <kbd>Ctrl</kbd>+<kbd>D</kbd> only toggles the on-screen diagnostics overlay.)</li>
+      </ul>
+      <p>These files never leave your device, are not deleted automatically when you uninstall the app, and can be deleted manually at any time.</p>
+
+      <h3>Optional manual update check</h3>
+      <p>PikaPDF's only network operation runs solely when you explicitly choose <strong>More commands &gt; Check for Updates</strong>. It never checks for updates at startup, on a timer, or in the background.</p>
+      <ul>
+        <li>When triggered, PikaPDF sends a single HTTPS <code>GET</code> request with <code>User-Agent: PikaPDF/&lt;version&gt;</code> to the fixed endpoint <code>https://api.github.com/repos/underoatz-netizen/FastPDF-Downloads/releases/latest</code> using Windows system certificate validation, finite timeouts, and a 64 KB response limit.</li>
+        <li>It reads only the <code>tag_name</code> field to check whether a newer release exists.</li>
+        <li>PikaPDF never auto-downloads or auto-installs files. Only if you explicitly confirm opening the releases page does it launch <code>https://github.com/underoatz-netizen/FastPDF-Downloads/releases</code> in your default web browser.</li>
+        <li>Standard connection metadata (such as your IP address and request details) for that request is processed by GitHub under GitHub's privacy policy.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pikaview-privacy">
+      <div class="section-head">
+        <h2 id="pikaview-privacy">PikaView (formerly OZ Image Viewer)</h2>
+        <span class="mono-meta">Effective 19 November 2026 · PikaView v0.1.1+</span>
+      </div>
+      <p>PikaView is a completely offline Windows desktop image viewer. It makes no network requests and has no telemetry, no background services, and no auto-updater.</p>
+      <ul>
+        <li>Local viewer preferences are stored on your device at <code>%LOCALAPPDATA%\OZViewer\settings.json</code>.</li>
+        <li>If installed with the per-user Windows Setup installer, standard local installation entries may also exist under <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code> and <code>HKCU\Software\OZImageViewer</code>.</li>
+        <li>Uninstalling PikaView via Windows Settings removes its installed program files and owned installer registry entries, while manually deleting <code>%LOCALAPPDATA%\OZViewer\</code> removes your local preferences (<code>settings.json</code>).</li>
+      </ul>
     </section>
 
     <section aria-labelledby="questions">
       <div class="section-head">
-        <h2 id="questions">Questions</h2>
+        <h2 id="questions">Support, donations &amp; user control</h2>
       </div>
-      <p>For anything related to reports or privacy, see the <a href="/support/">Support</a> page.</p>
+      <ul>
+        <li><strong>Support &amp; public issue trackers:</strong> Reports and questions submitted via GitHub issue trackers (see the <a href="/support/">Support</a> page) are public and governed by GitHub's privacy policy. Please do not post personal data, credentials, or confidential documents.</li>
+        <li><strong>Voluntary donations:</strong> Contributions through <a href="https://ko-fi.com/ozlab" rel="noopener noreferrer" target="_blank">Ko-fi</a> or PromptPay happen directly on Ko-fi or in your banking app. OZ Lab's website and desktop apps do not collect, process, or store payment details.</li>
+        <li><strong>User control:</strong> Because OZ Lab operates no backend servers and collects no personal data, uninstalling through Windows Settings removes the installed program files (and PikaView's owned installer registry entries), while manually deleting <code>%LOCALAPPDATA%\FastPDF\</code> and <code>%LOCALAPPDATA%\OZViewer\</code> removes all retained local state, recent-file history, preferences, and diagnostic logs from your device.</li>
+      </ul>
+
+      <h3 id="policy-updates">Policy updates</h3>
+      <p>Any updates to this Privacy Policy will be published on this page with an updated effective date. In the event of any discrepancy between translations, the English text is the reference text.</p>
     </section>
   </main>
 
@@ -105,9 +153,10 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Hosting</h2>
+          <h2>Hosting &amp; mirrors</h2>
           <ul>
-            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">GitHub Pages</a></li>
+            <li><a href="https://ozlab.pages.dev/">Official site (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">Backup mirror (GitHub Pages)</a></li>
             <li><a href="/th/privacy/" hreflang="th" lang="th">ภาษาไทย</a></li>
           </ul>
         </div>
