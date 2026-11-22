@@ -14,7 +14,7 @@ build step and no JavaScript.
 
 - **PikaPDF (formerly FastPDF)** — a Windows desktop app for opening, reading,
   searching, annotating, presenting, capturing, printing and converting PDF
-  documents. Current release: `v0.5.0`.
+  documents. Current release: `v0.5.1`.
   <https://ozlab.pages.dev/software/fastpdf/>
 - **PikaView (formerly OZ Image Viewer)** — a Windows desktop image viewer for
   common still image formats, with fast first-image display, zoom and pan,
@@ -34,7 +34,7 @@ no application source code, no installers and no release files.
 Product source and release files are kept outside this repository:
 
 - **PikaPDF (formerly FastPDF)** — the source code is private and is not
-  published. Release files (`v0.5.0`) and the public issue tracker are in
+  published. Release files (`v0.5.1`) and the public issue tracker are in
   <https://github.com/underoatz-netizen/FastPDF-Downloads>. Download links are
   on <https://ozlab.pages.dev/software/fastpdf/downloads/>.
 - **PikaView (formerly OZ Image Viewer)** — first-party source code is public

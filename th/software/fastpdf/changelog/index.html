@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>บันทึกการเปลี่ยนแปลง PikaPDF — ประวัติการเผยแพร่</title>
-  <meta name="description" content="ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF) เวอร์ชัน 0.5.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
+  <meta name="description" content="ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF) เวอร์ชัน 0.5.1 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
   <link rel="canonical" href="https://ozlab.pages.dev/th/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/fastpdf/changelog/">
   <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/fastpdf/changelog/">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
   <meta property="og:title" content="บันทึกการเปลี่ยนแปลง PikaPDF — ประวัติการเผยแพร่">
-  <meta property="og:description" content="ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF) เวอร์ชัน 0.5.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
+  <meta property="og:description" content="ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF) เวอร์ชัน 0.5.1 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
   <meta property="og:url" content="https://ozlab.pages.dev/th/software/fastpdf/changelog/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -52,19 +52,34 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">ประวัติการเผยแพร่ · v0.3.2 – v0.5.0</span>
+      <span class="mono-meta">ประวัติการเผยแพร่ · v0.3.2 – v0.5.1</span>
       <h1>บันทึกการเปลี่ยนแปลง</h1>
       <p class="lede">ประวัติการเผยแพร่ของ PikaPDF (เดิมชื่อ FastPDF ถึงรุ่น 0.4.1) เรียงจากใหม่ไปเก่า</p>
     </div>
 
     <div class="callout">
-      <p><strong>PikaPDF 0.5.0 พร้อมใช้งานแล้ว</strong> เผยแพร่เมื่อวันที่ 18 พฤศจิกายน 2026 สำหรับ Windows 10 และ Windows 11 (64-bit x64)</p>
+      <p><strong>PikaPDF 0.5.1 พร้อมใช้งานแล้ว</strong> เผยแพร่เมื่อวันที่ 22 พฤศจิกายน 2026 สำหรับ Windows 10 และ Windows 11 (64-bit x64)</p>
     </div>
+
+    <section class="changelog-entry" aria-labelledby="v051">
+      <div class="changelog-head">
+        <h2 id="v051">0.5.1 — 22 พฤศจิกายน 2026</h2>
+        <span class="badge">รุ่นล่าสุด</span>
+      </div>
+      <ul>
+        <li>เพิ่ม<strong>ธีมปรับตามระบบ (System-Aware Theme)</strong> ที่ปรับตามการตั้งค่า Light/Dark ของแอปบน Windows (<code>AppsUseLightTheme</code>) และความสว่างหน้าต่าง High Contrast อัตโนมัติตั้งแต่เปิดโปรแกรมและทันทีเมื่อเปลี่ยนธีมระบบ (<code>WM_SETTINGCHANGE</code> / <code>WM_THEMECHANGED</code>)</li>
+        <li>ปรับธีมแถบชื่อเรื่อง DWM, แถบเลื่อนและตัวควบคุม Explorer, แถบคำสั่งแถวเดียว, แถบด้านข้าง Thumbnails &amp; Bookmarks, แผงค้นหา และแถบแจ้งเตือน โดยไม่ต้องเรนเดอร์หน้า PDF ที่แคชไว้ใหม่</li>
+        <li>คงการเรนเดอร์หน้า PDF พื้นหลังสีดำของโหมดนำเสนอ สีไฮไลต์การค้นหา และพู่กันวาดหมึกไว้ตามเดิมไม่เปลี่ยนแปลง</li>
+        <li>อัปเกรดในตำแหน่งเดิมทับ FastPDF 0.4.x และ PikaPDF 0.5.0 ได้ทันที โดยยังคงชื่อไฟล์ <code>FastPDF.exe</code> และรักษาการตั้งค่ากับไฟล์ล่าสุดใน <code>%LOCALAPPDATA%\FastPDF</code></li>
+        <li>มีสองไฟล์ให้ดาวน์โหลด คือตัวติดตั้งสำหรับ Windows และไฟล์ ZIP แบบพกพา ทั้งสองไฟล์ยังไม่ได้ลงนาม และเผยแพร่ค่าแฮช SHA-256 ไว้ในไฟล์ <code>SHA256SUMS</code></li>
+      </ul>
+      <p>ดูไฟล์และค่าแฮชได้ที่หน้า <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a> หรือดูที่ <a href="https://github.com/underoatz-netizen/FastPDF-Downloads/releases/tag/v0.5.1">v0.5.1 บน GitHub Releases</a></p>
+    </section>
 
     <section class="changelog-entry" aria-labelledby="v050">
       <div class="changelog-head">
         <h2 id="v050">0.5.0 — 18 พฤศจิกายน 2026</h2>
-        <span class="badge">รุ่นล่าสุด</span>
+        <span class="mono-meta">PikaPDF</span>
       </div>
       <ul>
         <li>เปลี่ยนชื่อผลิตภัณฑ์จาก FastPDF เป็น <strong>PikaPDF</strong> โดยยังคงชื่อไฟล์โปรแกรม <code>FastPDF.exe</code> ภายในแพ็กเกจ เพื่อให้ชอร์ตคัตเดิมใช้งานได้ต่อเนื่อง</li>
@@ -132,7 +147,7 @@
             <span class="editorial-row-title">ดาวน์โหลด</span>
             <span class="editorial-row-desc">รับเวอร์ชันปัจจุบัน</span>
             <span class="editorial-row-meta">
-              <span>v0.5.0</span>
+              <span>v0.5.1</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>

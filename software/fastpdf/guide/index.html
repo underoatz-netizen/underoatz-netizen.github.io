@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PikaPDF User Guide &amp; FAQ — OZ Lab</title>
-  <meta name="description" content="A short guide to using PikaPDF 0.5.0 (formerly FastPDF): command bar, sidebar, drawing and highlighting, saving copies, printing, reading, searching, presenting, capturing and converting, plus answers to common questions.">
+  <meta name="description" content="A short guide to using PikaPDF 0.5.1 (formerly FastPDF): command bar, sidebar, system-aware theme, drawing and highlighting, saving copies, printing, reading, searching, presenting, capturing and converting, plus answers to common questions.">
   <link rel="canonical" href="https://ozlab.pages.dev/software/fastpdf/guide/">
   <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/fastpdf/guide/">
   <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/fastpdf/guide/">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OZ Lab">
   <meta property="og:title" content="PikaPDF User Guide &amp; FAQ — OZ Lab">
-  <meta property="og:description" content="A short guide to using PikaPDF 0.5.0 (formerly FastPDF), plus answers to common questions.">
+  <meta property="og:description" content="A short guide to using PikaPDF 0.5.1 (formerly FastPDF), plus answers to common questions.">
   <meta property="og:url" content="https://ozlab.pages.dev/software/fastpdf/guide/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -52,9 +52,9 @@
     </nav>
 
     <div class="page-intro">
-      <span class="mono-meta">Documentation · v0.5.0</span>
+      <span class="mono-meta">Documentation · v0.5.1</span>
       <h1>User guide &amp; FAQ</h1>
-      <p class="lede">This guide walks through how PikaPDF (formerly FastPDF) is used. It covers the features in version 0.5.0 for Windows x64, available on the <a href="/software/fastpdf/downloads/">Downloads</a> page.</p>
+      <p class="lede">This guide walks through how PikaPDF (formerly FastPDF) is used. It covers the features in version 0.5.1 for Windows x64, available on the <a href="/software/fastpdf/downloads/">Downloads</a> page.</p>
     </div>
 
     <nav class="page-toc" aria-label="On this page">
@@ -81,6 +81,7 @@
         <li><strong>Screenshot (<kbd>Ctrl</kbd>+<kbd>S</kbd>).</strong> Drag a region on the page to copy it to the clipboard and optionally save it as an image. Note that <kbd>Ctrl</kbd>+<kbd>S</kbd> triggers Screenshot capture, not document saving.</li>
         <li><strong>Convert.</strong> Export PDF pages to PNG images, or combine PNG, JPEG and BMP images into a single PDF.</li>
         <li><strong>Print (<kbd>Ctrl</kbd>+<kbd>P</kbd>).</strong> Use the Print dialog with 1–6 pages per sheet, a first-sheet preview thumbnail, colour or monochrome output, duplex printing, Fast/Medium/Detailed quality, By set or By page copy order, and spool progress with cancel.</li>
+        <li><strong>System-Aware Theme.</strong> PikaPDF automatically adapts its window shell (DWM title bar, Explorer scrollbars/controls, command bar, sidebar, Find panel, and notification toasts) to Windows Light/Dark app settings and High Contrast mode at startup and live on theme changes, without re-rendering cached PDF pages or altering Presentation Mode's black background.</li>
       </ul>
     </section>
 
@@ -136,10 +137,10 @@
       </div>
 
       <h3 id="faq-get">Where can I download PikaPDF?</h3>
-      <p>Version 0.5.0 is available for Windows 10 and Windows 11 (x64) on the <a href="/software/fastpdf/downloads/">Downloads</a> page. The builds are unsigned, so Windows may show a warning when you run them.</p>
+      <p>Version 0.5.1 is available for Windows 10 and Windows 11 (x64) on the <a href="/software/fastpdf/downloads/">Downloads</a> page. The builds are unsigned, so Windows may show a warning when you run them.</p>
 
-      <h3 id="faq-upgrade">How do I upgrade from FastPDF 0.4.1?</h3>
-      <p>PikaPDF 0.5.0 upgrades over FastPDF 0.4.1 in place, reusing your existing install folder and preserving your settings and recent files in <code>%LOCALAPPDATA%\FastPDF</code>. Fresh installs default to <code>Program Files\PikaPDF</code>. Inside both packages, the executable filename remains <code>FastPDF.exe</code> (with <code>pdfium.dll</code> and <code>licenses/</code>) so existing shortcuts keep working.</p>
+      <h3 id="faq-upgrade">How do I upgrade from FastPDF 0.4.x or PikaPDF 0.5.0?</h3>
+      <p>PikaPDF 0.5.1 upgrades over FastPDF 0.4.x and PikaPDF 0.5.0 in place, reusing your existing install folder and preserving your settings and recent files in <code>%LOCALAPPDATA%\FastPDF</code>. Fresh installs default to <code>Program Files\PikaPDF</code>. Inside both packages, the executable filename remains <code>FastPDF.exe</code> (with <code>pdfium.dll</code> and <code>licenses/</code>) so existing shortcuts keep working.</p>
 
       <h3 id="faq-account">Do I need an account to use PikaPDF?</h3>
       <p>No. PikaPDF is a desktop application and does not use accounts or sign-in.</p>
