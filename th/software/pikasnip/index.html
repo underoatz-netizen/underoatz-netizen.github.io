@@ -20,6 +20,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .shot-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 1.25rem 0 0; }
+    .shot-grid figure { margin: 0; border: 1px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+    .shot-grid img { width: 100%; height: auto; display: block; }
+    .shot-grid figcaption { margin: 0; padding: 0.6rem 0.8rem; background: var(--surface); border-top: 1px solid var(--border); font-size: 0.875rem; color: var(--secondary); }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,11 +119,12 @@
     </div>
 
     <div class="callout">
-      <p><strong>PikaSnip 0.1.0 สำหรับ Windows x64 พร้อมให้ดาวน์โหลดแล้วบน GitHub Releases</strong> แนะนำแพ็กเกจ Portable ZIP x64 (<code>13.30 MiB</code>) สำหรับแตกไฟล์และใช้งานทันทีโดยไม่ต้องติดตั้งใบรับรอง ส่วนแพ็กเกจ MSIX แบบลงนามเอง (self-signed sideload) เผยแพร่ไว้สำหรับการทดสอบระหว่างที่รุ่น Microsoft Store กำลังเตรียมเผยแพร่ ดูไฟล์ ค่าแฮช SHA-256 และประกาศสัญญาอนุญาตได้ที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a></p>
+      <p><strong>PikaSnip 0.1.0 สำหรับ Windows x64 พร้อมให้ดาวน์โหลดแล้วบน GitHub Releases</strong> แนะนำแพ็กเกจ Portable ZIP x64 (<code>13.30 MiB</code>) สำหรับแตกไฟล์และใช้งานทันทีโดยไม่ต้องติดตั้งใบรับรอง ส่วนแพ็กเกจ MSIX แบบลงนามเอง (self-signed sideload) เผยแพร่ไว้สำหรับการทดสอบ ส่งเข้าหน้า Microsoft Store แล้ว — อยู่ระหว่างการตรวจสอบ จะเพิ่มลิงก์เมื่อหน้าร้านเผยแพร่แล้ว ดูไฟล์ ค่าแฮช SHA-256 และประกาศสัญญาอนุญาตได้ที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a></p>
     </div>
 
     <nav class="page-toc" aria-label="ในหน้านี้">
       <a href="#what">ทำอะไรได้บ้าง</a>
+      <a href="#screenshots">ภาพหน้าจอ</a>
       <a href="#specs">สถาปัตยกรรมและขนาด</a>
       <a href="#status">สถานะโปรเจกต์</a>
       <a href="#next">หน้าถัดไป</a>
@@ -139,6 +146,31 @@
         <li>รักษาแรมขณะรอทำงานให้ต่ำ: <code>onnxruntime.dll</code> (v1.32.0) ถูกโหลดแบบหน่วงเวลา (lazy load) ผ่าน <code>LoadLibraryExW</code> เฉพาะตอนที่คุณสั่งรัน OCR เท่านั้น</li>
         <li>ทำงานออฟไลน์ 100% ไม่มี telemetry ไม่เชื่อมต่อเครือข่าย ไม่มีบัญชีผู้ใช้ และปิดการเริ่มทำงานพร้อม Windows ไว้เป็นค่าเริ่มต้น (<code>Enabled="false"</code>)</li>
       </ul>
+    </section>
+
+    <section aria-labelledby="screenshots">
+      <div class="section-head">
+        <h2 id="screenshots">ภาพหน้าจอ</h2>
+        <span class="mono-meta">4 ภาพ · v0.1.0</span>
+      </div>
+      <div class="shot-grid">
+        <figure>
+          <img src="/assets/images/pikasnip/01-capture-magnifier.png" alt="PikaSnip จับภาพพื้นที่พร้อมแว่นขยาย" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>จับภาพพื้นที่พร้อมแว่นขยายและซูมระดับพิกเซล</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/pikasnip/02-annotations-toolbar.png" alt="แถบเครื่องมือวาดเขียนของ PikaSnip" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>แถบเครื่องมือวาดเขียนก่อนบันทึก</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/pikasnip/03-floating-pin-edit.png" alt="หน้าต่างปักหมุดลอยพร้อมแถบเครื่องมือแก้ไขของ PikaSnip" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>หน้าต่างปักหมุดลอยพร้อมแถบเครื่องมือแก้ไข</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/pikasnip/04-offline-thai-en-ocr.png" alt="OCR ไทยและอังกฤษออฟไลน์ของ PikaSnip" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>OCR ไทยและอังกฤษ ทำงานออฟไลน์ 100%</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section aria-labelledby="specs">
@@ -178,7 +210,7 @@
             </tr>
             <tr>
               <th scope="row">ดาวน์โหลด</th>
-              <td>ไฟล์ Portable ZIP (แนะนำ) และแพ็กเกจ MSIX แบบลงนามเองสำหรับทดสอบที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a> ส่วนรุ่น Microsoft Store กำลังอยู่ระหว่างเตรียมเผยแพร่</td>
+              <td>ไฟล์ Portable ZIP (แนะนำ) และแพ็กเกจ MSIX แบบลงนามเองสำหรับทดสอบที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a> ส่งเข้าหน้า Microsoft Store แล้ว — อยู่ระหว่างการตรวจสอบ</td>
             </tr>
             <tr>
               <th scope="row">คลังโค้ด</th>

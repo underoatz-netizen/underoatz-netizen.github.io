@@ -59,7 +59,7 @@
     </div>
 
     <div class="callout">
-      <p><strong>แนะนำให้ใช้รุ่น Portable ZIP ในตอนนี้</strong> ทั้งสองแพ็กเกจเผยแพร่จาก GitHub Release ทางการและรวมโมเดล OCR OpenThai 2.1, Microsoft ONNX Runtime v1.32.0 และ MSVC x64 CRT DLLs เฉพาะแอปจำนวน 4 ไฟล์ไว้ครบ จึงไม่ต้องลง VC++ Redistributable เพิ่มเติม ส่วนไฟล์ MSIX เป็นบิลด์ทดสอบแบบลงนามเอง (self-signed sideload) ที่ต้องให้สิทธิ์ผู้ดูแลระบบเชื่อถือใบรับรองก่อนติดตั้ง ระหว่างที่รุ่น Microsoft Store กำลังเตรียมเผยแพร่</p>
+      <p><strong>แนะนำให้ใช้รุ่น Portable ZIP ในตอนนี้</strong> ทั้งสองแพ็กเกจเผยแพร่จาก GitHub Release ทางการและรวมโมเดล OCR OpenThai 2.1, Microsoft ONNX Runtime v1.32.0 และ MSVC x64 CRT DLLs เฉพาะแอปจำนวน 4 ไฟล์ไว้ครบ จึงไม่ต้องลง VC++ Redistributable เพิ่มเติม ส่วนไฟล์ MSIX เป็นบิลด์ทดสอบแบบลงนามเอง (self-signed sideload) ที่ต้องให้สิทธิ์ผู้ดูแลระบบเชื่อถือใบรับรองก่อนติดตั้ง ส่งเข้าหน้า Microsoft Store แล้ว — อยู่ระหว่างการตรวจสอบ</p>
     </div>
 
     <section aria-labelledby="files">
@@ -93,7 +93,7 @@
               <span class="badge">13.65 MiB</span>
             </div>
             <p class="download-card-file">PikaSnip_0.1.0.0_x64.msix (14,309,278 ไบต์)</p>
-            <p>แพ็กเกจ MSIX แบบลงนามเองสำหรับทดสอบการติดตั้งแบบ sideload ระหว่างที่รุ่น Microsoft Store กำลังเตรียมเผยแพร่ การติดตั้งต้องใช้สิทธิ์ผู้ดูแลระบบนำเข้าใบรับรองทดสอบสาธารณะ (<code>PikaSnip_0.1.0.0_x64.cer</code>, <code>CN=OZ Lab</code>) ลงใน <code>LocalMachine\Root</code> และ <code>LocalMachine\TrustedPeople</code> เก็บการตั้งค่าไว้ที่ <code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code></p>
+            <p>แพ็กเกจ MSIX แบบลงนามเองสำหรับทดสอบการติดตั้งแบบ sideload ส่งเข้าหน้า Microsoft Store แล้ว — อยู่ระหว่างการตรวจสอบ การติดตั้งต้องใช้สิทธิ์ผู้ดูแลระบบนำเข้าใบรับรองทดสอบสาธารณะ (<code>PikaSnip_0.1.0.0_x64.cer</code>, <code>CN=OZ Lab</code>) ลงใน <code>LocalMachine\Root</code> และ <code>LocalMachine\TrustedPeople</code> เก็บการตั้งค่าไว้ที่ <code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code></p>
           </div>
           <div>
             <a class="btn btn-secondary" href="https://github.com/underoatz-netizen/pikasnip/releases/download/v0.1.0/PikaSnip_0.1.0.0_x64.msix">
@@ -231,7 +231,7 @@
           </div>
 
           <h3>หมายเหตุการติดตั้ง MSIX แบบลงนามเอง (Sideload)</h3>
-          <p>แพ็กเกจ MSIX ลงนามด้วยใบรับรองทดสอบแบบลงนามเองสำหรับการทดสอบติดตั้งในเครื่อง ระหว่างที่รุ่น Microsoft Store กำลังเตรียมเผยแพร่:</p>
+          <p>แพ็กเกจ MSIX ลงนามด้วยใบรับรองทดสอบแบบลงนามเองสำหรับการทดสอบติดตั้งในเครื่อง ส่งเข้าหน้า Microsoft Store แล้ว — อยู่ระหว่างการตรวจสอบ:</p>
           <ul>
             <li><strong>ไฟล์ใบรับรอง:</strong> <code>PikaSnip_0.1.0.0_x64.cer</code> (772 ไบต์)</li>
             <li><strong>ผู้ลงนาม (Subject):</strong> <code>CN=OZ Lab</code></li>

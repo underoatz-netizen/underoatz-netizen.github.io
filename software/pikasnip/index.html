@@ -20,6 +20,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .shot-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 1.25rem 0 0; }
+    .shot-grid figure { margin: 0; border: 1px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+    .shot-grid img { width: 100%; height: auto; display: block; }
+    .shot-grid figcaption { margin: 0; padding: 0.6rem 0.8rem; background: var(--surface); border-top: 1px solid var(--border); font-size: 0.875rem; color: var(--secondary); }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,11 +119,12 @@
     </div>
 
     <div class="callout">
-      <p><strong>PikaSnip 0.1.0 for Windows x64 is available now on GitHub Releases.</strong> The Portable x64 ZIP (<code>13.30 MiB</code>) is recommended for immediate use with no certificate installation. A self-signed MSIX sideload package is also published for testing while the Microsoft Store release is in preparation. See the <a href="/software/pikasnip/downloads/">Downloads</a> page for packages, SHA-256 checksums, and third-party notices.</p>
+      <p><strong>PikaSnip 0.1.0 for Windows x64 is available now on GitHub Releases.</strong> The Portable x64 ZIP (<code>13.30 MiB</code>) is recommended for immediate use with no certificate installation. A self-signed MSIX sideload package is also published for testing. Submitted to Microsoft Store — pending certification; the Store listing will be linked here once it is published. See the <a href="/software/pikasnip/downloads/">Downloads</a> page for packages, SHA-256 checksums, and third-party notices.</p>
     </div>
 
     <nav class="page-toc" aria-label="On this page">
       <a href="#what">What it does</a>
+      <a href="#screenshots">Screenshots</a>
       <a href="#specs">Architecture &amp; footprint</a>
       <a href="#status">Project status</a>
       <a href="#next">Where to go next</a>
@@ -139,6 +146,31 @@
         <li>Keep standby memory low: <code>onnxruntime.dll</code> (v1.32.0) is loaded lazily via <code>LoadLibraryExW</code> only when you actually invoke OCR.</li>
         <li>Work completely offline with zero telemetry, zero network requests, no accounts, and Windows Startup disabled by default (<code>Enabled="false"</code>).</li>
       </ul>
+    </section>
+
+    <section aria-labelledby="screenshots">
+      <div class="section-head">
+        <h2 id="screenshots">Screenshots</h2>
+        <span class="mono-meta">4 screenshots · v0.1.0</span>
+      </div>
+      <div class="shot-grid">
+        <figure>
+          <img src="/assets/images/pikasnip/01-capture-magnifier.png" alt="PikaSnip region capture with magnifier" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Region capture with magnifier and pixel-level zoom</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/pikasnip/02-annotations-toolbar.png" alt="PikaSnip annotation toolbar" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Annotation toolbar for markup before saving</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/pikasnip/03-floating-pin-edit.png" alt="PikaSnip floating pin window with edit toolbar" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Floating pin window with edit toolbar</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/pikasnip/04-offline-thai-en-ocr.png" alt="PikaSnip 100% offline Thai and English OCR" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>100% offline Thai and English OCR</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section aria-labelledby="specs">
@@ -178,7 +210,7 @@
             </tr>
             <tr>
               <th scope="row">Downloads</th>
-              <td>Portable ZIP (recommended) and self-signed MSIX sideload package on <a href="/software/pikasnip/downloads/">Downloads</a>; Microsoft Store release is in preparation</td>
+              <td>Portable ZIP (recommended) and self-signed MSIX sideload package on <a href="/software/pikasnip/downloads/">Downloads</a>; submitted to Microsoft Store — pending certification</td>
             </tr>
             <tr>
               <th scope="row">Repository</th>

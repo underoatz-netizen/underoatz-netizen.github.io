@@ -145,7 +145,7 @@
       </div>
 
       <h3 id="faq-portable-msix">Should I download the Portable ZIP or the MSIX package?</h3>
-      <p>For most users right now, download the <strong>Portable x64 ZIP</strong> from the <a href="/software/pikasnip/downloads/">Downloads</a> page: extract it and run <code>PikaSnip.exe</code> without installing any certificate. The MSIX file is a self-signed sideload test build that requires importing <code>PikaSnip_0.1.0.0_x64.cer</code> as Administrator into <code>LocalMachine\Root</code> and <code>LocalMachine\TrustedPeople</code> while the Microsoft Store release is in preparation.</p>
+      <p>For most users right now, download the <strong>Portable x64 ZIP</strong> from the <a href="/software/pikasnip/downloads/">Downloads</a> page: extract it and run <code>PikaSnip.exe</code> without installing any certificate. The MSIX file is a self-signed sideload test build that requires importing <code>PikaSnip_0.1.0.0_x64.cer</code> as Administrator into <code>LocalMachine\Root</code> and <code>LocalMachine\TrustedPeople</code>. Submitted to Microsoft Store — pending certification.</p>
 
       <h3 id="faq-vcredist">Do I need to install Microsoft Visual C++ Redistributable?</h3>
       <p>No. <code>PikaSnip.exe</code> is linked statically (<code>/MT</code>) with zero dynamic CRT imports, and the package includes the 4 app-local MSVC x64 CRT DLLs required by <code>onnxruntime.dll</code> so clean Windows 10 and 11 systems work out of the box.</p>
