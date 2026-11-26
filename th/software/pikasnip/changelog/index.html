@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>บันทึกการเปลี่ยนแปลง PikaSnip — ประวัติการเผยแพร่</title>
+  <meta name="description" content="ประวัติการเผยแพร่ของ PikaSnip เวอร์ชัน 0.1.0 เป็นรุ่นสาธารณะแรกสำหรับ Windows 10 และ 11 (x64) บน GitHub Releases">
+  <link rel="canonical" href="https://ozlab.pages.dev/th/software/pikasnip/changelog/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/changelog/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/changelog/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/changelog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="บันทึกการเปลี่ยนแปลง PikaSnip — ประวัติการเผยแพร่">
+  <meta property="og:description" content="ประวัติการเผยแพร่ของ PikaSnip เวอร์ชัน 0.1.0 พร้อมให้ดาวน์โหลดสำหรับ Windows x64 บน GitHub Releases">
+  <meta property="og:url" content="https://ozlab.pages.dev/th/software/pikasnip/changelog/">
+  <meta property="og:image" content="https://ozlab.pages.dev/assets/images/pikasnip-logo.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/th/">
+        <img class="brand-logo" src="/assets/images/oz-lab-logo.png" alt="" width="28" height="28">
+        <span>OZ Lab</span>
+      </a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
+          <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
+          <li><a href="/th/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/th/support/">ช่วยเหลือ</a></li>
+          <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/software/pikasnip/changelog/" hreflang="en" lang="en">English</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/pikasnip/">PikaSnip</a>
+      <span aria-hidden="true">/</span>
+      <span>บันทึกการเปลี่ยนแปลง</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">ประวัติการเผยแพร่ · v0.1.0</span>
+      <h1>บันทึกการเปลี่ยนแปลง</h1>
+      <p class="lede">ประวัติการเผยแพร่ของ PikaSnip สำหรับ Windows 10 และ 11 (x64) เรียงจากใหม่ไปเก่า</p>
+    </div>
+
+    <div class="callout">
+      <p><strong>PikaSnip 0.1.0 พร้อมใช้งานแล้ว</strong> รุ่นสาธารณะแรก เผยแพร่เมื่อวันที่ 26 พฤศจิกายน 2026 สำหรับ Windows 10 และ Windows 11 (64-bit x64)</p>
+    </div>
+
+    <section class="changelog-entry" aria-labelledby="v010">
+      <div class="changelog-head">
+        <h2 id="v010">0.1.0 — 26 พฤศจิกายน 2026</h2>
+        <span class="badge">รุ่นล่าสุด</span>
+      </div>
+      <ul>
+        <li>เผยแพร่รุ่นสาธารณะแรกของ <strong>PikaSnip</strong> สำหรับ Windows 10 และ 11 (x64) พัฒนาด้วย C++20 เนทีฟบน Win32 และ Direct2D โดยไม่ใช้ Electron, WebView2, Qt หรือ .NET</li>
+        <li>ไฟล์ <code>PikaSnip.exe</code> ขนาดกะทัดรัด (<code>754,688</code> ไบต์) คอมไพล์แบบ static CRT (<code>/MT</code>) ไม่มี dynamic CRT imports พร้อมแนบ MSVC x64 CRT DLLs เฉพาะแอปจำนวน 4 ไฟล์สำหรับ ONNX Runtime เพื่อให้เครื่อง Windows ที่สะอาดเปิดใช้งานได้โดยไม่ต้องลง VC++ Redistributable</li>
+        <li>จับภาพหน้าจอ (<kbd>PrintScreen</kbd> / <kbd>Alt</kbd>+<kbd>A</kbd>), วาดแก้ไขพร้อมเลิกทำ/ทำซ้ำ (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>), ดูดรหัสสี HEX (<kbd>C</kbd>), คัดลอกลงคลิปบอร์ด (<kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd>) และบันทึกไฟล์ PNG (<kbd>Ctrl</kbd>+<kbd>S</kbd>) ลงใน <code>%USERPROFILE%\Pictures\PikaSnip</code></li>
+        <li>ปักหมุดภาพลอยด้านบนสุดจากพื้นที่ที่เลือก (<kbd>Ctrl</kbd>+<kbd>P</kbd>) หรือจากคลิปบอร์ด (<kbd>Alt</kbd>+<kbd>P</kbd>) พร้อมซูม (25%–400%), ปรับความโปร่งใส (20%–100%), รีเซ็ต (<kbd>0</kbd>) และแถบเครื่องมือแก้ไขบนหมุด (<kbd>E</kbd> / <kbd>Space</kbd>)</li>
+        <li>OCR ภาษาไทยและอังกฤษแบบออฟไลน์ 100% (<kbd>Alt</kbd>+<kbd>T</kbd> สำหรับ Quick OCR และ <kbd>Ctrl</kbd>+<kbd>T</kbd> สำหรับพื้นที่ที่เลือก) ขับเคลื่อนด้วยโมเดล OpenThai 2.1 (Apache 2.0) และ Microsoft ONNX Runtime v1.32.0 (MIT)</li>
+        <li>โหลดเอนจิน OCR แบบหน่วงเวลาผ่าน <code>LoadLibraryExW</code> ทำให้แรมสแตนด์บายต่ำกว่า 15 MB (วัดได้ <code>10.79–11.33 MB</code> บนเครื่อง Windows 11 build 26100 ที่สะอาด)</li>
+        <li>ทำงานออฟไลน์ 100% ไม่มี telemetry ไม่เชื่อมต่อเครือข่าย และปิดการเริ่มทำงานพร้อม Windows ไว้เป็นค่าเริ่มต้น (<code>Enabled="false"</code>)</li>
+        <li>เผยแพร่บน GitHub Releases ทั้งไฟล์ Portable x64 ZIP ที่แนะนำ (<code>13.30 MiB</code>) และแพ็กเกจ MSIX ลงนามเองสำหรับ sideload (<code>13.65 MiB</code>) พร้อม <code>PikaSnip_0.1.0.0_x64.cer</code>, <code>SHA256SUMS.txt</code> และ <code>ThirdPartyNotices.txt</code> ส่วนรุ่น Microsoft Store กำลังอยู่ระหว่างเตรียมเผยแพร่</li>
+      </ul>
+      <p>ดูไฟล์และค่าแฮช SHA-256 ได้ที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a> หรือดูที่ <a href="https://github.com/underoatz-netizen/pikasnip/releases/tag/v0.1.0" rel="noopener noreferrer" target="_blank">v0.1.0 บน GitHub Releases</a></p>
+    </section>
+
+    <section aria-labelledby="related">
+      <div class="section-head">
+        <h2 id="related">หน้าที่เกี่ยวข้อง</h2>
+      </div>
+      <ul class="editorial-list">
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/pikasnip/downloads/">
+            <span class="editorial-row-title">ดาวน์โหลด</span>
+            <span class="editorial-row-desc">รับแพ็กเกจรุ่น 0.1.0 และค่าแฮช SHA-256</span>
+            <span class="editorial-row-meta">
+              <span>v0.1.0</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/pikasnip/">
+            <span class="editorial-row-title">ภาพรวม PikaSnip</span>
+            <span class="editorial-row-desc">ผลิตภัณฑ์นี้ทำอะไรได้บ้าง</span>
+            <span class="editorial-row-meta">
+              <span>ภาพรวม</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="editorial-row">
+          <a class="editorial-row-link" href="/th/software/pikasnip/guide/">
+            <span class="editorial-row-title">คู่มือและคำถามที่พบบ่อย</span>
+            <span class="editorial-row-desc">คีย์ลัด ที่เก็บไฟล์ และคำถามที่พบบ่อย</span>
+            <span class="editorial-row-meta">
+              <span>คู่มือ</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaSnip เป็นโปรแกรมเนทีฟสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+            <li><a href="/th/software/pikasnip/">PikaSnip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและเว็บสำรอง</h2>
+          <ul>
+            <li><a href="https://ozlab.pages.dev/th/">เว็บไซต์ทางการ (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/th/" rel="noopener noreferrer" target="_blank">เว็บสำรอง (GitHub Pages)</a></li>
+            <li><a href="/software/pikasnip/changelog/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

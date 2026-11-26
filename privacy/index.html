@@ -44,15 +44,16 @@
 
   <main id="main" class="wrap">
     <div class="page-intro">
-      <span class="mono-meta">Effective 19 November 2026 · Static website &amp; desktop apps</span>
+      <span class="mono-meta">Effective 26 November 2026 · Static website &amp; desktop apps</span>
       <h1>Privacy policy</h1>
-      <p class="lede">This Privacy Policy explains how data is handled by the OZ Lab website, PikaPDF (formerly FastPDF), and PikaView (formerly OZ Image Viewer).</p>
+      <p class="lede">This Privacy Policy explains how data is handled by the OZ Lab website, PikaPDF (formerly FastPDF), PikaView (formerly OZ Image Viewer), and PikaSnip.</p>
     </div>
 
     <nav class="page-toc" aria-label="On this page">
       <a href="#site-privacy">This website</a>
       <a href="#app-privacy">PikaPDF</a>
       <a href="#pikaview-privacy">PikaView</a>
+      <a href="#pikasnip-privacy">PikaSnip</a>
       <a href="#questions">Support, donations &amp; user control</a>
       <a href="#policy-updates">Policy updates</a>
     </nav>
@@ -114,6 +115,20 @@
       </ul>
     </section>
 
+    <section aria-labelledby="pikasnip-privacy">
+      <div class="section-head">
+        <h2 id="pikasnip-privacy">PikaSnip</h2>
+        <span class="mono-meta">Effective 25 November 2026 · PikaSnip v0.1.0+</span>
+      </div>
+      <p>PikaSnip runs 100% offline on your Windows device. It collects no personal data, uses no telemetry or analytics, shows no ads, and makes zero network connections. All screen captures, annotations, floating pins, and Thai/English OCR (powered by bundled OpenThai 2.1 models and Microsoft ONNX Runtime) are processed strictly locally.</p>
+      <ul>
+        <li>Preferences are stored locally in <code>settings.json</code> beside <code>PikaSnip.exe</code> (Portable) or at <code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code> (MSIX).</li>
+        <li>Saved screenshots are written to <code>%USERPROFILE%\Pictures\PikaSnip</code> only when you explicitly choose Save (<kbd>Ctrl</kbd>+<kbd>S</kbd>).</li>
+        <li>Windows Startup is disabled by default (<code>Enabled="false"</code>) and only runs if you explicitly enable it.</li>
+        <li>Read the standalone English and Thai policy at <a href="/privacy-pikasnip.html">/privacy-pikasnip.html</a>.</li>
+      </ul>
+    </section>
+
     <section aria-labelledby="questions">
       <div class="section-head">
         <h2 id="questions">Support, donations &amp; user control</h2>
@@ -121,7 +136,7 @@
       <ul>
         <li><strong>Support &amp; public issue trackers:</strong> Reports and questions submitted via GitHub issue trackers (see the <a href="/support/">Support</a> page) are public and governed by GitHub's privacy policy. Please do not post personal data, credentials, or confidential documents.</li>
         <li><strong>Voluntary donations:</strong> Contributions through <a href="https://ko-fi.com/ozlab" rel="noopener noreferrer" target="_blank">Ko-fi</a> or PromptPay happen directly on Ko-fi or in your banking app. OZ Lab's website and desktop apps do not collect, process, or store payment details.</li>
-        <li><strong>User control:</strong> Because OZ Lab operates no backend servers and collects no personal data, uninstalling through Windows Settings removes the installed program files (and PikaView's owned installer registry entries), while manually deleting <code>%LOCALAPPDATA%\FastPDF\</code> and <code>%LOCALAPPDATA%\OZViewer\</code> removes all retained local state, recent-file history, preferences, and diagnostic logs from your device.</li>
+        <li><strong>User control:</strong> Because OZ Lab operates no backend servers and collects no personal data, uninstalling through Windows Settings removes the installed program files (and PikaView's owned installer registry entries), while manually deleting <code>%LOCALAPPDATA%\FastPDF\</code>, <code>%LOCALAPPDATA%\OZViewer\</code>, and <code>%LOCALAPPDATA%\OZLab\PikaSnip\</code> removes all retained local state, recent-file history, preferences, and diagnostic logs from your device.</li>
       </ul>
 
       <h3 id="policy-updates">Policy updates</h3>
@@ -142,6 +157,7 @@
             <li><a href="/software/">All software</a></li>
             <li><a href="/software/fastpdf/">PikaPDF (formerly FastPDF)</a></li>
             <li><a href="/software/oz-image-viewer/">PikaView (formerly OZ Image Viewer)</a></li>
+            <li><a href="/software/pikasnip/">PikaSnip</a></li>
           </ul>
         </div>
         <div class="footer-col">

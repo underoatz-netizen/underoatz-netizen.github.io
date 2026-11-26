@@ -3,14 +3,14 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ozlab.pages.dev/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/"/>
   </url>
   <url>
     <loc>https://ozlab.pages.dev/software/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/"/>
@@ -72,6 +72,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/oz-image-viewer/guide/"/>
   </url>
   <url>
+    <loc>https://ozlab.pages.dev/software/pikasnip/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/"/>
+  </url>
+  <url>
+    <loc>https://ozlab.pages.dev/software/pikasnip/downloads/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/downloads/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/downloads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/downloads/"/>
+  </url>
+  <url>
+    <loc>https://ozlab.pages.dev/software/pikasnip/changelog/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/changelog/"/>
+  </url>
+  <url>
+    <loc>https://ozlab.pages.dev/software/pikasnip/guide/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/guide/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/guide/"/>
+  </url>
+  <url>
     <loc>https://ozlab.pages.dev/support/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/support/"/>
@@ -80,21 +108,25 @@
   </url>
   <url>
     <loc>https://ozlab.pages.dev/privacy/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/privacy/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/privacy/"/>
   </url>
   <url>
+    <loc>https://ozlab.pages.dev/privacy-pikasnip.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://ozlab.pages.dev/th/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/"/>
   </url>
   <url>
     <loc>https://ozlab.pages.dev/th/software/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/"/>
@@ -156,6 +188,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/oz-image-viewer/guide/"/>
   </url>
   <url>
+    <loc>https://ozlab.pages.dev/th/software/pikasnip/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/"/>
+  </url>
+  <url>
+    <loc>https://ozlab.pages.dev/th/software/pikasnip/downloads/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/downloads/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/downloads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/downloads/"/>
+  </url>
+  <url>
+    <loc>https://ozlab.pages.dev/th/software/pikasnip/changelog/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/changelog/"/>
+  </url>
+  <url>
+    <loc>https://ozlab.pages.dev/th/software/pikasnip/guide/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/guide/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/guide/"/>
+  </url>
+  <url>
     <loc>https://ozlab.pages.dev/th/support/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/support/"/>
@@ -164,7 +224,7 @@
   </url>
   <url>
     <loc>https://ozlab.pages.dev/th/privacy/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/privacy/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/privacy/"/>

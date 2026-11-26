@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>คู่มือและคำถามที่พบบ่อย PikaSnip — OZ Lab</title>
+  <meta name="description" content="คู่มือและคำถามที่พบบ่อยของ PikaSnip 0.1.0: การจับภาพหน้าจอ ปักหมุดภาพลอย อ่านข้อความ OCR ไทย/อังกฤษแบบออฟไลน์ คีย์ลัด ที่เก็บไฟล์ในเครื่อง และหมายเหตุการติดตั้ง">
+  <link rel="canonical" href="https://ozlab.pages.dev/th/software/pikasnip/guide/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/guide/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="คู่มือและคำถามที่พบบ่อย PikaSnip — OZ Lab">
+  <meta property="og:description" content="วิธีใช้ PikaSnip 0.1.0 บน Windows x64: คีย์ลัด การปักหมุดภาพ OCR ไทย/อังกฤษออฟไลน์ ที่เก็บไฟล์ และคำถามที่พบบ่อย">
+  <meta property="og:url" content="https://ozlab.pages.dev/th/software/pikasnip/guide/">
+  <meta property="og:image" content="https://ozlab.pages.dev/assets/images/pikasnip-logo.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/th/">
+        <img class="brand-logo" src="/assets/images/oz-lab-logo.png" alt="" width="28" height="28">
+        <span>OZ Lab</span>
+      </a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
+          <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
+          <li><a href="/th/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/th/support/">ช่วยเหลือ</a></li>
+          <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/software/pikasnip/guide/" hreflang="en" lang="en">English</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="breadcrumb" aria-label="ลำดับหน้า">
+      <a href="/th/software/">ซอฟต์แวร์</a>
+      <span aria-hidden="true">/</span>
+      <a href="/th/software/pikasnip/">PikaSnip</a>
+      <span aria-hidden="true">/</span>
+      <span>คู่มือและคำถามที่พบบ่อย</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">คู่มือการใช้งาน · v0.1.0</span>
+      <h1>คู่มือและคำถามที่พบบ่อย</h1>
+      <p class="lede">วิธีจับภาพหน้าจอ ปักหมุดภาพลอย วาดแก้ไข ดูดสี และรัน OCR ภาษาไทยและอังกฤษแบบออฟไลน์ด้วย PikaSnip 0.1.0 สำหรับ Windows x64 ดาวน์โหลดได้ที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a></p>
+    </div>
+
+    <nav class="page-toc" aria-label="หัวข้อในหน้านี้">
+      <a href="#basics">พื้นฐาน</a>
+      <a href="#shortcuts">คีย์ลัด</a>
+      <a href="#paths">ที่เก็บไฟล์และการตั้งค่า</a>
+      <a href="#faq">คำถามที่พบบ่อย</a>
+    </nav>
+
+    <section aria-labelledby="basics">
+      <div class="section-head">
+        <h2 id="basics">พื้นฐาน</h2>
+      </div>
+      <ul>
+        <li><strong>รอทำงานในถาดระบบ (System Tray)</strong> เมื่อเปิด <code>PikaSnip.exe</code> แอปจะรออยู่ในพื้นที่แจ้งเตือนของ Windows โดยใช้แรมต่ำกว่า 15 MB คลิกขวาที่ไอคอนในถาดระบบเพื่อตั้งค่า เรียกคำสั่ง หรือสลับตัวเลือก <em>Run at Startup</em> (ปิดเป็นค่าเริ่มต้น)</li>
+        <li><strong>จับภาพและวาดแก้ไข</strong> กด <kbd>PrintScreen</kbd> หรือ <kbd>Alt</kbd>+<kbd>A</kbd> เพื่อลากเลือกพื้นที่หน้าจอ วาดแก้ไขทับภาพได้ทันที เลิกทำหรือทำซ้ำด้วย <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> คัดลอกด้วย <kbd>Ctrl</kbd>+<kbd>C</kbd> หรือ <kbd>Enter</kbd> หรือบันทึกเป็น PNG ด้วย <kbd>Ctrl</kbd>+<kbd>S</kbd></li>
+        <li><strong>ดูดสีพิกเซล</strong> ขณะกำลังจับภาพ กดปุ่ม <kbd>C</kbd> เพื่อคัดลอกรหัสสี HEX ใต้เคอร์เซอร์ลงคลิปบอร์ดทันที</li>
+        <li><strong>ปักหมุดภาพลอย</strong> กด <kbd>Ctrl</kbd>+<kbd>P</kbd> ระหว่างจับภาพเพื่อปักหมุดพื้นที่ที่เลือกลอยไว้เหนือหน้าต่างอื่นทั้งหมด หรือกด <kbd>Alt</kbd>+<kbd>P</kbd> เพื่อปักหมุดภาพที่อยู่ในคลิปบอร์ดทันที</li>
+        <li><strong>ปรับแต่งและแก้ไขภาพที่ปักหมุด</strong> เลื่อนเมาส์เหนือหน้าต่างหมุดแล้วหมุน <kbd>Mouse Wheel</kbd> เพื่อซูม (25%–400%), กด <kbd>Ctrl</kbd>+<kbd>Wheel</kbd> เพื่อปรับความโปร่งใส (20%–100%), กด <kbd>0</kbd> เพื่อรีเซ็ต, กด <kbd>E</kbd> หรือ <kbd>Space</kbd> เพื่อเปิด/ปิดแถบเครื่องมือแก้ไขบนหมุด หรือกด <kbd>Esc</kbd> เพื่อปิดหมุด</li>
+        <li><strong>OCR ภาษาไทยและอังกฤษแบบออฟไลน์</strong> กด <kbd>Alt</kbd>+<kbd>T</kbd> สำหรับ Quick OCR หรือกด <kbd>Ctrl</kbd>+<kbd>T</kbd> บนพื้นที่ที่กำลังเลือกเพื่ออ่านข้อความไทยและอังกฤษแบบออฟไลน์ 100% ด้วยโมเดล OpenThai 2.1 และ Microsoft ONNX Runtime (v1.32.0) ที่โหลดเมื่อใช้งาน</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="shortcuts">
+      <div class="section-head">
+        <h2 id="shortcuts">คีย์ลัด</h2>
+        <span class="mono-meta">แป้นพิมพ์และเมาส์</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">คีย์ลัดเริ่มต้นของ PikaSnip v0.1.0</caption>
+          <thead>
+            <tr><th scope="col">คีย์ลัด</th><th scope="col">การทำงาน</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>PrintScreen</kbd> / <kbd>Alt</kbd>+<kbd>A</kbd></td><td>เริ่มจับภาพพื้นที่หน้าจอ</td></tr>
+            <tr><td><kbd>Alt</kbd>+<kbd>T</kbd></td><td>Quick OCR (สกัดข้อความไทยและอังกฤษแบบออฟไลน์)</td></tr>
+            <tr><td><kbd>Alt</kbd>+<kbd>P</kbd></td><td>ปักหมุดภาพจากคลิปบอร์ด</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td>ปักหมุดพื้นที่ที่กำลังเลือก</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>T</kbd></td><td>รัน OCR ออฟไลน์กับพื้นที่ที่กำลังเลือก</td></tr>
+            <tr><td><kbd>C</kbd></td><td>คัดลอกรหัสสี HEX ใต้เคอร์เซอร์ขณะจับภาพ</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>เลิกทำ / ทำซ้ำการวาดแก้ไข</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>บันทึกภาพ PNG ลงใน <code>Pictures\PikaSnip</code></td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd></td><td>คัดลอกภาพลงคลิปบอร์ด</td></tr>
+            <tr><td><kbd>E</kbd> / <kbd>Space</kbd></td><td>เปิด/ปิดแถบเครื่องมือแก้ไขบนหน้าต่างหมุด</td></tr>
+            <tr><td><kbd>Mouse Wheel</kbd></td><td>ซูมหน้าต่างที่ปักหมุด (25%–400%)</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Wheel</kbd></td><td>ปรับความโปร่งใสของหน้าต่างที่ปักหมุด (20%–100%)</td></tr>
+            <tr><td><kbd>0</kbd></td><td>รีเซ็ตขนาดซูมและความโปร่งใสของหน้าต่างหมุด</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>ยกเลิกการจับภาพ หรือปิดหน้าต่างหมุดที่กำลังเลือก</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="paths">
+      <div class="section-head">
+        <h2 id="paths">ที่เก็บไฟล์และการตั้งค่า</h2>
+        <span class="mono-meta">ไฟล์ในเครื่อง</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">ตำแหน่งที่ PikaSnip จัดเก็บการตั้งค่าและไฟล์ภาพที่บันทึก</caption>
+          <thead>
+            <tr><th scope="col">รายการ</th><th scope="col">ตำแหน่ง</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>การตั้งค่ารุ่น Portable</td>
+              <td><code>settings.json</code> ข้างไฟล์ <code>PikaSnip.exe</code></td>
+            </tr>
+            <tr>
+              <td>การตั้งค่ารุ่น MSIX</td>
+              <td><code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code></td>
+            </tr>
+            <tr>
+              <td>ภาพหน้าจอที่บันทึก (PNG)</td>
+              <td><code>%USERPROFILE%\Pictures\PikaSnip</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <div class="section-head">
+        <h2 id="faq">คำถามที่พบบ่อย</h2>
+      </div>
+
+      <h3 id="faq-portable-msix">ควรดาวน์โหลดไฟล์ Portable ZIP หรือแพ็กเกจ MSIX</h3>
+      <p>สำหรับผู้ใช้ทั่วไปในตอนนี้ แนะนำให้ดาวน์โหลด <strong>Portable x64 ZIP</strong> จากหน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a> เพราะแตกไฟล์แล้วเปิด <code>PikaSnip.exe</code> ใช้งานได้ทันทีโดยไม่ต้องติดตั้งใบรับรอง ส่วนไฟล์ MSIX เป็นบิลด์ทดสอบแบบลงนามเองสำหรับ sideload ที่ต้องให้สิทธิ์ผู้ดูแลระบบนำเข้า <code>PikaSnip_0.1.0.0_x64.cer</code> ลงใน <code>LocalMachine\Root</code> และ <code>LocalMachine\TrustedPeople</code> ระหว่างที่รุ่น Microsoft Store กำลังเตรียมเผยแพร่</p>
+
+      <h3 id="faq-vcredist">ต้องติดตั้ง Microsoft Visual C++ Redistributable เพิ่มหรือไม่</h3>
+      <p>ไม่ต้องครับ <code>PikaSnip.exe</code> คอมไพล์แบบ static CRT (<code>/MT</code>) ไม่มี dynamic CRT imports และในแพ็กเกจแนบ MSVC x64 CRT DLLs เฉพาะแอปจำนวน 4 ไฟล์สำหรับ <code>onnxruntime.dll</code> มาให้ครบ เครื่อง Windows 10 และ 11 ที่สะอาดจึงเปิดใช้งานได้ทันที</p>
+
+      <h3 id="faq-ram">ทำไม PikaSnip ใช้แรมตอนสแตนด์บายต่ำกว่า 15 MB</h3>
+      <p>ตัวโปรแกรมหลักพัฒนาด้วย C++20 เนทีฟ Win32/Direct2D โดยไม่มีเอนจินเบราว์เซอร์ และ <code>onnxruntime.dll</code> (v1.32.0) จะถูกโหลดแบบหน่วงเวลาผ่าน <code>LoadLibraryExW</code> เฉพาะเมื่อคุณสั่งรัน OCR เท่านั้น จากการทดสอบบนเครื่อง Windows 11 build 26100 ที่สะอาด พบการใช้แรมสแตนด์บายที่ <code>10.79–11.33 MB</code></p>
+
+      <h3 id="faq-privacy">PikaSnip ส่งภาพหน้าจอหรือข้อความ OCR ออกอินเทอร์เน็ตหรือไม่</h3>
+      <p>ไม่เคยครับ PikaSnip ทำงานแบบออฟไลน์ 100% ไม่มี telemetry และไม่เชื่อมต่อเครือข่าย การจับภาพ การปักหมุด การวาดแก้ไข และการอ่านข้อความ OpenThai 2.1 OCR ทั้งหมดประมวลผลในเครื่องของคุณ อ่านรายละเอียดฉบับเต็มได้ที่ <a href="/privacy-pikasnip.html">นโยบายความเป็นส่วนตัวของ PikaSnip</a> หรือหน้า <a href="/th/privacy/#pikasnip-privacy">ความเป็นส่วนตัว</a></p>
+
+      <h3 id="faq-startup">PikaSnip เปิดเองพร้อม Windows หรือไม่</h3>
+      <p>ไม่ได้เปิดเป็นค่าเริ่มต้นครับ ตัวเลือกเริ่มพร้อม Windows ถูกปิดไว้ (<code>Enabled="false"</code>) และจะเริ่มอัตโนมัติเฉพาะเมื่อคุณเปิดใช้งาน <em>Run at Startup</em> ด้วยตนเอง</p>
+
+      <h3 id="faq-notices">ดูคลังโค้ดและประกาศสัญญาอนุญาตโอเพนซอร์สได้ที่ไหน</h3>
+      <p>ดูคลังโค้ดได้ที่ <a href="https://github.com/underoatz-netizen/pikasnip" rel="noopener noreferrer" target="_blank">github.com/underoatz-netizen/pikasnip</a> และดูไฟล์ <code>ThirdPartyNotices.txt</code> ที่หน้า <a href="/th/software/pikasnip/downloads/">ดาวน์โหลด</a> สำหรับประกาศสัญญาอนุญาตของ OpenThai 2.1 (Apache 2.0) และ Microsoft ONNX Runtime (MIT)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaSnip เป็นโปรแกรมเนทีฟสำหรับ Windows จาก OZ Lab เว็บนี้เป็นไฟล์สถิตและไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</p>
+        </div>
+        <div class="footer-col">
+          <h2>ซอฟต์แวร์</h2>
+          <ul>
+            <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
+            <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
+            <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+            <li><a href="/th/software/pikasnip/">PikaSnip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>ข้อมูลและช่วยเหลือ</h2>
+          <ul>
+            <li><a href="/th/support/">ช่วยเหลือและการบริจาค</a></li>
+            <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>โฮสติ้งและเว็บสำรอง</h2>
+          <ul>
+            <li><a href="https://ozlab.pages.dev/th/">เว็บไซต์ทางการ (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/th/" rel="noopener noreferrer" target="_blank">เว็บสำรอง (GitHub Pages)</a></li>
+            <li><a href="/software/pikasnip/guide/" hreflang="en" lang="en">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab สงวนลิขสิทธิ์</span>
+        <span class="mono-meta">เว็บสถิต HTML และ CSS · ไม่มีการติดตามผู้ใช้</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

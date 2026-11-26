@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PikaSnip User Guide &amp; FAQ — OZ Lab</title>
+  <meta name="description" content="User guide and FAQ for PikaSnip 0.1.0: screen capture, floating pin windows, offline Thai &amp; English OCR, keyboard shortcuts, local data paths, and installation notes.">
+  <link rel="canonical" href="https://ozlab.pages.dev/software/pikasnip/guide/">
+  <link rel="alternate" hreflang="en" href="https://ozlab.pages.dev/software/pikasnip/guide/">
+  <link rel="alternate" hreflang="th" href="https://ozlab.pages.dev/th/software/pikasnip/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://ozlab.pages.dev/software/pikasnip/guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OZ Lab">
+  <meta property="og:title" content="PikaSnip User Guide &amp; FAQ — OZ Lab">
+  <meta property="og:description" content="How to use PikaSnip 0.1.0 on Windows x64: shortcuts, floating pins, offline Thai &amp; English OCR, storage paths, and FAQ.">
+  <meta property="og:url" content="https://ozlab.pages.dev/software/pikasnip/guide/">
+  <meta property="og:image" content="https://ozlab.pages.dev/assets/images/pikasnip-logo.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/assets/images/oz-lab-logo.png" alt="" width="28" height="28">
+        <span>OZ Lab</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/software/fastpdf/">PikaPDF</a></li>
+          <li><a href="/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="/th/software/pikasnip/guide/" hreflang="th" lang="th">ไทย</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/software/">Software</a>
+      <span aria-hidden="true">/</span>
+      <a href="/software/pikasnip/">PikaSnip</a>
+      <span aria-hidden="true">/</span>
+      <span>Guide &amp; FAQ</span>
+    </nav>
+
+    <div class="page-intro">
+      <span class="mono-meta">Documentation · v0.1.0</span>
+      <h1>User guide &amp; FAQ</h1>
+      <p class="lede">How to capture, pin, annotate, pick colors, and run offline Thai &amp; English OCR with PikaSnip 0.1.0 for Windows x64, available on the <a href="/software/pikasnip/downloads/">Downloads</a> page.</p>
+    </div>
+
+    <nav class="page-toc" aria-label="On this page">
+      <a href="#basics">Basics</a>
+      <a href="#shortcuts">Keyboard shortcuts</a>
+      <a href="#paths">Data &amp; storage paths</a>
+      <a href="#faq">Frequently asked questions</a>
+    </nav>
+
+    <section aria-labelledby="basics">
+      <div class="section-head">
+        <h2 id="basics">Basics</h2>
+      </div>
+      <ul>
+        <li><strong>System tray standby.</strong> Launch <code>PikaSnip.exe</code> and it stays ready in the Windows notification area (system tray) using under 15 MB of RAM while idle. Right-click the tray icon to open settings, trigger actions, or toggle <em>Run at Startup</em> (disabled by default).</li>
+        <li><strong>Capture &amp; annotate.</strong> Press <kbd>PrintScreen</kbd> or <kbd>Alt</kbd>+<kbd>A</kbd> to select a region. Draw annotations directly over the selection, undo or redo with <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>, copy with <kbd>Ctrl</kbd>+<kbd>C</kbd> or <kbd>Enter</kbd>, or save as PNG with <kbd>Ctrl</kbd>+<kbd>S</kbd>.</li>
+        <li><strong>Color picker.</strong> While capturing, press <kbd>C</kbd> to copy the HEX color value of the pixel under the cursor straight to your clipboard.</li>
+        <li><strong>Pin floating windows.</strong> Press <kbd>Ctrl</kbd>+<kbd>P</kbd> during capture to pin the selected region on top of all windows, or press <kbd>Alt</kbd>+<kbd>P</kbd> to pin whatever image is currently in your clipboard.</li>
+        <li><strong>Inspect &amp; edit pins.</strong> Hover a pinned window and scroll the <kbd>Mouse Wheel</kbd> to zoom (25%–400%), hold <kbd>Ctrl</kbd>+<kbd>Wheel</kbd> to change opacity (20%–100%), press <kbd>0</kbd> to reset, press <kbd>E</kbd> or <kbd>Space</kbd> to toggle the pin edit toolbar, or press <kbd>Esc</kbd> to close it.</li>
+        <li><strong>Offline Thai &amp; English OCR.</strong> Press <kbd>Alt</kbd>+<kbd>T</kbd> for Quick OCR or <kbd>Ctrl</kbd>+<kbd>T</kbd> on an active capture selection to extract Thai and English text completely offline using bundled OpenThai 2.1 models and lazily loaded Microsoft ONNX Runtime (v1.32.0).</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="shortcuts">
+      <div class="section-head">
+        <h2 id="shortcuts">Keyboard shortcuts</h2>
+        <span class="mono-meta">Keycaps</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">PikaSnip v0.1.0 default keyboard &amp; mouse shortcuts</caption>
+          <thead>
+            <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>PrintScreen</kbd> / <kbd>Alt</kbd>+<kbd>A</kbd></td><td>Start screen region capture</td></tr>
+            <tr><td><kbd>Alt</kbd>+<kbd>T</kbd></td><td>Quick OCR (offline Thai &amp; English text extraction)</td></tr>
+            <tr><td><kbd>Alt</kbd>+<kbd>P</kbd></td><td>Pin current clipboard image</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td>Pin active capture selection</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>T</kbd></td><td>Run offline OCR on active capture selection</td></tr>
+            <tr><td><kbd>C</kbd></td><td>Copy HEX color code under cursor during capture</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>Undo / Redo annotation</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Save capture as PNG to <code>Pictures\PikaSnip</code></td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd></td><td>Copy capture to clipboard</td></tr>
+            <tr><td><kbd>E</kbd> / <kbd>Space</kbd></td><td>Toggle pin edit toolbar</td></tr>
+            <tr><td><kbd>Mouse Wheel</kbd></td><td>Zoom pinned window (25%–400%)</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Wheel</kbd></td><td>Adjust pinned window opacity (20%–100%)</td></tr>
+            <tr><td><kbd>0</kbd></td><td>Reset pinned window zoom and opacity</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Cancel capture or close active pin window</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="paths">
+      <div class="section-head">
+        <h2 id="paths">Data &amp; storage paths</h2>
+        <span class="mono-meta">Local files</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption class="muted">Where PikaSnip stores settings and saved screenshots</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Location</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Portable settings</td>
+              <td><code>settings.json</code> beside <code>PikaSnip.exe</code></td>
+            </tr>
+            <tr>
+              <td>MSIX settings</td>
+              <td><code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code></td>
+            </tr>
+            <tr>
+              <td>Saved screenshots (PNG)</td>
+              <td><code>%USERPROFILE%\Pictures\PikaSnip</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <div class="section-head">
+        <h2 id="faq">Frequently asked questions</h2>
+      </div>
+
+      <h3 id="faq-portable-msix">Should I download the Portable ZIP or the MSIX package?</h3>
+      <p>For most users right now, download the <strong>Portable x64 ZIP</strong> from the <a href="/software/pikasnip/downloads/">Downloads</a> page: extract it and run <code>PikaSnip.exe</code> without installing any certificate. The MSIX file is a self-signed sideload test build that requires importing <code>PikaSnip_0.1.0.0_x64.cer</code> as Administrator into <code>LocalMachine\Root</code> and <code>LocalMachine\TrustedPeople</code> while the Microsoft Store release is in preparation.</p>
+
+      <h3 id="faq-vcredist">Do I need to install Microsoft Visual C++ Redistributable?</h3>
+      <p>No. <code>PikaSnip.exe</code> is linked statically (<code>/MT</code>) with zero dynamic CRT imports, and the package includes the 4 app-local MSVC x64 CRT DLLs required by <code>onnxruntime.dll</code> so clean Windows 10 and 11 systems work out of the box.</p>
+
+      <h3 id="faq-ram">How does PikaSnip stay under 15 MB RAM when idle?</h3>
+      <p>The core app uses pure native C++20 Win32/Direct2D with no browser engine, and <code>onnxruntime.dll</code> (v1.32.0) is loaded lazily via <code>LoadLibraryExW</code> only when you actually invoke OCR. On a clean Windows 11 build 26100 system, idle standby memory was observed at <code>10.79–11.33 MB</code>.</p>
+
+      <h3 id="faq-privacy">Does PikaSnip send screenshots or OCR text over the internet?</h3>
+      <p>Never. PikaSnip runs 100% offline with zero telemetry and zero network access. All screen captures, pins, annotations, and OpenThai 2.1 OCR recognition happen locally on your PC. Read the full <a href="/privacy-pikasnip.html">PikaSnip Privacy Policy</a> or the site-wide <a href="/privacy/#pikasnip-privacy">Privacy</a> page for details.</p>
+
+      <h3 id="faq-startup">Does PikaSnip start automatically with Windows?</h3>
+      <p>Not by default. The startup task is disabled by default (<code>Enabled="false"</code>) and only runs at login if you explicitly enable <em>Run at Startup</em>.</p>
+
+      <h3 id="faq-notices">Where can I view source and open-source notices?</h3>
+      <p>Visit the repository at <a href="https://github.com/underoatz-netizen/pikasnip" rel="noopener noreferrer" target="_blank">github.com/underoatz-netizen/pikasnip</a> and see <code>ThirdPartyNotices.txt</code> on the <a href="/software/pikasnip/downloads/">Downloads</a> page for Apache 2.0 (OpenThai 2.1) and MIT (Microsoft ONNX Runtime) license notices.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2>OZ Lab</h2>
+          <p>PikaSnip is a native Windows utility from OZ Lab. This site is static and uses no tracking or analytics.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Software</h2>
+          <ul>
+            <li><a href="/software/">All software</a></li>
+            <li><a href="/software/fastpdf/">PikaPDF (formerly FastPDF)</a></li>
+            <li><a href="/software/oz-image-viewer/">PikaView (formerly OZ Image Viewer)</a></li>
+            <li><a href="/software/pikasnip/">PikaSnip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="/support/">Support &amp; donations</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="https://github.com/underoatz-netizen" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Hosting &amp; mirrors</h2>
+          <ul>
+            <li><a href="https://ozlab.pages.dev/">Official site (Cloudflare Pages)</a></li>
+            <li><a href="https://underoatz-netizen.github.io/" rel="noopener noreferrer" target="_blank">Backup mirror (GitHub Pages)</a></li>
+            <li><a href="/th/software/pikasnip/guide/" hreflang="th" lang="th">ภาษาไทย</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OZ Lab. All rights reserved.</span>
+        <span class="mono-meta">Static HTML &amp; CSS · Zero tracking</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PikaSnip Privacy Policy — OZ Lab</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #0284c7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --surface: #111827;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #1e293b;
+        --accent: #38bdf8;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 16px 48px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Thai", sans-serif;
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 28px 32px;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+    h2 {
+      margin: 24px 0 8px;
+      font-size: 1.15rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+    p, li { color: var(--text); }
+    .meta {
+      margin: 0 0 20px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .summary {
+      padding: 12px 16px;
+      border-left: 4px solid var(--accent);
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+      border-radius: 6px;
+      margin: 16px 0 20px;
+    }
+    ul { padding-left: 20px; margin: 8px 0; }
+    code {
+      font-family: Consolas, "Cascadia Mono", monospace;
+      font-size: 0.9em;
+      padding: 1px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    a { color: var(--accent); }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+    footer {
+      margin-top: 28px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy Policy — PikaSnip</h1>
+      <p class="meta">Publisher: OZ Lab &middot; Effective Date: November 25, 2026</p>
+    </header>
+
+    <div class="summary">
+      <strong>Short version:</strong> PikaSnip runs 100% offline on your Windows device. It collects <strong>no personal data</strong>, uses <strong>no telemetry or analytics</strong>, displays <strong>no ads</strong>, and makes <strong>zero network connections</strong>.
+    </div>
+
+    <section>
+      <h2>1. Overview</h2>
+      <p>
+        PikaSnip is a native Windows desktop utility developed by OZ Lab for capturing screenshots, pinning floating reference images on screen, annotating captures, and performing offline Thai and English optical character recognition (OCR).
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Data Collection</h2>
+      <p>PikaSnip does <strong>not</strong> collect, transmit, sell, or share any personal or usage data:</p>
+      <ul>
+        <li>Zero telemetry, usage analytics, or behavioral tracking.</li>
+        <li>Zero crash-report uploads or background network requests.</li>
+        <li>Zero accounts, sign-ins, advertising SDKs, or third-party trackers.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Screen Capture &amp; Offline OCR Processing</h2>
+      <p>
+        All screen captures, annotations, pinned windows, and OCR text recognition (powered by bundled OpenThai 2.1 models and Microsoft ONNX Runtime, with optional local Windows Media OCR fallback) run <strong>entirely on your device</strong>. Captured pixels and recognized text never leave your computer.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Local Storage &amp; Clipboard</h2>
+      <ul>
+        <li><strong>Settings:</strong> Preferences (such as hotkeys, capture delay, and stroke style) are stored locally in <code>settings.json</code> at <code>%LOCALAPPDATA%\OZLab\PikaSnip</code> for Microsoft Store / MSIX installations, or beside <code>PikaSnip.exe</code> in writable Portable installations.</li>
+        <li><strong>Saved Screenshots:</strong> Images are written to disk only when you explicitly choose Save (<code>Ctrl+S</code>), saved as PNG files in <code>%USERPROFILE%\Pictures\PikaSnip</code>.</li>
+        <li><strong>Clipboard:</strong> PikaSnip reads from or writes to the Windows clipboard only when you explicitly trigger a Copy, Pin Clipboard (<code>Alt+P</code>), Color HEX copy (<code>C</code>), or OCR action.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. App Capabilities &amp; Permissions</h2>
+      <ul>
+        <li><strong>Desktop Capture &amp; Full Trust (<code>runFullTrust</code>):</strong> Used strictly to capture multi-monitor desktop content, register local hotkeys, host the system tray icon, display always-on-top pin windows, and lazily load the local OCR engine when requested.</li>
+        <li><strong>Startup Task (<code>PikaSnipStartupTask</code>):</strong> Disabled by default. PikaSnip starts automatically with Windows only if you explicitly enable <em>Run at Startup</em> in the tray menu.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Children&rsquo;s Privacy</h2>
+      <p>
+        PikaSnip does not collect personal information from anyone, including children under the age of 13.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Policy Updates &amp; Contact</h2>
+      <p>
+        If future versions introduce any changes to data handling, this policy will be updated with a new effective date before release. For questions or support, visit OZ Lab at <a href="https://ozlab.pages.dev/">https://ozlab.pages.dev/</a>.
+      </p>
+    </section>
+
+    <hr>
+
+    <section lang="th">
+      <h1>นโยบายความเป็นส่วนตัว — PikaSnip</h1>
+      <p class="meta">ผู้พัฒนา: OZ Lab &middot; วันที่มีผลบังคับใช้: 25 พฤศจิกายน 2026</p>
+      <p>
+        <strong>สรุปสั้น:</strong> PikaSnip ทำงานแบบออฟไลน์ 100% บนเครื่อง Windows ของคุณ ไม่เก็บข้อมูลส่วนบุคคล ไม่ส่ง telemetry หรือสถิติการใช้งาน ไม่มีโฆษณา และไม่เชื่อมต่อเครือข่ายใด ๆ
+      </p>
+      <ul>
+        <li><strong>การจับภาพและ OCR:</strong> ภาพหน้าจอที่จับ ภาพที่ปักหมุด การวาดแก้ไข และการอ่านข้อความไทย/อังกฤษ (ด้วยโมเดล OpenThai 2.1 และ ONNX Runtime ในเครื่อง) ประมวลผลบนอุปกรณ์ของคุณทั้งหมด ไม่มีการอัปโหลดภาพหรือข้อความออกจากเครื่อง</li>
+        <li><strong>การจัดเก็บข้อมูลในเครื่อง:</strong> การตั้งค่าถูกบันทึกไว้เฉพาะใน <code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code> (สำหรับรุ่น Microsoft Store / MSIX) หรือข้างไฟล์โปรแกรมในรุ่น Portable และจะบันทึกภาพ PNG ลง <code>%USERPROFILE%\Pictures\PikaSnip</code> เฉพาะเมื่อคุณสั่งบันทึกเท่านั้น</li>
+        <li><strong>คลิปบอร์ดและการเริ่มพร้อม Windows:</strong> แอปแก้ไขคลิปบอร์ดเฉพาะตอนคุณสั่งคัดลอก ปักหมุดจากคลิปบอร์ด หรือสกัดข้อความ OCR เท่านั้น ส่วนการเปิดพร้อม Windows ถูกปิดไว้เป็นค่าเริ่มต้น</li>
+        <li><strong>ช่องทางติดต่อ:</strong> <a href="https://ozlab.pages.dev/">https://ozlab.pages.dev/</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2026 OZ Lab &middot; PikaSnip
+    </footer>
+  </main>
+</body>
+</html>

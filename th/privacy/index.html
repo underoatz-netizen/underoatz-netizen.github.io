@@ -44,15 +44,16 @@
 
   <main id="main" class="wrap">
     <div class="page-intro">
-      <span class="mono-meta">มีผลบังคับใช้ 19 พฤศจิกายน 2026 · เว็บไซต์สถิตและแอปบนเดสก์ท็อป</span>
+      <span class="mono-meta">มีผลบังคับใช้ 26 พฤศจิกายน 2026 · เว็บไซต์สถิตและแอปบนเดสก์ท็อป</span>
       <h1>นโยบายความเป็นส่วนตัว</h1>
-      <p class="lede">หน้านี้คือนโยบายความเป็นส่วนตัวฉบับเผยแพร่สำหรับเว็บไซต์ OZ Lab แอป PikaPDF (เดิมชื่อ FastPDF) และแอป PikaView (เดิมชื่อ OZ Image Viewer)</p>
+      <p class="lede">หน้านี้คือนโยบายความเป็นส่วนตัวฉบับเผยแพร่สำหรับเว็บไซต์ OZ Lab แอป PikaPDF (เดิมชื่อ FastPDF) แอป PikaView (เดิมชื่อ OZ Image Viewer) และแอป PikaSnip</p>
     </div>
 
     <nav class="page-toc" aria-label="หัวข้อในหน้านี้">
       <a href="#site-privacy">เว็บนี้</a>
       <a href="#app-privacy">PikaPDF</a>
       <a href="#pikaview-privacy">PikaView</a>
+      <a href="#pikasnip-privacy">PikaSnip</a>
       <a href="#questions">การช่วยเหลือ บริจาค และการควบคุมข้อมูล</a>
       <a href="#policy-updates">การปรับปรุงนโยบาย</a>
     </nav>
@@ -114,6 +115,20 @@
       </ul>
     </section>
 
+    <section aria-labelledby="pikasnip-privacy">
+      <div class="section-head">
+        <h2 id="pikasnip-privacy">PikaSnip</h2>
+        <span class="mono-meta">มีผลบังคับใช้ 25 พฤศจิกายน 2026 · PikaSnip v0.1.0+</span>
+      </div>
+      <p>PikaSnip ทำงานแบบออฟไลน์ 100% บนเครื่อง Windows ของคุณ ไม่เก็บข้อมูลส่วนบุคคล ไม่ส่ง telemetry หรือสถิติการใช้งาน ไม่มีโฆษณา และไม่เชื่อมต่อเครือข่ายใด ๆ การจับภาพหน้าจอ การวาดแก้ไข การปักหมุดภาพลอย และ OCR ภาษาไทย/อังกฤษ (ขับเคลื่อนด้วยโมเดล OpenThai 2.1 และ Microsoft ONNX Runtime ที่รวมมาในเครื่อง) ประมวลผลในเครื่องทั้งหมด</p>
+      <ul>
+        <li>การตั้งค่าถูกเก็บในเครื่องที่ <code>settings.json</code> ข้างไฟล์ <code>PikaSnip.exe</code> (รุ่น Portable) หรือที่ <code>%LOCALAPPDATA%\OZLab\PikaSnip\settings.json</code> (รุ่น MSIX)</li>
+        <li>ภาพหน้าจอจะถูกบันทึกเป็นไฟล์ PNG ลงใน <code>%USERPROFILE%\Pictures\PikaSnip</code> เฉพาะเมื่อคุณสั่งบันทึก (<kbd>Ctrl</kbd>+<kbd>S</kbd>) เท่านั้น</li>
+        <li>การเปิดพร้อม Windows ถูกปิดไว้เป็นค่าเริ่มต้น (<code>Enabled="false"</code>) และจะทำงานเฉพาะเมื่อคุณเปิดใช้งานด้วยตนเอง</li>
+        <li>อ่านนโยบายฉบับเต็ม (ภาษาอังกฤษและภาษาไทย) ได้ที่ <a href="/privacy-pikasnip.html">/privacy-pikasnip.html</a></li>
+      </ul>
+    </section>
+
     <section aria-labelledby="questions">
       <div class="section-head">
         <h2 id="questions">การช่วยเหลือ การบริจาค และการควบคุมข้อมูล</h2>
@@ -121,7 +136,7 @@
       <ul>
         <li><strong>การช่วยเหลือและตัวติดตามปัญหาสาธารณะ:</strong> รายงานปัญหาและคำถามที่ส่งผ่าน GitHub issue trackers (ดูหน้า <a href="/th/support/">ช่วยเหลือ</a>) เป็นข้อมูลสาธารณะและอยู่ภายใต้นโยบายความเป็นส่วนตัวของ GitHub โปรดอย่าโพสต์ข้อมูลส่วนบุคคล ข้อมูลรับรอง หรือเอกสารลับ</li>
         <li><strong>การบริจาคโดยสมัครใจ:</strong> การสนับสนุนผ่าน <a href="https://ko-fi.com/ozlab" rel="noopener noreferrer" target="_blank">Ko-fi</a> หรือ PromptPay เกิดขึ้นโดยตรงบน Ko-fi หรือในแอปธนาคารของคุณ เว็บไซต์และแอปของ OZ Lab ไม่ได้ประมวลผลหรือจัดเก็บข้อมูลการชำระเงิน</li>
-        <li><strong>การควบคุมโดยผู้ใช้:</strong> เนื่องจาก OZ Lab ไม่มีเซิร์ฟเวอร์ฝั่งหลังบ้านและไม่ได้เก็บข้อมูลส่วนบุคคล การถอนการติดตั้งผ่าน Windows Settings จะลบไฟล์โปรแกรมที่ติดตั้งไว้ (และรายการรีจิสทรีของตัวติดตั้ง PikaView) ส่วนการลบโฟลเดอร์ <code>%LOCALAPPDATA%\FastPDF\</code> และ <code>%LOCALAPPDATA%\OZViewer\</code> ออกด้วยตัวเองจะลบสถานะแอป ประวัติไฟล์ล่าสุด ค่ากำหนด และบันทึกการวินิจฉัยที่เหลืออยู่ทั้งหมดออกจากอุปกรณ์ของคุณ</li>
+        <li><strong>การควบคุมโดยผู้ใช้:</strong> เนื่องจาก OZ Lab ไม่มีเซิร์ฟเวอร์ฝั่งหลังบ้านและไม่ได้เก็บข้อมูลส่วนบุคคล การถอนการติดตั้งผ่าน Windows Settings จะลบไฟล์โปรแกรมที่ติดตั้งไว้ (และรายการรีจิสทรีของตัวติดตั้ง PikaView) ส่วนการลบโฟลเดอร์ <code>%LOCALAPPDATA%\FastPDF\</code>, <code>%LOCALAPPDATA%\OZViewer\</code> และ <code>%LOCALAPPDATA%\OZLab\PikaSnip\</code> ออกด้วยตัวเองจะลบสถานะแอป ประวัติไฟล์ล่าสุด ค่ากำหนด และบันทึกการวินิจฉัยที่เหลืออยู่ทั้งหมดออกจากอุปกรณ์ของคุณ</li>
       </ul>
 
       <h3 id="policy-updates">การปรับปรุงนโยบาย</h3>
@@ -142,6 +157,7 @@
             <li><a href="/th/software/">ซอฟต์แวร์ทั้งหมด</a></li>
             <li><a href="/th/software/fastpdf/">PikaPDF (เดิมชื่อ FastPDF)</a></li>
             <li><a href="/th/software/oz-image-viewer/">PikaView (เดิมชื่อ OZ Image Viewer)</a></li>
+            <li><a href="/th/software/pikasnip/">PikaSnip</a></li>
           </ul>
         </div>
         <div class="footer-col">
