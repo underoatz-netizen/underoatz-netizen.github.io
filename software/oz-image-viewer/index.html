@@ -48,9 +48,7 @@
       <nav aria-label="Main">
         <ul class="nav">
           <li><a href="/">Home</a></li>
-          <li><a href="/software/">Software</a></li>
-          <li><a href="/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/software/oz-image-viewer/" aria-current="page">PikaView</a></li>
+          <li><a href="/software/" aria-current="true">Software</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy</a></li>
         </ul>
@@ -85,10 +83,10 @@
 
       <div class="hero-visual">
         <figure class="screenshot-frame">
-          <img src="/assets/images/pikaview-screenshot.webp" alt="PikaView v0.1.2 running on Windows showing the new application icon, single-row Lucide command bar, dark-charcoal UI, and a 1376 by 768 alpine lake photograph" width="1104" height="692" loading="eager" decoding="async">
+          <img src="/assets/images/pikaview-ui-main.webp" alt="PikaView v0.1.2 running on Windows showing the single-row Lucide command bar, dark-charcoal UI, and a high-resolution test photograph fit to the viewport" width="1104" height="690" loading="eager" decoding="async">
           <figcaption class="screenshot-caption">
             <span>PikaView v0.1.2 on Windows x64 — 40-DIP Lucide command bar &amp; Direct2D viewport</span>
-            <span class="screenshot-meta">ozviewer.exe · 1104 × 692</span>
+            <span class="screenshot-meta">ozviewer.exe · 1104 × 690</span>
           </figcaption>
         </figure>
       </div>
@@ -98,24 +96,109 @@
       <p><strong>Version 0.1.2 release:</strong> Introduces the new PikaView application icon, a single-row 40-DIP Lucide command bar with a dark-charcoal UI and <code>More</code> overflow menu, save cache/preload invalidation fixes, and localized storage error guidance. Version 0.1.2 is available for 64-bit Windows systems and upgrades existing 0.1.0 or 0.1.1 per-user installations seamlessly in place, keeping <code>ozviewer.exe</code> and <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code>. Download the installer or portable ZIP from the <a href="/software/oz-image-viewer/downloads/">Downloads</a> page. Source code is public on GitHub at <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a>.</p>
     </div>
 
-    <section aria-labelledby="what">
+    <nav class="page-toc" aria-label="On this page">
+      <a href="#what">What it does</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#features">Features</a>
+      <a href="#status">Status</a>
+      <a href="#next">Next</a>
+    </nav>
+
+    <section id="what" aria-labelledby="what-title">
       <div class="section-head">
-        <h2 id="what">What PikaView does</h2>
+        <h2 id="what-title">What PikaView does</h2>
         <span class="mono-meta">10 core capabilities</span>
       </div>
-      <p>PikaView opens one image at a time and focuses on showing it quickly, then staying responsive while you look around. These are the capabilities implemented so far:</p>
-      <ul class="feature-list">
-        <li>Open and display common still image formats: JPEG, PNG, static WebP, BMP, static GIF, TIFF (first page), ICO, CUR, TGA, AVIF and HEIC/HEIF.</li>
-        <li>Fast-first display: the requested image is shown first, while scanning the folder and preloading neighbours happen in the background.</li>
-        <li>Navigate between other images in the same folder with the keyboard, with each image decoded as you select it.</li>
-        <li>Zoom with the mouse wheel centred on the cursor, or with the keyboard, and pan by dragging the image.</li>
-        <li>Fit-to-window and 100% views, and a double-click toggle between them.</li>
-        <li>Borderless-windowed fullscreen on the current monitor.</li>
-        <li>Non-destructive editing: rotate, flip, crop and resize, with undo and redo. The original file is never changed until you save.</li>
-        <li>Interactive single-image printing (<code>More -&gt; Print...</code> or <code>Ctrl+P</code>): prepares one fit-to-page output of the committed image without modifying the file.</li>
-        <li>Save and Save As to PNG, JPEG, WebP (lossless), TIFF (Save As only) and BMP.</li>
-        <li>Open an image from the command line, or drag a single file onto the window.</li>
-      </ul>
+      <div class="overview-grid">
+        <p>PikaView opens one image at a time and focuses on showing it quickly, then staying responsive while you look around. Common still image formats open directly, zoom and pan follow the pointer, other images in the same folder are one keypress away, and simple edits stay non-destructive until you save. These are the capabilities implemented so far.</p>
+        <aside class="quick-facts" aria-labelledby="qf-title">
+          <h3 id="qf-title">Quick facts</h3>
+          <dl>
+            <dt>Version</dt>
+            <dd>0.1.2</dd>
+            <dt>Platform</dt>
+            <dd>Windows 10/11 x64</dd>
+            <dt>Licence</dt>
+            <dd>MIT + LGPLv3</dd>
+            <dt>Source</dt>
+            <dd><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">Public on GitHub</a></dd>
+            <dt>Installer</dt>
+            <dd>~4.1 MiB</dd>
+            <dt>Portable ZIP</dt>
+            <dd>~2.6 MiB</dd>
+            <dt>LGPL source archive</dt>
+            <dd>~2.3 MiB</dd>
+            <dt>Privacy</dt>
+            <dd>No telemetry or background services</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-head">
+        <h2 id="screenshots-title">Screenshots</h2>
+        <span class="mono-meta">3 screenshots · v0.1.2</span>
+      </div>
+      <div class="shot-grid">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-view-main">
+            <img src="/assets/images/pikaview-ui-main-700.webp" alt="PikaView v0.1.2 showing an image fit to the window with the 40-DIP Lucide command bar" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Fit-to-window viewing with the 40-DIP Lucide command bar</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-view-zoom">
+            <img src="/assets/images/pikaview-ui-zoom-700.webp" alt="PikaView v0.1.2 zoomed to 100% detail with the image panned around the cursor" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>100% detail zoom and smooth cursor-centred pan</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-view-edit">
+            <img src="/assets/images/pikaview-ui-edit-700.webp" alt="PikaView v0.1.2 crop mode showing draggable guide lines over the open image" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Non-destructive crop mode with interactive guide lines</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <h2 id="features-title">Features</h2>
+        <span class="mono-meta">10 capabilities in 4 groups</span>
+      </div>
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3>Theme &amp; interface</h3>
+          <ul>
+            <li>Borderless-windowed fullscreen on the current monitor.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Reading &amp; navigation</h3>
+          <ul>
+            <li>Open and display common still image formats: JPEG, PNG, static WebP, BMP, static GIF, TIFF (first page), ICO, CUR, TGA, AVIF and HEIC/HEIF.</li>
+            <li>Fast-first display: the requested image is shown first, while scanning the folder and preloading neighbours happen in the background.</li>
+            <li>Navigate between other images in the same folder with the keyboard, with each image decoded as you select it.</li>
+            <li>Zoom with the mouse wheel centred on the cursor, or with the keyboard, and pan by dragging the image.</li>
+            <li>Fit-to-window and 100% views, and a double-click toggle between them.</li>
+            <li>Open an image from the command line, or drag a single file onto the window.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Editing &amp; saving</h3>
+          <ul>
+            <li>Non-destructive editing: rotate, flip, crop and resize, with undo and redo. The original file is never changed until you save.</li>
+            <li>Save and Save As to PNG, JPEG, WebP (lossless), TIFF (Save As only) and BMP.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Print</h3>
+          <ul>
+            <li>Interactive single-image printing (<code>More -&gt; Print...</code> or <code>Ctrl+P</code>): prepares one fit-to-page output of the committed image without modifying the file.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="status">
@@ -207,6 +290,39 @@
         </li>
       </ul>
     </section>
+
+    <div class="lightbox" id="lb-view-main">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikaview-ui-main.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Fit-to-window viewing with the 40-DIP Lucide command bar</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-view-zoom">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikaview-ui-zoom.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>100% detail zoom and smooth cursor-centred pan</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-view-edit">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikaview-ui-edit.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Non-destructive crop mode with interactive guide lines</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">

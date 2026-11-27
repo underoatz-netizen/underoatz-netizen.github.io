@@ -31,9 +31,7 @@
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
-          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
-          <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/th/software/oz-image-viewer/" aria-current="page">PikaView</a></li>
+          <li><a href="/th/software/" aria-current="true">ซอฟต์แวร์</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
         </ul>
@@ -68,10 +66,10 @@
 
       <div class="hero-visual">
         <figure class="screenshot-frame">
-          <img src="/assets/images/pikaview-screenshot.webp" alt="หน้าต่างจริงของ PikaView v0.1.2 บน Windows แสดงไอคอนแอปใหม่ แถบคำสั่ง Lucide แถวเดียวโทนเข้ม และภาพถ่ายทะเลสาบขนาด 1376 × 768" width="1104" height="692" loading="eager" decoding="async">
+          <img src="/assets/images/pikaview-ui-main.webp" alt="หน้าต่างจริงของ PikaView v0.1.2 บน Windows แสดงแถบคำสั่ง Lucide แถวเดียวโทนเข้ม และภาพถ่ายความละเอียดสูงแบบพอดีหน้าต่าง" width="1104" height="690" loading="eager" decoding="async">
           <figcaption class="screenshot-caption">
             <span>PikaView v0.1.2 บน Windows x64 — แถบคำสั่ง Lucide 40-DIP และมุมมอง Direct2D</span>
-            <span class="screenshot-meta">ozviewer.exe · 1104 × 692</span>
+            <span class="screenshot-meta">ozviewer.exe · 1104 × 690</span>
           </figcaption>
         </figure>
       </div>
@@ -81,24 +79,109 @@
       <p><strong>การเผยแพร่รุ่น 0.1.2:</strong> มาพร้อมไอคอนแอป PikaView ใหม่ แถบคำสั่ง Lucide แถวเดียวความสูง 40-DIP ในหน้าตาโทนเข้มพร้อมเมนู <code>More</code> การแก้ไขบั๊กล้างแคช/พรีโหลดเมื่อบันทึก และคำแนะนำภาษาไทย/อังกฤษเมื่อพื้นที่จัดเก็บข้อมูลป้องกันการเขียนหรือไม่มีสิทธิ์ เวอร์ชัน 0.1.2 พร้อมให้ดาวน์โหลดสำหรับ Windows แบบ 64-บิต และสามารถอัปเกรดทับการติดตั้งรุ่น 0.1.0 หรือ 0.1.1 แบบต่อผู้ใช้เดิมได้ทันทีโดยยังคงใช้ <code>ozviewer.exe</code> และโฟลเดอร์ <code>%LOCALAPPDATA%\Programs\OZ Image Viewer</code> ดาวน์โหลดตัวติดตั้งหรือไฟล์ ZIP แบบพกพาได้ที่หน้า <a href="/th/software/oz-image-viewer/downloads/">ดาวน์โหลด</a> ซอร์สโค้ดเปิดเผยสาธารณะบน GitHub ที่ <a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">underoatz-netizen/oz-image-viewer</a></p>
     </div>
 
-    <section aria-labelledby="what">
+    <nav class="page-toc" aria-label="ในหน้านี้">
+      <a href="#what">ทำอะไรได้บ้าง</a>
+      <a href="#screenshots">ภาพหน้าจอ</a>
+      <a href="#features">ฟีเจอร์</a>
+      <a href="#status">สถานะ</a>
+      <a href="#next">หน้าถัดไป</a>
+    </nav>
+
+    <section id="what" aria-labelledby="what-title">
       <div class="section-head">
-        <h2 id="what">PikaView ทำอะไรได้บ้าง</h2>
+        <h2 id="what-title">PikaView ทำอะไรได้บ้าง</h2>
         <span class="mono-meta">ความสามารถหลัก 10 รายการ</span>
       </div>
-      <p>PikaView เปิดรูปทีละภาพ เน้นการแสดงผลที่รวดเร็วและตอบสนองลื่นไหลระหว่างดูรูป นี่คือความสามารถที่มีในตอนนี้:</p>
-      <ul class="feature-list">
-        <li>เปิดและแสดงไฟล์ภาพนิ่งทั่วไป: JPEG, PNG, WebP แบบนิ่ง, BMP, GIF แบบนิ่ง, TIFF (หน้าแรก), ICO, CUR, TGA, AVIF และ HEIC/HEIF</li>
-        <li>แสดงภาพแรกอย่างรวดเร็ว โดยสแกนโฟลเดอร์และโหลดภาพข้างเคียงอยู่เบื้องหลัง</li>
-        <li>เลื่อนดูภาพอื่นในโฟลเดอร์เดียวกันด้วยคีย์บอร์ด และถอดรหัสภาพเมื่อเลือก</li>
-        <li>ซูมด้วยล้อเมาส์โดยยึดตำแหน่งเคอร์เซอร์ หรือใช้คีย์บอร์ด และเลื่อนภาพด้วยการลาก</li>
-        <li>มุมมองพอดีหน้าต่าง และ 100% พร้อมดับเบิลคลิกเพื่อสลับ</li>
-        <li>โหมดเต็มจอแบบไม่มีขอบบนจอปัจจุบัน</li>
-        <li>แก้ไขแบบไม่ทำลายต้นฉบับ: หมุน พลิก ครอป และย่อ/ขยาย พร้อมเลิกทำและทำซ้ำ ไฟล์ต้นฉบับไม่ถูกแก้จนกว่าคุณจะบันทึก</li>
-        <li>พิมพ์ภาพเดี่ยวแบบโต้ตอบ (<code>More -&gt; Print...</code> หรือ <code>Ctrl+P</code>): เตรียมผลลัพธ์หนึ่งหน้าพอดีกระดาษจากภาพที่ยืนยันแล้วโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
-        <li>บันทึกและบันทึกเป็นเป็น PNG, JPEG, WebP (แบบไม่สูญเสียข้อมูล), TIFF (บันทึกเป็นเท่านั้น) และ BMP</li>
-        <li>เปิดภาพจากบรรทัดคำสั่ง หรือลากไฟล์หนึ่งไฟล์วางบนหน้าต่าง</li>
-      </ul>
+      <div class="overview-grid">
+        <p>PikaView เปิดรูปทีละภาพ เน้นการแสดงผลที่รวดเร็วและตอบสนองลื่นไหลระหว่างดูรูป เปิดไฟล์ภาพนิ่งทั่วไปได้โดยตรง ซูมและเลื่อนภาพตามตำแหน่งเคอร์เซอร์ ดูภาพอื่นในโฟลเดอร์เดียวกันได้ด้วยคีย์บอร์ด และแก้ไขแบบง่ายโดยไม่ทำลายไฟล์ต้นฉบับจนกว่าคุณจะบันทึก นี่คือความสามารถที่มีในตอนนี้</p>
+        <aside class="quick-facts" aria-labelledby="qf-title">
+          <h3 id="qf-title">ข้อมูลสรุป</h3>
+          <dl>
+            <dt>เวอร์ชัน</dt>
+            <dd>0.1.2</dd>
+            <dt>แพลตฟอร์ม</dt>
+            <dd>Windows 10/11 x64</dd>
+            <dt>สัญญาอนุญาต</dt>
+            <dd>MIT + LGPLv3</dd>
+            <dt>ซอร์สโค้ด</dt>
+            <dd><a href="https://github.com/underoatz-netizen/oz-image-viewer" rel="noopener noreferrer" target="_blank">เปิดเผยสาธารณะบน GitHub</a></dd>
+            <dt>ตัวติดตั้ง</dt>
+            <dd>~4.1 MiB</dd>
+            <dt>ไฟล์ ZIP แบบพกพา</dt>
+            <dd>~2.6 MiB</dd>
+            <dt>ไฟล์ซอร์ส LGPL</dt>
+            <dd>~2.3 MiB</dd>
+            <dt>ความเป็นส่วนตัว</dt>
+            <dd>ไม่มีเทเลเมทรีหรือบริการเบื้องหลัง</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-head">
+        <h2 id="screenshots-title">ภาพหน้าจอ</h2>
+        <span class="mono-meta">3 ภาพ · v0.1.2</span>
+      </div>
+      <div class="shot-grid">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-view-main">
+            <img src="/assets/images/pikaview-ui-main-700.webp" alt="PikaView v0.1.2 แสดงภาพแบบพอดีหน้าต่างพร้อมแถบคำสั่ง Lucide ความสูง 40-DIP" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>มุมมองพอดีหน้าต่างพร้อมแถบคำสั่ง Lucide 40-DIP</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-view-zoom">
+            <img src="/assets/images/pikaview-ui-zoom-700.webp" alt="PikaView v0.1.2 ซูมภาพที่ระดับ 100% และเลื่อนภาพตามตำแหน่งเคอร์เซอร์" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>ซูมดูรายละเอียด 100% และเลื่อนภาพตามตำแหน่งเคอร์เซอร์</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-view-edit">
+            <img src="/assets/images/pikaview-ui-edit-700.webp" alt="PikaView v0.1.2 ในโหมดครอป แสดงเส้นนำสายตาที่ลากปรับได้บนภาพ" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>โหมดครอปแบบไม่ทำลายต้นฉบับพร้อมเส้นนำสายตา</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <h2 id="features-title">ฟีเจอร์</h2>
+        <span class="mono-meta">10 ความสามารถใน 4 กลุ่ม</span>
+      </div>
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3>ธีมและหน้าตา</h3>
+          <ul>
+            <li>โหมดเต็มจอแบบไม่มีขอบบนจอปัจจุบัน</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>อ่านและนำทาง</h3>
+          <ul>
+            <li>เปิดและแสดงไฟล์ภาพนิ่งทั่วไป: JPEG, PNG, WebP แบบนิ่ง, BMP, GIF แบบนิ่ง, TIFF (หน้าแรก), ICO, CUR, TGA, AVIF และ HEIC/HEIF</li>
+            <li>แสดงภาพแรกอย่างรวดเร็ว โดยสแกนโฟลเดอร์และโหลดภาพข้างเคียงอยู่เบื้องหลัง</li>
+            <li>เลื่อนดูภาพอื่นในโฟลเดอร์เดียวกันด้วยคีย์บอร์ด และถอดรหัสภาพเมื่อเลือก</li>
+            <li>ซูมด้วยล้อเมาส์โดยยึดตำแหน่งเคอร์เซอร์ หรือใช้คีย์บอร์ด และเลื่อนภาพด้วยการลาก</li>
+            <li>มุมมองพอดีหน้าต่าง และ 100% พร้อมดับเบิลคลิกเพื่อสลับ</li>
+            <li>เปิดภาพจากบรรทัดคำสั่ง หรือลากไฟล์หนึ่งไฟล์วางบนหน้าต่าง</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>แก้ไขและบันทึก</h3>
+          <ul>
+            <li>แก้ไขแบบไม่ทำลายต้นฉบับ: หมุน พลิก ครอป และย่อ/ขยาย พร้อมเลิกทำและทำซ้ำ ไฟล์ต้นฉบับไม่ถูกแก้จนกว่าคุณจะบันทึก</li>
+            <li>บันทึกและบันทึกเป็นเป็น PNG, JPEG, WebP (แบบไม่สูญเสียข้อมูล), TIFF (บันทึกเป็นเท่านั้น) และ BMP</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>พิมพ์</h3>
+          <ul>
+            <li>พิมพ์ภาพเดี่ยวแบบโต้ตอบ (<code>More -&gt; Print...</code> หรือ <code>Ctrl+P</code>): เตรียมผลลัพธ์หนึ่งหน้าพอดีกระดาษจากภาพที่ยืนยันแล้วโดยไม่แก้ไขไฟล์ต้นฉบับ</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="status">
@@ -190,6 +273,39 @@
         </li>
       </ul>
     </section>
+
+    <div class="lightbox" id="lb-view-main">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikaview-ui-main.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>มุมมองพอดีหน้าต่างพร้อมแถบคำสั่ง Lucide 40-DIP</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-view-zoom">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikaview-ui-zoom.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>ซูมดูรายละเอียด 100% และเลื่อนภาพตามตำแหน่งเคอร์เซอร์</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-view-edit">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikaview-ui-edit.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>โหมดครอปแบบไม่ทำลายต้นฉบับพร้อมเส้นนำสายตา</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">

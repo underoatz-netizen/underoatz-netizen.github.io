@@ -20,12 +20,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-    .shot-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 1.25rem 0 0; }
-    .shot-grid figure { margin: 0; border: 1px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; background: var(--card); }
-    .shot-grid img { width: 100%; height: auto; display: block; }
-    .shot-grid figcaption { margin: 0; padding: 0.6rem 0.8rem; background: var(--surface); border-top: 1px solid var(--border); font-size: 0.875rem; color: var(--secondary); }
-  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,9 +49,7 @@
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
-          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
-          <li><a href="/th/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/th/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/th/software/" aria-current="true">ซอฟต์แวร์</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
         </ul>
@@ -125,57 +117,116 @@
     <nav class="page-toc" aria-label="ในหน้านี้">
       <a href="#what">ทำอะไรได้บ้าง</a>
       <a href="#screenshots">ภาพหน้าจอ</a>
+      <a href="#features">ฟีเจอร์</a>
       <a href="#specs">สถาปัตยกรรมและขนาด</a>
       <a href="#status">สถานะโปรเจกต์</a>
       <a href="#next">หน้าถัดไป</a>
     </nav>
 
-    <section aria-labelledby="what">
+    <section id="what" aria-labelledby="what-title">
       <div class="section-head">
-        <h2 id="what">PikaSnip ทำอะไรได้บ้าง</h2>
-        <span class="mono-meta">จับภาพ · ปักหมุด · วาดแก้ไข · OCR ออฟไลน์</span>
+        <h2 id="what-title">PikaSnip ทำอะไรได้บ้าง</h2>
+        <span class="mono-meta">ความสามารถหลัก 8 รายการ</span>
       </div>
-      <p>PikaSnip รอทำงานอย่างเงียบ ๆ ในถาดระบบของ Windows จนกว่าคุณจะกดคีย์ลัด โดยรวมการจับภาพหน้าจอ การปักหมุดภาพอ้างอิง การวาดแก้ไข การดูดสี และการอ่านข้อความ OCR ไทย/อังกฤษแบบออฟไลน์ไว้ในแอปเนทีฟตัวเดียว:</p>
-      <ul class="feature-list">
-        <li>จับภาพบางส่วนของหน้าจอข้ามหลายจอภาพด้วย <kbd>PrintScreen</kbd> หรือ <kbd>Alt</kbd>+<kbd>A</kbd> แล้วคัดลอกลงคลิปบอร์ด (<kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd>) หรือบันทึกเป็นไฟล์ PNG (<kbd>Ctrl</kbd>+<kbd>S</kbd>) ลงโฟลเดอร์ <code>Pictures\PikaSnip</code></li>
-        <li>ปักหมุดพื้นที่ที่เลือก (<kbd>Ctrl</kbd>+<kbd>P</kbd>) หรือปักหมุดภาพจากคลิปบอร์ด (<kbd>Alt</kbd>+<kbd>P</kbd>) เป็นหน้าต่างอ้างอิงลอยด้านบนสุด</li>
-        <li>ปรับดูภาพที่ปักหมุดได้ลื่นไหลด้วยการหมุนล้อเมาส์เพื่อซูม (25%–400%), กด <kbd>Ctrl</kbd>+<kbd>Wheel</kbd> ปรับความโปร่งใส (20%–100%), รีเซ็ตด้วยปุ่ม <kbd>0</kbd> และเปิดแถบเครื่องมือแก้ไขบนหมุดด้วย <kbd>E</kbd> หรือ <kbd>Space</kbd></li>
-        <li>วาดแก้ไขลงบนภาพก่อนคัดลอก ปักหมุด หรือบันทึก พร้อมเลิกทำและทำซ้ำ (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>)</li>
-        <li>ดูดสีพิกเซลขณะจับภาพและคัดลอกรหัสสี HEX ลงคลิปบอร์ดได้ทันทีด้วยปุ่ม <kbd>C</kbd></li>
-        <li>สกัดข้อความภาษาไทยและอังกฤษแบบออฟไลน์ 100% ด้วย Quick OCR (<kbd>Alt</kbd>+<kbd>T</kbd>) หรือจากพื้นที่ที่กำลังเลือก (<kbd>Ctrl</kbd>+<kbd>T</kbd>) ขับเคลื่อนด้วยโมเดล OpenThai 2.1 (Apache 2.0) และ Microsoft ONNX Runtime (MIT) ที่รวมมาในแพ็กเกจ</li>
-        <li>รักษาแรมขณะรอทำงานให้ต่ำ: <code>onnxruntime.dll</code> (v1.32.0) ถูกโหลดแบบหน่วงเวลา (lazy load) ผ่าน <code>LoadLibraryExW</code> เฉพาะตอนที่คุณสั่งรัน OCR เท่านั้น</li>
-        <li>ทำงานออฟไลน์ 100% ไม่มี telemetry ไม่เชื่อมต่อเครือข่าย ไม่มีบัญชีผู้ใช้ และปิดการเริ่มทำงานพร้อม Windows ไว้เป็นค่าเริ่มต้น (<code>Enabled="false"</code>)</li>
-      </ul>
+      <div class="overview-grid">
+        <p>PikaSnip รอทำงานอย่างเงียบ ๆ ในถาดระบบของ Windows จนกว่าคุณจะกดคีย์ลัด โดยรวมการจับภาพหน้าจอ การปักหมุดภาพอ้างอิง การวาดแก้ไข การดูดสี และการอ่านข้อความ OCR ไทย/อังกฤษแบบออฟไลน์ไว้ในแอปเนทีฟตัวเดียว</p>
+        <aside class="quick-facts" aria-labelledby="qf-title">
+          <h3 id="qf-title">ข้อมูลสรุป</h3>
+          <dl>
+            <dt>เวอร์ชัน</dt>
+            <dd>0.1.0</dd>
+            <dt>แพลตฟอร์ม</dt>
+            <dd>Windows 10/11 x64</dd>
+            <dt>สัญญาอนุญาต</dt>
+            <dd>ฟรี · โมเดล OCR Apache 2.0 / MIT</dd>
+            <dt>ขนาดไฟล์</dt>
+            <dd>Portable ZIP 13.30 MiB · PikaSnip.exe 754,688 ไบต์</dd>
+            <dt>ช่องทางเผยแพร่</dt>
+            <dd>GitHub Releases + MSIX sideload · รอตรวจ Store</dd>
+            <dt>ไฟล์โปรแกรม</dt>
+            <dd>PikaSnip.exe</dd>
+            <dt>ความเป็นส่วนตัว</dt>
+            <dd>ออฟไลน์ 100% · ไม่มี telemetry</dd>
+            <dt>ดาวน์โหลด</dt>
+            <dd><a href="/th/software/pikasnip/downloads/">หน้าดาวน์โหลด</a></dd>
+          </dl>
+        </aside>
+      </div>
     </section>
 
-    <section aria-labelledby="screenshots">
+    <section id="screenshots" aria-labelledby="screenshots-title">
       <div class="section-head">
-        <h2 id="screenshots">ภาพหน้าจอ</h2>
+        <h2 id="screenshots-title">ภาพหน้าจอ</h2>
         <span class="mono-meta">4 ภาพ · v0.1.0</span>
       </div>
       <div class="shot-grid">
-        <figure>
-          <img src="/assets/images/pikasnip/01-capture-magnifier.png" alt="PikaSnip จับภาพพื้นที่พร้อมแว่นขยาย" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-capture">
+            <img src="/assets/images/pikasnip/01-capture-magnifier-700.webp" alt="PikaSnip จับภาพพื้นที่พร้อมแว่นขยาย" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>จับภาพพื้นที่พร้อมแว่นขยายและซูมระดับพิกเซล</figcaption>
         </figure>
-        <figure>
-          <img src="/assets/images/pikasnip/02-annotations-toolbar.png" alt="แถบเครื่องมือวาดเขียนของ PikaSnip" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-annotate">
+            <img src="/assets/images/pikasnip/02-annotations-toolbar-700.webp" alt="แถบเครื่องมือวาดเขียนของ PikaSnip" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>แถบเครื่องมือวาดเขียนก่อนบันทึก</figcaption>
         </figure>
-        <figure>
-          <img src="/assets/images/pikasnip/03-floating-pin-edit.png" alt="หน้าต่างปักหมุดลอยพร้อมแถบเครื่องมือแก้ไขของ PikaSnip" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-pin">
+            <img src="/assets/images/pikasnip/03-floating-pin-edit-700.webp" alt="หน้าต่างปักหมุดลอยพร้อมแถบเครื่องมือแก้ไขของ PikaSnip" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>หน้าต่างปักหมุดลอยพร้อมแถบเครื่องมือแก้ไข</figcaption>
         </figure>
-        <figure>
-          <img src="/assets/images/pikasnip/04-offline-thai-en-ocr.png" alt="OCR ไทยและอังกฤษออฟไลน์ของ PikaSnip" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-ocr">
+            <img src="/assets/images/pikasnip/04-offline-thai-en-ocr-700.webp" alt="OCR ไทยและอังกฤษออฟไลน์ของ PikaSnip" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>OCR ไทยและอังกฤษ ทำงานออฟไลน์ 100%</figcaption>
         </figure>
       </div>
     </section>
 
-    <section aria-labelledby="specs">
+    <section id="features" aria-labelledby="features-title">
       <div class="section-head">
-        <h2 id="specs">สถาปัตยกรรมและขนาด</h2>
+        <h2 id="features-title">ฟีเจอร์</h2>
+        <span class="mono-meta">8 ความสามารถใน 4 กลุ่ม</span>
+      </div>
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3>จับภาพและดูดสี</h3>
+          <ul>
+            <li>จับภาพบางส่วนของหน้าจอข้ามหลายจอภาพด้วย <kbd>PrintScreen</kbd> หรือ <kbd>Alt</kbd>+<kbd>A</kbd> แล้วคัดลอกลงคลิปบอร์ด (<kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd>) หรือบันทึกเป็นไฟล์ PNG (<kbd>Ctrl</kbd>+<kbd>S</kbd>) ลงโฟลเดอร์ <code>Pictures\PikaSnip</code></li>
+            <li>ดูดสีพิกเซลขณะจับภาพและคัดลอกรหัสสี HEX ลงคลิปบอร์ดได้ทันทีด้วยปุ่ม <kbd>C</kbd></li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>หน้าต่างปักหมุดลอย</h3>
+          <ul>
+            <li>ปักหมุดพื้นที่ที่เลือก (<kbd>Ctrl</kbd>+<kbd>P</kbd>) หรือปักหมุดภาพจากคลิปบอร์ด (<kbd>Alt</kbd>+<kbd>P</kbd>) เป็นหน้าต่างอ้างอิงลอยด้านบนสุด</li>
+            <li>ปรับดูภาพที่ปักหมุดได้ลื่นไหลด้วยการหมุนล้อเมาส์เพื่อซูม (25%–400%), กด <kbd>Ctrl</kbd>+<kbd>Wheel</kbd> ปรับความโปร่งใส (20%–100%), รีเซ็ตด้วยปุ่ม <kbd>0</kbd> และเปิดแถบเครื่องมือแก้ไขบนหมุดด้วย <kbd>E</kbd> หรือ <kbd>Space</kbd></li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>วาดแก้ไขและ OCR ออฟไลน์</h3>
+          <ul>
+            <li>วาดแก้ไขลงบนภาพก่อนคัดลอก ปักหมุด หรือบันทึก พร้อมเลิกทำและทำซ้ำ (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>)</li>
+            <li>สกัดข้อความภาษาไทยและอังกฤษแบบออฟไลน์ 100% ด้วย Quick OCR (<kbd>Alt</kbd>+<kbd>T</kbd>) หรือจากพื้นที่ที่กำลังเลือก (<kbd>Ctrl</kbd>+<kbd>T</kbd>) ขับเคลื่อนด้วยโมเดล OpenThai 2.1 (Apache 2.0) และ Microsoft ONNX Runtime (MIT) ที่รวมมาในแพ็กเกจ</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>แรมสแตนด์บายและความเป็นส่วนตัว</h3>
+          <ul>
+            <li>รักษาแรมขณะรอทำงานให้ต่ำ: <code>onnxruntime.dll</code> (v1.32.0) ถูกโหลดแบบหน่วงเวลา (lazy load) ผ่าน <code>LoadLibraryExW</code> เฉพาะตอนที่คุณสั่งรัน OCR เท่านั้น</li>
+            <li>ทำงานออฟไลน์ 100% ไม่มี telemetry ไม่เชื่อมต่อเครือข่าย ไม่มีบัญชีผู้ใช้ และปิดการเริ่มทำงานพร้อม Windows ไว้เป็นค่าเริ่มต้น (<code>Enabled="false"</code>)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" aria-labelledby="specs-title">
+      <div class="section-head">
+        <h2 id="specs-title">สถาปัตยกรรมและขนาด</h2>
         <span class="mono-meta">เนทีฟ Windows ไร้ความบวม</span>
       </div>
       <p>PikaSnip พัฒนาด้วย C++20 เนทีฟบน Win32 และ Direct2D โดยไม่พ่วง Electron, WebView2, Qt หรือ .NET:</p>
@@ -272,6 +323,50 @@
         </li>
       </ul>
     </section>
+
+    <div class="lightbox" id="lb-snip-capture">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/01-capture-magnifier.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>จับภาพพื้นที่พร้อมแว่นขยายและซูมระดับพิกเซล</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-snip-annotate">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/02-annotations-toolbar.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>แถบเครื่องมือวาดเขียนก่อนบันทึก</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-snip-pin">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/03-floating-pin-edit.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>หน้าต่างปักหมุดลอยพร้อมแถบเครื่องมือแก้ไข</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-snip-ocr">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/04-offline-thai-en-ocr.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>OCR ไทยและอังกฤษ ทำงานออฟไลน์ 100%</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">

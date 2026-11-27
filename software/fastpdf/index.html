@@ -47,9 +47,7 @@
       <nav aria-label="Main">
         <ul class="nav">
           <li><a href="/">Home</a></li>
-          <li><a href="/software/">Software</a></li>
-          <li><a href="/software/fastpdf/" aria-current="page">PikaPDF</a></li>
-          <li><a href="/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/software/" aria-current="true">Software</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy</a></li>
         </ul>
@@ -84,10 +82,10 @@
 
       <div class="hero-visual">
         <figure class="screenshot-frame">
-          <img src="/assets/images/pikapdf-screenshot.webp" alt="PikaPDF v0.5.0 running on Windows showing the single-row Lucide command bar, Thumbnails and Bookmarks sidebar, and a three-page technical PDF document" width="1104" height="692" loading="eager" decoding="async">
+          <img src="/assets/images/pikapdf-ui-main.webp" alt="PikaPDF v0.5.1 running on Windows showing the single-row Lucide command bar and PDF document canvas" width="1104" height="690" loading="eager" decoding="async">
           <figcaption class="screenshot-caption">
-            <span>PikaPDF v0.5.0 capture on Windows x64 — Thumbnails sidebar &amp; PDFium document canvas</span>
-            <span class="screenshot-meta">FastPDF.exe · 1104 × 692</span>
+            <span>PikaPDF v0.5.1 on Windows x64 — single-row Lucide command bar &amp; PDFium document canvas</span>
+            <span class="screenshot-meta">FastPDF.exe · 1104 × 690</span>
           </figcaption>
         </figure>
       </div>
@@ -97,31 +95,132 @@
       <p><strong>PikaPDF 0.5.1 for Windows x64 is available now.</strong> Upgrading over FastPDF 0.4.1 and PikaPDF 0.5.0 is seamless: the build upgrades in place, reuses the existing install directory, and preserves your settings and recent files. The builds are unsigned, so Windows may show a warning when you run them. You can find the files and their SHA-256 checksums on the <a href="/software/fastpdf/downloads/">Downloads</a> page.</p>
     </div>
 
-    <section aria-labelledby="what">
+    <nav class="page-toc" aria-label="On this page">
+      <a href="#what">What it does</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#features">Features</a>
+      <a href="#status">Status</a>
+      <a href="#next">Next</a>
+    </nav>
+
+    <section id="what" aria-labelledby="what-title">
       <div class="section-head">
-        <h2 id="what">What PikaPDF does</h2>
+        <h2 id="what-title">What PikaPDF does</h2>
         <span class="mono-meta">17 core capabilities</span>
       </div>
-      <p>PikaPDF is a viewer and a set of document tools in one desktop app. These are the features it includes:</p>
-      <ul class="feature-list">
-        <li>Follow Windows Light/Dark app settings and High Contrast mode automatically at startup and live on theme changes, updating the DWM title bar, Explorer controls, command bar, sidebar, Find panel, and notification toasts without re-rendering cached PDF pages or altering Presentation Mode.</li>
-        <li>Open and read PDF documents, with continuous single-column scrolling.</li>
-        <li>Reach commands from a single-row responsive command bar with Lucide icons; commands that do not fit appear in the More commands overflow menu.</li>
-        <li>Show or hide the Thumbnails and Bookmarks sidebar with <kbd>Ctrl</kbd>+<kbd>B</kbd>. Unsupported external or remote bookmark actions are safely labelled and never executed.</li>
-        <li>Draw freehand ink in multiple colours and three stroke widths, or highlight selectable text in multiple colours, then undo and redo with <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd>.</li>
-        <li>Save a Copy of the current document. Unsaved-change protection prompts on close, open, print and PNG export, and never overwrites existing files or the source document.</li>
-        <li>Jump directly to any page with the Go to Page dialog (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
-        <li>Zoom controls: fit width, fit page, 100% and free zoom, with a page anchor that keeps your place.</li>
-        <li>Presentation mode (<kbd>F11</kbd>) for full-screen page-by-page viewing.</li>
-        <li>Search inside a document with an incremental find panel (<kbd>Ctrl</kbd>+<kbd>F</kbd>).</li>
-        <li>Capture a region of a page to the clipboard with Screenshot (<kbd>Ctrl</kbd>+<kbd>S</kbd>) and save it as an image.</li>
-        <li>Export PDF pages to PNG images, and combine PNG, JPEG and BMP images into a single PDF.</li>
-        <li>Print through an enhanced Print dialog: 1–6 pages per sheet, a preview thumbnail, colour or monochrome output, duplex printing, Fast/Medium/Detailed quality, By set or By page selection, and progress with cancel.</li>
-        <li>Rotate pages and save a rotated copy without changing the original file.</li>
-        <li>Keep a list of recently opened documents.</li>
-        <li>Open a document directly from the command line or by dragging one file onto the window.</li>
-        <li>A manual "Check for Updates" option and an About dialog, plus Diagnostics (<kbd>Ctrl</kbd>+<kbd>D</kbd>) for troubleshooting.</li>
-      </ul>
+      <div class="overview-grid">
+        <p>PikaPDF is a viewer and a set of document tools in one desktop app. Reading, search, annotation, presentation, capture, image export, image-to-PDF conversion and printing all live in the same window, and Windows theme changes are followed automatically.</p>
+        <aside class="quick-facts" aria-labelledby="qf-title">
+          <h3 id="qf-title">Quick facts</h3>
+          <dl>
+            <dt>Version</dt>
+            <dd>0.5.1</dd>
+            <dt>Platform</dt>
+            <dd>Windows 10/11 x64</dd>
+            <dt>Source</dt>
+            <dd>Private (not published)</dd>
+            <dt>Licence</dt>
+            <dd>Freeware</dd>
+            <dt>Installer</dt>
+            <dd>~5.4 MB</dd>
+            <dt>Portable ZIP</dt>
+            <dd>~4.1 MB</dd>
+            <dt>Privacy</dt>
+            <dd>No tracking or analytics</dd>
+            <dt>Download</dt>
+            <dd><a href="/software/fastpdf/downloads/">Downloads page</a></dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-head">
+        <h2 id="screenshots-title">Screenshots</h2>
+        <span class="mono-meta">4 screenshots · v0.5.1</span>
+      </div>
+      <div class="shot-grid">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-main">
+            <img src="/assets/images/pikapdf-ui-main-700.webp" alt="PikaPDF v0.5.1 main reading view with the single-row Lucide command bar above the PDF document canvas" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Main reading view with single-row Lucide command bar</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-sidebar">
+            <img src="/assets/images/pikapdf-ui-sidebar-700.webp" alt="PikaPDF v0.5.1 Thumbnails and Bookmarks sidebar open beside the document page" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Thumbnails and Bookmarks sidebar (Ctrl+B)</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-find">
+            <img src="/assets/images/pikapdf-ui-find-700.webp" alt="PikaPDF v0.5.1 incremental Find panel opened inside the PDF document" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Incremental Find panel (Ctrl+F) inside the document</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-print">
+            <img src="/assets/images/pikapdf-ui-print-700.webp" alt="PikaPDF v0.5.1 enhanced Print dialog with multi-page layout options and a print preview" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Enhanced Print dialog with multi-page layout and preview</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <h2 id="features-title">Features</h2>
+        <span class="mono-meta">17 capabilities in 6 groups</span>
+      </div>
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3>Theme &amp; interface</h3>
+          <ul>
+            <li>Follow Windows Light/Dark app settings and High Contrast mode automatically at startup and live on theme changes, updating the DWM title bar, Explorer controls, command bar, sidebar, Find panel, and notification toasts without re-rendering cached PDF pages or altering Presentation Mode.</li>
+            <li>Reach commands from a single-row responsive command bar with Lucide icons; commands that do not fit appear in the More commands overflow menu.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Reading &amp; navigation</h3>
+          <ul>
+            <li>Open and read PDF documents, with continuous single-column scrolling.</li>
+            <li>Show or hide the Thumbnails and Bookmarks sidebar with <kbd>Ctrl</kbd>+<kbd>B</kbd>. Unsupported external or remote bookmark actions are safely labelled and never executed.</li>
+            <li>Jump directly to any page with the Go to Page dialog (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
+            <li>Zoom controls: fit width, fit page, 100% and free zoom, with a page anchor that keeps your place.</li>
+            <li>Presentation mode (<kbd>F11</kbd>) for full-screen page-by-page viewing.</li>
+            <li>Keep a list of recently opened documents.</li>
+            <li>Open a document directly from the command line or by dragging one file onto the window.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Find &amp; capture</h3>
+          <ul>
+            <li>Search inside a document with an incremental find panel (<kbd>Ctrl</kbd>+<kbd>F</kbd>).</li>
+            <li>Capture a region of a page to the clipboard with Screenshot (<kbd>Ctrl</kbd>+<kbd>S</kbd>) and save it as an image.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Ink, highlight &amp; saving</h3>
+          <ul>
+            <li>Draw freehand ink in multiple colours and three stroke widths, or highlight selectable text in multiple colours, then undo and redo with <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd>.</li>
+            <li>Save a Copy of the current document. Unsaved-change protection prompts on close, open, print and PNG export, and never overwrites existing files or the source document.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Convert &amp; arrange</h3>
+          <ul>
+            <li>Export PDF pages to PNG images, and combine PNG, JPEG and BMP images into a single PDF.</li>
+            <li>Rotate pages and save a rotated copy without changing the original file.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Print &amp; updates</h3>
+          <ul>
+            <li>Print through an enhanced Print dialog: 1–6 pages per sheet, a preview thumbnail, colour or monochrome output, duplex printing, Fast/Medium/Detailed quality, By set or By page selection, and progress with cancel.</li>
+            <li>A manual "Check for Updates" option and an About dialog, plus Diagnostics (<kbd>Ctrl</kbd>+<kbd>D</kbd>) for troubleshooting.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="status">
@@ -199,6 +298,50 @@
         </li>
       </ul>
     </section>
+
+    <div class="lightbox" id="lb-pdf-main">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-main.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Main reading view with single-row Lucide command bar</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-pdf-sidebar">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-sidebar.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Thumbnails and Bookmarks sidebar (Ctrl+B)</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-pdf-find">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-find.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Incremental Find panel (Ctrl+F) inside the document</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-pdf-print">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-print.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Enhanced Print dialog with multi-page layout and preview</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">

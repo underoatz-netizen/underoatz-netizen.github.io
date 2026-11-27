@@ -47,9 +47,7 @@
       <nav aria-label="เมนูหลัก">
         <ul class="nav">
           <li><a href="/th/">หน้าแรก</a></li>
-          <li><a href="/th/software/">ซอฟต์แวร์</a></li>
-          <li><a href="/th/software/fastpdf/" aria-current="page">PikaPDF</a></li>
-          <li><a href="/th/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/th/software/" aria-current="true">ซอฟต์แวร์</a></li>
           <li><a href="/th/support/">ช่วยเหลือ</a></li>
           <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
         </ul>
@@ -84,10 +82,10 @@
 
       <div class="hero-visual">
         <figure class="screenshot-frame">
-          <img src="/assets/images/pikapdf-screenshot.webp" alt="หน้าต่างจริงของ PikaPDF v0.5.0 บน Windows แสดงแถบคำสั่ง Lucide แถวเดียว แถบข้าง Thumbnails และ Bookmarks พร้อมหน้าเอกสาร PDF" width="1104" height="692" loading="eager" decoding="async">
+          <img src="/assets/images/pikapdf-ui-main.webp" alt="หน้าต่างจริงของ PikaPDF v0.5.1 บน Windows แสดงแถบคำสั่ง Lucide แถวเดียวและพื้นที่แสดงผลเอกสาร PDF" width="1104" height="690" loading="eager" decoding="async">
           <figcaption class="screenshot-caption">
-            <span>ภาพหน้าจอ PikaPDF v0.5.0 บน Windows x64 — แถบข้างภาพย่อและพื้นที่แสดงผล PDFium</span>
-            <span class="screenshot-meta">FastPDF.exe · 1104 × 692</span>
+            <span>ภาพหน้าจอ PikaPDF v0.5.1 บน Windows x64 — แถบคำสั่ง Lucide แถวเดียวและพื้นที่แสดงผล PDFium</span>
+            <span class="screenshot-meta">FastPDF.exe · 1104 × 690</span>
           </figcaption>
         </figure>
       </div>
@@ -97,31 +95,132 @@
       <p><strong>พร้อมใช้งานแล้ว:</strong> PikaPDF 0.5.1 สำหรับ Windows x64 สามารถอัปเกรดในตำแหน่งเดิมทับ FastPDF 0.4.1 และ PikaPDF 0.5.0 ได้ทันที โดยใช้โฟลเดอร์ติดตั้งเดิมและรักษาการตั้งค่ากับไฟล์ล่าสุดไว้ครบถ้วน ไฟล์ที่เผยแพร่ยังไม่ได้ลงนาม Windows อาจแสดงคำเตือนเมื่อคุณเปิดใช้งาน ดูไฟล์และค่าแฮช SHA-256 ได้ที่หน้า <a href="/th/software/fastpdf/downloads/">ดาวน์โหลด</a></p>
     </div>
 
-    <section aria-labelledby="what">
+    <nav class="page-toc" aria-label="ในหน้านี้">
+      <a href="#what">ทำอะไรได้บ้าง</a>
+      <a href="#screenshots">ภาพหน้าจอ</a>
+      <a href="#features">ฟีเจอร์</a>
+      <a href="#status">สถานะ</a>
+      <a href="#next">หน้าถัดไป</a>
+    </nav>
+
+    <section id="what" aria-labelledby="what-title">
       <div class="section-head">
-        <h2 id="what">PikaPDF ทำอะไรได้บ้าง</h2>
+        <h2 id="what-title">PikaPDF ทำอะไรได้บ้าง</h2>
         <span class="mono-meta">ความสามารถหลัก 17 รายการ</span>
       </div>
-      <p>PikaPDF รวมโปรแกรมอ่านและเครื่องมือจัดการเอกสารไว้ในแอปเดียว ฟีเจอร์ที่มีในรุ่นนี้คือ:</p>
-      <ul class="feature-list">
-        <li>ปรับธีมตามระบบ Windows (Light, Dark และ High Contrast) อัตโนมัติตั้งแต่เปิดโปรแกรมและทันทีเมื่อเปลี่ยนธีมระบบ โดยอัปเดตแถบชื่อเรื่อง DWM, ตัวควบคุม Explorer, แถบคำสั่ง, แถบด้านข้าง, แผงค้นหา และแถบแจ้งเตือน โดยไม่เรนเดอร์หน้า PDF ที่แคชไว้ใหม่และไม่กระทบโหมดนำเสนอ</li>
-        <li>เปิดและอ่านเอกสาร PDF พร้อมการเลื่อนแบบต่อเนื่องหนึ่งคอลัมน์</li>
-        <li>เข้าถึงคำสั่งจากแถบคำสั่งแถวเดียวที่ปรับขนาดตามหน้าต่างพร้อมไอคอน Lucide และเมนู More commands สำหรับคำสั่งที่ล้นหน้าจอและคำสั่งจัดการเอกสาร</li>
-        <li>แสดงหรือซ่อนแถบด้านข้างภาพย่อ (Thumbnails) และบุ๊กมาร์ก (Bookmarks) ด้วย <kbd>Ctrl</kbd>+<kbd>B</kbd> โดยบุ๊กมาร์กที่เป็นลิงก์ภายนอกหรือระยะไกลที่ไม่รองรับจะถูกติดป้ายอย่างปลอดภัยและไม่ถูกเรียกทำงาน</li>
-        <li>วาดหมึกอิสระได้หลายสีและ 3 ความหนาเส้น หรือไฮไลต์ข้อความที่เลือกได้หลายสี พร้อมเลิกทำและทำซ้ำด้วย <kbd>Ctrl</kbd>+<kbd>Z</kbd> และ <kbd>Ctrl</kbd>+<kbd>Y</kbd></li>
-        <li>บันทึกสำเนาผ่านคำสั่ง Save a Copy พร้อมระบบป้องกันงานที่ยังไม่บันทึก ซึ่งจะถามยืนยันก่อนปิด เปลี่ยนไฟล์ พิมพ์ หรือส่งออก PNG และไม่เขียนทับไฟล์ที่มีอยู่หรือไฟล์ต้นฉบับ</li>
-        <li>ไปยังหน้าที่ต้องการได้ทันทีด้วยกล่องโต้ตอบไปที่หน้า (<kbd>Ctrl</kbd>+<kbd>G</kbd>)</li>
-        <li>การซูม: พอดีความกว้าง พอดีหน้า 100% และซูมเอง พร้อมระบบยึดตำแหน่งที่คงที่ให้คุณ</li>
-        <li>โหมดนำเสนอ (<kbd>F11</kbd>) สำหรับดูทีละหน้าแบบเต็มจอ</li>
-        <li>ค้นหาภายในเอกสารด้วยแผงค้นหาที่ค้นแบบทันทีขณะพิมพ์ (<kbd>Ctrl</kbd>+<kbd>F</kbd>)</li>
-        <li>จับภาพบางส่วนของหน้าไปยังคลิปบอร์ดด้วยคำสั่งจับภาพหน้าจอ (<kbd>Ctrl</kbd>+<kbd>S</kbd>) และบันทึกเป็นรูปภาพได้</li>
-        <li>ส่งออกหน้าเอกสารเป็นไฟล์ภาพ PNG และรวมไฟล์ภาพ PNG, JPEG และ BMP ให้เป็น PDF ไฟล์เดียว</li>
-        <li>กล่องโต้ตอบการพิมพ์แบบใหม่: จัดวาง 1–6 หน้าต่อแผ่น แสดงตัวอย่างแผ่นแรก เลือกพิมพ์สีหรือขาวดำ พิมพ์สองหน้า คุณภาพ Fast/Medium/Detailed ลำดับชุดสำเนา By set/By page พร้อมแถบความคืบหน้าและปุ่มยกเลิก</li>
-        <li>หมุนหน้าและบันทึกสำเนาที่หมุนแล้ว โดยไม่แก้ไฟล์ต้นฉบับ</li>
-        <li>เก็บรายการเอกสารที่เปิดล่าสุด</li>
-        <li>เปิดเอกสารได้โดยตรงจากบรรทัดคำสั่ง หรือลากไฟล์หนึ่งไฟล์วางบนหน้าต่าง</li>
-        <li>ตัวเลือก "ตรวจสอบอัปเดต" แบบเรียกเอง และกล่อง About พร้อมแผงข้อมูลวินิจฉัย (<kbd>Ctrl</kbd>+<kbd>D</kbd>) สำหรับการแก้ปัญหา</li>
-      </ul>
+      <div class="overview-grid">
+        <p>PikaPDF รวมโปรแกรมอ่านและเครื่องมือจัดการเอกสารไว้ในแอปเดียว การอ่าน ค้นหา การทำเครื่องหมาย โหมดนำเสนอ การจับภาพ การส่งออกภาพ การแปลงภาพเป็น PDF และการพิมพ์ อยู่ในหน้าต่างเดียวกันทั้งหมด และปรับตามธีมของ Windows ให้อัตโนมัติ</p>
+        <aside class="quick-facts" aria-labelledby="qf-title">
+          <h3 id="qf-title">ข้อมูลสรุป</h3>
+          <dl>
+            <dt>เวอร์ชัน</dt>
+            <dd>0.5.1</dd>
+            <dt>แพลตฟอร์ม</dt>
+            <dd>Windows 10/11 x64</dd>
+            <dt>ซอร์สโค้ด</dt>
+            <dd>ส่วนตัว (ไม่ได้เผยแพร่)</dd>
+            <dt>สัญญาอนุญาต</dt>
+            <dd>ฟรีแวร์</dd>
+            <dt>ตัวติดตั้ง</dt>
+            <dd>~5.4 MB</dd>
+            <dt>ไฟล์ ZIP แบบพกพา</dt>
+            <dd>~4.1 MB</dd>
+            <dt>ความเป็นส่วนตัว</dt>
+            <dd>ไม่มีการติดตามหรือวิเคราะห์ผู้ใช้</dd>
+            <dt>ดาวน์โหลด</dt>
+            <dd><a href="/th/software/fastpdf/downloads/">หน้าดาวน์โหลด</a></dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-head">
+        <h2 id="screenshots-title">ภาพหน้าจอ</h2>
+        <span class="mono-meta">4 ภาพ · v0.5.1</span>
+      </div>
+      <div class="shot-grid">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-main">
+            <img src="/assets/images/pikapdf-ui-main-700.webp" alt="หน้าเอกสารหลักของ PikaPDF v0.5.1 พร้อมแถบคำสั่ง Lucide แถวเดียวเหนือพื้นที่แสดงผล PDF" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>หน้าจออ่านเอกสารหลักพร้อมแถบคำสั่ง Lucide แถวเดียว</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-sidebar">
+            <img src="/assets/images/pikapdf-ui-sidebar-700.webp" alt="แถบข้างภาพย่อและบุ๊กมาร์กของ PikaPDF v0.5.1 เปิดอยู่ข้างหน้าเอกสาร" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>แถบข้างภาพย่อและบุ๊กมาร์ก (Ctrl+B)</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-find">
+            <img src="/assets/images/pikapdf-ui-find-700.webp" alt="แผงค้นหาแบบทันทีของ PikaPDF v0.5.1 ที่เปิดอยู่ภายในเอกสาร PDF" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>แผงค้นหาแบบทันที (Ctrl+F) ภายในเอกสาร</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-open" href="#lb-pdf-print">
+            <img src="/assets/images/pikapdf-ui-print-700.webp" alt="กล่องโต้ตอบการพิมพ์ของ PikaPDF v0.5.1 พร้อมตัวเลือกจัดวางหลายหน้าและภาพตัวอย่างก่อนพิมพ์" width="700" height="438" loading="lazy" decoding="async">
+          </a>
+          <figcaption>กล่องโต้ตอบการพิมพ์พร้อมจัดวางหลายหน้าและภาพตัวอย่าง</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <h2 id="features-title">ฟีเจอร์</h2>
+        <span class="mono-meta">17 ความสามารถใน 6 กลุ่ม</span>
+      </div>
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3>ธีมและหน้าตา</h3>
+          <ul>
+            <li>ปรับธีมตามระบบ Windows (Light, Dark และ High Contrast) อัตโนมัติตั้งแต่เปิดโปรแกรมและทันทีเมื่อเปลี่ยนธีมระบบ โดยอัปเดตแถบชื่อเรื่อง DWM, ตัวควบคุม Explorer, แถบคำสั่ง, แถบด้านข้าง, แผงค้นหา และแถบแจ้งเตือน โดยไม่เรนเดอร์หน้า PDF ที่แคชไว้ใหม่และไม่กระทบโหมดนำเสนอ</li>
+            <li>เข้าถึงคำสั่งจากแถบคำสั่งแถวเดียวที่ปรับขนาดตามหน้าต่างพร้อมไอคอน Lucide และเมนู More commands สำหรับคำสั่งที่ล้นหน้าจอและคำสั่งจัดการเอกสาร</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>อ่านและนำทาง</h3>
+          <ul>
+            <li>เปิดและอ่านเอกสาร PDF พร้อมการเลื่อนแบบต่อเนื่องหนึ่งคอลัมน์</li>
+            <li>แสดงหรือซ่อนแถบด้านข้างภาพย่อ (Thumbnails) และบุ๊กมาร์ก (Bookmarks) ด้วย <kbd>Ctrl</kbd>+<kbd>B</kbd> โดยบุ๊กมาร์กที่เป็นลิงก์ภายนอกหรือระยะไกลที่ไม่รองรับจะถูกติดป้ายอย่างปลอดภัยและไม่ถูกเรียกทำงาน</li>
+            <li>ไปยังหน้าที่ต้องการได้ทันทีด้วยกล่องโต้ตอบไปที่หน้า (<kbd>Ctrl</kbd>+<kbd>G</kbd>)</li>
+            <li>การซูม: พอดีความกว้าง พอดีหน้า 100% และซูมเอง พร้อมระบบยึดตำแหน่งที่คงที่ให้คุณ</li>
+            <li>โหมดนำเสนอ (<kbd>F11</kbd>) สำหรับดูทีละหน้าแบบเต็มจอ</li>
+            <li>เก็บรายการเอกสารที่เปิดล่าสุด</li>
+            <li>เปิดเอกสารได้โดยตรงจากบรรทัดคำสั่ง หรือลากไฟล์หนึ่งไฟล์วางบนหน้าต่าง</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>ค้นหาและจับภาพ</h3>
+          <ul>
+            <li>ค้นหาภายในเอกสารด้วยแผงค้นหาที่ค้นแบบทันทีขณะพิมพ์ (<kbd>Ctrl</kbd>+<kbd>F</kbd>)</li>
+            <li>จับภาพบางส่วนของหน้าไปยังคลิปบอร์ดด้วยคำสั่งจับภาพหน้าจอ (<kbd>Ctrl</kbd>+<kbd>S</kbd>) และบันทึกเป็นรูปภาพได้</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>เขียน ไฮไลต์ และบันทึก</h3>
+          <ul>
+            <li>วาดหมึกอิสระได้หลายสีและ 3 ความหนาเส้น หรือไฮไลต์ข้อความที่เลือกได้หลายสี พร้อมเลิกทำและทำซ้ำด้วย <kbd>Ctrl</kbd>+<kbd>Z</kbd> และ <kbd>Ctrl</kbd>+<kbd>Y</kbd></li>
+            <li>บันทึกสำเนาผ่านคำสั่ง Save a Copy พร้อมระบบป้องกันงานที่ยังไม่บันทึก ซึ่งจะถามยืนยันก่อนปิด เปลี่ยนไฟล์ พิมพ์ หรือส่งออก PNG และไม่เขียนทับไฟล์ที่มีอยู่หรือไฟล์ต้นฉบับ</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>แปลงและจัดหน้า</h3>
+          <ul>
+            <li>ส่งออกหน้าเอกสารเป็นไฟล์ภาพ PNG และรวมไฟล์ภาพ PNG, JPEG และ BMP ให้เป็น PDF ไฟล์เดียว</li>
+            <li>หมุนหน้าและบันทึกสำเนาที่หมุนแล้ว โดยไม่แก้ไฟล์ต้นฉบับ</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>พิมพ์และอัปเดต</h3>
+          <ul>
+            <li>กล่องโต้ตอบการพิมพ์แบบใหม่: จัดวาง 1–6 หน้าต่อแผ่น แสดงตัวอย่างแผ่นแรก เลือกพิมพ์สีหรือขาวดำ พิมพ์สองหน้า คุณภาพ Fast/Medium/Detailed ลำดับชุดสำเนา By set/By page พร้อมแถบความคืบหน้าและปุ่มยกเลิก</li>
+            <li>ตัวเลือก "ตรวจสอบอัปเดต" แบบเรียกเอง และกล่อง About พร้อมแผงข้อมูลวินิจฉัย (<kbd>Ctrl</kbd>+<kbd>D</kbd>) สำหรับการแก้ปัญหา</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="status">
@@ -199,6 +298,50 @@
         </li>
       </ul>
     </section>
+
+    <div class="lightbox" id="lb-pdf-main">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-main.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>หน้าจออ่านเอกสารหลักพร้อมแถบคำสั่ง Lucide แถวเดียว</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-pdf-sidebar">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-sidebar.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>แถบข้างภาพย่อและบุ๊กมาร์ก (Ctrl+B)</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-pdf-find">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-find.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>แผงค้นหาแบบทันที (Ctrl+F) ภายในเอกสาร</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-pdf-print">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="ปิดภาพขยาย"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikapdf-ui-print.webp" alt="" width="1104" height="690" loading="lazy" decoding="async">
+        <figcaption>
+          <span>กล่องโต้ตอบการพิมพ์พร้อมจัดวางหลายหน้าและภาพตัวอย่าง</span>
+          <a class="lightbox-close" href="#screenshots">ปิด</a>
+        </figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">

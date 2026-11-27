@@ -20,12 +20,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-    .shot-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 1.25rem 0 0; }
-    .shot-grid figure { margin: 0; border: 1px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; background: var(--card); }
-    .shot-grid img { width: 100%; height: auto; display: block; }
-    .shot-grid figcaption { margin: 0; padding: 0.6rem 0.8rem; background: var(--surface); border-top: 1px solid var(--border); font-size: 0.875rem; color: var(--secondary); }
-  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,9 +49,7 @@
       <nav aria-label="Main">
         <ul class="nav">
           <li><a href="/">Home</a></li>
-          <li><a href="/software/">Software</a></li>
-          <li><a href="/software/fastpdf/">PikaPDF</a></li>
-          <li><a href="/software/oz-image-viewer/">PikaView</a></li>
+          <li><a href="/software/" aria-current="true">Software</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy</a></li>
         </ul>
@@ -125,57 +117,116 @@
     <nav class="page-toc" aria-label="On this page">
       <a href="#what">What it does</a>
       <a href="#screenshots">Screenshots</a>
+      <a href="#features">Features</a>
       <a href="#specs">Architecture &amp; footprint</a>
       <a href="#status">Project status</a>
       <a href="#next">Where to go next</a>
     </nav>
 
-    <section aria-labelledby="what">
+    <section id="what" aria-labelledby="what-title">
       <div class="section-head">
-        <h2 id="what">What PikaSnip does</h2>
-        <span class="mono-meta">Capture · Pin · Annotate · Offline OCR</span>
+        <h2 id="what-title">What PikaSnip does</h2>
+        <span class="mono-meta">8 core capabilities</span>
       </div>
-      <p>PikaSnip stays quietly in the Windows system tray until you press a shortcut. It combines screen capture, floating reference pins, quick annotations, color picking, and offline Thai/English OCR in a single native utility:</p>
-      <ul class="feature-list">
-        <li>Capture screen regions across monitors with <kbd>PrintScreen</kbd> or <kbd>Alt</kbd>+<kbd>A</kbd>, then copy to the clipboard (<kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd>) or save as PNG (<kbd>Ctrl</kbd>+<kbd>S</kbd>) to <code>Pictures\PikaSnip</code>.</li>
-        <li>Pin any selection (<kbd>Ctrl</kbd>+<kbd>P</kbd>) or clipboard image (<kbd>Alt</kbd>+<kbd>P</kbd>) as a floating always-on-top reference window.</li>
-        <li>Inspect pinned windows smoothly with mouse-wheel zoom (25%–400%), <kbd>Ctrl</kbd>+<kbd>Wheel</kbd> opacity adjustment (20%–100%), reset (<kbd>0</kbd>), and an inline pin edit toolbar (<kbd>E</kbd> / <kbd>Space</kbd>).</li>
-        <li>Annotate captures before copying, pinning, or saving, with undo and redo (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>).</li>
-        <li>Pick exact pixel colors while capturing and copy the HEX code directly with <kbd>C</kbd>.</li>
-        <li>Extract Thai and English text 100% offline with Quick OCR (<kbd>Alt</kbd>+<kbd>T</kbd>) or from the active capture selection (<kbd>Ctrl</kbd>+<kbd>T</kbd>), powered by bundled OpenThai 2.1 models (Apache 2.0) and Microsoft ONNX Runtime (MIT).</li>
-        <li>Keep standby memory low: <code>onnxruntime.dll</code> (v1.32.0) is loaded lazily via <code>LoadLibraryExW</code> only when you actually invoke OCR.</li>
-        <li>Work completely offline with zero telemetry, zero network requests, no accounts, and Windows Startup disabled by default (<code>Enabled="false"</code>).</li>
-      </ul>
+      <div class="overview-grid">
+        <p>PikaSnip stays quietly in the Windows system tray until you press a shortcut. It combines screen capture, floating reference pins, quick annotations, color picking, and offline Thai/English OCR in a single native utility.</p>
+        <aside class="quick-facts" aria-labelledby="qf-title">
+          <h3 id="qf-title">Quick facts</h3>
+          <dl>
+            <dt>Version</dt>
+            <dd>0.1.0</dd>
+            <dt>Platform</dt>
+            <dd>Windows 10/11 x64</dd>
+            <dt>Licence</dt>
+            <dd>Free · Apache 2.0 / MIT OCR libs</dd>
+            <dt>Download size</dt>
+            <dd>Portable ZIP 13.30 MiB · PikaSnip.exe 754,688 B</dd>
+            <dt>Distribution</dt>
+            <dd>GitHub Releases + MSIX sideload · Store pending</dd>
+            <dt>Executable</dt>
+            <dd>PikaSnip.exe</dd>
+            <dt>Privacy</dt>
+            <dd>100% offline · zero telemetry</dd>
+            <dt>Download</dt>
+            <dd><a href="/software/pikasnip/downloads/">Downloads page</a></dd>
+          </dl>
+        </aside>
+      </div>
     </section>
 
-    <section aria-labelledby="screenshots">
+    <section id="screenshots" aria-labelledby="screenshots-title">
       <div class="section-head">
-        <h2 id="screenshots">Screenshots</h2>
+        <h2 id="screenshots-title">Screenshots</h2>
         <span class="mono-meta">4 screenshots · v0.1.0</span>
       </div>
       <div class="shot-grid">
-        <figure>
-          <img src="/assets/images/pikasnip/01-capture-magnifier.png" alt="PikaSnip region capture with magnifier" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-capture">
+            <img src="/assets/images/pikasnip/01-capture-magnifier-700.webp" alt="PikaSnip region capture with magnifier and pixel-level zoom" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>Region capture with magnifier and pixel-level zoom</figcaption>
         </figure>
-        <figure>
-          <img src="/assets/images/pikasnip/02-annotations-toolbar.png" alt="PikaSnip annotation toolbar" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-annotate">
+            <img src="/assets/images/pikasnip/02-annotations-toolbar-700.webp" alt="PikaSnip annotation toolbar for markup before saving" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>Annotation toolbar for markup before saving</figcaption>
         </figure>
-        <figure>
-          <img src="/assets/images/pikasnip/03-floating-pin-edit.png" alt="PikaSnip floating pin window with edit toolbar" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-pin">
+            <img src="/assets/images/pikasnip/03-floating-pin-edit-700.webp" alt="PikaSnip floating pin window with edit toolbar" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>Floating pin window with edit toolbar</figcaption>
         </figure>
-        <figure>
-          <img src="/assets/images/pikasnip/04-offline-thai-en-ocr.png" alt="PikaSnip 100% offline Thai and English OCR" width="1920" height="1080" loading="lazy" decoding="async">
+        <figure class="shot">
+          <a class="shot-open" href="#lb-snip-ocr">
+            <img src="/assets/images/pikasnip/04-offline-thai-en-ocr-700.webp" alt="PikaSnip 100% offline Thai and English OCR" width="700" height="394" loading="lazy" decoding="async">
+          </a>
           <figcaption>100% offline Thai and English OCR</figcaption>
         </figure>
       </div>
     </section>
 
-    <section aria-labelledby="specs">
+    <section id="features" aria-labelledby="features-title">
       <div class="section-head">
-        <h2 id="specs">Architecture &amp; footprint</h2>
+        <h2 id="features-title">Features</h2>
+        <span class="mono-meta">8 capabilities in 4 groups</span>
+      </div>
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3>Capture &amp; color</h3>
+          <ul>
+            <li>Capture screen regions across monitors with <kbd>PrintScreen</kbd> or <kbd>Alt</kbd>+<kbd>A</kbd>, then copy to the clipboard (<kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Enter</kbd>) or save as PNG (<kbd>Ctrl</kbd>+<kbd>S</kbd>) to <code>Pictures\PikaSnip</code>.</li>
+            <li>Pick exact pixel colors while capturing and copy the HEX code directly with <kbd>C</kbd>.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Floating pins</h3>
+          <ul>
+            <li>Pin any selection (<kbd>Ctrl</kbd>+<kbd>P</kbd>) or clipboard image (<kbd>Alt</kbd>+<kbd>P</kbd>) as a floating always-on-top reference window.</li>
+            <li>Inspect pinned windows smoothly with mouse-wheel zoom (25%–400%), <kbd>Ctrl</kbd>+<kbd>Wheel</kbd> opacity adjustment (20%–100%), reset (<kbd>0</kbd>), and an inline pin edit toolbar (<kbd>E</kbd> / <kbd>Space</kbd>).</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Annotate &amp; offline OCR</h3>
+          <ul>
+            <li>Annotate captures before copying, pinning, or saving, with undo and redo (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd>).</li>
+            <li>Extract Thai and English text 100% offline with Quick OCR (<kbd>Alt</kbd>+<kbd>T</kbd>) or from the active capture selection (<kbd>Ctrl</kbd>+<kbd>T</kbd>), powered by bundled OpenThai 2.1 models (Apache 2.0) and Microsoft ONNX Runtime (MIT).</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3>Standby footprint &amp; privacy</h3>
+          <ul>
+            <li>Keep standby memory low: <code>onnxruntime.dll</code> (v1.32.0) is loaded lazily via <code>LoadLibraryExW</code> only when you actually invoke OCR.</li>
+            <li>Work completely offline with zero telemetry, zero network requests, no accounts, and Windows Startup disabled by default (<code>Enabled="false"</code>).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" aria-labelledby="specs-title">
+      <div class="section-head">
+        <h2 id="specs-title">Architecture &amp; footprint</h2>
         <span class="mono-meta">Zero-bloat native Windows</span>
       </div>
       <p>PikaSnip is written in pure native C++20 against Win32 and Direct2D — with no Electron, WebView2, Qt, or .NET runtime:</p>
@@ -272,6 +323,50 @@
         </li>
       </ul>
     </section>
+
+    <div class="lightbox" id="lb-snip-capture">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/01-capture-magnifier.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Region capture with magnifier and pixel-level zoom</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-snip-annotate">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/02-annotations-toolbar.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Annotation toolbar for markup before saving</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-snip-pin">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/03-floating-pin-edit.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>Floating pin window with edit toolbar</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lb-snip-ocr">
+      <a class="lightbox-backdrop" href="#screenshots" aria-label="Close image preview"></a>
+      <figure class="lightbox-panel">
+        <img src="/assets/images/pikasnip/04-offline-thai-en-ocr.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>
+          <span>100% offline Thai and English OCR</span>
+          <a class="lightbox-close" href="#screenshots">Close</a>
+        </figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">
